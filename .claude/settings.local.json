@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout:*)",
+      "Bash(export:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:syosetu.org)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(python:*)",
+      "Bash(pyinstaller:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(sed:*)"
+    ],
+    "deny": []
+  }
+}

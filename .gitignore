@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Application specific
+*.log
+saved_novels/
+Output/
+temp/
+resources/
+
+# Windows specific
+*.exe
+*.dll
+*.pdb
+Thumbs.db
+*.lnk
+*.msi
+*.msm
+*.msp
+
+# Zone.Identifier files (Windows)
+*:Zone.Identifier
+
+# Testing
+test_*.py
+debug_*.py
+analyze_*.py
+
+# Build files
+build.bat
+build.ps1
+build.sh
+*.spec

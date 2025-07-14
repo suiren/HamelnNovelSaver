@@ -1,0 +1,285 @@
+
+.amazon{
+    text-align: center;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif, Verdana;
+}
+.amazon .amazon_wrap {
+    position: relative;
+    border: 1px #bbb solid;
+    display: flex;
+    box-sizing: border-box;
+    text-align: left;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background:#fff;
+    line-height: 1.5;
+}
+.amazon .amazon_wrap .amazon_site_name {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    font-size: 50%;
+    padding: 2px 5px
+}
+
+.amazon .amazon_wrap .amazon_site_name.site_name_Amazon {
+    background: #f90;
+    color: #000
+}
+
+.amazon .amazon_wrap .amazon_site_name.site_name_DLsite {
+    background: #4d6594;
+    color: #fff
+}
+
+.amazon .amazon_wrap .amazon_site_name.site_name_Rakuten {
+    background: #bf0000;
+    color: #fff
+}
+
+.amazon a {
+    color: #000;
+    display: inline-block;
+    text-decoration:none
+}
+body.night .amazon a:link{
+    color: #000;
+    display: inline-block;
+    text-decoration:none
+}
+
+
+.amazon .amazon_left_image img {
+    object-fit: contain
+}
+
+.amazon .amazon_right_box .amazon_detail {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+
+.amazon .amazon_height250 .amazon_right_box .amazon_detail {
+    -webkit-line-clamp: 1
+}
+
+.amazon .amazon_height50 .amazon_right_box .amazon_detail {
+    -webkit-line-clamp: 2;
+    line-height: 1.2;
+}
+
+.amazon .amazon_height60 .amazon_right_box .amazon_detail {
+    -webkit-line-clamp: 1
+}
+
+.amazon .amazon_right_box .amazon_detail span.price {
+    color: #b12704
+}
+
+.amazon .amazon_right_box .amazon_detail span.prime_logo {
+    vertical-align: middle
+}
+
+.amazon .ad_width728 {
+    width: 728px
+}
+
+.amazon .amazon_height50 {
+    display: flex;
+    max-width: 468px;
+    height: 50px
+}
+  
+.amazon .amazon_height50 .amazon_left_image {
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.amazon .amazon_height50 .amazon_left_image img {
+    max-width: 60px;
+    max-height: 46px
+}
+
+.amazon .amazon_height50 .amazon_right_box {
+    margin: 4px 10px
+}
+
+.amazon .amazon_height50 .amazon_right_box .amazon_title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font-weight: 700;
+    font-size: 13px
+}
+
+.amazon .amazon_height50 .amazon_right_box .amazon_detail span.price {
+    font-size: 14px
+}
+
+.amazon .amazon_height50 .amazon_right_box .amazon_detail span.remarks {
+    font-size: 11px
+}
+
+.amazon .amazon_height100 {
+    display: flex;
+    max-width: 468px;
+    height: 100px
+}
+
+.amazon .amazon_height100 .amazon_left_image {
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.amazon .amazon_height100 .amazon_left_image img {
+    max-width: 120px;
+    max-height: 96px
+}
+
+.amazon .amazon_height100 .amazon_right_box {
+    margin: 4px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.amazon .amazon_height100 .amazon_right_box .amazon_title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    font-weight: 700;
+    font-size: 13px
+}
+
+.amazon .amazon_height100 .amazon_right_box .amazon_detail span.price {
+    font-size: 14px
+}
+
+.amazon .amazon_height100 .amazon_right_box .amazon_detail span.remarks {
+    font-size: 12px
+}
+
+.amazon .amazon_height250 {
+    display: flex;
+    flex-flow: column;
+    min-width: 300px;
+    max-width: 468px;
+    height: 250px
+}
+
+.amazon .amazon_height250 .amazon_left_image {
+    margin: 3px;
+    text-align: center;
+    min-height: 70px
+}
+
+.amazon .amazon_height250 .amazon_left_image img {
+    max-width: 300px;
+    max-height: 174px
+}
+
+.amazon .amazon_height250 .amazon_right_box {
+    margin: 4px 20px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.amazon .amazon_height250 .amazon_right_box .amazon_title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-weight: 700;
+    font-size: 13px
+}
+
+.amazon .amazon_height250 .amazon_right_box .amazon_detail span.price {
+    font-size: 14px
+}
+
+.amazon .amazon_height250 .amazon_right_box .amazon_detail span.remarks {
+    font-size: 12px
+}
+
+.amazon .amazon_height60 {
+    display: flex;
+    max-width: 468px;
+    height: 60px
+}
+
+.amazon .amazon_height60 .amazon_right_box {
+    margin: 4px 10px
+}
+
+.amazon .amazon_height60 .amazon_right_box .amazon_title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font-weight: 700;
+    font-size: 13px
+}
+
+.amazon .amazon_height60 .amazon_right_box .amazon_detail span.price {
+    font-size: 14px
+}
+
+.amazon .amazon_height60 .amazon_right_box .amazon_detail span.remarks {
+    font-size: 12px
+}
+
+.amazon .amazon_height90 {
+    display: flex;
+    width: 364px;
+    height: 88px
+}
+
+.amazon .amazon_height90 .amazon_left_image {
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.amazon .amazon_height90 .amazon_left_image img {
+    max-width: 120px;
+    max-height: 86px
+}
+
+.amazon .amazon_height90 .amazon_right_box {
+    margin: 4px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.amazon .amazon_height90 .amazon_right_box .amazon_title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-weight: 700;
+    font-size: 13px
+}
+
+.amazon .amazon_height90 .amazon_right_box .amazon_detail span.price {
+    font-size: 14px
+}
+
+.amazon .amazon_height90 .amazon_right_box .amazon_detail span.remarks {
+    font-size: 12px
+}
+.amazon .amazon_right_box .amazon_detail span.remarks {
+    color:#999;
+}
