@@ -9800,3 +9800,675 @@ b'{console.log("undetected chromedriver 1337!")}                                
 2025-07-14 15:25:46,720 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a5.gif HTTP/1.1" 200 166
 2025-07-14 15:25:46,723 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
 2025-07-14 15:25:46,834 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=16 HTTP/1.1" 200 None
+2025-07-14 15:45:30,181 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 15:45:30,186 - INFO - CloudScraper初期化開始
+2025-07-14 15:45:30,218 - INFO - CloudScraper設定完了
+2025-07-14 15:45:30,220 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 15:45:34,238 - INFO - ページ取得開始: https://syosetu.org/novel/379375/
+2025-07-14 15:45:36,244 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:45:36,247 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-14 15:45:36,352 - DEBUG - https://syosetu.org:443 "GET /novel/379375/ HTTP/1.1" 200 None
+2025-07-14 15:45:36,371 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=27206bytes
+2025-07-14 15:45:36,391 - INFO - CloudScraperで取得されたHTMLテキスト長: 23352
+2025-07-14 15:45:36,409 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:45:36,443 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - ハーメルン
+2025-07-14 15:45:36,471 - INFO -   - 本文長: 2428文字
+2025-07-14 15:45:36,488 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/" property="og:url"/>
+<meta content="胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽は出来ない模様。 書きたいもの書いてたら...
+2025-07-14 15:45:36,496 - INFO -   - h1要素数: 1
+2025-07-14 15:45:36,504 - INFO -   - div要素数: 21
+2025-07-14 15:45:36,511 - INFO -   - a要素数: 112
+2025-07-14 15:45:36,517 - INFO -   - novel_body要素数: 0
+2025-07-14 15:45:36,524 - INFO -   - novel_view要素数: 0
+2025-07-14 15:45:36,531 - INFO - ページ検証: 正常なページ
+2025-07-14 15:45:36,537 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/
+2025-07-14 15:45:36,544 - INFO - 小説情報抽出開始
+2025-07-14 15:45:36,550 - INFO - タイトル抽出試行中...
+2025-07-14 15:45:36,558 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-14 15:45:36,563 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-14 15:45:36,569 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-14 15:45:36,578 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-14 15:45:36,587 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x0000022A72D94720>}
+2025-07-14 15:45:36,595 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x0000022A72D94720>} で要素が見つかりませんでした
+2025-07-14 15:45:36,602 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-14 15:45:36,611 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-14 15:45:36,618 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-14 15:45:36,626 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-14 15:45:36,633 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-14 15:45:36,640 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-14 15:45:36,648 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-14 15:45:36,654 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-14 15:45:36,659 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-14 15:45:36,666 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-14 15:45:36,671 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-14 15:45:36,678 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-14 15:45:36,684 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-14 15:45:36,691 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-14 15:45:36,698 - INFO - タイトルセレクター試行: h1 {}
+2025-07-14 15:45:36,704 - INFO - タイトルセレクター試行: title {}
+2025-07-14 15:45:36,710 - INFO - タイトル取得成功: 胡蝶の夢、或いは不労所得の夢
+2025-07-14 15:45:36,714 - INFO - 作者抽出試行中...
+2025-07-14 15:45:36,721 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-14 15:45:36,727 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-14 15:45:36,732 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-14 15:45:36,741 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-14 15:45:36,748 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-14 15:45:36,755 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-14 15:45:36,762 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-14 15:45:36,768 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-14 15:45:36,776 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x0000022A72D947C0>}
+2025-07-14 15:45:36,783 - INFO - 作者取得成功: nyasu
+2025-07-14 15:45:36,790 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-14 15:45:36,896 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-14 15:45:36,923 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-14 15:45:36,951 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-14 15:45:36,981 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.gif HTTP/1.1" 200 811
+2025-07-14 15:45:37,012 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.gif HTTP/1.1" 200 1297
+2025-07-14 15:45:37,045 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.gif HTTP/1.1" 200 1294
+2025-07-14 15:45:37,073 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.gif HTTP/1.1" 200 833
+2025-07-14 15:45:37,102 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.gif HTTP/1.1" 200 1102
+2025-07-14 15:45:37,134 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.gif HTTP/1.1" 200 1072
+2025-07-14 15:45:37,168 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.gif HTTP/1.1" 200 1866
+2025-07-14 15:45:37,198 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.gif HTTP/1.1" 200 1014
+2025-07-14 15:45:37,232 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.gif HTTP/1.1" 200 927
+2025-07-14 15:45:37,263 - DEBUG - https://img.syosetu.org:443 "GET /image/square.gif HTTP/1.1" 200 816
+2025-07-14 15:45:37,295 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.gif HTTP/1.1" 200 874
+2025-07-14 15:45:37,327 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.gif HTTP/1.1" 200 833
+2025-07-14 15:45:37,357 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.gif HTTP/1.1" 200 834
+2025-07-14 15:45:37,392 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.gif HTTP/1.1" 200 1136
+2025-07-14 15:45:37,424 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.gif HTTP/1.1" 200 1136
+2025-07-14 15:45:37,453 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.gif HTTP/1.1" 200 898
+2025-07-14 15:45:37,482 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-14 15:45:37,509 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-14 15:45:37,540 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-14 15:45:37,568 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-14 15:45:37,604 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-14 15:45:37,641 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-14 15:45:37,668 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-14 15:45:37,701 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-14 15:45:37,730 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png HTTP/1.1" 200 4864
+2025-07-14 15:45:37,759 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png HTTP/1.1" 200 1566
+2025-07-14 15:45:37,788 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-14 15:45:37,819 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-14 15:45:37,848 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-14 15:45:37,877 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_mokuzi_pc_min.js?202008211 HTTP/1.1" 200 953
+2025-07-14 15:45:37,883 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-14 15:45:37,886 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-14 15:45:37,918 - DEBUG - https://img.syosetu.org:443 "GET /js/ad_dliste.min.js?202501083 HTTP/1.1" 200 536
+2025-07-14 15:45:37,961 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a5.gif HTTP/1.1" 200 166
+2025-07-14 15:45:37,970 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-14 15:45:38,079 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375 HTTP/1.1" 200 None
+2025-07-14 15:45:38,186 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:45:38,236 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:45:38,330 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:45:38,417 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:45:38,428 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-14 15:45:38,431 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-14 15:45:38,504 - INFO - ページ取得開始: https://syosetu.org/novel/379375/1.html
+2025-07-14 15:45:40,510 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:45:40,555 - DEBUG - https://syosetu.org:443 "GET /novel/379375/1.html HTTP/1.1" 200 None
+2025-07-14 15:45:40,561 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29356bytes
+2025-07-14 15:45:40,566 - INFO - CloudScraperで取得されたHTMLテキスト長: 21468
+2025-07-14 15:45:40,580 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:45:40,587 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 三十路の夢 - ハーメルン
+2025-07-14 15:45:40,594 - INFO -   - 本文長: 4072文字
+2025-07-14 15:45:40,607 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/1.html" property="og:url"/>
+<meta content="三十路の夢 - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽は出来ない模...
+2025-07-14 15:45:40,614 - INFO -   - h1要素数: 1
+2025-07-14 15:45:40,620 - INFO -   - div要素数: 18
+2025-07-14 15:45:40,627 - INFO -   - a要素数: 75
+2025-07-14 15:45:40,632 - INFO -   - novel_body要素数: 0
+2025-07-14 15:45:40,638 - INFO -   - novel_view要素数: 0
+2025-07-14 15:45:40,645 - INFO - ページ検証: 正常なページ
+2025-07-14 15:45:40,651 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/1.html
+2025-07-14 15:45:40,697 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:45:40,746 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:45:40,801 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:45:40,851 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:45:40,907 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:40,997 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:45:41,046 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:41,133 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:45:41,217 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:41,263 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=1 HTTP/1.1" 200 None
+2025-07-14 15:45:44,281 - INFO - ページ取得開始: https://syosetu.org/novel/379375/2.html
+2025-07-14 15:45:46,287 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:45:46,338 - DEBUG - https://syosetu.org:443 "GET /novel/379375/2.html HTTP/1.1" 200 None
+2025-07-14 15:45:46,372 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28036bytes
+2025-07-14 15:45:46,379 - INFO - CloudScraperで取得されたHTMLテキスト長: 20626
+2025-07-14 15:45:46,404 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:45:46,432 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 凡人だと自覚した１５年 - ハーメルン
+2025-07-14 15:45:46,509 - INFO -   - 本文長: 3868文字
+2025-07-14 15:45:46,543 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/2.html" property="og:url"/>
+<meta content="凡人だと自覚した１５年 - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽...
+2025-07-14 15:45:46,551 - INFO -   - h1要素数: 1
+2025-07-14 15:45:46,560 - INFO -   - div要素数: 18
+2025-07-14 15:45:46,566 - INFO -   - a要素数: 75
+2025-07-14 15:45:46,574 - INFO -   - novel_body要素数: 0
+2025-07-14 15:45:46,581 - INFO -   - novel_view要素数: 0
+2025-07-14 15:45:46,590 - INFO - ページ検証: 正常なページ
+2025-07-14 15:45:46,595 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/2.html
+2025-07-14 15:45:46,641 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:45:46,689 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:45:46,740 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:45:46,792 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:45:46,841 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:46,891 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:45:46,941 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:46,990 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:45:47,039 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:47,087 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=2 HTTP/1.1" 200 None
+2025-07-14 15:45:50,103 - INFO - ページ取得開始: https://syosetu.org/novel/379375/3.html
+2025-07-14 15:45:52,130 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:45:52,203 - DEBUG - https://syosetu.org:443 "GET /novel/379375/3.html HTTP/1.1" 200 None
+2025-07-14 15:45:52,333 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28161bytes
+2025-07-14 15:45:52,359 - INFO - CloudScraperで取得されたHTMLテキスト長: 20905
+2025-07-14 15:45:52,455 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:45:52,539 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 確認の大博打 - ハーメルン
+2025-07-14 15:45:52,586 - INFO -   - 本文長: 3880文字
+2025-07-14 15:45:52,741 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/3.html" property="og:url"/>
+<meta content="確認の大博打 - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽は出来ない...
+2025-07-14 15:45:52,759 - INFO -   - h1要素数: 1
+2025-07-14 15:45:52,777 - INFO -   - div要素数: 18
+2025-07-14 15:45:52,805 - INFO -   - a要素数: 75
+2025-07-14 15:45:52,821 - INFO -   - novel_body要素数: 0
+2025-07-14 15:45:52,837 - INFO -   - novel_view要素数: 0
+2025-07-14 15:45:52,851 - INFO - ページ検証: 正常なページ
+2025-07-14 15:45:52,866 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/3.html
+2025-07-14 15:45:52,916 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:45:52,964 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:45:53,016 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:45:53,066 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:45:53,119 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:53,168 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:45:53,218 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:53,269 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:45:53,317 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:53,364 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=3 HTTP/1.1" 200 None
+2025-07-14 15:45:56,386 - INFO - ページ取得開始: https://syosetu.org/novel/379375/4.html
+2025-07-14 15:45:58,395 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:45:58,441 - DEBUG - https://syosetu.org:443 "GET /novel/379375/4.html HTTP/1.1" 200 None
+2025-07-14 15:45:58,450 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28257bytes
+2025-07-14 15:45:58,460 - INFO - CloudScraperで取得されたHTMLテキスト長: 20985
+2025-07-14 15:45:58,485 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:45:58,498 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - もう一人の僕 - ハーメルン
+2025-07-14 15:45:58,507 - INFO -   - 本文長: 3816文字
+2025-07-14 15:45:58,535 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/4.html" property="og:url"/>
+<meta content="もう一人の僕 - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽は出来ない...
+2025-07-14 15:45:58,559 - INFO -   - h1要素数: 1
+2025-07-14 15:45:58,574 - INFO -   - div要素数: 18
+2025-07-14 15:45:58,588 - INFO -   - a要素数: 75
+2025-07-14 15:45:58,600 - INFO -   - novel_body要素数: 0
+2025-07-14 15:45:58,616 - INFO -   - novel_view要素数: 0
+2025-07-14 15:45:58,641 - INFO - ページ検証: 正常なページ
+2025-07-14 15:45:58,652 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/4.html
+2025-07-14 15:45:58,704 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:45:58,754 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:45:58,805 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:45:58,855 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:45:58,910 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:58,960 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:45:59,010 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:59,065 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:45:59,114 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:45:59,159 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=4 HTTP/1.1" 200 None
+2025-07-14 15:46:02,194 - INFO - ページ取得開始: https://syosetu.org/novel/379375/5.html
+2025-07-14 15:46:04,207 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:46:04,258 - DEBUG - https://syosetu.org:443 "GET /novel/379375/5.html HTTP/1.1" 200 None
+2025-07-14 15:46:04,270 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=27675bytes
+2025-07-14 15:46:04,284 - INFO - CloudScraperで取得されたHTMLテキスト長: 20633
+2025-07-14 15:46:04,316 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:46:04,330 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 答えを知ってるだけで、こんなに上手くいくとは - ハーメルン
+2025-07-14 15:46:04,341 - INFO -   - 本文長: 3752文字
+2025-07-14 15:46:04,367 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/5.html" property="og:url"/>
+<meta content="答えを知ってるだけで、こんなに上手くいくとは - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、...
+2025-07-14 15:46:04,381 - INFO -   - h1要素数: 1
+2025-07-14 15:46:04,392 - INFO -   - div要素数: 18
+2025-07-14 15:46:04,402 - INFO -   - a要素数: 75
+2025-07-14 15:46:04,412 - INFO -   - novel_body要素数: 0
+2025-07-14 15:46:04,423 - INFO -   - novel_view要素数: 0
+2025-07-14 15:46:04,436 - INFO - ページ検証: 正常なページ
+2025-07-14 15:46:04,450 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/5.html
+2025-07-14 15:46:04,499 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:46:04,548 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:46:04,599 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:46:04,650 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:46:04,702 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:04,751 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:46:04,801 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:04,851 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:46:04,899 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:04,946 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=5 HTTP/1.1" 200 None
+2025-07-14 15:46:07,975 - INFO - ページ取得開始: https://syosetu.org/novel/379375/6.html
+2025-07-14 15:46:09,985 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:46:10,031 - DEBUG - https://syosetu.org:443 "GET /novel/379375/6.html HTTP/1.1" 200 None
+2025-07-14 15:46:10,040 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29046bytes
+2025-07-14 15:46:10,058 - INFO - CloudScraperで取得されたHTMLテキスト長: 21576
+2025-07-14 15:46:10,088 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:46:10,100 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - ブルーオーシャン過ぎて何もない - ハーメルン
+2025-07-14 15:46:10,111 - INFO -   - 本文長: 4014文字
+2025-07-14 15:46:10,149 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/6.html" property="og:url"/>
+<meta content="ブルーオーシャン過ぎて何もない - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう...
+2025-07-14 15:46:10,163 - INFO -   - h1要素数: 1
+2025-07-14 15:46:10,172 - INFO -   - div要素数: 18
+2025-07-14 15:46:10,185 - INFO -   - a要素数: 75
+2025-07-14 15:46:10,196 - INFO -   - novel_body要素数: 0
+2025-07-14 15:46:10,211 - INFO -   - novel_view要素数: 0
+2025-07-14 15:46:10,220 - INFO - ページ検証: 正常なページ
+2025-07-14 15:46:10,230 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/6.html
+2025-07-14 15:46:10,284 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:46:10,331 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:46:10,383 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:46:10,433 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:46:10,489 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:10,538 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:46:10,589 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:10,638 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:46:10,686 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:10,735 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=6 HTTP/1.1" 200 None
+2025-07-14 15:46:13,763 - INFO - ページ取得開始: https://syosetu.org/novel/379375/7.html
+2025-07-14 15:46:15,769 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:46:15,817 - DEBUG - https://syosetu.org:443 "GET /novel/379375/7.html HTTP/1.1" 200 None
+2025-07-14 15:46:15,825 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29326bytes
+2025-07-14 15:46:15,832 - INFO - CloudScraperで取得されたHTMLテキスト長: 21730
+2025-07-14 15:46:15,860 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:46:15,868 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - ０回戦敗退 - ハーメルン
+2025-07-14 15:46:15,876 - INFO -   - 本文長: 4002文字
+2025-07-14 15:46:15,903 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/7.html" property="og:url"/>
+<meta content="０回戦敗退 - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽は出来ない模...
+2025-07-14 15:46:15,915 - INFO -   - h1要素数: 1
+2025-07-14 15:46:15,926 - INFO -   - div要素数: 18
+2025-07-14 15:46:15,933 - INFO -   - a要素数: 75
+2025-07-14 15:46:15,940 - INFO -   - novel_body要素数: 0
+2025-07-14 15:46:15,949 - INFO -   - novel_view要素数: 0
+2025-07-14 15:46:15,960 - INFO - ページ検証: 正常なページ
+2025-07-14 15:46:15,968 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/7.html
+2025-07-14 15:46:16,018 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:46:16,069 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:46:16,118 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:46:16,169 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:46:16,221 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:16,271 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:46:16,321 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:16,371 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:46:16,421 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:16,467 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=7 HTTP/1.1" 200 None
+2025-07-14 15:46:19,500 - INFO - ページ取得開始: https://syosetu.org/novel/379375/8.html
+2025-07-14 15:46:21,512 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:46:21,558 - DEBUG - https://syosetu.org:443 "GET /novel/379375/8.html HTTP/1.1" 200 None
+2025-07-14 15:46:21,565 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31331bytes
+2025-07-14 15:46:21,572 - INFO - CloudScraperで取得されたHTMLテキスト長: 22315
+2025-07-14 15:46:21,598 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:46:21,609 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 綺麗事だとか言うなマジうるせぇ - ハーメルン
+2025-07-14 15:46:21,618 - INFO -   - 本文長: 4641文字
+2025-07-14 15:46:21,642 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/8.html" property="og:url"/>
+<meta content="綺麗事だとか言うなマジうるせぇ - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう...
+2025-07-14 15:46:21,653 - INFO -   - h1要素数: 1
+2025-07-14 15:46:21,661 - INFO -   - div要素数: 18
+2025-07-14 15:46:21,669 - INFO -   - a要素数: 75
+2025-07-14 15:46:21,680 - INFO -   - novel_body要素数: 0
+2025-07-14 15:46:21,691 - INFO -   - novel_view要素数: 0
+2025-07-14 15:46:21,700 - INFO - ページ検証: 正常なページ
+2025-07-14 15:46:21,710 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/8.html
+2025-07-14 15:46:21,762 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:46:21,810 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:46:21,863 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:46:21,912 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:46:21,966 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:22,014 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:46:22,064 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:22,115 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:46:22,163 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:22,210 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=8 HTTP/1.1" 200 None
+2025-07-14 15:46:25,236 - INFO - ページ取得開始: https://syosetu.org/novel/379375/9.html
+2025-07-14 15:46:27,246 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:46:27,293 - DEBUG - https://syosetu.org:443 "GET /novel/379375/9.html HTTP/1.1" 200 None
+2025-07-14 15:46:27,304 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29903bytes
+2025-07-14 15:46:27,314 - INFO - CloudScraperで取得されたHTMLテキスト長: 21353
+2025-07-14 15:46:27,340 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:46:27,353 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 浅い夢見て酔いもする - ハーメルン
+2025-07-14 15:46:27,365 - INFO -   - 本文長: 4418文字
+2025-07-14 15:46:27,394 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/9.html" property="og:url"/>
+<meta content="浅い夢見て酔いもする - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽は...
+2025-07-14 15:46:27,405 - INFO -   - h1要素数: 1
+2025-07-14 15:46:27,415 - INFO -   - div要素数: 18
+2025-07-14 15:46:27,424 - INFO -   - a要素数: 75
+2025-07-14 15:46:27,434 - INFO -   - novel_body要素数: 0
+2025-07-14 15:46:27,443 - INFO -   - novel_view要素数: 0
+2025-07-14 15:46:27,455 - INFO - ページ検証: 正常なページ
+2025-07-14 15:46:27,463 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/9.html
+2025-07-14 15:46:27,513 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:46:27,563 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:46:27,613 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:46:27,663 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:46:27,716 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:27,767 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:46:27,817 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:27,870 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:46:27,914 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:27,963 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=9 HTTP/1.1" 200 None
+2025-07-14 15:46:31,997 - INFO - ページ取得開始: https://syosetu.org/novel/379375/10.html
+2025-07-14 15:46:34,007 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:46:34,054 - DEBUG - https://syosetu.org:443 "GET /novel/379375/10.html HTTP/1.1" 200 None
+2025-07-14 15:46:34,067 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28644bytes
+2025-07-14 15:46:34,075 - INFO - CloudScraperで取得されたHTMLテキスト長: 21264
+2025-07-14 15:46:34,103 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:46:34,114 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 個人から企業へ、憧れから本物へ - ハーメルン
+2025-07-14 15:46:34,123 - INFO -   - 本文長: 3888文字
+2025-07-14 15:46:34,145 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/10.html" property="og:url"/>
+<meta content="個人から企業へ、憧れから本物へ - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそ...
+2025-07-14 15:46:34,157 - INFO -   - h1要素数: 1
+2025-07-14 15:46:34,165 - INFO -   - div要素数: 18
+2025-07-14 15:46:34,173 - INFO -   - a要素数: 75
+2025-07-14 15:46:34,182 - INFO -   - novel_body要素数: 0
+2025-07-14 15:46:34,192 - INFO -   - novel_view要素数: 0
+2025-07-14 15:46:34,204 - INFO - ページ検証: 正常なページ
+2025-07-14 15:46:34,215 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/10.html
+2025-07-14 15:46:34,267 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:46:34,316 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:46:34,366 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:46:34,417 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:46:34,471 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:34,522 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:46:34,589 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:34,635 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:46:34,683 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:34,730 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=10 HTTP/1.1" 200 None
+2025-07-14 15:46:38,759 - INFO - ページ取得開始: https://syosetu.org/novel/379375/11.html
+2025-07-14 15:46:40,770 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:46:40,817 - DEBUG - https://syosetu.org:443 "GET /novel/379375/11.html HTTP/1.1" 200 None
+2025-07-14 15:46:40,827 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31247bytes
+2025-07-14 15:46:40,837 - INFO - CloudScraperで取得されたHTMLテキスト長: 22301
+2025-07-14 15:46:40,864 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:46:40,877 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - この度の炎上配信について大事なお知らせ - ハーメルン
+2025-07-14 15:46:40,887 - INFO -   - 本文長: 4647文字
+2025-07-14 15:46:40,909 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/11.html" property="og:url"/>
+<meta content="この度の炎上配信について大事なお知らせ - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人...
+2025-07-14 15:46:40,924 - INFO -   - h1要素数: 1
+2025-07-14 15:46:40,934 - INFO -   - div要素数: 18
+2025-07-14 15:46:40,943 - INFO -   - a要素数: 75
+2025-07-14 15:46:40,951 - INFO -   - novel_body要素数: 0
+2025-07-14 15:46:40,961 - INFO -   - novel_view要素数: 0
+2025-07-14 15:46:40,977 - INFO - ページ検証: 正常なページ
+2025-07-14 15:46:40,987 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/11.html
+2025-07-14 15:46:41,035 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:46:41,084 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:46:41,170 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:46:41,216 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:46:41,267 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:41,319 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:46:41,367 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:41,417 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:46:41,466 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:41,514 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=11 HTTP/1.1" 200 None
+2025-07-14 15:46:45,541 - INFO - ページ取得開始: https://syosetu.org/novel/379375/12.html
+2025-07-14 15:46:47,547 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:46:47,596 - DEBUG - https://syosetu.org:443 "GET /novel/379375/12.html HTTP/1.1" 200 None
+2025-07-14 15:46:47,602 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29662bytes
+2025-07-14 15:46:47,606 - INFO - CloudScraperで取得されたHTMLテキスト長: 22118
+2025-07-14 15:46:47,619 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:46:47,625 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 炎上した火でマシュマロ炙る - ハーメルン
+2025-07-14 15:46:47,633 - INFO -   - 本文長: 3990文字
+2025-07-14 15:46:47,648 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/12.html" property="og:url"/>
+<meta content="炎上した火でマシュマロ炙る - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡...
+2025-07-14 15:46:47,655 - INFO -   - h1要素数: 1
+2025-07-14 15:46:47,661 - INFO -   - div要素数: 18
+2025-07-14 15:46:47,666 - INFO -   - a要素数: 75
+2025-07-14 15:46:47,672 - INFO -   - novel_body要素数: 0
+2025-07-14 15:46:47,681 - INFO -   - novel_view要素数: 0
+2025-07-14 15:46:47,690 - INFO - ページ検証: 正常なページ
+2025-07-14 15:46:47,705 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/12.html
+2025-07-14 15:46:47,756 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:46:47,805 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:46:47,856 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:46:47,906 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:46:47,955 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:48,006 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:46:48,057 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:48,107 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:46:48,154 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:48,202 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=12 HTTP/1.1" 200 None
+2025-07-14 15:46:52,237 - INFO - ページ取得開始: https://syosetu.org/novel/379375/13.html
+2025-07-14 15:46:54,248 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:46:54,296 - DEBUG - https://syosetu.org:443 "GET /novel/379375/13.html HTTP/1.1" 200 None
+2025-07-14 15:46:54,307 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29250bytes
+2025-07-14 15:46:54,316 - INFO - CloudScraperで取得されたHTMLテキスト長: 21482
+2025-07-14 15:46:54,346 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:46:54,358 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 初コラボ前のテコ入れ - ハーメルン
+2025-07-14 15:46:54,369 - INFO -   - 本文長: 4061文字
+2025-07-14 15:46:54,402 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/13.html" property="og:url"/>
+<meta content="初コラボ前のテコ入れ - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽...
+2025-07-14 15:46:54,416 - INFO -   - h1要素数: 1
+2025-07-14 15:46:54,429 - INFO -   - div要素数: 18
+2025-07-14 15:46:54,440 - INFO -   - a要素数: 75
+2025-07-14 15:46:54,455 - INFO -   - novel_body要素数: 0
+2025-07-14 15:46:54,466 - INFO -   - novel_view要素数: 0
+2025-07-14 15:46:54,480 - INFO - ページ検証: 正常なページ
+2025-07-14 15:46:54,491 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/13.html
+2025-07-14 15:46:54,548 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:46:54,596 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:46:54,646 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:46:54,697 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:46:54,748 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:54,797 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:46:54,847 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:54,898 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:46:54,946 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:46:54,995 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=13 HTTP/1.1" 200 None
+2025-07-14 15:46:59,012 - INFO - ページ取得開始: https://syosetu.org/novel/379375/14.html
+2025-07-14 15:47:01,021 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:47:01,068 - DEBUG - https://syosetu.org:443 "GET /novel/379375/14.html HTTP/1.1" 200 None
+2025-07-14 15:47:01,078 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30500bytes
+2025-07-14 15:47:01,088 - INFO - CloudScraperで取得されたHTMLテキスト長: 22110
+2025-07-14 15:47:01,120 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:47:01,135 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - デジタルデトックス - ハーメルン
+2025-07-14 15:47:01,145 - INFO -   - 本文長: 4338文字
+2025-07-14 15:47:01,178 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/14.html" property="og:url"/>
+<meta content="デジタルデトックス - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽は...
+2025-07-14 15:47:01,193 - INFO -   - h1要素数: 1
+2025-07-14 15:47:01,205 - INFO -   - div要素数: 18
+2025-07-14 15:47:01,214 - INFO -   - a要素数: 75
+2025-07-14 15:47:01,224 - INFO -   - novel_body要素数: 0
+2025-07-14 15:47:01,232 - INFO -   - novel_view要素数: 0
+2025-07-14 15:47:01,243 - INFO - ページ検証: 正常なページ
+2025-07-14 15:47:01,252 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/14.html
+2025-07-14 15:47:01,304 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:47:01,357 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:47:01,403 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:47:01,455 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:47:01,505 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:47:01,557 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:47:01,607 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:47:01,655 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:47:01,706 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:47:01,751 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=14 HTTP/1.1" 200 None
+2025-07-14 15:47:05,784 - INFO - ページ取得開始: https://syosetu.org/novel/379375/15.html
+2025-07-14 15:47:07,792 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:47:07,839 - DEBUG - https://syosetu.org:443 "GET /novel/379375/15.html HTTP/1.1" 200 None
+2025-07-14 15:47:07,845 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29740bytes
+2025-07-14 15:47:07,850 - INFO - CloudScraperで取得されたHTMLテキスト長: 21882
+2025-07-14 15:47:07,863 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:47:07,873 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 素の自分で復帰配信 - ハーメルン
+2025-07-14 15:47:07,880 - INFO -   - 本文長: 4142文字
+2025-07-14 15:47:07,893 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/15.html" property="og:url"/>
+<meta content="素の自分で復帰配信 - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽は...
+2025-07-14 15:47:07,901 - INFO -   - h1要素数: 1
+2025-07-14 15:47:07,909 - INFO -   - div要素数: 18
+2025-07-14 15:47:07,918 - INFO -   - a要素数: 75
+2025-07-14 15:47:07,928 - INFO -   - novel_body要素数: 0
+2025-07-14 15:47:07,937 - INFO -   - novel_view要素数: 0
+2025-07-14 15:47:07,948 - INFO - ページ検証: 正常なページ
+2025-07-14 15:47:07,959 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/15.html
+2025-07-14 15:47:08,009 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:47:08,057 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:47:08,108 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:47:08,159 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:47:08,208 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:47:08,259 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:47:08,311 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:47:08,360 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:47:08,409 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:47:08,456 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=15 HTTP/1.1" 200 None
+2025-07-14 15:47:12,498 - INFO - ページ取得開始: https://syosetu.org/novel/379375/16.html
+2025-07-14 15:47:14,512 - INFO - CloudScraperで初回試行中...
+2025-07-14 15:47:14,558 - DEBUG - https://syosetu.org:443 "GET /novel/379375/16.html HTTP/1.1" 200 None
+2025-07-14 15:47:14,589 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=38925bytes
+2025-07-14 15:47:14,596 - INFO - CloudScraperで取得されたHTMLテキスト長: 29317
+2025-07-14 15:47:14,631 - INFO - CloudScraper取得ページ分析:
+2025-07-14 15:47:14,647 - INFO -   - タイトル: 胡蝶の夢、或いは不労所得の夢 - 配信外のお仕事色々 - ハーメルン
+2025-07-14 15:47:14,658 - INFO -   - 本文長: 5269文字
+2025-07-14 15:47:14,689 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379375/16.html" property="og:url"/>
+<meta content="配信外のお仕事色々 - 胡蝶の夢、或いは不労所得の夢 - ハーメルン" property="og:title"/>
+<meta content="気付いたらTSタイムリープした主人公。 なお、凡人だからそう簡単に楽は...
+2025-07-14 15:47:14,709 - INFO -   - h1要素数: 1
+2025-07-14 15:47:14,719 - INFO -   - div要素数: 28
+2025-07-14 15:47:14,729 - INFO -   - a要素数: 117
+2025-07-14 15:47:14,739 - INFO -   - novel_body要素数: 0
+2025-07-14 15:47:14,748 - INFO -   - novel_view要素数: 0
+2025-07-14 15:47:14,760 - INFO - ページ検証: 正常なページ
+2025-07-14 15:47:14,770 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379375/16.html
+2025-07-14 15:47:14,822 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 15:47:14,871 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 15:47:14,922 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 15:47:14,973 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 15:47:15,022 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 15:47:15,073 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 15:47:15,123 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 15:47:15,175 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 15:47:15,221 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 15:47:15,269 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=16 HTTP/1.1" 200 None

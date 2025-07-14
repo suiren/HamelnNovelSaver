@@ -5722,3 +5722,323 @@
 2025-07-14 15:00:56,227 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
 2025-07-14 15:00:56,228 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=378070
 2025-07-14 15:00:56,228 - INFO - 小説情報ページ保存完了: 小説情報.html
+2025-07-14 19:28:35,174 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:28:35,175 - INFO - CloudScraper初期化開始
+2025-07-14 19:28:35,183 - INFO - CloudScraper設定完了
+2025-07-14 19:28:35,183 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:28:40,205 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:28:40,205 - INFO - CloudScraper初期化開始
+2025-07-14 19:28:40,209 - INFO - CloudScraper設定完了
+2025-07-14 19:28:40,209 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:28:40,210 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:28:40,210 - INFO - CloudScraper初期化開始
+2025-07-14 19:28:40,212 - INFO - CloudScraper設定完了
+2025-07-14 19:28:40,213 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:28:40,213 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:28:40,214 - INFO - CloudScraper初期化開始
+2025-07-14 19:28:40,216 - INFO - CloudScraper設定完了
+2025-07-14 19:28:40,216 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:28:40,217 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=378070
+2025-07-14 19:28:40,218 - INFO - 感想ページ保存完了: 感想.html
+2025-07-14 19:28:40,218 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:28:40,218 - INFO - CloudScraper初期化開始
+2025-07-14 19:28:40,221 - INFO - CloudScraper設定完了
+2025-07-14 19:28:40,221 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:28:40,222 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=378070
+2025-07-14 19:28:40,223 - INFO - 小説情報ページ保存完了: 小説情報.html
+2025-07-14 19:32:37,459 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:32:37,461 - INFO - CloudScraper初期化開始
+2025-07-14 19:32:37,466 - INFO - CloudScraper設定完了
+2025-07-14 19:32:37,466 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:32:58,185 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:32:58,185 - INFO - CloudScraper初期化開始
+2025-07-14 19:32:58,189 - INFO - CloudScraper設定完了
+2025-07-14 19:32:58,189 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:33:00,196 - INFO - ページ取得開始: https://syosetu.org/novel/378070/
+2025-07-14 19:33:02,199 - INFO - CloudScraperで初回試行中...
+2025-07-14 19:33:02,202 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-14 19:33:02,310 - DEBUG - https://syosetu.org:443 "GET /novel/378070/ HTTP/1.1" 200 None
+2025-07-14 19:33:02,311 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21709bytes
+2025-07-14 19:33:02,312 - INFO - CloudScraperで取得されたHTMLテキスト長: 18631
+2025-07-14 19:33:02,318 - INFO - CloudScraper取得ページ分析:
+2025-07-14 19:33:02,319 - INFO -   - タイトル: ダウナー女神のアクア様 - ハーメルン
+2025-07-14 19:33:02,319 - INFO -   - 本文長: 1871文字
+2025-07-14 19:33:02,321 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378070/" property="og:url"/>
+<meta content="ダウナー女神のアクア様 - ハーメルン" property="og:title"/>
+<meta content="もしもアクアがダウナー系な女神様だったなら。そんな世界線のこのすば。 " property="og:descrip...
+2025-07-14 19:33:02,322 - INFO -   - h1要素数: 1
+2025-07-14 19:33:02,322 - INFO -   - div要素数: 21
+2025-07-14 19:33:02,323 - INFO -   - a要素数: 85
+2025-07-14 19:33:02,323 - INFO -   - novel_body要素数: 0
+2025-07-14 19:33:02,323 - INFO -   - novel_view要素数: 0
+2025-07-14 19:33:02,323 - INFO - ページ検証: 正常なページ
+2025-07-14 19:33:02,323 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378070/
+2025-07-14 19:33:02,324 - INFO - 小説情報抽出開始
+2025-07-14 19:33:02,324 - INFO - タイトル抽出試行中...
+2025-07-14 19:33:02,324 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-14 19:33:02,324 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-14 19:33:02,325 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-14 19:33:02,325 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-14 19:33:02,325 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x78f4f3cd3be0>}
+2025-07-14 19:33:02,325 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x78f4f3cd3be0>} で要素が見つかりませんでした
+2025-07-14 19:33:02,326 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-14 19:33:02,326 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-14 19:33:02,326 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-14 19:33:02,327 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-14 19:33:02,327 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-14 19:33:02,327 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-14 19:33:02,327 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-14 19:33:02,328 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-14 19:33:02,328 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-14 19:33:02,328 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-14 19:33:02,328 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-14 19:33:02,329 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-14 19:33:02,329 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-14 19:33:02,329 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-14 19:33:02,329 - INFO - タイトルセレクター試行: h1 {}
+2025-07-14 19:33:02,330 - INFO - タイトルセレクター試行: title {}
+2025-07-14 19:33:02,330 - INFO - タイトル取得成功: ダウナー女神のアクア様
+2025-07-14 19:33:02,330 - INFO - 作者抽出試行中...
+2025-07-14 19:33:02,330 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-14 19:33:02,330 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-14 19:33:02,331 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-14 19:33:02,331 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-14 19:33:02,331 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-14 19:33:02,331 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-14 19:33:02,331 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-14 19:33:02,332 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-14 19:33:02,332 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x78f4f3d31480>}
+2025-07-14 19:33:02,332 - INFO - 作者取得成功: 全智一皆
+2025-07-14 19:33:02,335 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-14 19:33:02,437 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-14 19:33:02,461 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-14 19:33:02,482 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-14 19:33:02,505 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.gif HTTP/1.1" 200 811
+2025-07-14 19:33:02,531 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.gif HTTP/1.1" 200 1297
+2025-07-14 19:33:02,551 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.gif HTTP/1.1" 200 1294
+2025-07-14 19:33:02,573 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.gif HTTP/1.1" 200 833
+2025-07-14 19:33:02,595 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.gif HTTP/1.1" 200 1102
+2025-07-14 19:33:02,616 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.gif HTTP/1.1" 200 1072
+2025-07-14 19:33:02,639 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.gif HTTP/1.1" 200 1866
+2025-07-14 19:33:02,660 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.gif HTTP/1.1" 200 1014
+2025-07-14 19:33:02,682 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.gif HTTP/1.1" 200 927
+2025-07-14 19:33:02,703 - DEBUG - https://img.syosetu.org:443 "GET /image/square.gif HTTP/1.1" 200 816
+2025-07-14 19:33:02,728 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.gif HTTP/1.1" 200 874
+2025-07-14 19:33:02,755 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.gif HTTP/1.1" 200 833
+2025-07-14 19:33:02,777 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.gif HTTP/1.1" 200 834
+2025-07-14 19:33:02,802 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.gif HTTP/1.1" 200 1136
+2025-07-14 19:33:02,828 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.gif HTTP/1.1" 200 1136
+2025-07-14 19:33:02,850 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.gif HTTP/1.1" 200 898
+2025-07-14 19:33:02,872 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-14 19:33:02,894 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-14 19:33:02,917 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-14 19:33:02,936 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-14 19:33:02,958 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-14 19:33:02,982 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-14 19:33:03,003 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-14 19:33:03,027 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-14 19:33:03,048 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png HTTP/1.1" 200 4864
+2025-07-14 19:33:03,068 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png HTTP/1.1" 200 1566
+2025-07-14 19:33:03,089 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-14 19:33:03,113 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-14 19:33:03,135 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-14 19:33:03,158 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_mokuzi_pc_min.js?202008211 HTTP/1.1" 200 953
+2025-07-14 19:33:03,159 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-14 19:33:03,183 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-14 19:33:03,214 - DEBUG - https://img.syosetu.org:443 "GET /js/ad_dliste.min.js?202501083 HTTP/1.1" 200 536
+2025-07-14 19:33:03,248 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a5.gif HTTP/1.1" 200 166
+2025-07-14 19:33:03,249 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-14 19:33:03,366 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378070 HTTP/1.1" 200 None
+2025-07-14 19:33:03,421 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 19:33:03,469 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 19:33:03,564 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 19:33:03,612 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 19:33:03,614 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-14 19:33:03,623 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-14 19:33:03,635 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=378070
+2025-07-14 19:33:03,635 - INFO - ページ取得開始: https://syosetu.org/?mode=ss_detail&nid=378070
+2025-07-14 19:33:05,637 - INFO - CloudScraperで初回試行中...
+2025-07-14 19:33:05,692 - DEBUG - https://syosetu.org:443 "GET /?mode=ss_detail&nid=378070 HTTP/1.1" 200 None
+2025-07-14 19:33:05,692 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=20483bytes
+2025-07-14 19:33:05,692 - INFO - CloudScraperで取得されたHTMLテキスト長: 19063
+2025-07-14 19:33:05,705 - INFO - CloudScraper取得ページ分析:
+2025-07-14 19:33:05,705 - INFO -   - タイトル: ダウナー女神のアクア様の小説情報 - ハーメルン
+2025-07-14 19:33:05,705 - INFO -   - 本文長: 860文字
+2025-07-14 19:33:05,707 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-14 19:33:05,709 - INFO -   - h1要素数: 1
+2025-07-14 19:33:05,709 - INFO -   - div要素数: 31
+2025-07-14 19:33:05,709 - INFO -   - a要素数: 62
+2025-07-14 19:33:05,710 - INFO -   - novel_body要素数: 0
+2025-07-14 19:33:05,710 - INFO -   - novel_view要素数: 0
+2025-07-14 19:33:05,710 - INFO - ページ検証: 正常なページ
+2025-07-14 19:33:05,710 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=ss_detail&nid=378070
+2025-07-14 19:33:05,733 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-14 19:33:05,761 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-14 19:33:05,785 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-14 19:33:05,808 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-14 19:33:05,831 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-14 19:33:05,852 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-14 19:33:05,873 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-14 19:33:05,893 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-14 19:33:05,916 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-14 19:33:06,002 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-14 19:33:06,026 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-14 19:33:06,048 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-14 19:33:06,070 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-14 19:33:06,093 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-14 19:33:06,115 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-14 19:33:06,117 - DEBUG - Starting new HTTPS connection (3): securepubads.g.doubleclick.net:443
+2025-07-14 19:33:06,134 - DEBUG - Starting new HTTPS connection (3): cpt.geniee.jp:443
+2025-07-14 19:33:06,153 - INFO - 小説情報ページ保存完了: ダウナー女神のアクア様 - 小説情報.html
+2025-07-14 19:33:06,154 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=378070
+2025-07-14 19:33:06,154 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070
+2025-07-14 19:33:08,156 - INFO - CloudScraperで初回試行中...
+2025-07-14 19:33:08,214 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070 HTTP/1.1" 200 None
+2025-07-14 19:33:08,215 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29529bytes
+2025-07-14 19:33:08,215 - INFO - CloudScraperで取得されたHTMLテキスト長: 26051
+2025-07-14 19:33:08,224 - INFO - CloudScraper取得ページ分析:
+2025-07-14 19:33:08,224 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-14 19:33:08,224 - INFO -   - 本文長: 2293文字
+2025-07-14 19:33:08,228 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-14 19:33:08,230 - INFO -   - h1要素数: 1
+2025-07-14 19:33:08,230 - INFO -   - div要素数: 30
+2025-07-14 19:33:08,231 - INFO -   - a要素数: 114
+2025-07-14 19:33:08,231 - INFO -   - novel_body要素数: 0
+2025-07-14 19:33:08,231 - INFO -   - novel_view要素数: 0
+2025-07-14 19:33:08,232 - INFO - ページ検証: 正常なページ
+2025-07-14 19:33:08,232 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070
+2025-07-14 19:33:08,253 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-14 19:33:08,275 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-14 19:33:08,277 - DEBUG - Starting new HTTPS connection (4): securepubads.g.doubleclick.net:443
+2025-07-14 19:33:08,290 - DEBUG - Starting new HTTPS connection (4): cpt.geniee.jp:443
+2025-07-14 19:33:08,312 - INFO - 感想ページ保存完了: ダウナー女神のアクア様 - 感想.html
+2025-07-14 19:33:08,312 - INFO - ページ取得開始: https://syosetu.org/novel/378070/1.html
+2025-07-14 19:33:10,314 - INFO - CloudScraperで初回試行中...
+2025-07-14 19:33:10,359 - DEBUG - https://syosetu.org:443 "GET /novel/378070/1.html HTTP/1.1" 200 None
+2025-07-14 19:33:10,377 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=42613bytes
+2025-07-14 19:33:10,377 - INFO - CloudScraperで取得されたHTMLテキスト長: 28315
+2025-07-14 19:33:10,390 - INFO - CloudScraper取得ページ分析:
+2025-07-14 19:33:10,390 - INFO -   - タイトル: ダウナー女神のアクア様 - 序章　彼と彼女の出会い - ハーメルン
+2025-07-14 19:33:10,390 - INFO -   - 本文長: 7259文字
+2025-07-14 19:33:10,397 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378070/1.html" property="og:url"/>
+<meta content="序章　彼と彼女の出会い - ダウナー女神のアクア様 - ハーメルン" property="og:title"/>
+<meta content="もしもアクアがダウナー系な女神様だったなら。そんな世界線のこのすば。 " ...
+2025-07-14 19:33:10,399 - INFO -   - h1要素数: 1
+2025-07-14 19:33:10,399 - INFO -   - div要素数: 20
+2025-07-14 19:33:10,399 - INFO -   - a要素数: 76
+2025-07-14 19:33:10,399 - INFO -   - novel_body要素数: 0
+2025-07-14 19:33:10,399 - INFO -   - novel_view要素数: 0
+2025-07-14 19:33:10,399 - INFO - ページ検証: 正常なページ
+2025-07-14 19:33:10,400 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378070/1.html
+2025-07-14 19:33:10,452 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 19:33:10,501 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 19:33:10,553 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 19:33:10,602 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 19:33:10,656 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 19:33:10,742 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 19:33:10,792 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 19:33:10,883 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 19:33:10,963 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 19:33:11,010 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378070&v=1 HTTP/1.1" 200 None
+2025-07-14 19:33:14,026 - INFO - ページ取得開始: https://syosetu.org/novel/378070/2.html
+2025-07-14 19:33:16,029 - INFO - CloudScraperで初回試行中...
+2025-07-14 19:33:16,075 - DEBUG - https://syosetu.org:443 "GET /novel/378070/2.html HTTP/1.1" 200 None
+2025-07-14 19:33:16,076 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=35873bytes
+2025-07-14 19:33:16,076 - INFO - CloudScraperで取得されたHTMLテキスト長: 23605
+2025-07-14 19:33:16,085 - INFO - CloudScraper取得ページ分析:
+2025-07-14 19:33:16,085 - INFO -   - タイトル: ダウナー女神のアクア様 - 第一話　女神、降り立つ。そしてやらかす。 - ハーメルン
+2025-07-14 19:33:16,085 - INFO -   - 本文長: 6263文字
+2025-07-14 19:33:16,089 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378070/2.html" property="og:url"/>
+<meta content="第一話　女神、降り立つ。そしてやらかす。 - ダウナー女神のアクア様 - ハーメルン" property="og:title"/>
+<meta content="もしもアクアがダウナー系な女神様だったなら。そんな世界線...
+2025-07-14 19:33:16,091 - INFO -   - h1要素数: 1
+2025-07-14 19:33:16,091 - INFO -   - div要素数: 18
+2025-07-14 19:33:16,092 - INFO -   - a要素数: 75
+2025-07-14 19:33:16,092 - INFO -   - novel_body要素数: 0
+2025-07-14 19:33:16,092 - INFO -   - novel_view要素数: 0
+2025-07-14 19:33:16,092 - INFO - ページ検証: 正常なページ
+2025-07-14 19:33:16,092 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378070/2.html
+2025-07-14 19:33:16,143 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 19:33:16,191 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 19:33:16,245 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 19:33:16,290 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 19:33:16,343 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 19:33:16,394 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 19:33:16,443 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 19:33:16,492 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 19:33:16,540 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 19:33:16,588 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378070&v=2 HTTP/1.1" 200 None
+2025-07-14 19:33:19,601 - INFO - ページ取得開始: https://syosetu.org/novel/378070/3.html
+2025-07-14 19:33:21,603 - INFO - CloudScraperで初回試行中...
+2025-07-14 19:33:21,649 - DEBUG - https://syosetu.org:443 "GET /novel/378070/3.html HTTP/1.1" 200 None
+2025-07-14 19:33:21,666 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=42014bytes
+2025-07-14 19:33:21,666 - INFO - CloudScraperで取得されたHTMLテキスト長: 29668
+2025-07-14 19:33:21,681 - INFO - CloudScraper取得ページ分析:
+2025-07-14 19:33:21,681 - INFO -   - タイトル: ダウナー女神のアクア様 - 第二話　今日を何とか頑張るぞい！ - ハーメルン
+2025-07-14 19:33:21,681 - INFO -   - 本文長: 6596文字
+2025-07-14 19:33:21,687 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378070/3.html" property="og:url"/>
+<meta content="第二話　今日を何とか頑張るぞい！ - ダウナー女神のアクア様 - ハーメルン" property="og:title"/>
+<meta content="もしもアクアがダウナー系な女神様だったなら。そんな世界線のこのす...
+2025-07-14 19:33:21,689 - INFO -   - h1要素数: 1
+2025-07-14 19:33:21,689 - INFO -   - div要素数: 28
+2025-07-14 19:33:21,689 - INFO -   - a要素数: 107
+2025-07-14 19:33:21,689 - INFO -   - novel_body要素数: 0
+2025-07-14 19:33:21,689 - INFO -   - novel_view要素数: 0
+2025-07-14 19:33:21,690 - INFO - ページ検証: 正常なページ
+2025-07-14 19:33:21,690 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378070/3.html
+2025-07-14 19:33:21,743 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 19:33:21,793 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 19:33:21,845 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 19:33:21,893 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 19:33:21,942 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 19:33:21,995 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 19:33:22,046 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 19:33:22,098 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 19:33:22,144 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 19:33:22,192 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378070&v=3 HTTP/1.1" 200 None

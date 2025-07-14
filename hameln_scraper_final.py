@@ -35,9 +35,9 @@ class HamelnFinalScraper:
         self.session = requests.Session()
         self.debug_mode = True
         
-        # 🎛️ 機能制御フラグ（Norton検出回避のため、新機能は無効化）
-        self.enable_novel_info_saving = False  # 小説情報保存機能
-        self.enable_comments_saving = False    # 感想保存機能
+        # 🎛️ 機能制御フラグ（Norton検出問題解決により、新機能を有効化）
+        self.enable_novel_info_saving = True   # 小説情報保存機能
+        self.enable_comments_saving = True     # 感想保存機能
         
         self.setup_logging()
         self.setup_scrapers()
