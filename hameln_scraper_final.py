@@ -1142,7 +1142,8 @@ class HamelnFinalScraper:
     def detect_comments_pagination(self, soup, base_url):
         """🆕 感想ページのページネーションを検出"""
         try:
-            page_links = [base_url]  # 最初のページ
+            page_links = []
+            base_page_num = self.extract_page_number(base_url)
             
             # ページネーションの検出パターン
             pagination_selectors = [
@@ -1176,9 +1177,15 @@ class HamelnFinalScraper:
                             else:
                                 continue
                             
-                            if full_url not in page_links:
+                            # 重複チェック（ページ番号ベース）
+                            page_num = self.extract_page_number(full_url)
+                            if not any(self.extract_page_number(existing_url) == page_num for existing_url in page_links):
                                 page_links.append(full_url)
                     break
+            
+            # ベースURLがリストに含まれていない場合は追加
+            if not any(self.extract_page_number(url) == base_page_num for url in page_links):
+                page_links.append(base_url)
             
             # ページ番号順にソート
             page_links.sort(key=lambda url: self.extract_page_number(url))
@@ -1255,7 +1262,7 @@ class HamelnFinalScraper:
             # 感想を挿入する場所を特定
             content_area = integrated_soup.find('div', class_='content') or integrated_soup.find('div', class_='main') or integrated_soup.find('body')
             
-            if content_area:
+            if content_area and all_comments:
                 # 統合情報を追加
                 info_div = integrated_soup.new_tag('div', class_='comments-integration-info')
                 info_div.string = f"📄 統合表示: 全{total_pages}ページの感想を統合しました ({len(all_comments)}件)"
@@ -1264,13 +1271,16 @@ class HamelnFinalScraper:
                 
                 # 全感想を挿入
                 for comment in all_comments:
-                    content_area.append(copy.deepcopy(comment))
+                    if comment:  # Noneチェック
+                        content_area.append(copy.deepcopy(comment))
             
             self.debug_log("感想ページ統合完了")
             return integrated_soup
             
         except Exception as e:
             self.debug_log(f"感想ページ統合作成エラー: {e}", "ERROR")
+            import traceback
+            self.debug_log(f"統合エラー詳細: {traceback.format_exc()}", "ERROR")
             return base_soup
         
     def get_chapter_links(self, soup, base_novel_url):
