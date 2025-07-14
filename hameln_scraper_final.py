@@ -26,6 +26,7 @@ from datetime import datetime
 import gzip
 import zlib
 import brotli
+import copy
 
 class HamelnFinalScraper:
     def __init__(self, base_url="https://syosetu.org"):
@@ -632,8 +633,8 @@ class HamelnFinalScraper:
         print("=== ブラウザレベル完全リソース保存完了 ===")
         return soup
     
-    def fix_local_navigation_links(self, soup, chapter_mapping, current_chapter_url, index_file = None):
-        """ナビゲーションリンクをローカルファイルへのリンクに修正（強化版）"""
+    def fix_local_navigation_links(self, soup, chapter_mapping, current_chapter_url, index_file = None, novel_info_file = None, comments_file = None):
+        """ナビゲーションリンクをローカルファイルへのリンクに修正（強化版 + 小説情報・感想対応）"""
         print("ナビゲーションリンクをローカル用に修正中...")
         
         # 1. 目次リンクの修正（複数のパターンに対応）
@@ -727,6 +728,24 @@ class HamelnFinalScraper:
                 link['class'] = link.get('class', []) + ['disabled']
                 link['style'] = 'color: #999; cursor: not-allowed; text-decoration: none;'
                 print(f"無効な次の話リンク修正: {link_text} -> 無効化")
+        
+        # 4. 🆕 小説情報・感想ページへのリンク修正
+        if novel_info_file or comments_file:
+            info_and_comment_links = soup.find_all('a', href=True)
+            for link in info_and_comment_links:
+                href = link.get('href')
+                if not href:
+                    continue
+                
+                # 小説情報ページのリンク修正
+                if novel_info_file and ('mode=ss_detail' in href or '小説情報' in link.get_text()):
+                    link['href'] = novel_info_file
+                    print(f"小説情報リンク修正: {href} -> {novel_info_file}")
+                
+                # 感想ページのリンク修正
+                elif comments_file and ('mode=review' in href or '感想' in link.get_text()):
+                    link['href'] = comments_file
+                    print(f"感想リンク修正: {href} -> {comments_file}")
         
         return soup
     
@@ -1031,13 +1050,13 @@ class HamelnFinalScraper:
             return None
 
     def save_comments_page(self, comments_url, output_dir, novel_title):
-        """感想ページを取得・保存"""
+        """感想ページを取得・保存（複数ページ対応）"""
         try:
             self.debug_log(f"感想ページを取得中: {comments_url}")
             
-            # 感想ページを取得
-            comments_soup = self.get_page(comments_url)
-            if not comments_soup:
+            # 🆕 複数ページの感想を取得
+            all_pages_content = self.get_all_comments_pages(comments_url)
+            if not all_pages_content:
                 self.debug_log("感想ページの取得に失敗しました", "ERROR")
                 return None
             
@@ -1046,7 +1065,7 @@ class HamelnFinalScraper:
             comments_filename = f"{safe_title} - 感想"
             
             comments_file_path = self.save_complete_page(
-                comments_soup,
+                all_pages_content,
                 comments_url,
                 comments_filename,
                 output_dir,
@@ -1063,6 +1082,196 @@ class HamelnFinalScraper:
         except Exception as e:
             self.debug_log(f"感想ページ保存エラー: {e}", "ERROR")
             return None
+
+    def get_all_comments_pages(self, base_comments_url):
+        """🆕 複数ページの感想を全て取得して統合"""
+        try:
+            self.debug_log("感想ページのページネーション検出を開始")
+            
+            # 最初のページを取得
+            first_page_soup = self.get_page(base_comments_url)
+            if not first_page_soup:
+                return None
+            
+            # ページネーションを検出
+            page_links = self.detect_comments_pagination(first_page_soup, base_comments_url)
+            
+            if len(page_links) <= 1:
+                # 単一ページの場合
+                self.debug_log("感想は1ページのみです")
+                return first_page_soup
+            
+            self.debug_log(f"感想ページ数: {len(page_links)}ページ")
+            
+            # 全ページを取得
+            all_comments = []
+            
+            for page_num, page_url in enumerate(page_links, 1):
+                self.debug_log(f"感想ページ {page_num}/{len(page_links)} を取得中: {page_url}")
+                
+                if page_num == 1:
+                    # 最初のページは既に取得済み
+                    page_soup = first_page_soup
+                else:
+                    # 2ページ目以降を取得
+                    time.sleep(2)  # サーバー負荷軽減
+                    page_soup = self.get_page(page_url)
+                    if not page_soup:
+                        self.debug_log(f"感想ページ {page_num} の取得に失敗", "WARNING")
+                        continue
+                
+                # 感想コンテンツを抽出
+                comments_content = self.extract_comments_content(page_soup)
+                if comments_content:
+                    all_comments.extend(comments_content)
+            
+            if not all_comments:
+                self.debug_log("感想コンテンツが見つかりませんでした", "WARNING")
+                return first_page_soup
+            
+            # 統合されたHTMLを作成
+            integrated_soup = self.create_integrated_comments_page(first_page_soup, all_comments, len(page_links))
+            self.debug_log(f"感想ページ統合完了: {len(all_comments)}件の感想を統合")
+            
+            return integrated_soup
+            
+        except Exception as e:
+            self.debug_log(f"感想ページ統合エラー: {e}", "ERROR")
+            return None
+
+    def detect_comments_pagination(self, soup, base_url):
+        """🆕 感想ページのページネーションを検出"""
+        try:
+            page_links = [base_url]  # 最初のページ
+            
+            # ページネーションの検出パターン
+            pagination_selectors = [
+                # 一般的なページネーション
+                'div.pagination a',
+                'div.pager a', 
+                'div.page-nav a',
+                # ハーメルン特有のパターン
+                'a[href*="mode=review"][href*="page="]',
+                'a[href*="&page="]'
+            ]
+            
+            for selector in pagination_selectors:
+                pagination_links = soup.select(selector)
+                if pagination_links:
+                    self.debug_log(f"ページネーション発見: {selector} ({len(pagination_links)}個のリンク)")
+                    
+                    for link in pagination_links:
+                        href = link.get('href')
+                        if href and 'page=' in href:
+                            # 相対URLを絶対URLに変換
+                            if href.startswith('?'):
+                                # ?page=2 形式
+                                full_url = base_url.split('?')[0] + href
+                            elif href.startswith('/'):
+                                # /path?page=2 形式
+                                full_url = 'https://syosetu.org' + href
+                            elif href.startswith('http'):
+                                # https://... 形式
+                                full_url = href
+                            else:
+                                continue
+                            
+                            if full_url not in page_links:
+                                page_links.append(full_url)
+                    break
+            
+            # ページ番号順にソート
+            page_links.sort(key=lambda url: self.extract_page_number(url))
+            
+            self.debug_log(f"検出されたページ: {len(page_links)}ページ")
+            for i, url in enumerate(page_links, 1):
+                self.debug_log(f"  ページ{i}: {url}")
+            
+            return page_links
+            
+        except Exception as e:
+            self.debug_log(f"ページネーション検出エラー: {e}", "ERROR")
+            return [base_url]
+
+    def extract_page_number(self, url):
+        """URLからページ番号を抽出"""
+        try:
+            import re
+            match = re.search(r'page=(\d+)', url)
+            return int(match.group(1)) if match else 1
+        except:
+            return 1
+
+    def extract_comments_content(self, soup):
+        """🆕 感想コンテンツを抽出"""
+        try:
+            comments = []
+            
+            # 感想コンテンツの検出パターン
+            comment_selectors = [
+                'div.review-item',
+                'div.comment-item', 
+                'div.impression',
+                'tr[id*="review"]',  # テーブル形式の感想
+                'div[class*="review"]',
+                'div[class*="comment"]'
+            ]
+            
+            for selector in comment_selectors:
+                comment_elements = soup.select(selector)
+                if comment_elements:
+                    self.debug_log(f"感想要素発見: {selector} ({len(comment_elements)}件)")
+                    comments.extend(comment_elements)
+                    break
+            
+            # フォールバック: テーブル行から感想を抽出
+            if not comments:
+                table_rows = soup.find_all('tr')
+                for row in table_rows:
+                    # 感想らしいテキストを含む行を検出
+                    text = row.get_text().strip()
+                    if len(text) > 20 and any(keyword in text for keyword in ['面白', '良い', '素晴らしい', '感動', '続き']):
+                        comments.append(row)
+            
+            self.debug_log(f"抽出された感想: {len(comments)}件")
+            return comments
+            
+        except Exception as e:
+            self.debug_log(f"感想コンテンツ抽出エラー: {e}", "ERROR")
+            return []
+
+    def create_integrated_comments_page(self, base_soup, all_comments, total_pages):
+        """🆕 統合された感想ページを作成"""
+        try:
+            # ベースHTMLをコピー
+            integrated_soup = copy.deepcopy(base_soup)
+            
+            # 既存の感想コンテンツを削除
+            for selector in ['div.review-item', 'div.comment-item', 'tr[id*="review"]']:
+                existing_comments = integrated_soup.select(selector)
+                for comment in existing_comments:
+                    comment.decompose()
+            
+            # 感想を挿入する場所を特定
+            content_area = integrated_soup.find('div', class_='content') or integrated_soup.find('div', class_='main') or integrated_soup.find('body')
+            
+            if content_area:
+                # 統合情報を追加
+                info_div = integrated_soup.new_tag('div', class_='comments-integration-info')
+                info_div.string = f"📄 統合表示: 全{total_pages}ページの感想を統合しました ({len(all_comments)}件)"
+                info_div['style'] = 'background: #f0f8ff; padding: 10px; margin: 10px 0; border: 1px solid #cce7ff; border-radius: 5px;'
+                content_area.insert(0, info_div)
+                
+                # 全感想を挿入
+                for comment in all_comments:
+                    content_area.append(copy.deepcopy(comment))
+            
+            self.debug_log("感想ページ統合完了")
+            return integrated_soup
+            
+        except Exception as e:
+            self.debug_log(f"感想ページ統合作成エラー: {e}", "ERROR")
+            return base_soup
         
     def get_chapter_links(self, soup, base_novel_url):
         """章のリンクを抽出（ハーメルン特化版）"""
@@ -1809,13 +2018,17 @@ class HamelnFinalScraper:
             print("📁 リソースファイルのダウンロードが完了しました。各章ではリソース再処理をスキップします。")
             
             # 🆕 新機能: 小説情報・感想保存（フラグで制御）
+            info_file_name = None
+            comments_file_name = None
+            
             if self.enable_novel_info_saving:
                 print("小説情報ページを保存中...")
                 info_url = self.extract_novel_info_url(soup)
                 if info_url:
                     info_file_path = self.save_novel_info_page(info_url, output_dir, title)
                     if info_file_path:
-                        print(f"📝 小説情報ページ保存完了: {os.path.basename(info_file_path)}")
+                        info_file_name = os.path.basename(info_file_path)
+                        print(f"📝 小説情報ページ保存完了: {info_file_name}")
                     else:
                         print("⚠️ 小説情報ページの保存に失敗しました")
                 else:
@@ -1827,7 +2040,8 @@ class HamelnFinalScraper:
                 if comments_url:
                     comments_file_path = self.save_comments_page(comments_url, output_dir, title)
                     if comments_file_path:
-                        print(f"💬 感想ページ保存完了: {os.path.basename(comments_file_path)}")
+                        comments_file_name = os.path.basename(comments_file_path)
+                        print(f"💬 感想ページ保存完了: {comments_file_name}")
                     else:
                         print("⚠️ 感想ページの保存に失敗しました")
                 else:
@@ -1885,12 +2099,14 @@ class HamelnFinalScraper:
                     else:
                         chapter_title_text = f"第{i}話"
                     
-                    # ローカルリンク修正（第1回目：仮のマッピング）
+                    # ローカルリンク修正（第1回目：仮のマッピング + 小説情報・感想対応）
                     chapter_soup = self.fix_local_navigation_links(
                         chapter_soup, 
                         chapter_mapping, 
                         chapter_url, 
-                        index_filename
+                        index_filename,
+                        info_file_name,
+                        comments_file_name
                     )
                     
                     # 章を個別ファイルとして保存
@@ -1932,7 +2148,9 @@ class HamelnFinalScraper:
                         soup, 
                         chapter_mapping, 
                         chapter_info['url'], 
-                        index_filename
+                        index_filename,
+                        info_file_name,
+                        comments_file_name
                     )
                     
                     with open(chapter_info['file_path'], 'w', encoding='utf-8') as f:
@@ -1949,7 +2167,9 @@ class HamelnFinalScraper:
                     soup, 
                     chapter_mapping, 
                     novel_url, 
-                    None
+                    None,
+                    info_file_name,
+                    comments_file_name
                 )
                 
                 with open(index_file_path, 'w', encoding='utf-8') as f:
