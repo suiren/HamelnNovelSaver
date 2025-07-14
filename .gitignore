@@ -86,4 +86,4 @@ analyze_*.py
 build.bat
 build.ps1
 build.sh
-*.spec
+# *.spec - コメントアウト：プロジェクトで必要
