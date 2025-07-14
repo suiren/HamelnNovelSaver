@@ -233,7 +233,7 @@ class HamelnGUI:
             
             # 🎛️ 新機能制御（Norton検出回避のため無効化、必要時にTrueに変更）
             # self.scraper.enable_novel_info_saving = True   # 小説情報保存を有効化
-            # self.scraper.enable_comments_saving = True     # 感想保存を有効化
+            self.scraper.enable_comments_saving = True     # 感想保存を有効化
             
             # スクレイパーのデバッグログをGUIに転送
             original_debug_log = self.scraper.debug_log
