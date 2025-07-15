@@ -1,0 +1,36 @@
+name: 🗑️ Cleanup Old Workflow Runs
+
+on:
+  schedule:
+    # 毎月1日の午前2時に実行
+    - cron: '0 2 1 * *'
+  workflow_dispatch:
+    inputs:
+      days_to_keep:
+        description: '保持する日数（デフォルト：30日）'
+        required: false
+        default: '30'
+        type: string
+
+jobs:
+  cleanup:
+    name: 🧹 古いワークフロー実行の削除
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🗑️ 古いワークフロー実行を削除
+      uses: Mattraks/delete-workflow-runs@v2
+      with:
+        token: ${{ github.token }}
+        repository: ${{ github.repository }}
+        retain_days: ${{ github.event.inputs.days_to_keep || '30' }}
+        keep_minimum_runs: 5
+        delete_workflow_pattern: 'CI/CD Pipeline for Hameln Novel Saver'
+        delete_run_by_conclusion_pattern: 'failure,cancelled'
+        
+    - name: 📊 クリーンアップ完了報告
+      run: |
+        echo "🎉 ワークフロー実行履歴のクリーンアップが完了しました"
+        echo "📅 ${{ github.event.inputs.days_to_keep || '30' }}日より古い実行を削除"
+        echo "🔄 最低5個の実行は保持"
+        echo "❌ 失敗・キャンセルされた実行を優先削除"
