@@ -1275,12 +1275,6 @@ class HamelnFinalScraper:
             content_area = integrated_soup.find('div', class_='content') or integrated_soup.find('div', class_='main') or integrated_soup.find('body')
             
             if content_area and all_comments:
-                # 統合情報を追加
-                info_div = integrated_soup.new_tag('div', class_='comments-integration-info')
-                info_div.string = f"📄 統合表示: 全{total_pages}ページの感想を統合しました ({len(all_comments)}件)"
-                info_div['style'] = 'background: #f0f8ff; padding: 10px; margin: 10px 0; border: 1px solid #cce7ff; border-radius: 5px;'
-                content_area.insert(0, info_div)
-                
                 # 全感想を挿入
                 for comment in all_comments:
                     if comment:  # Noneチェック
