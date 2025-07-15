@@ -198,45 +198,7 @@ jobs:
     - name: 🎯 Complete novel download test
       run: |
         mkdir -p full-test-downloads
-        python -c "
-from hameln_scraper_final import HamelnFinalScraper
-import os
-
-scraper = HamelnFinalScraper()
-test_url = 'https://syosetu.org/novel/378070/'
-output_dir = 'full-test-downloads'
-
-print('Complete novel download test starting...')
-try:
-    result = scraper.save_novel(test_url, output_dir)
-    if result:
-        print(f'✅ Complete download successful: {result}')
-        
-        # Check if comments were saved with multiple pages
-        import glob
-        comment_files = glob.glob(os.path.join(output_dir, '**/感想*.html'), recursive=True)
-        if comment_files:
-            print(f'✅ Comments files found: {len(comment_files)}')
-            for comment_file in comment_files:
-                size = os.path.getsize(comment_file)
-                print(f'  - {os.path.basename(comment_file)}: {size} bytes')
-                
-                # Check if it contains multiple pages indication
-                with open(comment_file, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    if '統合表示' in content:
-                        print(f'  ✅ Multiple pages integrated in {os.path.basename(comment_file)}')
-                    else:
-                        print(f'  ℹ️ Single page comments in {os.path.basename(comment_file)}')
-        else:
-            print('⚠️ No comment files found')
-    else:
-        print('❌ Complete download failed')
-except Exception as e:
-    print(f'❌ Error during download: {e}')
-    import traceback
-    traceback.print_exc()
-" > full-integration-test-results.txt 2>&1
+        python test_full_integration.py > full-integration-test-results.txt 2>&1
         
     - name: 📊 Upload complete test results and downloads
       uses: actions/upload-artifact@v3
