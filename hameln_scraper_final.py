@@ -1165,12 +1165,11 @@ class HamelnFinalScraper:
                     
                     # 感想ページのURL形式を検出
                     if 'mode=review' in href:
-                        # 対応するローカルファイルを探す
-                        for original_url, local_file in page_mapping.items():
-                            if href in original_url or original_url in href:
-                                link['href'] = local_file
-                                self.debug_log(f"感想ページリンク修正: {href} -> {local_file}")
-                                break
+                        # より精密なマッチングを実装
+                        matched_file = self.find_matching_comments_page(href, page_mapping)
+                        if matched_file:
+                            link['href'] = matched_file
+                            self.debug_log(f"感想ページリンク修正: {href} -> {matched_file}")
                     
                     # 目次ページへのリンクを修正
                     elif ('/novel/' in href and href.endswith('/')) or '目次' in link.get_text():
@@ -1194,6 +1193,78 @@ class HamelnFinalScraper:
                 
         except Exception as e:
             self.debug_log(f"感想ページリンク修正エラー: {e}", "ERROR")
+    
+    def find_matching_comments_page(self, href, page_mapping):
+        """感想ページのURLから正確なローカルファイルを探す"""
+        try:
+            # リンクからページ番号を抽出
+            target_page_num = self.extract_page_number(href)
+            
+            # 基本URL（nid部分）を抽出
+            target_base_url = self.extract_base_comments_url(href)
+            
+            # マッピングから対応するファイルを検索
+            for original_url, local_file in page_mapping.items():
+                original_page_num = self.extract_page_number(original_url)
+                original_base_url = self.extract_base_comments_url(original_url)
+                
+                # 基本URLとページ番号が一致する場合
+                if (target_base_url == original_base_url and 
+                    target_page_num == original_page_num):
+                    return local_file
+            
+            return None
+            
+        except Exception as e:
+            self.debug_log(f"感想ページマッチングエラー: {e}", "ERROR")
+            return None
+    
+    def extract_page_number(self, url):
+        """URLからページ番号を抽出"""
+        try:
+            from urllib.parse import urlparse, parse_qs
+            
+            # URLをパース
+            parsed = urlparse(url)
+            params = parse_qs(parsed.query)
+            
+            # page パラメータからページ番号を取得
+            if 'page' in params:
+                return int(params['page'][0])
+            else:
+                return 1  # デフォルトは1ページ目
+                
+        except Exception as e:
+            self.debug_log(f"ページ番号抽出エラー: {e}", "DEBUG")
+            return 1
+    
+    def extract_base_comments_url(self, url):
+        """URLから基本URL（nid部分）を抽出"""
+        try:
+            from urllib.parse import urlparse, parse_qs
+            
+            # URLをパース
+            parsed = urlparse(url)
+            params = parse_qs(parsed.query)
+            
+            # 基本的なパラメータのみを保持
+            base_params = {}
+            if 'mode' in params:
+                base_params['mode'] = params['mode'][0]
+            if 'nid' in params:
+                base_params['nid'] = params['nid'][0]
+            
+            # 基本URLを構築
+            base_url = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
+            if base_params:
+                param_str = '&'.join([f"{k}={v}" for k, v in base_params.items()])
+                base_url += f"?{param_str}"
+            
+            return base_url
+            
+        except Exception as e:
+            self.debug_log(f"基本URL抽出エラー: {e}", "ERROR")
+            return url
 
     def get_all_comments_pages(self, base_comments_url):
         """🆕 複数ページの感想を全て取得して統合"""
@@ -1317,15 +1388,6 @@ class HamelnFinalScraper:
         except Exception as e:
             self.debug_log(f"ページネーション検出エラー: {e}", "ERROR")
             return [base_url]
-
-    def extract_page_number(self, url):
-        """URLからページ番号を抽出"""
-        try:
-            import re
-            match = re.search(r'page=(\d+)', url)
-            return int(match.group(1)) if match else 1
-        except:
-            return 1
 
     def extract_comments_content(self, soup):
         """🆕 感想コンテンツを抽出"""
