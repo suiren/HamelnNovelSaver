@@ -1,0 +1,20 @@
+==================================== ERRORS ====================================
+_________________ ERROR collecting test_comments_pagination.py _________________
+ImportError while importing test module '/home/runner/work/HamelnNovelSaver/HamelnNovelSaver/test_comments_pagination.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+test_comments_pagination.py:14: in <module>
+    from hameln_scraper_final import HamelnFinalScraper
+hameln_scraper_final.py:28: in <module>
+    import brotli
+E   ModuleNotFoundError: No module named 'brotli'
+--------------------------------- JSON report ----------------------------------
+report saved to: test-report.json
+- Generated html report: file:///home/runner/work/HamelnNovelSaver/HamelnNovelSaver/test-report.html -
+=========================== short test summary info ============================
+ERROR test_comments_pagination.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 2.41s ===============================
+Error: Process completed with exit code 2.

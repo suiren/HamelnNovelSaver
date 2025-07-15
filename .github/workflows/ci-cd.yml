@@ -45,8 +45,7 @@ jobs:
     - name: 🔧 Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 lxml cloudscraper undetected-chromedriver selenium pillow
-        pip install pytest pytest-html pytest-json-report
+        pip install -r requirements.txt
         
     - name: 🧪 Run unit tests
       run: |
@@ -78,7 +77,7 @@ jobs:
     - name: 🔧 Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 lxml cloudscraper undetected-chromedriver selenium pillow
+        pip install -r requirements.txt
         
     - name: 🌐 Run functional tests
       run: |
@@ -108,7 +107,7 @@ jobs:
     - name: 🔧 Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 lxml cloudscraper undetected-chromedriver selenium pillow
+        pip install -r requirements.txt
         
     - name: 🔗 Run integration tests with live site
       run: |
@@ -142,7 +141,7 @@ jobs:
     - name: 🔧 Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 lxml cloudscraper undetected-chromedriver selenium pillow
+        pip install -r requirements.txt
         pip install pyinstaller
         
     - name: 🏗️ Build executable
@@ -207,7 +206,7 @@ jobs:
     - name: 🔧 Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 lxml cloudscraper undetected-chromedriver selenium pillow
+        pip install -r requirements.txt
         
     - name: 🎯 Complete novel download test
       run: |
