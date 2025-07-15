@@ -401,9 +401,22 @@ class HamelnFinalScraper:
     def download_resource(self, url, base_path):
         """リソース（画像、CSS、JS等）をダウンロード"""
         try:
-            # 絶対URLに変換
+            # 絶対URLに変換（ハーメルン特化）
             if not url.startswith('http'):
-                url = urljoin(self.base_url, url)
+                if url.startswith('./resources/'):
+                    # ./resources/style.css -> https://img.syosetu.org/css/style.css
+                    resource_file = url.replace('./resources/', '')
+                    if resource_file.endswith('.css'):
+                        url = f"https://img.syosetu.org/css/{resource_file}"
+                    elif resource_file.endswith('.js'):
+                        url = f"https://img.syosetu.org/js/{resource_file}"
+                    else:
+                        url = f"https://img.syosetu.org/image/{resource_file}"
+                elif url.startswith('./'):
+                    # ./banner.png -> https://img.syosetu.org/image/banner.png
+                    url = f"https://img.syosetu.org/image/{url[2:]}"
+                else:
+                    url = urljoin(self.base_url, url)
             
             # ファイル名を生成
             parsed = urlparse(url)
@@ -744,8 +757,9 @@ class HamelnFinalScraper:
                 
                 # 感想ページのリンク修正
                 elif comments_file and ('mode=review' in href or '感想' in link.get_text()):
-                    link['href'] = comments_file
-                    print(f"感想リンク修正: {href} -> {comments_file}")
+                    # 感想フォルダ内の最初のページへのリンクに修正
+                    link['href'] = '感想/感想 - ページ1.html'
+                    print(f"感想リンク修正: {href} -> 感想/感想 - ページ1.html")
         
         return soup
     
@@ -1061,7 +1075,7 @@ class HamelnFinalScraper:
             self.debug_log(f"小説情報ページ保存エラー: {e}", "ERROR")
             return None
 
-    def save_comments_page(self, comments_url, output_dir, novel_title):
+    def save_comments_page(self, comments_url, output_dir, novel_title, index_file_name=None):
         """🆕 感想ページを各ページ個別に保存（ハーメルン元構造保持）"""
         try:
             self.debug_log(f"感想ページを取得中: {comments_url}")
@@ -1115,6 +1129,9 @@ class HamelnFinalScraper:
                     self.debug_log(f"感想ページ{page_num}保存完了: {os.path.basename(page_file_path)}")
             
             if saved_files:
+                # 感想ページ間のリンクを修正
+                self.debug_log("感想ページ間のリンクを修正中...")
+                self.fix_comments_page_links(saved_files, page_links, index_file_name)
                 self.debug_log(f"感想ページ保存完了: {len(saved_files)}ページ保存")
                 return saved_files[0]  # 最初のページのパスを返す（互換性のため）
             else:
@@ -1124,6 +1141,59 @@ class HamelnFinalScraper:
         except Exception as e:
             self.debug_log(f"感想ページ保存エラー: {e}", "ERROR")
             return None
+    
+    def fix_comments_page_links(self, saved_files, page_urls, index_file_name=None):
+        """感想ページ間のリンクを修正"""
+        try:
+            # ページファイル名とURLのマッピングを作成
+            page_mapping = {}
+            for i, (file_path, url) in enumerate(zip(saved_files, page_urls), 1):
+                page_mapping[url] = os.path.basename(file_path)
+            
+            # 各ページのリンクを修正
+            for i, file_path in enumerate(saved_files):
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                soup = BeautifulSoup(content, 'html.parser')
+                
+                # 感想ページのナビゲーションリンクを修正
+                for link in soup.find_all('a', href=True):
+                    href = link.get('href')
+                    if not href:
+                        continue
+                    
+                    # 感想ページのURL形式を検出
+                    if 'mode=review' in href:
+                        # 対応するローカルファイルを探す
+                        for original_url, local_file in page_mapping.items():
+                            if href in original_url or original_url in href:
+                                link['href'] = local_file
+                                self.debug_log(f"感想ページリンク修正: {href} -> {local_file}")
+                                break
+                    
+                    # 目次ページへのリンクを修正
+                    elif ('/novel/' in href and href.endswith('/')) or '目次' in link.get_text():
+                        # 親ディレクトリの目次ページへのリンクに修正
+                        if index_file_name:
+                            link['href'] = f'../{index_file_name}'
+                            self.debug_log(f"目次リンク修正: {href} -> ../{index_file_name}")
+                        else:
+                            link['href'] = '../目次.html'
+                            self.debug_log(f"目次リンク修正: {href} -> ../目次.html")
+                    
+                    # 小説情報ページへのリンクを修正
+                    elif 'mode=ss_detail' in href or '小説情報' in link.get_text():
+                        # 親ディレクトリの小説情報ページへのリンクに修正
+                        link['href'] = '../小説情報.html'
+                        self.debug_log(f"小説情報リンク修正: {href} -> ../小説情報.html")
+                
+                # 修正されたコンテンツを保存
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(str(soup))
+                
+        except Exception as e:
+            self.debug_log(f"感想ページリンク修正エラー: {e}", "ERROR")
 
     def get_all_comments_pages(self, base_comments_url):
         """🆕 複数ページの感想を全て取得して統合"""
@@ -2094,7 +2164,9 @@ class HamelnFinalScraper:
                 print("感想ページを保存中...")
                 comments_url = self.extract_comments_url(soup)
                 if comments_url:
-                    comments_file_path = self.save_comments_page(comments_url, output_dir, title)
+                    # index_filenameが定義されていない場合は単一ページなので None を渡す
+                    index_file_name = index_filename if 'index_filename' in locals() else None
+                    comments_file_path = self.save_comments_page(comments_url, output_dir, title, index_file_name)
                     if comments_file_path:
                         comments_file_name = os.path.basename(comments_file_path)
                         print(f"💬 感想ページ保存完了: {comments_file_name}")
