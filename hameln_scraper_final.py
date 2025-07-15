@@ -1041,7 +1041,7 @@ class HamelnFinalScraper:
             self.debug_log(f"感想URL抽出エラー: {e}", "ERROR")
             return None
 
-    def save_novel_info_page(self, info_url, output_dir, novel_title):
+    def save_novel_info_page(self, info_url, output_dir, novel_title, index_file_name=None, comments_file_name=None):
         """小説情報ページを取得・保存"""
         try:
             self.debug_log(f"小説情報ページを取得中: {info_url}")
@@ -1051,6 +1051,9 @@ class HamelnFinalScraper:
             if not info_soup:
                 self.debug_log("小説情報ページの取得に失敗しました", "ERROR")
                 return None
+            
+            # 保存前に小説情報ページのリンク修正
+            info_soup = self.fix_novel_info_page_links(info_soup, index_file_name, comments_file_name)
             
             # 保存処理
             safe_title = re.sub(r'[<>:"/\\|?*]', '_', novel_title)
@@ -1074,6 +1077,45 @@ class HamelnFinalScraper:
         except Exception as e:
             self.debug_log(f"小説情報ページ保存エラー: {e}", "ERROR")
             return None
+    
+    def fix_novel_info_page_links(self, soup, index_file_name=None, comments_file_name=None):
+        """小説情報ページのリンクを修正"""
+        try:
+            # 小説情報ページから感想ページへのリンクを修正
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                if not href:
+                    continue
+                
+                # 感想ページへのリンクを修正
+                if 'mode=review' in href:
+                    # 感想フォルダ内の最初のページへのリンクに修正
+                    link['href'] = '感想/感想 - ページ1.html'
+                    self.debug_log(f"小説情報ページ感想リンク修正: {href} -> 感想/感想 - ページ1.html")
+                
+                # 目次ページへのリンクを修正
+                elif '/novel/' in href and href.endswith('/'):
+                    if index_file_name:
+                        link['href'] = index_file_name
+                        self.debug_log(f"小説情報ページ目次リンク修正: {href} -> {index_file_name}")
+                    else:
+                        link['href'] = '目次.html'
+                        self.debug_log(f"小説情報ページ目次リンク修正: {href} -> 目次.html")
+                
+                # 小説本文ページへのリンクを修正（章ページ）
+                elif '/novel/' in href and re.search(r'/\d+\.html', href):
+                    # 章ページへのリンクは相対パスで修正
+                    chapter_num = re.search(r'/(\d+)\.html', href)
+                    if chapter_num:
+                        chapter_title = f"第{chapter_num.group(1)}話"
+                        link['href'] = f"{chapter_title}.html"
+                        self.debug_log(f"小説情報ページ章リンク修正: {href} -> {chapter_title}.html")
+            
+            return soup
+            
+        except Exception as e:
+            self.debug_log(f"小説情報ページリンク修正エラー: {e}", "ERROR")
+            return soup
 
     def save_comments_page(self, comments_url, output_dir, novel_title, index_file_name=None):
         """🆕 感想ページを各ページ個別に保存（ハーメルン元構造保持）"""
@@ -2209,19 +2251,7 @@ class HamelnFinalScraper:
             
             # 🆕 新機能: 小説情報・感想保存（フラグで制御）
             
-            if self.enable_novel_info_saving:
-                print("小説情報ページを保存中...")
-                info_url = self.extract_novel_info_url(soup)
-                if info_url:
-                    info_file_path = self.save_novel_info_page(info_url, output_dir, title)
-                    if info_file_path:
-                        info_file_name = os.path.basename(info_file_path)
-                        print(f"📝 小説情報ページ保存完了: {info_file_name}")
-                    else:
-                        print("⚠️ 小説情報ページの保存に失敗しました")
-                else:
-                    print("⚠️ 小説情報ページのURLが見つかりませんでした")
-            
+            # 感想ページを先に保存（小説情報ページから参照するため）
             if self.enable_comments_saving:
                 print("感想ページを保存中...")
                 comments_url = self.extract_comments_url(soup)
@@ -2234,8 +2264,27 @@ class HamelnFinalScraper:
                         print(f"💬 感想ページ保存完了: {comments_file_name}")
                     else:
                         print("⚠️ 感想ページの保存に失敗しました")
+                        comments_file_name = None
                 else:
                     print("⚠️ 感想ページのURLが見つかりませんでした")
+                    comments_file_name = None
+            else:
+                comments_file_name = None
+            
+            if self.enable_novel_info_saving:
+                print("小説情報ページを保存中...")
+                info_url = self.extract_novel_info_url(soup)
+                if info_url:
+                    # index_filenameが定義されていない場合は単一ページなので None を渡す
+                    index_file_name = index_filename if 'index_filename' in locals() else None
+                    info_file_path = self.save_novel_info_page(info_url, output_dir, title, index_file_name, comments_file_name)
+                    if info_file_path:
+                        info_file_name = os.path.basename(info_file_path)
+                        print(f"📝 小説情報ページ保存完了: {info_file_name}")
+                    else:
+                        print("⚠️ 小説情報ページの保存に失敗しました")
+                else:
+                    print("⚠️ 小説情報ページのURLが見つかりませんでした")
         
         if not chapter_links:
             print("章リンクが見つかりませんでした。単一ページとして処理します。")
