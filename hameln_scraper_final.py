@@ -40,6 +40,8 @@ class HamelnFinalScraper:
         self.enable_novel_info_saving = True   # 小説情報保存機能
         self.enable_comments_saving = True     # 感想保存機能
         
+        self.resource_cache = {}  # URL -> local_filename mapping
+        
         self.setup_logging()
         self.setup_scrapers()
         
@@ -399,11 +401,20 @@ class HamelnFinalScraper:
         return True
             
     def download_resource(self, url, base_path):
-        """リソース（画像、CSS、JS等）をダウンロード"""
+        """リソース（画像、CSS、JS等）をダウンロード（キャッシュ機能付き）"""
         try:
             # 絶対URLに変換
             if not url.startswith('http'):
                 url = urljoin(self.base_url, url)
+            
+            if url in self.resource_cache:
+                cached_filename = self.resource_cache[url]
+                cached_path = os.path.join(base_path, cached_filename)
+                if os.path.exists(cached_path):
+                    print(f"キャッシュから取得: {cached_filename}")
+                    return cached_filename
+                else:
+                    del self.resource_cache[url]
             
             # ファイル名を生成
             parsed = urlparse(url)
@@ -426,6 +437,7 @@ class HamelnFinalScraper:
             # 既存ファイルの保護（エンコーディング破損防止）
             if os.path.exists(local_path):
                 print(f"既存ファイルを使用（上書き防止）: {filename}")
+                self.resource_cache[url] = filename
                 return filename
             
             # リソースをダウンロード
@@ -442,6 +454,9 @@ class HamelnFinalScraper:
                     f.write(response.content)
             
             print(f"リソース保存: {filename}")
+            
+            self.resource_cache[url] = filename
+            
             return filename
             
         except Exception as e:
@@ -2213,11 +2228,21 @@ class HamelnFinalScraper:
         else:
             return None
         
+    def get_cache_stats(self):
+        """リソースキャッシュの統計情報を取得"""
+        return {
+            'cached_resources': len(self.resource_cache),
+            'cache_entries': list(self.resource_cache.keys())[:10]  # 最初の10個のみ表示
+        }
+
     def close(self):
         """リソースを解放"""
         if self.driver:
             self.driver.quit()
             print("ブラウザを閉じました")
+        
+        stats = self.get_cache_stats()
+        self.debug_log(f"リソースキャッシュ統計: {stats['cached_resources']}個のリソースをキャッシュしました")
 
 def main():
     """メイン関数"""
