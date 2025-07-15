@@ -146,6 +146,8 @@ jobs:
         
     - name: 🏗️ Build executable
       run: |
+        ls -la *.spec
+        pwd
         pyinstaller --clean HamelnBookDownloader.spec
         
     - name: 📦 Upload executable
