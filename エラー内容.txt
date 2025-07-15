@@ -1,20 +1,14 @@
-==================================== ERRORS ====================================
-_________________ ERROR collecting test_comments_pagination.py _________________
-ImportError while importing test module '/home/runner/work/HamelnNovelSaver/HamelnNovelSaver/test_comments_pagination.py'.
-Hint: make sure your test modules/packages have valid Python names.
-Traceback:
-/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/importlib/__init__.py:126: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-test_comments_pagination.py:14: in <module>
-    from hameln_scraper_final import HamelnFinalScraper
-hameln_scraper_final.py:28: in <module>
-    import brotli
-E   ModuleNotFoundError: No module named 'brotli'
---------------------------------- JSON report ----------------------------------
-report saved to: test-report.json
-- Generated html report: file:///home/runner/work/HamelnNovelSaver/HamelnNovelSaver/test-report.html -
-=========================== short test summary info ============================
-ERROR test_comments_pagination.py
-!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-=============================== 1 error in 2.41s ===============================
-Error: Process completed with exit code 2.
+Run ls -la *.spec
+-rw-r--r-- 1 runner docker 738 Jul 15 02:00 HamelnNovelSave.spec
+-rw-r--r-- 1 runner docker 707 Jul 15 02:00 hameln_gui.spec
+-rw-r--r-- 1 runner docker 767 Jul 15 02:00 hameln_gui_fixed.spec
+-rw-r--r-- 1 runner docker 726 Jul 15 02:00 hameln_scraper_final.spec
+/home/runner/work/HamelnNovelSaver/HamelnNovelSaver
+683 INFO: PyInstaller: 6.14.2, contrib hooks: 2025.6
+683 INFO: Python: 3.10.18
+685 INFO: Platform: Linux-6.11.0-1018-azure-x86_64-with-glibc2.39
+685 INFO: Python environment: /opt/hostedtoolcache/Python/3.10.18/x64
+871 INFO: UPX is available but is disabled on non-Windows due to known compatibility problems.
+871 INFO: Removing temporary files and cleaning cache in /home/runner/.cache/pyinstaller
+ERROR: Spec file "HamelnBookDownloader.spec" not found!
+Error: Process completed with exit code 1.
