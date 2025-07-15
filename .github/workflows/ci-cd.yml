@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Hameln Novel Saver
+name: 🚀 ハーメルン小説保存アプリ - 自動テスト・ビルド・配布
 
 on:
   push:
@@ -22,7 +22,7 @@ on:
 
 jobs:
   test:
-    name: 🧪 Tests
+    name: 🧪 単体テスト（感想ページ複数取得機能）
     runs-on: ubuntu-latest
     
     steps:
@@ -61,7 +61,7 @@ jobs:
           test-report.json
           
   functional-test:
-    name: 🌐 Functional Tests
+    name: 🌐 機能テスト（URL変換・ページネーション）
     runs-on: ubuntu-latest
     needs: test
     
@@ -91,7 +91,7 @@ jobs:
         path: functional-test-results.txt
         
   integration-test:
-    name: 🔗 Integration Tests (Live Site)
+    name: 🔗 統合テスト（実際のハーメルンサイト接続）
     runs-on: ubuntu-latest
     needs: [test, functional-test]
     
@@ -125,7 +125,7 @@ jobs:
           test_integrated_comments.html
           
   build:
-    name: 🏗️ Build Executable
+    name: 🏗️ 実行ファイルビルド（Windows・Linux対応）
     runs-on: ubuntu-latest
     needs: [test, functional-test, integration-test]
     
@@ -157,7 +157,7 @@ jobs:
         path: dist/HamelnBookDownloader
         
   executable-test:
-    name: 🚀 Executable Test
+    name: 🚀 実行ファイル動作テスト
     runs-on: ubuntu-latest
     needs: build
     
@@ -191,7 +191,7 @@ jobs:
           executable-test-downloads/
           
   full-integration-test:
-    name: 🎯 Complete Novel Download Test
+    name: 🎯 完全統合テスト（小説フルダウンロード検証）
     runs-on: ubuntu-latest
     needs: executable-test
     if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch' && github.event.inputs.run_full_test == 'true')
@@ -225,7 +225,7 @@ jobs:
           full-test-downloads/
           
   summary-report:
-    name: 📋 Test Summary Report
+    name: 📋 テスト結果サマリー
     runs-on: ubuntu-latest
     needs: [test, functional-test, integration-test, build, executable-test, full-integration-test]
     if: always()
