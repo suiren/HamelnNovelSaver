@@ -1056,31 +1056,61 @@ class HamelnFinalScraper:
             return None
 
     def save_comments_page(self, comments_url, output_dir, novel_title):
-        """感想ページを取得・保存（複数ページ対応）"""
+        """🆕 感想ページを各ページ個別に保存（ハーメルン元構造保持）"""
         try:
             self.debug_log(f"感想ページを取得中: {comments_url}")
             
-            # 🆕 複数ページの感想を取得
-            all_pages_content = self.get_all_comments_pages(comments_url)
-            if not all_pages_content:
+            # 感想保存フォルダを作成
+            safe_title = re.sub(r'[<>:"/\\|?*]', '_', novel_title)
+            comments_dir = os.path.join(output_dir, "感想")
+            os.makedirs(comments_dir, exist_ok=True)
+            self.debug_log(f"感想保存フォルダ作成: {comments_dir}")
+            
+            # 最初のページを取得してページネーション検出
+            first_page_soup = self.get_page(comments_url)
+            if not first_page_soup:
                 self.debug_log("感想ページの取得に失敗しました", "ERROR")
                 return None
             
-            # 保存処理
-            safe_title = re.sub(r'[<>:"/\\|?*]', '_', novel_title)
-            comments_filename = f"{safe_title} - 感想"
+            # ページネーションを検出
+            page_links = self.detect_comments_pagination(first_page_soup, comments_url)
+            self.debug_log(f"感想ページ数: {len(page_links)}ページ")
             
-            comments_file_path = self.save_complete_page(
-                all_pages_content,
-                comments_url,
-                comments_filename,
-                output_dir,
-                comments_url
-            )
+            saved_files = []
             
-            if comments_file_path:
-                self.debug_log(f"感想ページ保存完了: {os.path.basename(comments_file_path)}")
-                return comments_file_path
+            # 各ページを個別に保存
+            for page_num, page_url in enumerate(page_links, 1):
+                self.debug_log(f"感想ページ {page_num}/{len(page_links)} を保存中: {page_url}")
+                
+                # ページを取得
+                if page_num == 1:
+                    page_soup = first_page_soup
+                else:
+                    time.sleep(2)  # サーバー負荷軽減
+                    page_soup = self.get_page(page_url)
+                    if not page_soup:
+                        self.debug_log(f"感想ページ {page_num} の取得に失敗", "WARNING")
+                        continue
+                
+                # ファイル名生成
+                comments_filename = f"感想 - ページ{page_num}"
+                
+                # 個別ページを保存
+                page_file_path = self.save_complete_page(
+                    page_soup,
+                    page_url,
+                    comments_filename,
+                    comments_dir,
+                    page_url
+                )
+                
+                if page_file_path:
+                    saved_files.append(page_file_path)
+                    self.debug_log(f"感想ページ{page_num}保存完了: {os.path.basename(page_file_path)}")
+            
+            if saved_files:
+                self.debug_log(f"感想ページ保存完了: {len(saved_files)}ページ保存")
+                return saved_files[0]  # 最初のページのパスを返す（互換性のため）
             else:
                 self.debug_log("感想ページの保存に失敗しました", "ERROR")
                 return None
@@ -1226,12 +1256,14 @@ class HamelnFinalScraper:
         try:
             comments = []
             
-            # 感想コンテンツの検出パターン
+            # 感想コンテンツの検出パターン（ハーメルンの実際の構造に対応）
             comment_selectors = [
-                'div.review-item',
+                'div[id*="review"]',     # ハーメルンの実際の構造: div.review_7612892
+                'div.review-item',       # 一般的な構造
                 'div.comment-item', 
                 'div.impression',
-                'tr[id*="review"]',  # テーブル形式の感想
+                'tr[id*="review"]',      # テーブル形式の感想
+                'div[class*="review_"]', # review_で始まるクラス
                 'div[class*="review"]',
                 'div[class*="comment"]'
             ]
@@ -1265,8 +1297,8 @@ class HamelnFinalScraper:
             # ベースHTMLをコピー
             integrated_soup = copy.deepcopy(base_soup)
             
-            # 既存の感想コンテンツを削除
-            for selector in ['div.review-item', 'div.comment-item', 'tr[id*="review"]']:
+            # 既存の感想コンテンツを削除（ハーメルンの実際の構造に対応）
+            for selector in ['div[id*="review"]', 'div.review-item', 'div.comment-item', 'tr[id*="review"]']:
                 existing_comments = integrated_soup.select(selector)
                 for comment in existing_comments:
                     comment.decompose()
