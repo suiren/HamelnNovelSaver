@@ -10472,3 +10472,1365 @@ b'{console.log("undetected chromedriver 1337!")}                                
 2025-07-14 15:47:15,175 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
 2025-07-14 15:47:15,221 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
 2025-07-14 15:47:15,269 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379375&v=16 HTTP/1.1" 200 None
+2025-07-14 20:03:38,779 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 20:03:38,781 - INFO - CloudScraper初期化開始
+2025-07-14 20:03:38,811 - INFO - CloudScraper設定完了
+2025-07-14 20:03:38,813 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 20:03:40,832 - INFO - ページ取得開始: https://syosetu.org/novel/379532/
+2025-07-14 20:03:42,842 - INFO - CloudScraperで初回試行中...
+2025-07-14 20:03:42,844 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-14 20:03:47,333 - DEBUG - https://syosetu.org:443 "GET /novel/379532/ HTTP/1.1" 200 None
+2025-07-14 20:03:47,341 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=23953bytes
+2025-07-14 20:03:47,349 - INFO - CloudScraperで取得されたHTMLテキスト長: 21179
+2025-07-14 20:03:47,366 - INFO - CloudScraper取得ページ分析:
+2025-07-14 20:03:47,380 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン
+2025-07-14 20:03:47,389 - INFO -   - 本文長: 1702文字
+2025-07-14 20:03:47,415 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/" property="og:url"/>
+<meta content="雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキャラになろうとしただけのTS転...
+2025-07-14 20:03:47,428 - INFO -   - h1要素数: 1
+2025-07-14 20:03:47,436 - INFO -   - div要素数: 21
+2025-07-14 20:03:47,444 - INFO -   - a要素数: 104
+2025-07-14 20:03:47,451 - INFO -   - novel_body要素数: 0
+2025-07-14 20:03:47,458 - INFO -   - novel_view要素数: 0
+2025-07-14 20:03:47,467 - INFO - ページ検証: 正常なページ
+2025-07-14 20:03:47,474 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/
+2025-07-14 20:03:47,484 - INFO - 小説情報抽出開始
+2025-07-14 20:03:47,490 - INFO - タイトル抽出試行中...
+2025-07-14 20:03:47,496 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-14 20:03:47,502 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-14 20:03:47,509 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-14 20:03:47,514 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-14 20:03:47,521 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x00000227DF334AE0>}
+2025-07-14 20:03:47,530 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x00000227DF334AE0>} で要素が見つかりませんでした
+2025-07-14 20:03:47,539 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-14 20:03:47,547 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-14 20:03:47,555 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-14 20:03:47,563 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-14 20:03:47,570 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-14 20:03:47,576 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-14 20:03:47,583 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-14 20:03:47,590 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-14 20:03:47,595 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-14 20:03:47,600 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-14 20:03:47,606 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-14 20:03:47,612 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-14 20:03:47,618 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-14 20:03:47,624 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-14 20:03:47,629 - INFO - タイトルセレクター試行: h1 {}
+2025-07-14 20:03:47,635 - INFO - タイトルセレクター試行: title {}
+2025-07-14 20:03:47,643 - INFO - タイトル取得成功: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。
+2025-07-14 20:03:47,649 - INFO - 作者抽出試行中...
+2025-07-14 20:03:47,656 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-14 20:03:47,662 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-14 20:03:47,669 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-14 20:03:47,676 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-14 20:03:47,682 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-14 20:03:47,690 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-14 20:03:47,696 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-14 20:03:47,702 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-14 20:03:47,710 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x00000227DF334F40>}
+2025-07-14 20:03:47,719 - INFO - セレクター a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x00000227DF334F40>} で要素が見つかりませんでした
+2025-07-14 20:03:47,727 - INFO - 作者セレクター試行: div {'class': 'author'}
+2025-07-14 20:03:47,734 - INFO - セレクター div {'class': 'author'} で要素が見つかりませんでした
+2025-07-14 20:03:47,740 - INFO - 作者セレクター試行: span {'class': 'author'}
+2025-07-14 20:03:47,747 - INFO - セレクター span {'class': 'author'} で要素が見つかりませんでした
+2025-07-14 20:03:47,753 - INFO - 作者セレクター試行: a {'class': 'author'}
+2025-07-14 20:03:47,760 - INFO - セレクター a {'class': 'author'} で要素が見つかりませんでした
+2025-07-14 20:03:47,768 - WARNING - 基本情報取得失敗、詳細調査を実行
+2025-07-14 20:03:47,776 - INFO - === ページ構造詳細調査 ===
+2025-07-14 20:03:47,781 - INFO - h1タグ数: 1
+2025-07-14 20:03:47,786 - INFO -   h1[0]: class=['siteTitle'], text=...
+2025-07-14 20:03:47,791 - INFO - リンク数: 104
+2025-07-14 20:03:47,797 - INFO - ユーザーリンク数: 0
+2025-07-14 20:03:47,802 - INFO - 関連クラス名: []
+2025-07-14 20:03:47,808 - INFO - 関連spanクラス名: []
+2025-07-14 20:03:47,813 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-14 20:03:47,886 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-14 20:03:47,923 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-14 20:03:47,948 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-14 20:03:47,970 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-14 20:03:47,979 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-14 20:03:47,991 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-14 20:03:48,009 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-14 20:03:48,120 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532 HTTP/1.1" 200 None
+2025-07-14 20:03:48,223 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 20:03:48,276 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 20:03:48,367 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 20:03:48,463 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 20:03:48,469 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-14 20:03:48,471 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-14 20:03:48,484 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-14 20:03:48,491 - INFO - ページ取得開始: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-14 20:03:50,497 - INFO - CloudScraperで初回試行中...
+2025-07-14 20:03:50,558 - DEBUG - https://syosetu.org:443 "GET /?mode=ss_detail&nid=379532 HTTP/1.1" 200 None
+2025-07-14 20:03:50,563 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21523bytes
+2025-07-14 20:03:50,568 - INFO - CloudScraperで取得されたHTMLテキスト長: 19929
+2025-07-14 20:03:50,578 - INFO - CloudScraper取得ページ分析:
+2025-07-14 20:03:50,584 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。の小説情報 - ハーメルン
+2025-07-14 20:03:50,590 - INFO -   - 本文長: 963文字
+2025-07-14 20:03:50,598 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-14 20:03:50,603 - INFO -   - h1要素数: 1
+2025-07-14 20:03:50,608 - INFO -   - div要素数: 32
+2025-07-14 20:03:50,613 - INFO -   - a要素数: 68
+2025-07-14 20:03:50,618 - INFO -   - novel_body要素数: 0
+2025-07-14 20:03:50,623 - INFO -   - novel_view要素数: 0
+2025-07-14 20:03:50,628 - INFO - ページ検証: 正常なページ
+2025-07-14 20:03:50,633 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-14 20:03:50,656 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-14 20:03:50,681 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-14 20:03:50,715 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-14 20:03:50,743 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-14 20:03:50,768 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-14 20:03:50,793 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-14 20:03:50,816 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-14 20:03:50,843 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-14 20:03:50,870 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-14 20:03:50,901 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-14 20:03:50,927 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-14 20:03:50,955 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-14 20:03:50,979 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-14 20:03:51,007 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-14 20:03:51,035 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-14 20:03:51,040 - DEBUG - Starting new HTTPS connection (3): securepubads.g.doubleclick.net:443
+2025-07-14 20:03:51,042 - DEBUG - Starting new HTTPS connection (3): cpt.geniee.jp:443
+2025-07-14 20:03:51,061 - INFO - 小説情報ページ保存完了: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 小説情報.html
+2025-07-14 20:03:51,069 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=379532
+2025-07-14 20:03:51,075 - INFO - 感想ページのページネーション検出を開始
+2025-07-14 20:03:51,082 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=379532
+2025-07-14 20:03:53,089 - INFO - CloudScraperで初回試行中...
+2025-07-14 20:03:53,150 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=379532 HTTP/1.1" 200 None
+2025-07-14 20:03:53,156 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28850bytes
+2025-07-14 20:03:53,162 - INFO - CloudScraperで取得されたHTMLテキスト長: 25846
+2025-07-14 20:03:53,174 - INFO - CloudScraper取得ページ分析:
+2025-07-14 20:03:53,181 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。の感想 - ハーメルン
+2025-07-14 20:03:53,187 - INFO -   - 本文長: 2069文字
+2025-07-14 20:03:53,198 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-14 20:03:53,204 - INFO -   - h1要素数: 1
+2025-07-14 20:03:53,208 - INFO -   - div要素数: 29
+2025-07-14 20:03:53,212 - INFO -   - a要素数: 110
+2025-07-14 20:03:53,217 - INFO -   - novel_body要素数: 0
+2025-07-14 20:03:53,222 - INFO -   - novel_view要素数: 0
+2025-07-14 20:03:53,227 - INFO - ページ検証: 正常なページ
+2025-07-14 20:03:53,232 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=379532
+2025-07-14 20:03:53,248 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (12個のリンク)
+2025-07-14 20:03:53,253 - INFO - 検出されたページ: 1ページ
+2025-07-14 20:03:53,262 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=379532
+2025-07-14 20:03:53,269 - INFO - 感想は1ページのみです
+2025-07-14 20:03:53,294 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-14 20:03:53,331 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-14 20:03:53,339 - DEBUG - Starting new HTTPS connection (4): securepubads.g.doubleclick.net:443
+2025-07-14 20:03:53,342 - DEBUG - Starting new HTTPS connection (4): cpt.geniee.jp:443
+2025-07-14 20:03:53,403 - DEBUG - https://syosetu.org:443 "GET /registkey.cgi?1%21R5dn1Kpn%21nb0H3dAbM4 HTTP/1.1" 200 140
+2025-07-14 20:03:53,422 - INFO - 感想ページ保存完了: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 感想.html
+2025-07-14 20:03:53,429 - INFO - ページ取得開始: https://syosetu.org/novel/379532/1.html
+2025-07-14 20:03:55,437 - INFO - CloudScraperで初回試行中...
+2025-07-14 20:03:55,495 - DEBUG - https://syosetu.org:443 "GET /novel/379532/1.html HTTP/1.1" 200 None
+2025-07-14 20:03:55,502 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30685bytes
+2025-07-14 20:03:55,508 - INFO - CloudScraperで取得されたHTMLテキスト長: 22213
+2025-07-14 20:03:55,523 - INFO - CloudScraper取得ページ分析:
+2025-07-14 20:03:55,531 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 理不尽ゲーに転生してしまった一般TS転生者の場合 - ハーメルン
+2025-07-14 20:03:55,539 - INFO -   - 本文長: 4343文字
+2025-07-14 20:03:55,553 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/1.html" property="og:url"/>
+<meta content="理不尽ゲーに転生してしまった一般TS転生者の場合 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="...
+2025-07-14 20:03:55,563 - INFO -   - h1要素数: 1
+2025-07-14 20:03:55,572 - INFO -   - div要素数: 20
+2025-07-14 20:03:55,583 - INFO -   - a要素数: 76
+2025-07-14 20:03:55,589 - INFO -   - novel_body要素数: 0
+2025-07-14 20:03:55,595 - INFO -   - novel_view要素数: 0
+2025-07-14 20:03:55,601 - INFO - ページ検証: 正常なページ
+2025-07-14 20:03:55,609 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/1.html
+2025-07-14 20:03:55,665 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 20:03:55,716 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 20:03:55,766 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 20:03:55,821 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 20:03:55,880 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 20:03:55,970 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 20:03:56,029 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 20:03:56,121 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 20:03:56,207 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 20:03:56,254 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=1 HTTP/1.1" 200 None
+2025-07-14 20:03:59,272 - INFO - ページ取得開始: https://syosetu.org/novel/379532/2.html
+2025-07-14 20:04:01,278 - INFO - CloudScraperで初回試行中...
+2025-07-14 20:04:01,329 - DEBUG - https://syosetu.org:443 "GET /novel/379532/2.html HTTP/1.1" 200 None
+2025-07-14 20:04:01,357 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=39254bytes
+2025-07-14 20:04:01,363 - INFO - CloudScraperで取得されたHTMLテキスト長: 26572
+2025-07-14 20:04:01,379 - INFO - CloudScraper取得ページ分析:
+2025-07-14 20:04:01,388 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 不確定存在のキミのために - ハーメルン
+2025-07-14 20:04:01,394 - INFO -   - 本文長: 6468文字
+2025-07-14 20:04:01,407 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/2.html" property="og:url"/>
+<meta content="不確定存在のキミのために - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこ...
+2025-07-14 20:04:01,416 - INFO -   - h1要素数: 1
+2025-07-14 20:04:01,420 - INFO -   - div要素数: 20
+2025-07-14 20:04:01,425 - INFO -   - a要素数: 77
+2025-07-14 20:04:01,431 - INFO -   - novel_body要素数: 0
+2025-07-14 20:04:01,436 - INFO -   - novel_view要素数: 0
+2025-07-14 20:04:01,442 - INFO - ページ検証: 正常なページ
+2025-07-14 20:04:01,451 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/2.html
+2025-07-14 20:04:01,505 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 20:04:01,556 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 20:04:01,609 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 20:04:01,660 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 20:04:01,716 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:01,768 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 20:04:01,821 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:01,873 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 20:04:01,926 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:01,970 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=2 HTTP/1.1" 200 None
+2025-07-14 20:04:04,989 - INFO - ページ取得開始: https://syosetu.org/novel/379532/3.html
+2025-07-14 20:04:06,995 - INFO - CloudScraperで初回試行中...
+2025-07-14 20:04:07,054 - DEBUG - https://syosetu.org:443 "GET /novel/379532/3.html HTTP/1.1" 200 None
+2025-07-14 20:04:07,060 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31704bytes
+2025-07-14 20:04:07,065 - INFO - CloudScraperで取得されたHTMLテキスト長: 22926
+2025-07-14 20:04:07,078 - INFO - CloudScraper取得ページ分析:
+2025-07-14 20:04:07,086 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ガバガバ攻略 - ハーメルン
+2025-07-14 20:04:07,093 - INFO -   - 本文長: 4530文字
+2025-07-14 20:04:07,104 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/3.html" property="og:url"/>
+<meta content="ガバガバ攻略 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキ...
+2025-07-14 20:04:07,112 - INFO -   - h1要素数: 1
+2025-07-14 20:04:07,118 - INFO -   - div要素数: 20
+2025-07-14 20:04:07,123 - INFO -   - a要素数: 76
+2025-07-14 20:04:07,128 - INFO -   - novel_body要素数: 0
+2025-07-14 20:04:07,134 - INFO -   - novel_view要素数: 0
+2025-07-14 20:04:07,139 - INFO - ページ検証: 正常なページ
+2025-07-14 20:04:07,145 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/3.html
+2025-07-14 20:04:07,203 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 20:04:07,259 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 20:04:07,312 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 20:04:07,363 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 20:04:07,418 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:07,471 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 20:04:07,522 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:07,575 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 20:04:07,623 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:07,669 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=3 HTTP/1.1" 200 None
+2025-07-14 20:04:10,686 - INFO - ページ取得開始: https://syosetu.org/novel/379532/4.html
+2025-07-14 20:04:12,696 - INFO - CloudScraperで初回試行中...
+2025-07-14 20:04:12,748 - DEBUG - https://syosetu.org:443 "GET /novel/379532/4.html HTTP/1.1" 200 None
+2025-07-14 20:04:12,771 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=37461bytes
+2025-07-14 20:04:12,778 - INFO - CloudScraperで取得されたHTMLテキスト長: 26193
+2025-07-14 20:04:12,797 - INFO - CloudScraper取得ページ分析:
+2025-07-14 20:04:12,807 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 邂逅 - ハーメルン
+2025-07-14 20:04:12,814 - INFO -   - 本文長: 5752文字
+2025-07-14 20:04:12,833 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/4.html" property="og:url"/>
+<meta content="邂逅 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキャラにな...
+2025-07-14 20:04:12,842 - INFO -   - h1要素数: 1
+2025-07-14 20:04:12,848 - INFO -   - div要素数: 20
+2025-07-14 20:04:12,855 - INFO -   - a要素数: 77
+2025-07-14 20:04:12,860 - INFO -   - novel_body要素数: 0
+2025-07-14 20:04:12,867 - INFO -   - novel_view要素数: 0
+2025-07-14 20:04:12,875 - INFO - ページ検証: 正常なページ
+2025-07-14 20:04:12,886 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/4.html
+2025-07-14 20:04:12,941 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 20:04:12,993 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 20:04:13,042 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 20:04:13,096 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 20:04:13,146 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:13,199 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 20:04:13,250 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:13,299 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 20:04:13,347 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:13,393 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=4 HTTP/1.1" 200 None
+2025-07-14 20:04:16,412 - INFO - ページ取得開始: https://syosetu.org/novel/379532/5.html
+2025-07-14 20:04:18,418 - INFO - CloudScraperで初回試行中...
+2025-07-14 20:04:18,470 - DEBUG - https://syosetu.org:443 "GET /novel/379532/5.html HTTP/1.1" 200 None
+2025-07-14 20:04:18,496 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=44307bytes
+2025-07-14 20:04:18,502 - INFO - CloudScraperで取得されたHTMLテキスト長: 31989
+2025-07-14 20:04:18,517 - INFO - CloudScraper取得ページ分析:
+2025-07-14 20:04:18,524 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 主人公の決意 - ハーメルン
+2025-07-14 20:04:18,530 - INFO -   - 本文長: 6556文字
+2025-07-14 20:04:18,545 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/5.html" property="og:url"/>
+<meta content="主人公の決意 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキ...
+2025-07-14 20:04:18,557 - INFO -   - h1要素数: 1
+2025-07-14 20:04:18,564 - INFO -   - div要素数: 30
+2025-07-14 20:04:18,571 - INFO -   - a要素数: 118
+2025-07-14 20:04:18,577 - INFO -   - novel_body要素数: 0
+2025-07-14 20:04:18,585 - INFO -   - novel_view要素数: 0
+2025-07-14 20:04:18,594 - INFO - ページ検証: 正常なページ
+2025-07-14 20:04:18,602 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/5.html
+2025-07-14 20:04:18,657 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-14 20:04:18,708 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-14 20:04:18,766 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-14 20:04:18,816 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-14 20:04:18,869 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:18,921 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-14 20:04:18,976 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:19,029 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-14 20:04:19,082 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-14 20:04:19,127 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=5 HTTP/1.1" 200 None
+2025-07-15 00:09:39,176 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:09:39,181 - INFO - CloudScraper初期化開始
+2025-07-15 00:09:39,223 - INFO - CloudScraper設定完了
+2025-07-15 00:09:39,226 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:09:41,286 - INFO - ページ取得開始: https://syosetu.org/novel/379532/
+2025-07-15 00:09:43,301 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:09:43,305 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 00:09:48,640 - DEBUG - https://syosetu.org:443 "GET /novel/379532/ HTTP/1.1" 200 None
+2025-07-15 00:09:48,652 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=23947bytes
+2025-07-15 00:09:48,662 - INFO - CloudScraperで取得されたHTMLテキスト長: 21179
+2025-07-15 00:09:48,681 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:09:48,706 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン
+2025-07-15 00:09:48,725 - INFO -   - 本文長: 1702文字
+2025-07-15 00:09:48,764 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/" property="og:url"/>
+<meta content="雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキャラになろうとしただけのTS転...
+2025-07-15 00:09:48,780 - INFO -   - h1要素数: 1
+2025-07-15 00:09:48,790 - INFO -   - div要素数: 21
+2025-07-15 00:09:48,800 - INFO -   - a要素数: 104
+2025-07-15 00:09:48,808 - INFO -   - novel_body要素数: 0
+2025-07-15 00:09:48,818 - INFO -   - novel_view要素数: 0
+2025-07-15 00:09:48,833 - INFO - ページ検証: 正常なページ
+2025-07-15 00:09:48,843 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/
+2025-07-15 00:09:48,859 - INFO - 小説情報抽出開始
+2025-07-15 00:09:48,869 - INFO - タイトル抽出試行中...
+2025-07-15 00:09:48,877 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-15 00:09:48,889 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-15 00:09:48,898 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-15 00:09:48,908 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-15 00:09:48,917 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x00000254A70B8AE0>}
+2025-07-15 00:09:48,931 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x00000254A70B8AE0>} で要素が見つかりませんでした
+2025-07-15 00:09:48,945 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-15 00:09:48,961 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 00:09:48,981 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-15 00:09:48,991 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 00:09:49,005 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-15 00:09:49,028 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 00:09:49,039 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-15 00:09:49,049 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 00:09:49,056 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-15 00:09:49,065 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-15 00:09:49,074 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-15 00:09:49,083 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 00:09:49,090 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-15 00:09:49,098 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 00:09:49,106 - INFO - タイトルセレクター試行: h1 {}
+2025-07-15 00:09:49,116 - INFO - タイトルセレクター試行: title {}
+2025-07-15 00:09:49,126 - INFO - タイトル取得成功: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。
+2025-07-15 00:09:49,136 - INFO - 作者抽出試行中...
+2025-07-15 00:09:49,146 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-15 00:09:49,154 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 00:09:49,162 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-15 00:09:49,170 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 00:09:49,179 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-15 00:09:49,190 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-15 00:09:49,197 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-15 00:09:49,205 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-15 00:09:49,214 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x00000254A70B8F40>}
+2025-07-15 00:09:49,230 - INFO - セレクター a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x00000254A70B8F40>} で要素が見つかりませんでした
+2025-07-15 00:09:49,244 - INFO - 作者セレクター試行: div {'class': 'author'}
+2025-07-15 00:09:49,254 - INFO - セレクター div {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 00:09:49,268 - INFO - 作者セレクター試行: span {'class': 'author'}
+2025-07-15 00:09:49,279 - INFO - セレクター span {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 00:09:49,291 - INFO - 作者セレクター試行: a {'class': 'author'}
+2025-07-15 00:09:49,303 - INFO - セレクター a {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 00:09:49,313 - WARNING - 基本情報取得失敗、詳細調査を実行
+2025-07-15 00:09:49,327 - INFO - === ページ構造詳細調査 ===
+2025-07-15 00:09:49,335 - INFO - h1タグ数: 1
+2025-07-15 00:09:49,344 - INFO -   h1[0]: class=['siteTitle'], text=...
+2025-07-15 00:09:49,352 - INFO - リンク数: 104
+2025-07-15 00:09:49,359 - INFO - ユーザーリンク数: 0
+2025-07-15 00:09:49,368 - INFO - 関連クラス名: []
+2025-07-15 00:09:49,376 - INFO - 関連spanクラス名: []
+2025-07-15 00:09:49,388 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-15 00:09:49,485 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-15 00:09:49,536 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-15 00:09:49,566 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-15 00:09:49,593 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-15 00:09:49,605 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-15 00:09:49,618 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-15 00:09:49,638 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-15 00:09:49,749 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532 HTTP/1.1" 200 None
+2025-07-15 00:09:49,856 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:09:49,902 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:09:49,992 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:09:50,080 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:09:50,090 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-15 00:09:50,094 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-15 00:09:50,115 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-15 00:09:50,123 - INFO - ページ取得開始: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-15 00:09:52,132 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:09:52,185 - DEBUG - https://syosetu.org:443 "GET /?mode=ss_detail&nid=379532 HTTP/1.1" 200 None
+2025-07-15 00:09:52,198 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21523bytes
+2025-07-15 00:09:52,220 - INFO - CloudScraperで取得されたHTMLテキスト長: 19929
+2025-07-15 00:09:52,235 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:09:52,253 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。の小説情報 - ハーメルン
+2025-07-15 00:09:52,274 - INFO -   - 本文長: 963文字
+2025-07-15 00:09:52,291 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 00:09:52,300 - INFO -   - h1要素数: 1
+2025-07-15 00:09:52,318 - INFO -   - div要素数: 32
+2025-07-15 00:09:52,346 - INFO -   - a要素数: 68
+2025-07-15 00:09:52,356 - INFO -   - novel_body要素数: 0
+2025-07-15 00:09:52,368 - INFO -   - novel_view要素数: 0
+2025-07-15 00:09:52,380 - INFO - ページ検証: 正常なページ
+2025-07-15 00:09:52,412 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-15 00:09:52,439 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 00:09:52,494 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 00:09:52,506 - DEBUG - Starting new HTTPS connection (3): securepubads.g.doubleclick.net:443
+2025-07-15 00:09:52,508 - DEBUG - Starting new HTTPS connection (3): cpt.geniee.jp:443
+2025-07-15 00:09:52,535 - INFO - 小説情報ページ保存完了: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 小説情報.html
+2025-07-15 00:09:52,545 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 00:09:52,555 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 00:09:52,567 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 00:09:54,575 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:09:54,627 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=379532 HTTP/1.1" 200 None
+2025-07-15 00:09:54,634 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29102bytes
+2025-07-15 00:09:54,640 - INFO - CloudScraperで取得されたHTMLテキスト長: 25926
+2025-07-15 00:09:54,656 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:09:54,664 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。の感想 - ハーメルン
+2025-07-15 00:09:54,671 - INFO -   - 本文長: 2149文字
+2025-07-15 00:09:54,684 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 00:09:54,691 - INFO -   - h1要素数: 1
+2025-07-15 00:09:54,697 - INFO -   - div要素数: 29
+2025-07-15 00:09:54,704 - INFO -   - a要素数: 110
+2025-07-15 00:09:54,712 - INFO -   - novel_body要素数: 0
+2025-07-15 00:09:54,718 - INFO -   - novel_view要素数: 0
+2025-07-15 00:09:54,724 - INFO - ページ検証: 正常なページ
+2025-07-15 00:09:54,733 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 00:09:54,754 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (12個のリンク)
+2025-07-15 00:09:54,763 - INFO - 検出されたページ: 1ページ
+2025-07-15 00:09:54,771 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 00:09:54,778 - INFO - 感想は1ページのみです
+2025-07-15 00:09:54,804 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 00:09:54,851 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 00:09:54,862 - DEBUG - Starting new HTTPS connection (4): securepubads.g.doubleclick.net:443
+2025-07-15 00:09:54,865 - DEBUG - Starting new HTTPS connection (4): cpt.geniee.jp:443
+2025-07-15 00:09:54,890 - INFO - 感想ページ保存完了: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 感想.html
+2025-07-15 00:09:54,898 - INFO - ページ取得開始: https://syosetu.org/novel/379532/1.html
+2025-07-15 00:09:56,910 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:09:56,956 - DEBUG - https://syosetu.org:443 "GET /novel/379532/1.html HTTP/1.1" 200 None
+2025-07-15 00:09:56,970 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30685bytes
+2025-07-15 00:09:56,980 - INFO - CloudScraperで取得されたHTMLテキスト長: 22213
+2025-07-15 00:09:57,007 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:09:57,024 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 理不尽ゲーに転生してしまった一般TS転生者の場合 - ハーメルン
+2025-07-15 00:09:57,036 - INFO -   - 本文長: 4343文字
+2025-07-15 00:09:57,063 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/1.html" property="og:url"/>
+<meta content="理不尽ゲーに転生してしまった一般TS転生者の場合 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="...
+2025-07-15 00:09:57,076 - INFO -   - h1要素数: 1
+2025-07-15 00:09:57,087 - INFO -   - div要素数: 20
+2025-07-15 00:09:57,095 - INFO -   - a要素数: 76
+2025-07-15 00:09:57,104 - INFO -   - novel_body要素数: 0
+2025-07-15 00:09:57,113 - INFO -   - novel_view要素数: 0
+2025-07-15 00:09:57,123 - INFO - ページ検証: 正常なページ
+2025-07-15 00:09:57,133 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/1.html
+2025-07-15 00:09:57,180 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:09:57,230 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:09:57,280 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:09:57,329 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:09:57,382 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 00:09:57,472 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 00:09:57,520 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 00:09:57,612 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 00:09:57,695 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 00:09:57,741 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=1 HTTP/1.1" 200 None
+2025-07-15 00:10:00,770 - INFO - ページ取得開始: https://syosetu.org/novel/379532/2.html
+2025-07-15 00:10:02,777 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:10:02,824 - DEBUG - https://syosetu.org:443 "GET /novel/379532/2.html HTTP/1.1" 200 None
+2025-07-15 00:10:02,833 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=39254bytes
+2025-07-15 00:10:02,840 - INFO - CloudScraperで取得されたHTMLテキスト長: 26572
+2025-07-15 00:10:02,868 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:10:02,882 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 不確定存在のキミのために - ハーメルン
+2025-07-15 00:10:02,893 - INFO -   - 本文長: 6468文字
+2025-07-15 00:10:02,912 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/2.html" property="og:url"/>
+<meta content="不確定存在のキミのために - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこ...
+2025-07-15 00:10:02,922 - INFO -   - h1要素数: 1
+2025-07-15 00:10:02,931 - INFO -   - div要素数: 20
+2025-07-15 00:10:02,939 - INFO -   - a要素数: 77
+2025-07-15 00:10:02,947 - INFO -   - novel_body要素数: 0
+2025-07-15 00:10:02,955 - INFO -   - novel_view要素数: 0
+2025-07-15 00:10:02,965 - INFO - ページ検証: 正常なページ
+2025-07-15 00:10:02,972 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/2.html
+2025-07-15 00:10:03,022 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:10:03,071 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:10:03,125 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:10:03,173 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:10:03,232 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:03,280 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 00:10:03,331 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:03,381 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 00:10:03,430 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:03,476 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=2 HTTP/1.1" 200 None
+2025-07-15 00:10:06,499 - INFO - ページ取得開始: https://syosetu.org/novel/379532/3.html
+2025-07-15 00:10:08,508 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:10:08,555 - DEBUG - https://syosetu.org:443 "GET /novel/379532/3.html HTTP/1.1" 200 None
+2025-07-15 00:10:08,570 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31704bytes
+2025-07-15 00:10:08,579 - INFO - CloudScraperで取得されたHTMLテキスト長: 22926
+2025-07-15 00:10:08,598 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:10:08,611 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ガバガバ攻略 - ハーメルン
+2025-07-15 00:10:08,619 - INFO -   - 本文長: 4530文字
+2025-07-15 00:10:08,635 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/3.html" property="og:url"/>
+<meta content="ガバガバ攻略 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキ...
+2025-07-15 00:10:08,646 - INFO -   - h1要素数: 1
+2025-07-15 00:10:08,653 - INFO -   - div要素数: 20
+2025-07-15 00:10:08,664 - INFO -   - a要素数: 76
+2025-07-15 00:10:08,671 - INFO -   - novel_body要素数: 0
+2025-07-15 00:10:08,679 - INFO -   - novel_view要素数: 0
+2025-07-15 00:10:08,688 - INFO - ページ検証: 正常なページ
+2025-07-15 00:10:08,699 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/3.html
+2025-07-15 00:10:08,752 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:10:08,799 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:10:08,849 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:10:08,902 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:10:08,953 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:09,004 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 00:10:09,054 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:09,105 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 00:10:09,153 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:09,199 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=3 HTTP/1.1" 200 None
+2025-07-15 00:10:12,224 - INFO - ページ取得開始: https://syosetu.org/novel/379532/4.html
+2025-07-15 00:10:14,230 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:10:14,277 - DEBUG - https://syosetu.org:443 "GET /novel/379532/4.html HTTP/1.1" 200 None
+2025-07-15 00:10:14,285 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=37461bytes
+2025-07-15 00:10:14,292 - INFO - CloudScraperで取得されたHTMLテキスト長: 26193
+2025-07-15 00:10:14,313 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:10:14,325 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 邂逅 - ハーメルン
+2025-07-15 00:10:14,330 - INFO -   - 本文長: 5752文字
+2025-07-15 00:10:14,344 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/4.html" property="og:url"/>
+<meta content="邂逅 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキャラにな...
+2025-07-15 00:10:14,354 - INFO -   - h1要素数: 1
+2025-07-15 00:10:14,360 - INFO -   - div要素数: 20
+2025-07-15 00:10:14,366 - INFO -   - a要素数: 77
+2025-07-15 00:10:14,373 - INFO -   - novel_body要素数: 0
+2025-07-15 00:10:14,380 - INFO -   - novel_view要素数: 0
+2025-07-15 00:10:14,388 - INFO - ページ検証: 正常なページ
+2025-07-15 00:10:14,424 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/4.html
+2025-07-15 00:10:14,475 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:10:14,524 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:10:14,574 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:10:14,624 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:10:14,676 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:14,727 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 00:10:14,775 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:14,827 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 00:10:14,874 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:14,921 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=4 HTTP/1.1" 200 None
+2025-07-15 00:10:17,953 - INFO - ページ取得開始: https://syosetu.org/novel/379532/5.html
+2025-07-15 00:10:19,965 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:10:20,020 - DEBUG - https://syosetu.org:443 "GET /novel/379532/5.html HTTP/1.1" 200 None
+2025-07-15 00:10:20,041 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=44307bytes
+2025-07-15 00:10:20,057 - INFO - CloudScraperで取得されたHTMLテキスト長: 31989
+2025-07-15 00:10:20,105 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:10:20,131 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 主人公の決意 - ハーメルン
+2025-07-15 00:10:20,156 - INFO -   - 本文長: 6556文字
+2025-07-15 00:10:20,179 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/5.html" property="og:url"/>
+<meta content="主人公の決意 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキ...
+2025-07-15 00:10:20,190 - INFO -   - h1要素数: 1
+2025-07-15 00:10:20,201 - INFO -   - div要素数: 30
+2025-07-15 00:10:20,220 - INFO -   - a要素数: 118
+2025-07-15 00:10:20,231 - INFO -   - novel_body要素数: 0
+2025-07-15 00:10:20,241 - INFO -   - novel_view要素数: 0
+2025-07-15 00:10:20,252 - INFO - ページ検証: 正常なページ
+2025-07-15 00:10:20,280 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/5.html
+2025-07-15 00:10:20,335 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:10:20,383 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:10:20,438 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:10:20,487 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:10:20,544 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:20,595 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 00:10:20,643 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:20,695 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 00:10:20,744 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 00:10:20,789 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=5 HTTP/1.1" 200 None
+2025-07-15 00:58:11,201 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:58:11,204 - INFO - CloudScraper初期化開始
+2025-07-15 00:58:11,233 - INFO - CloudScraper設定完了
+2025-07-15 00:58:11,235 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:58:13,254 - INFO - ページ取得開始: https://syosetu.org/novel/379532/
+2025-07-15 00:58:15,263 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:58:15,265 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 00:58:15,366 - DEBUG - https://syosetu.org:443 "GET /novel/379532/ HTTP/1.1" 200 None
+2025-07-15 00:58:15,372 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=23947bytes
+2025-07-15 00:58:15,376 - INFO - CloudScraperで取得されたHTMLテキスト長: 21179
+2025-07-15 00:58:15,388 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:58:15,403 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン
+2025-07-15 00:58:15,412 - INFO -   - 本文長: 1702文字
+2025-07-15 00:58:15,434 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/" property="og:url"/>
+<meta content="雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキャラになろうとしただけのTS転...
+2025-07-15 00:58:15,443 - INFO -   - h1要素数: 1
+2025-07-15 00:58:15,449 - INFO -   - div要素数: 21
+2025-07-15 00:58:15,455 - INFO -   - a要素数: 104
+2025-07-15 00:58:15,464 - INFO -   - novel_body要素数: 0
+2025-07-15 00:58:15,470 - INFO -   - novel_view要素数: 0
+2025-07-15 00:58:15,490 - INFO - ページ検証: 正常なページ
+2025-07-15 00:58:15,496 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/
+2025-07-15 00:58:15,504 - INFO - 小説情報抽出開始
+2025-07-15 00:58:15,510 - INFO - タイトル抽出試行中...
+2025-07-15 00:58:15,515 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-15 00:58:15,520 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-15 00:58:15,529 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-15 00:58:15,535 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-15 00:58:15,553 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001B88DE28CC0>}
+2025-07-15 00:58:15,562 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001B88DE28CC0>} で要素が見つかりませんでした
+2025-07-15 00:58:15,571 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-15 00:58:15,578 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 00:58:15,589 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-15 00:58:15,595 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 00:58:15,602 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-15 00:58:15,616 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 00:58:15,621 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-15 00:58:15,627 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 00:58:15,632 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-15 00:58:15,638 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-15 00:58:15,642 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-15 00:58:15,652 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 00:58:15,657 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-15 00:58:15,662 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 00:58:15,680 - INFO - タイトルセレクター試行: h1 {}
+2025-07-15 00:58:15,686 - INFO - タイトルセレクター試行: title {}
+2025-07-15 00:58:15,692 - INFO - タイトル取得成功: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。
+2025-07-15 00:58:15,702 - INFO - 作者抽出試行中...
+2025-07-15 00:58:15,708 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-15 00:58:15,716 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 00:58:15,721 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-15 00:58:15,740 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 00:58:15,746 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-15 00:58:15,755 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-15 00:58:15,760 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-15 00:58:15,766 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-15 00:58:15,778 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001B88DE29120>}
+2025-07-15 00:58:15,790 - INFO - セレクター a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001B88DE29120>} で要素が見つかりませんでした
+2025-07-15 00:58:15,808 - INFO - 作者セレクター試行: div {'class': 'author'}
+2025-07-15 00:58:15,817 - INFO - セレクター div {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 00:58:15,826 - INFO - 作者セレクター試行: span {'class': 'author'}
+2025-07-15 00:58:15,833 - INFO - セレクター span {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 00:58:15,840 - INFO - 作者セレクター試行: a {'class': 'author'}
+2025-07-15 00:58:15,848 - INFO - セレクター a {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 00:58:15,868 - WARNING - 基本情報取得失敗、詳細調査を実行
+2025-07-15 00:58:15,879 - INFO - === ページ構造詳細調査 ===
+2025-07-15 00:58:15,886 - INFO - h1タグ数: 1
+2025-07-15 00:58:15,893 - INFO -   h1[0]: class=['siteTitle'], text=...
+2025-07-15 00:58:15,906 - INFO - リンク数: 104
+2025-07-15 00:58:15,913 - INFO - ユーザーリンク数: 0
+2025-07-15 00:58:15,934 - INFO - 関連クラス名: []
+2025-07-15 00:58:15,941 - INFO - 関連spanクラス名: []
+2025-07-15 00:58:15,949 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-15 00:58:16,047 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-15 00:58:16,089 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-15 00:58:16,115 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-15 00:58:16,138 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-15 00:58:16,148 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-15 00:58:16,155 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-15 00:58:16,160 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-15 00:58:16,264 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532 HTTP/1.1" 200 None
+2025-07-15 00:58:16,362 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:58:16,410 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:58:16,502 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:58:16,585 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:58:16,591 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-15 00:58:16,593 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-15 00:58:16,606 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-15 00:58:16,612 - INFO - ページ取得開始: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-15 00:58:18,619 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:58:18,672 - DEBUG - https://syosetu.org:443 "GET /?mode=ss_detail&nid=379532 HTTP/1.1" 200 None
+2025-07-15 00:58:18,678 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21523bytes
+2025-07-15 00:58:18,683 - INFO - CloudScraperで取得されたHTMLテキスト長: 19929
+2025-07-15 00:58:18,693 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:58:18,701 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。の小説情報 - ハーメルン
+2025-07-15 00:58:18,706 - INFO -   - 本文長: 963文字
+2025-07-15 00:58:18,715 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 00:58:18,721 - INFO -   - h1要素数: 1
+2025-07-15 00:58:18,725 - INFO -   - div要素数: 32
+2025-07-15 00:58:18,729 - INFO -   - a要素数: 68
+2025-07-15 00:58:18,736 - INFO -   - novel_body要素数: 0
+2025-07-15 00:58:18,743 - INFO -   - novel_view要素数: 0
+2025-07-15 00:58:18,748 - INFO - ページ検証: 正常なページ
+2025-07-15 00:58:18,753 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-15 00:58:18,778 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 00:58:18,813 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 00:58:18,820 - DEBUG - Starting new HTTPS connection (3): securepubads.g.doubleclick.net:443
+2025-07-15 00:58:18,822 - DEBUG - Starting new HTTPS connection (3): cpt.geniee.jp:443
+2025-07-15 00:58:18,836 - INFO - 小説情報ページ保存完了: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 小説情報.html
+2025-07-15 00:58:18,844 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 00:58:18,852 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 00:58:18,857 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 00:58:20,863 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:58:20,917 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=379532 HTTP/1.1" 200 None
+2025-07-15 00:58:20,929 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29098bytes
+2025-07-15 00:58:20,936 - INFO - CloudScraperで取得されたHTMLテキスト長: 25922
+2025-07-15 00:58:20,953 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:58:20,960 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。の感想 - ハーメルン
+2025-07-15 00:58:20,968 - INFO -   - 本文長: 2149文字
+2025-07-15 00:58:20,982 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 00:58:20,989 - INFO -   - h1要素数: 1
+2025-07-15 00:58:20,995 - INFO -   - div要素数: 29
+2025-07-15 00:58:21,002 - INFO -   - a要素数: 110
+2025-07-15 00:58:21,012 - INFO -   - novel_body要素数: 0
+2025-07-15 00:58:21,018 - INFO -   - novel_view要素数: 0
+2025-07-15 00:58:21,025 - INFO - ページ検証: 正常なページ
+2025-07-15 00:58:21,031 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 00:58:21,051 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (12個のリンク)
+2025-07-15 00:58:21,057 - INFO - 検出されたページ: 1ページ
+2025-07-15 00:58:21,064 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 00:58:21,070 - INFO - 感想は1ページのみです
+2025-07-15 00:58:21,096 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 00:58:21,132 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 00:58:21,140 - DEBUG - Starting new HTTPS connection (4): securepubads.g.doubleclick.net:443
+2025-07-15 00:58:21,142 - DEBUG - Starting new HTTPS connection (4): cpt.geniee.jp:443
+2025-07-15 00:58:21,159 - INFO - 感想ページ保存完了: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 感想.html
+2025-07-15 00:58:21,168 - INFO - ページ取得開始: https://syosetu.org/novel/379532/1.html
+2025-07-15 00:58:23,175 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:58:23,221 - DEBUG - https://syosetu.org:443 "GET /novel/379532/1.html HTTP/1.1" 200 None
+2025-07-15 00:58:23,227 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30685bytes
+2025-07-15 00:58:23,239 - INFO - CloudScraperで取得されたHTMLテキスト長: 22213
+2025-07-15 00:58:23,253 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:58:23,262 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 理不尽ゲーに転生してしまった一般TS転生者の場合 - ハーメルン
+2025-07-15 00:58:23,269 - INFO -   - 本文長: 4343文字
+2025-07-15 00:58:23,283 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/1.html" property="og:url"/>
+<meta content="理不尽ゲーに転生してしまった一般TS転生者の場合 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="...
+2025-07-15 00:58:23,301 - INFO -   - h1要素数: 1
+2025-07-15 00:58:23,307 - INFO -   - div要素数: 20
+2025-07-15 00:58:23,313 - INFO -   - a要素数: 76
+2025-07-15 00:58:23,320 - INFO -   - novel_body要素数: 0
+2025-07-15 00:58:23,327 - INFO -   - novel_view要素数: 0
+2025-07-15 00:58:23,336 - INFO - ページ検証: 正常なページ
+2025-07-15 00:58:23,344 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/1.html
+2025-07-15 00:58:23,395 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:58:23,444 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:58:23,495 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:58:23,544 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:58:23,599 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:23,680 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 00:58:23,731 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:23,820 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 00:58:23,902 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:23,948 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=1 HTTP/1.1" 200 None
+2025-07-15 00:58:26,965 - INFO - ページ取得開始: https://syosetu.org/novel/379532/2.html
+2025-07-15 00:58:28,970 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:58:29,015 - DEBUG - https://syosetu.org:443 "GET /novel/379532/2.html HTTP/1.1" 200 None
+2025-07-15 00:58:29,036 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=39254bytes
+2025-07-15 00:58:29,044 - INFO - CloudScraperで取得されたHTMLテキスト長: 26572
+2025-07-15 00:58:29,060 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:58:29,067 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 不確定存在のキミのために - ハーメルン
+2025-07-15 00:58:29,074 - INFO -   - 本文長: 6468文字
+2025-07-15 00:58:29,085 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/2.html" property="og:url"/>
+<meta content="不確定存在のキミのために - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこ...
+2025-07-15 00:58:29,093 - INFO -   - h1要素数: 1
+2025-07-15 00:58:29,097 - INFO -   - div要素数: 20
+2025-07-15 00:58:29,102 - INFO -   - a要素数: 77
+2025-07-15 00:58:29,107 - INFO -   - novel_body要素数: 0
+2025-07-15 00:58:29,112 - INFO -   - novel_view要素数: 0
+2025-07-15 00:58:29,119 - INFO - ページ検証: 正常なページ
+2025-07-15 00:58:29,126 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/2.html
+2025-07-15 00:58:29,175 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:58:29,223 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:58:29,276 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:58:29,325 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:58:29,375 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:29,426 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 00:58:29,481 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:29,527 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 00:58:29,575 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:29,621 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=2 HTTP/1.1" 200 None
+2025-07-15 00:58:32,643 - INFO - ページ取得開始: https://syosetu.org/novel/379532/3.html
+2025-07-15 00:58:34,651 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:58:34,699 - DEBUG - https://syosetu.org:443 "GET /novel/379532/3.html HTTP/1.1" 200 None
+2025-07-15 00:58:34,706 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31704bytes
+2025-07-15 00:58:34,714 - INFO - CloudScraperで取得されたHTMLテキスト長: 22926
+2025-07-15 00:58:34,729 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:58:34,738 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ガバガバ攻略 - ハーメルン
+2025-07-15 00:58:34,745 - INFO -   - 本文長: 4530文字
+2025-07-15 00:58:34,757 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/3.html" property="og:url"/>
+<meta content="ガバガバ攻略 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキ...
+2025-07-15 00:58:34,763 - INFO -   - h1要素数: 1
+2025-07-15 00:58:34,769 - INFO -   - div要素数: 20
+2025-07-15 00:58:34,774 - INFO -   - a要素数: 76
+2025-07-15 00:58:34,779 - INFO -   - novel_body要素数: 0
+2025-07-15 00:58:34,785 - INFO -   - novel_view要素数: 0
+2025-07-15 00:58:34,790 - INFO - ページ検証: 正常なページ
+2025-07-15 00:58:34,795 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/3.html
+2025-07-15 00:58:34,844 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:58:34,894 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:58:34,944 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:58:34,993 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:58:35,044 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:35,094 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 00:58:35,145 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:35,194 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 00:58:35,243 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:35,290 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=3 HTTP/1.1" 200 None
+2025-07-15 00:58:38,310 - INFO - ページ取得開始: https://syosetu.org/novel/379532/4.html
+2025-07-15 00:58:40,316 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:58:40,362 - DEBUG - https://syosetu.org:443 "GET /novel/379532/4.html HTTP/1.1" 200 None
+2025-07-15 00:58:40,369 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=37461bytes
+2025-07-15 00:58:40,374 - INFO - CloudScraperで取得されたHTMLテキスト長: 26193
+2025-07-15 00:58:40,390 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:58:40,401 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 邂逅 - ハーメルン
+2025-07-15 00:58:40,407 - INFO -   - 本文長: 5752文字
+2025-07-15 00:58:40,431 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/4.html" property="og:url"/>
+<meta content="邂逅 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキャラにな...
+2025-07-15 00:58:40,438 - INFO -   - h1要素数: 1
+2025-07-15 00:58:40,444 - INFO -   - div要素数: 20
+2025-07-15 00:58:40,450 - INFO -   - a要素数: 77
+2025-07-15 00:58:40,456 - INFO -   - novel_body要素数: 0
+2025-07-15 00:58:40,463 - INFO -   - novel_view要素数: 0
+2025-07-15 00:58:40,472 - INFO - ページ検証: 正常なページ
+2025-07-15 00:58:40,479 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/4.html
+2025-07-15 00:58:40,532 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:58:40,581 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:58:40,632 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:58:40,682 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:58:40,741 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:40,789 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 00:58:40,840 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:40,892 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 00:58:40,941 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:40,987 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=4 HTTP/1.1" 200 None
+2025-07-15 00:58:44,006 - INFO - ページ取得開始: https://syosetu.org/novel/379532/5.html
+2025-07-15 00:58:46,012 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:58:46,058 - DEBUG - https://syosetu.org:443 "GET /novel/379532/5.html HTTP/1.1" 200 None
+2025-07-15 00:58:46,086 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=44307bytes
+2025-07-15 00:58:46,092 - INFO - CloudScraperで取得されたHTMLテキスト長: 31989
+2025-07-15 00:58:46,109 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:58:46,117 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 主人公の決意 - ハーメルン
+2025-07-15 00:58:46,123 - INFO -   - 本文長: 6556文字
+2025-07-15 00:58:46,136 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/5.html" property="og:url"/>
+<meta content="主人公の決意 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキ...
+2025-07-15 00:58:46,144 - INFO -   - h1要素数: 1
+2025-07-15 00:58:46,150 - INFO -   - div要素数: 30
+2025-07-15 00:58:46,164 - INFO -   - a要素数: 118
+2025-07-15 00:58:46,170 - INFO -   - novel_body要素数: 0
+2025-07-15 00:58:46,176 - INFO -   - novel_view要素数: 0
+2025-07-15 00:58:46,184 - INFO - ページ検証: 正常なページ
+2025-07-15 00:58:46,191 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/5.html
+2025-07-15 00:58:46,245 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 00:58:46,292 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 00:58:46,344 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 00:58:46,392 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 00:58:46,442 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:46,492 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 00:58:46,544 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:46,594 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 00:58:46,643 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 00:58:46,689 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=5 HTTP/1.1" 200 None
+2025-07-15 08:52:51,488 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 08:52:51,492 - INFO - CloudScraper初期化開始
+2025-07-15 08:52:51,521 - INFO - CloudScraper設定完了
+2025-07-15 08:52:51,523 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 08:52:53,543 - INFO - ページ取得開始: https://syosetu.org/novel/379532/
+2025-07-15 08:52:55,557 - INFO - CloudScraperで初回試行中...
+2025-07-15 08:52:55,561 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 08:52:55,670 - DEBUG - https://syosetu.org:443 "GET /novel/379532/ HTTP/1.1" 200 None
+2025-07-15 08:52:55,681 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=24015bytes
+2025-07-15 08:52:55,690 - INFO - CloudScraperで取得されたHTMLテキスト長: 21233
+2025-07-15 08:52:55,711 - INFO - CloudScraper取得ページ分析:
+2025-07-15 08:52:55,731 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン
+2025-07-15 08:52:55,748 - INFO -   - 本文長: 1705文字
+2025-07-15 08:52:55,781 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/" property="og:url"/>
+<meta content="雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキャラになろうとしただけのTS転...
+2025-07-15 08:52:55,795 - INFO -   - h1要素数: 1
+2025-07-15 08:52:55,808 - INFO -   - div要素数: 21
+2025-07-15 08:52:55,814 - INFO -   - a要素数: 104
+2025-07-15 08:52:55,824 - INFO -   - novel_body要素数: 0
+2025-07-15 08:52:55,834 - INFO -   - novel_view要素数: 0
+2025-07-15 08:52:55,849 - INFO - ページ検証: 正常なページ
+2025-07-15 08:52:55,859 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/
+2025-07-15 08:52:55,880 - INFO - 小説情報抽出開始
+2025-07-15 08:52:55,890 - INFO - タイトル抽出試行中...
+2025-07-15 08:52:55,900 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-15 08:52:55,909 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-15 08:52:55,915 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-15 08:52:55,923 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-15 08:52:55,934 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EA4E958CC0>}
+2025-07-15 08:52:55,946 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EA4E958CC0>} で要素が見つかりませんでした
+2025-07-15 08:52:55,957 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-15 08:52:55,969 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 08:52:55,981 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-15 08:52:55,992 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 08:52:56,000 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-15 08:52:56,010 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 08:52:56,020 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-15 08:52:56,029 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 08:52:56,034 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-15 08:52:56,041 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-15 08:52:56,049 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-15 08:52:56,061 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 08:52:56,071 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-15 08:52:56,083 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 08:52:56,093 - INFO - タイトルセレクター試行: h1 {}
+2025-07-15 08:52:56,101 - INFO - タイトルセレクター試行: title {}
+2025-07-15 08:52:56,111 - INFO - タイトル取得成功: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。
+2025-07-15 08:52:56,127 - INFO - 作者抽出試行中...
+2025-07-15 08:52:56,139 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-15 08:52:56,149 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 08:52:56,160 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-15 08:52:56,174 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 08:52:56,190 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-15 08:52:56,204 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-15 08:52:56,218 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-15 08:52:56,228 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-15 08:52:56,242 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EA4E959120>}
+2025-07-15 08:52:56,260 - INFO - セレクター a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EA4E959120>} で要素が見つかりませんでした
+2025-07-15 08:52:56,273 - INFO - 作者セレクター試行: div {'class': 'author'}
+2025-07-15 08:52:56,285 - INFO - セレクター div {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 08:52:56,298 - INFO - 作者セレクター試行: span {'class': 'author'}
+2025-07-15 08:52:56,313 - INFO - セレクター span {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 08:52:56,323 - INFO - 作者セレクター試行: a {'class': 'author'}
+2025-07-15 08:52:56,335 - INFO - セレクター a {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 08:52:56,349 - WARNING - 基本情報取得失敗、詳細調査を実行
+2025-07-15 08:52:56,363 - INFO - === ページ構造詳細調査 ===
+2025-07-15 08:52:56,371 - INFO - h1タグ数: 1
+2025-07-15 08:52:56,379 - INFO -   h1[0]: class=['siteTitle'], text=...
+2025-07-15 08:52:56,388 - INFO - リンク数: 104
+2025-07-15 08:52:56,397 - INFO - ユーザーリンク数: 0
+2025-07-15 08:52:56,417 - INFO - 関連クラス名: []
+2025-07-15 08:52:56,426 - INFO - 関連spanクラス名: []
+2025-07-15 08:52:56,433 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-15 08:52:56,518 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-15 08:52:56,553 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-15 08:52:56,578 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-15 08:52:56,600 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-15 08:52:56,608 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-15 08:52:56,620 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-15 08:52:56,638 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-15 08:52:56,738 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532 HTTP/1.1" 200 None
+2025-07-15 08:52:56,796 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 08:52:56,844 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 08:52:56,927 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 08:52:57,013 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 08:52:57,020 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-15 08:52:57,023 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-15 08:52:57,044 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-15 08:52:57,051 - INFO - ページ取得開始: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-15 08:52:59,089 - INFO - CloudScraperで初回試行中...
+2025-07-15 08:52:59,150 - DEBUG - https://syosetu.org:443 "GET /?mode=ss_detail&nid=379532 HTTP/1.1" 200 None
+2025-07-15 08:52:59,173 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21523bytes
+2025-07-15 08:52:59,193 - INFO - CloudScraperで取得されたHTMLテキスト長: 19929
+2025-07-15 08:52:59,227 - INFO - CloudScraper取得ページ分析:
+2025-07-15 08:52:59,256 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。の小説情報 - ハーメルン
+2025-07-15 08:52:59,289 - INFO -   - 本文長: 963文字
+2025-07-15 08:52:59,314 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 08:52:59,326 - INFO -   - h1要素数: 1
+2025-07-15 08:52:59,334 - INFO -   - div要素数: 32
+2025-07-15 08:52:59,351 - INFO -   - a要素数: 68
+2025-07-15 08:52:59,367 - INFO -   - novel_body要素数: 0
+2025-07-15 08:52:59,377 - INFO -   - novel_view要素数: 0
+2025-07-15 08:52:59,387 - INFO - ページ検証: 正常なページ
+2025-07-15 08:52:59,398 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=ss_detail&nid=379532
+2025-07-15 08:52:59,425 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 08:52:59,477 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 08:52:59,497 - DEBUG - Starting new HTTPS connection (3): securepubads.g.doubleclick.net:443
+2025-07-15 08:52:59,501 - DEBUG - Starting new HTTPS connection (3): cpt.geniee.jp:443
+2025-07-15 08:52:59,537 - INFO - 小説情報ページ保存完了: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 小説情報.html
+2025-07-15 08:52:59,553 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 08:52:59,565 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 08:52:59,579 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 08:53:01,596 - INFO - CloudScraperで初回試行中...
+2025-07-15 08:53:01,649 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=379532 HTTP/1.1" 200 None
+2025-07-15 08:53:01,663 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29098bytes
+2025-07-15 08:53:01,697 - INFO - CloudScraperで取得されたHTMLテキスト長: 25922
+2025-07-15 08:53:01,727 - INFO - CloudScraper取得ページ分析:
+2025-07-15 08:53:01,751 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。の感想 - ハーメルン
+2025-07-15 08:53:01,760 - INFO -   - 本文長: 2149文字
+2025-07-15 08:53:01,784 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 08:53:01,795 - INFO -   - h1要素数: 1
+2025-07-15 08:53:01,809 - INFO -   - div要素数: 29
+2025-07-15 08:53:01,816 - INFO -   - a要素数: 110
+2025-07-15 08:53:01,823 - INFO -   - novel_body要素数: 0
+2025-07-15 08:53:01,837 - INFO -   - novel_view要素数: 0
+2025-07-15 08:53:01,846 - INFO - ページ検証: 正常なページ
+2025-07-15 08:53:01,855 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 08:53:01,892 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (12個のリンク)
+2025-07-15 08:53:01,909 - INFO - 検出されたページ: 1ページ
+2025-07-15 08:53:01,938 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=379532
+2025-07-15 08:53:01,951 - INFO - 感想は1ページのみです
+2025-07-15 08:53:01,977 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 08:53:02,024 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 08:53:02,035 - DEBUG - Starting new HTTPS connection (4): securepubads.g.doubleclick.net:443
+2025-07-15 08:53:02,047 - DEBUG - Starting new HTTPS connection (4): cpt.geniee.jp:443
+2025-07-15 08:53:02,085 - INFO - 感想ページ保存完了: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 感想.html
+2025-07-15 08:53:02,100 - INFO - ページ取得開始: https://syosetu.org/novel/379532/1.html
+2025-07-15 08:53:04,114 - INFO - CloudScraperで初回試行中...
+2025-07-15 08:53:04,160 - DEBUG - https://syosetu.org:443 "GET /novel/379532/1.html HTTP/1.1" 200 None
+2025-07-15 08:53:04,168 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30685bytes
+2025-07-15 08:53:04,175 - INFO - CloudScraperで取得されたHTMLテキスト長: 22213
+2025-07-15 08:53:04,206 - INFO - CloudScraper取得ページ分析:
+2025-07-15 08:53:04,221 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 理不尽ゲーに転生してしまった一般TS転生者の場合 - ハーメルン
+2025-07-15 08:53:04,232 - INFO -   - 本文長: 4343文字
+2025-07-15 08:53:04,256 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/1.html" property="og:url"/>
+<meta content="理不尽ゲーに転生してしまった一般TS転生者の場合 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="...
+2025-07-15 08:53:04,270 - INFO -   - h1要素数: 1
+2025-07-15 08:53:04,284 - INFO -   - div要素数: 20
+2025-07-15 08:53:04,294 - INFO -   - a要素数: 76
+2025-07-15 08:53:04,306 - INFO -   - novel_body要素数: 0
+2025-07-15 08:53:04,314 - INFO -   - novel_view要素数: 0
+2025-07-15 08:53:04,325 - INFO - ページ検証: 正常なページ
+2025-07-15 08:53:04,337 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/1.html
+2025-07-15 08:53:04,389 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 08:53:04,439 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 08:53:04,490 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 08:53:04,540 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 08:53:04,595 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:04,678 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 08:53:04,728 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:04,816 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 08:53:04,902 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:04,948 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=1 HTTP/1.1" 200 None
+2025-07-15 08:53:07,977 - INFO - ページ取得開始: https://syosetu.org/novel/379532/2.html
+2025-07-15 08:53:09,992 - INFO - CloudScraperで初回試行中...
+2025-07-15 08:53:10,040 - DEBUG - https://syosetu.org:443 "GET /novel/379532/2.html HTTP/1.1" 200 None
+2025-07-15 08:53:10,066 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=39254bytes
+2025-07-15 08:53:10,078 - INFO - CloudScraperで取得されたHTMLテキスト長: 26572
+2025-07-15 08:53:10,122 - INFO - CloudScraper取得ページ分析:
+2025-07-15 08:53:10,137 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 不確定存在のキミのために - ハーメルン
+2025-07-15 08:53:10,146 - INFO -   - 本文長: 6468文字
+2025-07-15 08:53:10,180 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/2.html" property="og:url"/>
+<meta content="不確定存在のキミのために - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこ...
+2025-07-15 08:53:10,193 - INFO -   - h1要素数: 1
+2025-07-15 08:53:10,204 - INFO -   - div要素数: 20
+2025-07-15 08:53:10,213 - INFO -   - a要素数: 77
+2025-07-15 08:53:10,220 - INFO -   - novel_body要素数: 0
+2025-07-15 08:53:10,229 - INFO -   - novel_view要素数: 0
+2025-07-15 08:53:10,248 - INFO - ページ検証: 正常なページ
+2025-07-15 08:53:10,255 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/2.html
+2025-07-15 08:53:10,308 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 08:53:10,357 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 08:53:10,408 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 08:53:10,459 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 08:53:10,510 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:10,559 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 08:53:10,614 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:10,660 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 08:53:10,710 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:10,758 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=2 HTTP/1.1" 200 None
+2025-07-15 08:53:13,794 - INFO - ページ取得開始: https://syosetu.org/novel/379532/3.html
+2025-07-15 08:53:15,802 - INFO - CloudScraperで初回試行中...
+2025-07-15 08:53:15,851 - DEBUG - https://syosetu.org:443 "GET /novel/379532/3.html HTTP/1.1" 200 None
+2025-07-15 08:53:15,859 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31704bytes
+2025-07-15 08:53:15,866 - INFO - CloudScraperで取得されたHTMLテキスト長: 22926
+2025-07-15 08:53:15,893 - INFO - CloudScraper取得ページ分析:
+2025-07-15 08:53:15,907 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ガバガバ攻略 - ハーメルン
+2025-07-15 08:53:15,915 - INFO -   - 本文長: 4530文字
+2025-07-15 08:53:15,934 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/3.html" property="og:url"/>
+<meta content="ガバガバ攻略 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキ...
+2025-07-15 08:53:15,944 - INFO -   - h1要素数: 1
+2025-07-15 08:53:15,955 - INFO -   - div要素数: 20
+2025-07-15 08:53:15,965 - INFO -   - a要素数: 76
+2025-07-15 08:53:15,974 - INFO -   - novel_body要素数: 0
+2025-07-15 08:53:15,982 - INFO -   - novel_view要素数: 0
+2025-07-15 08:53:15,992 - INFO - ページ検証: 正常なページ
+2025-07-15 08:53:16,001 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/3.html
+2025-07-15 08:53:16,052 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 08:53:16,100 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 08:53:16,152 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 08:53:16,204 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 08:53:16,260 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:16,307 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 08:53:16,358 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:16,409 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 08:53:16,459 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:16,506 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=3 HTTP/1.1" 200 None
+2025-07-15 08:53:19,640 - INFO - ページ取得開始: https://syosetu.org/novel/379532/4.html
+2025-07-15 08:53:21,676 - INFO - CloudScraperで初回試行中...
+2025-07-15 08:53:21,724 - DEBUG - https://syosetu.org:443 "GET /novel/379532/4.html HTTP/1.1" 200 None
+2025-07-15 08:53:21,752 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=37461bytes
+2025-07-15 08:53:21,762 - INFO - CloudScraperで取得されたHTMLテキスト長: 26193
+2025-07-15 08:53:21,814 - INFO - CloudScraper取得ページ分析:
+2025-07-15 08:53:21,834 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 邂逅 - ハーメルン
+2025-07-15 08:53:21,849 - INFO -   - 本文長: 5752文字
+2025-07-15 08:53:21,877 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/4.html" property="og:url"/>
+<meta content="邂逅 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキャラにな...
+2025-07-15 08:53:21,889 - INFO -   - h1要素数: 1
+2025-07-15 08:53:21,898 - INFO -   - div要素数: 20
+2025-07-15 08:53:21,907 - INFO -   - a要素数: 77
+2025-07-15 08:53:21,915 - INFO -   - novel_body要素数: 0
+2025-07-15 08:53:21,931 - INFO -   - novel_view要素数: 0
+2025-07-15 08:53:21,940 - INFO - ページ検証: 正常なページ
+2025-07-15 08:53:21,949 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/4.html
+2025-07-15 08:53:22,000 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 08:53:22,049 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 08:53:22,100 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 08:53:22,150 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 08:53:22,203 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:22,251 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 08:53:22,301 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:22,354 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 08:53:22,402 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:22,450 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=4 HTTP/1.1" 200 None
+2025-07-15 08:53:25,484 - INFO - ページ取得開始: https://syosetu.org/novel/379532/5.html
+2025-07-15 08:53:27,499 - INFO - CloudScraperで初回試行中...
+2025-07-15 08:53:27,545 - DEBUG - https://syosetu.org:443 "GET /novel/379532/5.html HTTP/1.1" 200 None
+2025-07-15 08:53:27,572 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=44303bytes
+2025-07-15 08:53:27,580 - INFO - CloudScraperで取得されたHTMLテキスト長: 31989
+2025-07-15 08:53:27,614 - INFO - CloudScraper取得ページ分析:
+2025-07-15 08:53:27,628 - INFO -   - タイトル: 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - 主人公の決意 - ハーメルン
+2025-07-15 08:53:27,636 - INFO -   - 本文長: 6556文字
+2025-07-15 08:53:27,660 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379532/5.html" property="og:url"/>
+<meta content="主人公の決意 - 雨の日にだけ出会える、謎だらけでミステリアスなお姉さんの正体について。 - ハーメルン" property="og:title"/>
+<meta content="　タイトル10割。ちょこっとお助けキ...
+2025-07-15 08:53:27,671 - INFO -   - h1要素数: 1
+2025-07-15 08:53:27,683 - INFO -   - div要素数: 30
+2025-07-15 08:53:27,690 - INFO -   - a要素数: 118
+2025-07-15 08:53:27,698 - INFO -   - novel_body要素数: 0
+2025-07-15 08:53:27,705 - INFO -   - novel_view要素数: 0
+2025-07-15 08:53:27,717 - INFO - ページ検証: 正常なページ
+2025-07-15 08:53:27,724 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379532/5.html
+2025-07-15 08:53:27,774 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 08:53:27,823 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 08:53:27,873 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 08:53:27,924 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 08:53:27,977 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:28,026 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 08:53:28,076 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:28,128 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 08:53:28,178 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 08:53:28,225 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=5 HTTP/1.1" 200 None

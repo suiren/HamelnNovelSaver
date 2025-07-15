@@ -6042,3 +6042,952 @@
 2025-07-14 19:33:22,098 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
 2025-07-14 19:33:22,144 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
 2025-07-14 19:33:22,192 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378070&v=3 HTTP/1.1" 200 None
+2025-07-14 19:55:44,980 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:55:44,980 - INFO - CloudScraper初期化開始
+2025-07-14 19:55:44,984 - INFO - CloudScraper設定完了
+2025-07-14 19:55:44,984 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:56:14,644 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:56:14,644 - INFO - CloudScraper初期化開始
+2025-07-14 19:56:14,648 - INFO - CloudScraper設定完了
+2025-07-14 19:56:14,648 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:56:31,091 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:56:31,091 - INFO - CloudScraper初期化開始
+2025-07-14 19:56:31,096 - INFO - CloudScraper設定完了
+2025-07-14 19:56:31,096 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:56:31,097 - INFO - ページネーション発見: div.pagination a (3個のリンク)
+2025-07-14 19:56:31,097 - INFO - 検出されたページ: 3ページ
+2025-07-14 19:56:31,097 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review
+2025-07-14 19:56:31,097 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-14 19:56:31,098 - INFO -   ページ3: https://syosetu.org/novel/123456/?mode=review&page=3
+2025-07-14 19:56:31,098 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-14 19:56:31,098 - INFO - 抽出された感想: 2件
+2025-07-14 19:56:31,099 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-14 19:56:31,099 - INFO - 抽出された感想: 2件
+2025-07-14 19:56:31,100 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-14 19:56:31,100 - INFO - 抽出された感想: 2件
+2025-07-14 19:56:31,100 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-14 19:56:31,101 - INFO - 抽出された感想: 2件
+2025-07-14 19:56:46,981 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-14 19:56:46,982 - INFO - CloudScraper初期化開始
+2025-07-14 19:56:46,986 - INFO - CloudScraper設定完了
+2025-07-14 19:56:46,986 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-14 19:56:46,987 - INFO - ページネーション発見: div.pagination a (3個のリンク)
+2025-07-14 19:56:46,987 - INFO - 検出されたページ: 3ページ
+2025-07-14 19:56:46,987 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review
+2025-07-14 19:56:46,988 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-14 19:56:46,988 - INFO -   ページ3: https://syosetu.org/novel/123456/?mode=review&page=3
+2025-07-14 19:56:46,988 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-14 19:56:46,988 - INFO - 抽出された感想: 2件
+2025-07-14 19:56:46,989 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-14 19:56:46,990 - INFO - 抽出された感想: 2件
+2025-07-14 19:56:46,990 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-14 19:56:46,990 - INFO - 抽出された感想: 2件
+2025-07-14 19:56:46,991 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-14 19:56:46,991 - INFO - 抽出された感想: 2件
+2025-07-14 19:56:46,993 - INFO - 感想ページ統合完了
+2025-07-15 00:53:15,101 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:53:15,103 - INFO - CloudScraper初期化開始
+2025-07-15 00:53:15,110 - INFO - CloudScraper設定完了
+2025-07-15 00:53:15,110 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:53:15,111 - INFO - ページネーション発見: div.page-nav a (5個のリンク)
+2025-07-15 00:53:15,111 - INFO - 検出されたページ: 6ページ
+2025-07-15 00:53:15,111 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review
+2025-07-15 00:53:15,111 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:53:15,112 - INFO -   ページ3: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:53:15,112 - INFO -   ページ4: https://syosetu.org/novel/123456/?mode=review&page=3
+2025-07-15 00:53:15,112 - INFO -   ページ5: https://syosetu.org/novel/123456/?mode=review&page=4
+2025-07-15 00:53:15,112 - INFO -   ページ6: https://syosetu.org/novel/123456/?mode=review&page=5
+2025-07-15 00:53:15,114 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:53:15,114 - INFO - CloudScraper初期化開始
+2025-07-15 00:53:15,117 - INFO - CloudScraper設定完了
+2025-07-15 00:53:15,118 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:53:15,118 - INFO - ページネーション発見: div.pagination a (3個のリンク)
+2025-07-15 00:53:15,118 - INFO - 検出されたページ: 4ページ
+2025-07-15 00:53:15,119 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review
+2025-07-15 00:53:15,119 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:53:15,119 - INFO -   ページ3: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:53:15,119 - INFO -   ページ4: https://syosetu.org/novel/123456/?mode=review&page=3
+2025-07-15 00:53:15,119 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:53:15,119 - INFO - CloudScraper初期化開始
+2025-07-15 00:53:15,124 - INFO - CloudScraper設定完了
+2025-07-15 00:53:15,124 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:53:15,125 - INFO - 検出されたページ: 1ページ
+2025-07-15 00:53:15,125 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review
+2025-07-15 00:53:15,126 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:53:15,126 - INFO - CloudScraper初期化開始
+2025-07-15 00:53:15,129 - INFO - CloudScraper設定完了
+2025-07-15 00:53:15,129 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:53:15,130 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-15 00:53:15,130 - INFO - 抽出された感想: 2件
+2025-07-15 00:53:15,130 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:53:15,131 - INFO - CloudScraper初期化開始
+2025-07-15 00:53:15,135 - INFO - CloudScraper設定完了
+2025-07-15 00:53:15,135 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:53:15,136 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:53:15,136 - INFO - CloudScraper初期化開始
+2025-07-15 00:53:15,140 - INFO - CloudScraper設定完了
+2025-07-15 00:53:15,140 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:53:15,142 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 00:53:15,143 - INFO - ページネーション発見: div.pagination a (2個のリンク)
+2025-07-15 00:53:15,143 - INFO - 検出されたページ: 3ページ
+2025-07-15 00:53:15,143 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review
+2025-07-15 00:53:15,144 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:53:15,144 - INFO -   ページ3: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:53:15,144 - INFO - 感想ページ数: 3ページ
+2025-07-15 00:53:15,144 - INFO - 感想ページ 1/3 を取得中: https://syosetu.org/novel/123456/?mode=review
+2025-07-15 00:53:15,144 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-15 00:53:15,145 - INFO - 抽出された感想: 2件
+2025-07-15 00:53:15,145 - INFO - 感想ページ 2/3 を取得中: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:53:17,148 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-15 00:53:17,148 - INFO - 抽出された感想: 2件
+2025-07-15 00:53:17,148 - INFO - 感想ページ 3/3 を取得中: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:53:19,151 - ERROR - 感想ページ統合エラー: 
+2025-07-15 00:55:01,539 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:01,540 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:01,546 - INFO - CloudScraper設定完了
+2025-07-15 00:55:01,547 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:01,549 - INFO - ページネーション発見: div.page-nav a (5個のリンク)
+2025-07-15 00:55:01,549 - INFO - 検出されたページ: 5ページ
+2025-07-15 00:55:01,549 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:55:01,549 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:55:01,549 - INFO -   ページ3: https://syosetu.org/novel/123456/?mode=review&page=3
+2025-07-15 00:55:01,550 - INFO -   ページ4: https://syosetu.org/novel/123456/?mode=review&page=4
+2025-07-15 00:55:01,550 - INFO -   ページ5: https://syosetu.org/novel/123456/?mode=review&page=5
+2025-07-15 00:55:01,553 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:01,553 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:01,560 - INFO - CloudScraper設定完了
+2025-07-15 00:55:01,560 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:01,561 - INFO - ページネーション発見: div.pagination a (3個のリンク)
+2025-07-15 00:55:01,561 - INFO - 検出されたページ: 3ページ
+2025-07-15 00:55:01,561 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:55:01,562 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:55:01,562 - INFO -   ページ3: https://syosetu.org/novel/123456/?mode=review&page=3
+2025-07-15 00:55:01,562 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:01,562 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:01,566 - INFO - CloudScraper設定完了
+2025-07-15 00:55:01,566 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:01,567 - INFO - 検出されたページ: 1ページ
+2025-07-15 00:55:01,567 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review
+2025-07-15 00:55:01,567 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:01,567 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:01,572 - INFO - CloudScraper設定完了
+2025-07-15 00:55:01,572 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:01,573 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-15 00:55:01,573 - INFO - 抽出された感想: 2件
+2025-07-15 00:55:01,573 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:01,574 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:01,577 - INFO - CloudScraper設定完了
+2025-07-15 00:55:01,577 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:01,578 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:01,578 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:01,581 - INFO - CloudScraper設定完了
+2025-07-15 00:55:01,582 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:01,584 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 00:55:01,585 - INFO - ページネーション発見: div.pagination a (2個のリンク)
+2025-07-15 00:55:01,585 - INFO - 検出されたページ: 2ページ
+2025-07-15 00:55:01,585 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:55:01,585 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:55:01,585 - INFO - 感想ページ数: 2ページ
+2025-07-15 00:55:01,586 - INFO - 感想ページ 1/2 を取得中: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:55:01,586 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-15 00:55:01,586 - INFO - 抽出された感想: 2件
+2025-07-15 00:55:01,586 - INFO - 感想ページ 2/2 を取得中: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:55:03,589 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-15 00:55:03,589 - INFO - 抽出された感想: 2件
+2025-07-15 00:55:03,590 - INFO - 感想ページ統合完了
+2025-07-15 00:55:03,591 - INFO - 感想ページ統合完了: 4件の感想を統合
+2025-07-15 00:55:29,607 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:29,607 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:29,613 - INFO - CloudScraper設定完了
+2025-07-15 00:55:29,613 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:29,614 - INFO - ページネーション発見: div.page-nav a (5個のリンク)
+2025-07-15 00:55:29,614 - INFO - 検出されたページ: 5ページ
+2025-07-15 00:55:29,615 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:55:29,615 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:55:29,615 - INFO -   ページ3: https://syosetu.org/novel/123456/?mode=review&page=3
+2025-07-15 00:55:29,615 - INFO -   ページ4: https://syosetu.org/novel/123456/?mode=review&page=4
+2025-07-15 00:55:29,615 - INFO -   ページ5: https://syosetu.org/novel/123456/?mode=review&page=5
+2025-07-15 00:55:29,617 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:29,618 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:29,622 - INFO - CloudScraper設定完了
+2025-07-15 00:55:29,622 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:29,623 - INFO - ページネーション発見: div.pagination a (3個のリンク)
+2025-07-15 00:55:29,623 - INFO - 検出されたページ: 3ページ
+2025-07-15 00:55:29,623 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:55:29,623 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:55:29,624 - INFO -   ページ3: https://syosetu.org/novel/123456/?mode=review&page=3
+2025-07-15 00:55:29,624 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:29,624 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:29,628 - INFO - CloudScraper設定完了
+2025-07-15 00:55:29,628 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:29,630 - INFO - 検出されたページ: 1ページ
+2025-07-15 00:55:29,630 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review
+2025-07-15 00:55:29,630 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:29,631 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:29,636 - INFO - CloudScraper設定完了
+2025-07-15 00:55:29,636 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:29,637 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-15 00:55:29,637 - INFO - 抽出された感想: 2件
+2025-07-15 00:55:29,638 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:29,638 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:29,642 - INFO - CloudScraper設定完了
+2025-07-15 00:55:29,642 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:29,643 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:55:29,643 - INFO - CloudScraper初期化開始
+2025-07-15 00:55:29,648 - INFO - CloudScraper設定完了
+2025-07-15 00:55:29,648 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:55:29,665 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 00:55:29,665 - INFO - ページネーション発見: div.pagination a (2個のリンク)
+2025-07-15 00:55:29,665 - INFO - 検出されたページ: 2ページ
+2025-07-15 00:55:29,665 - INFO -   ページ1: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:55:29,665 - INFO -   ページ2: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:55:29,665 - INFO - 感想ページ数: 2ページ
+2025-07-15 00:55:29,665 - INFO - 感想ページ 1/2 を取得中: https://syosetu.org/novel/123456/?mode=review&page=1
+2025-07-15 00:55:29,666 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-15 00:55:29,666 - INFO - 抽出された感想: 2件
+2025-07-15 00:55:29,666 - INFO - 感想ページ 2/2 を取得中: https://syosetu.org/novel/123456/?mode=review&page=2
+2025-07-15 00:55:31,669 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-15 00:55:31,670 - INFO - 抽出された感想: 2件
+2025-07-15 00:55:31,671 - INFO - 感想ページ統合完了
+2025-07-15 00:55:31,671 - INFO - 感想ページ統合完了: 4件の感想を統合
+2025-07-15 00:56:07,310 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 00:56:07,311 - INFO - CloudScraper初期化開始
+2025-07-15 00:56:07,316 - INFO - CloudScraper設定完了
+2025-07-15 00:56:07,317 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 00:56:07,317 - INFO - ページ取得開始: https://syosetu.org/novel/378070/?mode=review
+2025-07-15 00:56:09,319 - INFO - CloudScraperで初回試行中...
+2025-07-15 00:56:09,322 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 00:56:09,427 - DEBUG - https://syosetu.org:443 "GET /novel/378070/?mode=review HTTP/1.1" 200 None
+2025-07-15 00:56:09,429 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21709bytes
+2025-07-15 00:56:09,429 - INFO - CloudScraperで取得されたHTMLテキスト長: 18631
+2025-07-15 00:56:09,435 - INFO - CloudScraper取得ページ分析:
+2025-07-15 00:56:09,436 - INFO -   - タイトル: ダウナー女神のアクア様 - ハーメルン
+2025-07-15 00:56:09,436 - INFO -   - 本文長: 1871文字
+2025-07-15 00:56:09,439 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378070/" property="og:url"/>
+<meta content="ダウナー女神のアクア様 - ハーメルン" property="og:title"/>
+<meta content="もしもアクアがダウナー系な女神様だったなら。そんな世界線のこのすば。 " property="og:descrip...
+2025-07-15 00:56:09,440 - INFO -   - h1要素数: 1
+2025-07-15 00:56:09,440 - INFO -   - div要素数: 21
+2025-07-15 00:56:09,440 - INFO -   - a要素数: 85
+2025-07-15 00:56:09,440 - INFO -   - novel_body要素数: 0
+2025-07-15 00:56:09,440 - INFO -   - novel_view要素数: 0
+2025-07-15 00:56:09,440 - INFO - ページ検証: 正常なページ
+2025-07-15 00:56:09,440 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378070/?mode=review
+2025-07-15 00:56:09,449 - INFO - 検出されたページ: 1ページ
+2025-07-15 00:56:09,450 - INFO -   ページ1: https://syosetu.org/novel/378070/?mode=review
+2025-07-15 01:06:18,576 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 01:06:18,577 - INFO - CloudScraper初期化開始
+2025-07-15 01:06:18,581 - INFO - CloudScraper設定完了
+2025-07-15 01:06:18,581 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 01:06:18,581 - INFO - ページ取得開始: https://syosetu.org/novel/378070/
+2025-07-15 01:06:20,584 - INFO - CloudScraperで初回試行中...
+2025-07-15 01:06:20,585 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 01:06:20,695 - DEBUG - https://syosetu.org:443 "GET /novel/378070/ HTTP/1.1" 200 None
+2025-07-15 01:06:20,696 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21709bytes
+2025-07-15 01:06:20,696 - INFO - CloudScraperで取得されたHTMLテキスト長: 18631
+2025-07-15 01:06:20,704 - INFO - CloudScraper取得ページ分析:
+2025-07-15 01:06:20,705 - INFO -   - タイトル: ダウナー女神のアクア様 - ハーメルン
+2025-07-15 01:06:20,705 - INFO -   - 本文長: 1871文字
+2025-07-15 01:06:20,708 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378070/" property="og:url"/>
+<meta content="ダウナー女神のアクア様 - ハーメルン" property="og:title"/>
+<meta content="もしもアクアがダウナー系な女神様だったなら。そんな世界線のこのすば。 " property="og:descrip...
+2025-07-15 01:06:20,710 - INFO -   - h1要素数: 1
+2025-07-15 01:06:20,710 - INFO -   - div要素数: 21
+2025-07-15 01:06:20,710 - INFO -   - a要素数: 85
+2025-07-15 01:06:20,710 - INFO -   - novel_body要素数: 0
+2025-07-15 01:06:20,710 - INFO -   - novel_view要素数: 0
+2025-07-15 01:06:20,710 - INFO - ページ検証: 正常なページ
+2025-07-15 01:06:20,710 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378070/
+2025-07-15 01:06:20,711 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 01:06:20,711 - INFO - ページ取得開始: //syosetu.org/?mode=review&nid=378070
+2025-07-15 01:06:20,711 - ERROR - 無効なURL形式: //syosetu.org/?mode=review&nid=378070
+2025-07-15 01:06:44,066 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 01:06:44,067 - INFO - CloudScraper初期化開始
+2025-07-15 01:06:44,072 - INFO - CloudScraper設定完了
+2025-07-15 01:06:44,072 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 01:06:44,072 - INFO - ページ取得開始: https://syosetu.org/novel/378070/
+2025-07-15 01:06:46,073 - INFO - CloudScraperで初回試行中...
+2025-07-15 01:06:46,075 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 01:06:46,181 - DEBUG - https://syosetu.org:443 "GET /novel/378070/ HTTP/1.1" 200 None
+2025-07-15 01:06:46,182 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21709bytes
+2025-07-15 01:06:46,183 - INFO - CloudScraperで取得されたHTMLテキスト長: 18631
+2025-07-15 01:06:46,189 - INFO - CloudScraper取得ページ分析:
+2025-07-15 01:06:46,189 - INFO -   - タイトル: ダウナー女神のアクア様 - ハーメルン
+2025-07-15 01:06:46,190 - INFO -   - 本文長: 1871文字
+2025-07-15 01:06:46,192 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378070/" property="og:url"/>
+<meta content="ダウナー女神のアクア様 - ハーメルン" property="og:title"/>
+<meta content="もしもアクアがダウナー系な女神様だったなら。そんな世界線のこのすば。 " property="og:descrip...
+2025-07-15 01:06:46,193 - INFO -   - h1要素数: 1
+2025-07-15 01:06:46,193 - INFO -   - div要素数: 21
+2025-07-15 01:06:46,193 - INFO -   - a要素数: 85
+2025-07-15 01:06:46,193 - INFO -   - novel_body要素数: 0
+2025-07-15 01:06:46,193 - INFO -   - novel_view要素数: 0
+2025-07-15 01:06:46,193 - INFO - ページ検証: 正常なページ
+2025-07-15 01:06:46,194 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378070/
+2025-07-15 01:06:46,194 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 01:06:46,194 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 01:06:48,196 - INFO - CloudScraperで初回試行中...
+2025-07-15 01:06:48,251 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070 HTTP/1.1" 200 None
+2025-07-15 01:06:48,252 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29529bytes
+2025-07-15 01:06:48,252 - INFO - CloudScraperで取得されたHTMLテキスト長: 26051
+2025-07-15 01:06:48,276 - INFO - CloudScraper取得ページ分析:
+2025-07-15 01:06:48,276 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 01:06:48,276 - INFO -   - 本文長: 2293文字
+2025-07-15 01:06:48,280 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 01:06:48,282 - INFO -   - h1要素数: 1
+2025-07-15 01:06:48,282 - INFO -   - div要素数: 30
+2025-07-15 01:06:48,282 - INFO -   - a要素数: 114
+2025-07-15 01:06:48,282 - INFO -   - novel_body要素数: 0
+2025-07-15 01:06:48,282 - INFO -   - novel_view要素数: 0
+2025-07-15 01:06:48,282 - INFO - ページ検証: 正常なページ
+2025-07-15 01:06:48,282 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 01:06:48,297 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (14個のリンク)
+2025-07-15 01:06:48,297 - INFO - 検出されたページ: 1ページ
+2025-07-15 01:06:48,297 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 01:06:48,297 - INFO - 感想は1ページのみです
+2025-07-15 09:11:25,728 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 09:11:25,730 - INFO - CloudScraper初期化開始
+2025-07-15 09:11:25,734 - INFO - CloudScraper設定完了
+2025-07-15 09:11:25,734 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 09:11:25,734 - INFO - ページ取得開始: https://syosetu.org/novel/263207/
+2025-07-15 09:11:27,737 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:11:27,739 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 09:11:27,879 - DEBUG - https://syosetu.org:443 "GET /novel/263207/ HTTP/1.1" 200 None
+2025-07-15 09:11:27,880 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=5891bytes
+2025-07-15 09:11:27,880 - INFO - CloudScraperで取得されたHTMLテキスト長: 5347
+2025-07-15 09:11:27,883 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:11:27,883 - INFO -   - タイトル: ハーメルン - SS･小説投稿サイト-
+2025-07-15 09:11:27,883 - INFO -   - 本文長: 315文字
+2025-07-15 09:11:27,884 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:11:27,885 - INFO -   - h1要素数: 1
+2025-07-15 09:11:27,885 - INFO -   - div要素数: 5
+2025-07-15 09:11:27,885 - INFO -   - a要素数: 29
+2025-07-15 09:11:27,885 - INFO -   - novel_body要素数: 0
+2025-07-15 09:11:27,885 - INFO -   - novel_view要素数: 0
+2025-07-15 09:11:27,885 - INFO - ページ検証: 正常なページ
+2025-07-15 09:11:27,885 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/263207/
+2025-07-15 09:11:27,885 - WARNING - 感想URLが見つかりませんでした
+2025-07-15 09:11:27,885 - INFO - ページ取得開始: https://syosetu.org/novel/378070/
+2025-07-15 09:11:29,888 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:11:29,935 - DEBUG - https://syosetu.org:443 "GET /novel/378070/ HTTP/1.1" 200 None
+2025-07-15 09:11:29,936 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21709bytes
+2025-07-15 09:11:29,936 - INFO - CloudScraperで取得されたHTMLテキスト長: 18631
+2025-07-15 09:11:29,943 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:11:29,943 - INFO -   - タイトル: ダウナー女神のアクア様 - ハーメルン
+2025-07-15 09:11:29,943 - INFO -   - 本文長: 1871文字
+2025-07-15 09:11:29,946 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378070/" property="og:url"/>
+<meta content="ダウナー女神のアクア様 - ハーメルン" property="og:title"/>
+<meta content="もしもアクアがダウナー系な女神様だったなら。そんな世界線のこのすば。 " property="og:descrip...
+2025-07-15 09:11:29,947 - INFO -   - h1要素数: 1
+2025-07-15 09:11:29,947 - INFO -   - div要素数: 21
+2025-07-15 09:11:29,948 - INFO -   - a要素数: 85
+2025-07-15 09:11:29,948 - INFO -   - novel_body要素数: 0
+2025-07-15 09:11:29,948 - INFO -   - novel_view要素数: 0
+2025-07-15 09:11:29,949 - INFO - ページ検証: 正常なページ
+2025-07-15 09:11:29,949 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378070/
+2025-07-15 09:11:29,950 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:11:31,952 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:11:32,007 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070 HTTP/1.1" 200 None
+2025-07-15 09:11:32,007 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29529bytes
+2025-07-15 09:11:32,007 - INFO - CloudScraperで取得されたHTMLテキスト長: 26051
+2025-07-15 09:11:32,033 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:11:32,034 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:11:32,034 - INFO -   - 本文長: 2293文字
+2025-07-15 09:11:32,039 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:11:32,040 - INFO -   - h1要素数: 1
+2025-07-15 09:11:32,040 - INFO -   - div要素数: 30
+2025-07-15 09:11:32,040 - INFO -   - a要素数: 114
+2025-07-15 09:11:32,040 - INFO -   - novel_body要素数: 0
+2025-07-15 09:11:32,040 - INFO -   - novel_view要素数: 0
+2025-07-15 09:11:32,041 - INFO - ページ検証: 正常なページ
+2025-07-15 09:11:32,041 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:11:32,052 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (14個のリンク)
+2025-07-15 09:11:32,053 - INFO - 検出されたページ: 1ページ
+2025-07-15 09:11:32,053 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:11:32,053 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 09:11:32,053 - INFO - CloudScraper初期化開始
+2025-07-15 09:11:32,059 - INFO - CloudScraper設定完了
+2025-07-15 09:11:32,060 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 09:11:32,060 - INFO - ページ取得開始: https://syosetu.org/novel/263207/?mode=review
+2025-07-15 09:11:34,062 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:11:34,063 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 09:11:34,177 - DEBUG - https://syosetu.org:443 "GET /novel/263207/?mode=review HTTP/1.1" 200 None
+2025-07-15 09:11:34,178 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=5891bytes
+2025-07-15 09:11:34,178 - INFO - CloudScraperで取得されたHTMLテキスト長: 5347
+2025-07-15 09:11:34,181 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:11:34,181 - INFO -   - タイトル: ハーメルン - SS･小説投稿サイト-
+2025-07-15 09:11:34,181 - INFO -   - 本文長: 315文字
+2025-07-15 09:11:34,182 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:11:34,183 - INFO -   - h1要素数: 1
+2025-07-15 09:11:34,183 - INFO -   - div要素数: 5
+2025-07-15 09:11:34,183 - INFO -   - a要素数: 29
+2025-07-15 09:11:34,183 - INFO -   - novel_body要素数: 0
+2025-07-15 09:11:34,183 - INFO -   - novel_view要素数: 0
+2025-07-15 09:11:34,183 - INFO - ページ検証: 正常なページ
+2025-07-15 09:11:34,183 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/263207/?mode=review
+2025-07-15 09:16:02,514 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 09:16:02,515 - INFO - CloudScraper初期化開始
+2025-07-15 09:16:02,522 - INFO - CloudScraper設定完了
+2025-07-15 09:16:02,522 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 09:16:02,522 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 09:16:02,522 - INFO - CloudScraper初期化開始
+2025-07-15 09:16:02,526 - INFO - CloudScraper設定完了
+2025-07-15 09:16:02,526 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 09:16:02,526 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:16:04,528 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:16:04,531 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 09:16:04,647 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070 HTTP/1.1" 200 None
+2025-07-15 09:16:04,648 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29529bytes
+2025-07-15 09:16:04,648 - INFO - CloudScraperで取得されたHTMLテキスト長: 26051
+2025-07-15 09:16:04,659 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:16:04,660 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:16:04,660 - INFO -   - 本文長: 2293文字
+2025-07-15 09:16:04,664 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:16:04,666 - INFO -   - h1要素数: 1
+2025-07-15 09:16:04,667 - INFO -   - div要素数: 30
+2025-07-15 09:16:04,667 - INFO -   - a要素数: 114
+2025-07-15 09:16:04,667 - INFO -   - novel_body要素数: 0
+2025-07-15 09:16:04,667 - INFO -   - novel_view要素数: 0
+2025-07-15 09:16:04,667 - INFO - ページ検証: 正常なページ
+2025-07-15 09:16:04,668 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:18:20,734 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 09:18:20,735 - INFO - CloudScraper初期化開始
+2025-07-15 09:18:20,742 - INFO - CloudScraper設定完了
+2025-07-15 09:18:20,742 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 09:18:20,743 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 09:18:20,743 - INFO - CloudScraper初期化開始
+2025-07-15 09:18:20,747 - INFO - CloudScraper設定完了
+2025-07-15 09:18:20,747 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 09:18:20,747 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:18:22,749 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:18:22,751 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 09:18:22,869 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070 HTTP/1.1" 200 None
+2025-07-15 09:18:22,871 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29529bytes
+2025-07-15 09:18:22,871 - INFO - CloudScraperで取得されたHTMLテキスト長: 26051
+2025-07-15 09:18:22,881 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:18:22,881 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:18:22,881 - INFO -   - 本文長: 2293文字
+2025-07-15 09:18:22,885 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:18:22,887 - INFO -   - h1要素数: 1
+2025-07-15 09:18:22,887 - INFO -   - div要素数: 30
+2025-07-15 09:18:22,887 - INFO -   - a要素数: 114
+2025-07-15 09:18:22,887 - INFO -   - novel_body要素数: 0
+2025-07-15 09:18:22,887 - INFO -   - novel_view要素数: 0
+2025-07-15 09:18:22,888 - INFO - ページ検証: 正常なページ
+2025-07-15 09:18:22,888 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:19:59,706 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 09:19:59,708 - INFO - CloudScraper初期化開始
+2025-07-15 09:19:59,713 - INFO - CloudScraper設定完了
+2025-07-15 09:19:59,714 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 09:19:59,714 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 09:19:59,714 - INFO - CloudScraper初期化開始
+2025-07-15 09:19:59,717 - INFO - CloudScraper設定完了
+2025-07-15 09:19:59,717 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 09:19:59,717 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:20:01,719 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:20:01,722 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 09:20:01,865 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070 HTTP/1.1" 200 None
+2025-07-15 09:20:01,867 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29529bytes
+2025-07-15 09:20:01,867 - INFO - CloudScraperで取得されたHTMLテキスト長: 26051
+2025-07-15 09:20:01,877 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:20:01,878 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:20:01,878 - INFO -   - 本文長: 2293文字
+2025-07-15 09:20:01,882 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:20:01,883 - INFO -   - h1要素数: 1
+2025-07-15 09:20:01,884 - INFO -   - div要素数: 30
+2025-07-15 09:20:01,884 - INFO -   - a要素数: 114
+2025-07-15 09:20:01,884 - INFO -   - novel_body要素数: 0
+2025-07-15 09:20:01,885 - INFO -   - novel_view要素数: 0
+2025-07-15 09:20:01,886 - INFO - ページ検証: 正常なページ
+2025-07-15 09:20:01,886 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:20:01,899 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (14個のリンク)
+2025-07-15 09:20:01,899 - INFO - 検出されたページ: 6ページ
+2025-07-15 09:20:01,899 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:20:01,899 - INFO -   ページ2: https://syosetu.org//?mode=review&nid=378070&page=2
+2025-07-15 09:20:01,899 - INFO -   ページ3: https://syosetu.org//?mode=review&nid=378070&page=3
+2025-07-15 09:20:01,900 - INFO -   ページ4: https://syosetu.org//?mode=review&nid=378070&page=4
+2025-07-15 09:20:01,900 - INFO -   ページ5: https://syosetu.org//?mode=review&nid=378070&page=5
+2025-07-15 09:20:01,900 - INFO -   ページ6: https://syosetu.org//?mode=review&nid=378070&page=6
+2025-07-15 09:20:01,900 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 09:20:01,900 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:20:03,902 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:20:03,954 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070 HTTP/1.1" 200 None
+2025-07-15 09:20:03,955 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29529bytes
+2025-07-15 09:20:03,955 - INFO - CloudScraperで取得されたHTMLテキスト長: 26051
+2025-07-15 09:20:03,971 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:20:03,971 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:20:03,971 - INFO -   - 本文長: 2293文字
+2025-07-15 09:20:03,975 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:20:03,976 - INFO -   - h1要素数: 1
+2025-07-15 09:20:03,976 - INFO -   - div要素数: 30
+2025-07-15 09:20:03,976 - INFO -   - a要素数: 114
+2025-07-15 09:20:03,976 - INFO -   - novel_body要素数: 0
+2025-07-15 09:20:03,976 - INFO -   - novel_view要素数: 0
+2025-07-15 09:20:03,977 - INFO - ページ検証: 正常なページ
+2025-07-15 09:20:03,977 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:20:03,987 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (14個のリンク)
+2025-07-15 09:20:03,987 - INFO - 検出されたページ: 6ページ
+2025-07-15 09:20:03,987 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:20:03,987 - INFO -   ページ2: https://syosetu.org//?mode=review&nid=378070&page=2
+2025-07-15 09:20:03,987 - INFO -   ページ3: https://syosetu.org//?mode=review&nid=378070&page=3
+2025-07-15 09:20:03,987 - INFO -   ページ4: https://syosetu.org//?mode=review&nid=378070&page=4
+2025-07-15 09:20:03,988 - INFO -   ページ5: https://syosetu.org//?mode=review&nid=378070&page=5
+2025-07-15 09:20:03,988 - INFO -   ページ6: https://syosetu.org//?mode=review&nid=378070&page=6
+2025-07-15 09:20:03,988 - INFO - 感想ページ数: 6ページ
+2025-07-15 09:20:03,988 - INFO - 感想ページ 1/6 を取得中: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:20:03,993 - INFO - 感想要素発見: div[class*="review"] (1件)
+2025-07-15 09:20:03,993 - INFO - 抽出された感想: 1件
+2025-07-15 09:20:03,993 - INFO - 感想ページ 2/6 を取得中: https://syosetu.org//?mode=review&nid=378070&page=2
+2025-07-15 09:20:05,995 - INFO - ページ取得開始: https://syosetu.org//?mode=review&nid=378070&page=2
+2025-07-15 09:20:07,998 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:20:08,053 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070&page=2 HTTP/1.1" 200 None
+2025-07-15 09:20:08,054 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28745bytes
+2025-07-15 09:20:08,054 - INFO - CloudScraperで取得されたHTMLテキスト長: 25725
+2025-07-15 09:20:08,065 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:20:08,065 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:20:08,065 - INFO -   - 本文長: 2100文字
+2025-07-15 09:20:08,070 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:20:08,071 - INFO -   - h1要素数: 1
+2025-07-15 09:20:08,071 - INFO -   - div要素数: 29
+2025-07-15 09:20:08,071 - INFO -   - a要素数: 116
+2025-07-15 09:20:08,071 - INFO -   - novel_body要素数: 0
+2025-07-15 09:20:08,071 - INFO -   - novel_view要素数: 0
+2025-07-15 09:20:08,072 - INFO - ページ検証: 正常なページ
+2025-07-15 09:20:08,072 - INFO - CloudScraperで取得成功: https://syosetu.org//?mode=review&nid=378070&page=2
+2025-07-15 09:20:08,078 - INFO - 抽出された感想: 0件
+2025-07-15 09:20:08,078 - INFO - 感想ページ 3/6 を取得中: https://syosetu.org//?mode=review&nid=378070&page=3
+2025-07-15 09:20:10,081 - INFO - ページ取得開始: https://syosetu.org//?mode=review&nid=378070&page=3
+2025-07-15 09:20:12,083 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:20:12,136 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070&page=3 HTTP/1.1" 200 None
+2025-07-15 09:20:12,137 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28401bytes
+2025-07-15 09:20:12,137 - INFO - CloudScraperで取得されたHTMLテキスト長: 25523
+2025-07-15 09:20:12,147 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:20:12,147 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:20:12,147 - INFO -   - 本文長: 2006文字
+2025-07-15 09:20:12,151 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:20:12,152 - INFO -   - h1要素数: 1
+2025-07-15 09:20:12,152 - INFO -   - div要素数: 29
+2025-07-15 09:20:12,152 - INFO -   - a要素数: 115
+2025-07-15 09:20:12,153 - INFO -   - novel_body要素数: 0
+2025-07-15 09:20:12,153 - INFO -   - novel_view要素数: 0
+2025-07-15 09:20:12,153 - INFO - ページ検証: 正常なページ
+2025-07-15 09:20:12,153 - INFO - CloudScraperで取得成功: https://syosetu.org//?mode=review&nid=378070&page=3
+2025-07-15 09:20:12,159 - INFO - 抽出された感想: 0件
+2025-07-15 09:20:12,159 - INFO - 感想ページ 4/6 を取得中: https://syosetu.org//?mode=review&nid=378070&page=4
+2025-07-15 09:20:14,161 - INFO - ページ取得開始: https://syosetu.org//?mode=review&nid=378070&page=4
+2025-07-15 09:20:16,164 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:20:16,218 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070&page=4 HTTP/1.1" 200 None
+2025-07-15 09:20:16,219 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29964bytes
+2025-07-15 09:20:16,219 - INFO - CloudScraperで取得されたHTMLテキスト長: 26286
+2025-07-15 09:20:16,230 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:20:16,230 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:20:16,230 - INFO -   - 本文長: 2404文字
+2025-07-15 09:20:16,234 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:20:16,236 - INFO -   - h1要素数: 1
+2025-07-15 09:20:16,236 - INFO -   - div要素数: 30
+2025-07-15 09:20:16,236 - INFO -   - a要素数: 117
+2025-07-15 09:20:16,236 - INFO -   - novel_body要素数: 0
+2025-07-15 09:20:16,236 - INFO -   - novel_view要素数: 0
+2025-07-15 09:20:16,237 - INFO - ページ検証: 正常なページ
+2025-07-15 09:20:16,237 - INFO - CloudScraperで取得成功: https://syosetu.org//?mode=review&nid=378070&page=4
+2025-07-15 09:20:16,243 - INFO - 抽出された感想: 0件
+2025-07-15 09:20:16,244 - INFO - 感想ページ 5/6 を取得中: https://syosetu.org//?mode=review&nid=378070&page=5
+2025-07-15 09:20:18,246 - INFO - ページ取得開始: https://syosetu.org//?mode=review&nid=378070&page=5
+2025-07-15 09:20:20,248 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:20:20,298 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070&page=5 HTTP/1.1" 200 None
+2025-07-15 09:20:20,299 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=27980bytes
+2025-07-15 09:20:20,299 - INFO - CloudScraperで取得されたHTMLテキスト長: 25370
+2025-07-15 09:20:20,309 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:20:20,309 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:20:20,309 - INFO -   - 本文長: 1857文字
+2025-07-15 09:20:20,313 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:20:20,314 - INFO -   - h1要素数: 1
+2025-07-15 09:20:20,314 - INFO -   - div要素数: 29
+2025-07-15 09:20:20,314 - INFO -   - a要素数: 115
+2025-07-15 09:20:20,314 - INFO -   - novel_body要素数: 0
+2025-07-15 09:20:20,314 - INFO -   - novel_view要素数: 0
+2025-07-15 09:20:20,315 - INFO - ページ検証: 正常なページ
+2025-07-15 09:20:20,315 - INFO - CloudScraperで取得成功: https://syosetu.org//?mode=review&nid=378070&page=5
+2025-07-15 09:20:20,321 - INFO - 抽出された感想: 0件
+2025-07-15 09:20:20,321 - INFO - 感想ページ 6/6 を取得中: https://syosetu.org//?mode=review&nid=378070&page=6
+2025-07-15 09:20:22,323 - INFO - ページ取得開始: https://syosetu.org//?mode=review&nid=378070&page=6
+2025-07-15 09:20:24,326 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:20:24,379 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070&page=6 HTTP/1.1" 200 None
+2025-07-15 09:20:24,379 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=23635bytes
+2025-07-15 09:20:24,379 - INFO - CloudScraperで取得されたHTMLテキスト長: 21643
+2025-07-15 09:20:24,387 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:20:24,387 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:20:24,387 - INFO -   - 本文長: 1317文字
+2025-07-15 09:20:24,390 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:20:24,391 - INFO -   - h1要素数: 1
+2025-07-15 09:20:24,391 - INFO -   - div要素数: 24
+2025-07-15 09:20:24,391 - INFO -   - a要素数: 86
+2025-07-15 09:20:24,391 - INFO -   - novel_body要素数: 0
+2025-07-15 09:20:24,391 - INFO -   - novel_view要素数: 0
+2025-07-15 09:20:24,392 - INFO - ページ検証: 正常なページ
+2025-07-15 09:20:24,392 - INFO - CloudScraperで取得成功: https://syosetu.org//?mode=review&nid=378070&page=6
+2025-07-15 09:20:24,397 - INFO - 抽出された感想: 0件
+2025-07-15 09:20:24,407 - INFO - 感想ページ統合完了
+2025-07-15 09:20:24,407 - INFO - 感想ページ統合完了: 1件の感想を統合
+2025-07-15 09:21:10,171 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 09:21:10,171 - INFO - CloudScraper初期化開始
+2025-07-15 09:21:10,176 - INFO - CloudScraper設定完了
+2025-07-15 09:21:10,176 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 09:21:10,176 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 09:21:10,176 - INFO - CloudScraper初期化開始
+2025-07-15 09:21:10,179 - INFO - CloudScraper設定完了
+2025-07-15 09:21:10,179 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 09:21:10,179 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:21:12,182 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:21:12,183 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 09:21:12,493 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070 HTTP/1.1" 200 None
+2025-07-15 09:21:12,494 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29529bytes
+2025-07-15 09:21:12,494 - INFO - CloudScraperで取得されたHTMLテキスト長: 26051
+2025-07-15 09:21:12,505 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:21:12,505 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:21:12,505 - INFO -   - 本文長: 2293文字
+2025-07-15 09:21:12,509 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:21:12,510 - INFO -   - h1要素数: 1
+2025-07-15 09:21:12,511 - INFO -   - div要素数: 30
+2025-07-15 09:21:12,511 - INFO -   - a要素数: 114
+2025-07-15 09:21:12,511 - INFO -   - novel_body要素数: 0
+2025-07-15 09:21:12,511 - INFO -   - novel_view要素数: 0
+2025-07-15 09:21:12,511 - INFO - ページ検証: 正常なページ
+2025-07-15 09:21:12,511 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:21:12,523 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (14個のリンク)
+2025-07-15 09:21:12,523 - INFO - 検出されたページ: 6ページ
+2025-07-15 09:21:12,523 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:21:12,523 - INFO -   ページ2: https://syosetu.org/?mode=review&nid=378070&page=2
+2025-07-15 09:21:12,523 - INFO -   ページ3: https://syosetu.org/?mode=review&nid=378070&page=3
+2025-07-15 09:21:12,523 - INFO -   ページ4: https://syosetu.org/?mode=review&nid=378070&page=4
+2025-07-15 09:21:12,523 - INFO -   ページ5: https://syosetu.org/?mode=review&nid=378070&page=5
+2025-07-15 09:21:12,523 - INFO -   ページ6: https://syosetu.org/?mode=review&nid=378070&page=6
+2025-07-15 09:21:12,523 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 09:21:12,524 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:21:14,526 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:21:14,577 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070 HTTP/1.1" 200 None
+2025-07-15 09:21:14,578 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29529bytes
+2025-07-15 09:21:14,578 - INFO - CloudScraperで取得されたHTMLテキスト長: 26051
+2025-07-15 09:21:14,594 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:21:14,594 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:21:14,595 - INFO -   - 本文長: 2293文字
+2025-07-15 09:21:14,598 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:21:14,599 - INFO -   - h1要素数: 1
+2025-07-15 09:21:14,599 - INFO -   - div要素数: 30
+2025-07-15 09:21:14,599 - INFO -   - a要素数: 114
+2025-07-15 09:21:14,600 - INFO -   - novel_body要素数: 0
+2025-07-15 09:21:14,600 - INFO -   - novel_view要素数: 0
+2025-07-15 09:21:14,600 - INFO - ページ検証: 正常なページ
+2025-07-15 09:21:14,600 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:21:14,611 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (14個のリンク)
+2025-07-15 09:21:14,612 - INFO - 検出されたページ: 6ページ
+2025-07-15 09:21:14,612 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:21:14,612 - INFO -   ページ2: https://syosetu.org/?mode=review&nid=378070&page=2
+2025-07-15 09:21:14,612 - INFO -   ページ3: https://syosetu.org/?mode=review&nid=378070&page=3
+2025-07-15 09:21:14,612 - INFO -   ページ4: https://syosetu.org/?mode=review&nid=378070&page=4
+2025-07-15 09:21:14,612 - INFO -   ページ5: https://syosetu.org/?mode=review&nid=378070&page=5
+2025-07-15 09:21:14,612 - INFO -   ページ6: https://syosetu.org/?mode=review&nid=378070&page=6
+2025-07-15 09:21:14,613 - INFO - 感想ページ数: 6ページ
+2025-07-15 09:21:14,613 - INFO - 感想ページ 1/6 を取得中: https://syosetu.org/?mode=review&nid=378070
+2025-07-15 09:21:14,617 - INFO - 感想要素発見: div[class*="review"] (1件)
+2025-07-15 09:21:14,617 - INFO - 抽出された感想: 1件
+2025-07-15 09:21:14,617 - INFO - 感想ページ 2/6 を取得中: https://syosetu.org/?mode=review&nid=378070&page=2
+2025-07-15 09:21:16,620 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070&page=2
+2025-07-15 09:21:18,622 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:21:18,674 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070&page=2 HTTP/1.1" 200 None
+2025-07-15 09:21:18,675 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28745bytes
+2025-07-15 09:21:18,675 - INFO - CloudScraperで取得されたHTMLテキスト長: 25725
+2025-07-15 09:21:18,689 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:21:18,689 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:21:18,689 - INFO -   - 本文長: 2100文字
+2025-07-15 09:21:18,693 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:21:18,697 - INFO -   - h1要素数: 1
+2025-07-15 09:21:18,697 - INFO -   - div要素数: 29
+2025-07-15 09:21:18,698 - INFO -   - a要素数: 116
+2025-07-15 09:21:18,698 - INFO -   - novel_body要素数: 0
+2025-07-15 09:21:18,698 - INFO -   - novel_view要素数: 0
+2025-07-15 09:21:18,699 - INFO - ページ検証: 正常なページ
+2025-07-15 09:21:18,699 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070&page=2
+2025-07-15 09:21:18,713 - INFO - 抽出された感想: 0件
+2025-07-15 09:21:18,713 - INFO - 感想ページ 3/6 を取得中: https://syosetu.org/?mode=review&nid=378070&page=3
+2025-07-15 09:21:20,716 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070&page=3
+2025-07-15 09:21:22,718 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:21:22,768 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070&page=3 HTTP/1.1" 200 None
+2025-07-15 09:21:22,770 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28401bytes
+2025-07-15 09:21:22,770 - INFO - CloudScraperで取得されたHTMLテキスト長: 25523
+2025-07-15 09:21:22,782 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:21:22,782 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:21:22,782 - INFO -   - 本文長: 2006文字
+2025-07-15 09:21:22,786 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:21:22,789 - INFO -   - h1要素数: 1
+2025-07-15 09:21:22,789 - INFO -   - div要素数: 29
+2025-07-15 09:21:22,789 - INFO -   - a要素数: 115
+2025-07-15 09:21:22,789 - INFO -   - novel_body要素数: 0
+2025-07-15 09:21:22,789 - INFO -   - novel_view要素数: 0
+2025-07-15 09:21:22,790 - INFO - ページ検証: 正常なページ
+2025-07-15 09:21:22,790 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070&page=3
+2025-07-15 09:21:22,795 - INFO - 抽出された感想: 0件
+2025-07-15 09:21:22,796 - INFO - 感想ページ 4/6 を取得中: https://syosetu.org/?mode=review&nid=378070&page=4
+2025-07-15 09:21:24,798 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070&page=4
+2025-07-15 09:21:26,801 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:21:26,849 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070&page=4 HTTP/1.1" 200 None
+2025-07-15 09:21:26,850 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=29964bytes
+2025-07-15 09:21:26,850 - INFO - CloudScraperで取得されたHTMLテキスト長: 26286
+2025-07-15 09:21:26,859 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:21:26,860 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:21:26,860 - INFO -   - 本文長: 2404文字
+2025-07-15 09:21:26,864 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:21:26,865 - INFO -   - h1要素数: 1
+2025-07-15 09:21:26,866 - INFO -   - div要素数: 30
+2025-07-15 09:21:26,866 - INFO -   - a要素数: 117
+2025-07-15 09:21:26,866 - INFO -   - novel_body要素数: 0
+2025-07-15 09:21:26,866 - INFO -   - novel_view要素数: 0
+2025-07-15 09:21:26,866 - INFO - ページ検証: 正常なページ
+2025-07-15 09:21:26,866 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070&page=4
+2025-07-15 09:21:26,873 - INFO - 抽出された感想: 0件
+2025-07-15 09:21:26,873 - INFO - 感想ページ 5/6 を取得中: https://syosetu.org/?mode=review&nid=378070&page=5
+2025-07-15 09:21:28,875 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070&page=5
+2025-07-15 09:21:30,877 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:21:30,927 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070&page=5 HTTP/1.1" 200 None
+2025-07-15 09:21:30,928 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=27980bytes
+2025-07-15 09:21:30,928 - INFO - CloudScraperで取得されたHTMLテキスト長: 25370
+2025-07-15 09:21:30,938 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:21:30,939 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:21:30,939 - INFO -   - 本文長: 1857文字
+2025-07-15 09:21:30,943 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:21:30,944 - INFO -   - h1要素数: 1
+2025-07-15 09:21:30,944 - INFO -   - div要素数: 29
+2025-07-15 09:21:30,944 - INFO -   - a要素数: 115
+2025-07-15 09:21:30,944 - INFO -   - novel_body要素数: 0
+2025-07-15 09:21:30,945 - INFO -   - novel_view要素数: 0
+2025-07-15 09:21:30,945 - INFO - ページ検証: 正常なページ
+2025-07-15 09:21:30,945 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070&page=5
+2025-07-15 09:21:30,951 - INFO - 抽出された感想: 0件
+2025-07-15 09:21:30,951 - INFO - 感想ページ 6/6 を取得中: https://syosetu.org/?mode=review&nid=378070&page=6
+2025-07-15 09:21:32,953 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378070&page=6
+2025-07-15 09:21:34,956 - INFO - CloudScraperで初回試行中...
+2025-07-15 09:21:35,008 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378070&page=6 HTTP/1.1" 200 None
+2025-07-15 09:21:35,008 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=23635bytes
+2025-07-15 09:21:35,009 - INFO - CloudScraperで取得されたHTMLテキスト長: 21643
+2025-07-15 09:21:35,016 - INFO - CloudScraper取得ページ分析:
+2025-07-15 09:21:35,016 - INFO -   - タイトル: ダウナー女神のアクア様の感想 - ハーメルン
+2025-07-15 09:21:35,016 - INFO -   - 本文長: 1317文字
+2025-07-15 09:21:35,019 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 09:21:35,020 - INFO -   - h1要素数: 1
+2025-07-15 09:21:35,020 - INFO -   - div要素数: 24
+2025-07-15 09:21:35,020 - INFO -   - a要素数: 86
+2025-07-15 09:21:35,020 - INFO -   - novel_body要素数: 0
+2025-07-15 09:21:35,020 - INFO -   - novel_view要素数: 0
+2025-07-15 09:21:35,021 - INFO - ページ検証: 正常なページ
+2025-07-15 09:21:35,021 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378070&page=6
+2025-07-15 09:21:35,026 - INFO - 抽出された感想: 0件
+2025-07-15 09:21:35,034 - INFO - 感想ページ統合完了
+2025-07-15 09:21:35,034 - INFO - 感想ページ統合完了: 1件の感想を統合
