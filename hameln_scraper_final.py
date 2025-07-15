@@ -987,6 +987,12 @@ class HamelnFinalScraper:
                     if href.startswith('?'):
                         # 相対URLを絶対URLに変換
                         return f"https://syosetu.org/{href}"
+                    elif href.startswith('//'):
+                        # プロトコル相対URLをHTTPS絶対URLに変換
+                        return f"https:{href}"
+                    elif href.startswith('/'):
+                        # ルート相対URLを絶対URLに変換
+                        return f"https://syosetu.org{href}"
                     return href
             
             self.debug_log("小説情報URLが見つかりませんでした", "WARNING")
