@@ -1174,6 +1174,12 @@ class HamelnFinalScraper:
                             if href.startswith('?'):
                                 # ?page=2 形式
                                 full_url = base_url.split('?')[0] + href
+                            elif href.startswith('./'):
+                                # ./?page=2 形式
+                                full_url = base_url.split('?')[0] + href[2:]  # ./ を削除して処理
+                            elif href.startswith('//'):
+                                # プロトコル相対URLを絶対URLに変換
+                                full_url = f"https:{href}"
                             elif href.startswith('/'):
                                 # /path?page=2 形式
                                 full_url = 'https://syosetu.org' + href
