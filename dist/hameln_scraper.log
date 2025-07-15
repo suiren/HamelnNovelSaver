@@ -11834,3 +11834,1132 @@ b'{console.log("undetected chromedriver 1337!")}                                
 2025-07-15 08:53:28,128 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
 2025-07-15 08:53:28,178 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
 2025-07-15 08:53:28,225 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379532&v=5 HTTP/1.1" 200 None
+2025-07-15 12:55:47,465 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 12:55:47,469 - INFO - CloudScraper初期化開始
+2025-07-15 12:55:47,501 - INFO - CloudScraper設定完了
+2025-07-15 12:55:47,504 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 12:55:49,524 - INFO - ページ取得開始: https://syosetu.org/novel/378639/
+2025-07-15 12:55:51,533 - INFO - CloudScraperで初回試行中...
+2025-07-15 12:55:51,535 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 12:55:55,990 - DEBUG - https://syosetu.org:443 "GET /novel/378639/ HTTP/1.1" 200 None
+2025-07-15 12:55:55,996 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=23944bytes
+2025-07-15 12:55:56,001 - INFO - CloudScraperで取得されたHTMLテキスト長: 20996
+2025-07-15 12:55:56,013 - INFO - CloudScraper取得ページ分析:
+2025-07-15 12:55:56,019 - INFO -   - タイトル: とあるロキ・ファミリアのモブ団員 - ハーメルン
+2025-07-15 12:55:56,031 - INFO -   - 本文長: 1772文字
+2025-07-15 12:55:56,056 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378639/" property="og:url"/>
+<meta content="とあるロキ・ファミリアのモブ団員 - ハーメルン" property="og:title"/>
+<meta content="これはとある道化師の眷族、モブ団員の眷族の物語" property="og:description"/>...
+2025-07-15 12:55:56,064 - INFO -   - h1要素数: 1
+2025-07-15 12:55:56,071 - INFO -   - div要素数: 21
+2025-07-15 12:55:56,076 - INFO -   - a要素数: 94
+2025-07-15 12:55:56,082 - INFO -   - novel_body要素数: 0
+2025-07-15 12:55:56,091 - INFO -   - novel_view要素数: 0
+2025-07-15 12:55:56,099 - INFO - ページ検証: 正常なページ
+2025-07-15 12:55:56,117 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378639/
+2025-07-15 12:55:56,125 - INFO - 小説情報抽出開始
+2025-07-15 12:55:56,129 - INFO - タイトル抽出試行中...
+2025-07-15 12:55:56,135 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-15 12:55:56,141 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-15 12:55:56,147 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-15 12:55:56,155 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-15 12:55:56,162 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x0000029CC53DCAE0>}
+2025-07-15 12:55:56,180 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x0000029CC53DCAE0>} で要素が見つかりませんでした
+2025-07-15 12:55:56,187 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-15 12:55:56,196 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 12:55:56,202 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-15 12:55:56,210 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 12:55:56,218 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-15 12:55:56,226 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 12:55:56,243 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-15 12:55:56,250 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 12:55:56,256 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-15 12:55:56,262 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-15 12:55:56,268 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-15 12:55:56,274 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 12:55:56,281 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-15 12:55:56,287 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 12:55:56,293 - INFO - タイトルセレクター試行: h1 {}
+2025-07-15 12:55:56,306 - INFO - タイトルセレクター試行: title {}
+2025-07-15 12:55:56,313 - INFO - タイトル取得成功: とあるロキ・ファミリアのモブ団員
+2025-07-15 12:55:56,321 - INFO - 作者抽出試行中...
+2025-07-15 12:55:56,327 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-15 12:55:56,333 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 12:55:56,343 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-15 12:55:56,351 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 12:55:56,367 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-15 12:55:56,375 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-15 12:55:56,381 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-15 12:55:56,387 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-15 12:55:56,396 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x0000029CC53DCB80>}
+2025-07-15 12:55:56,409 - INFO - セレクター a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x0000029CC53DCB80>} で要素が見つかりませんでした
+2025-07-15 12:55:56,417 - INFO - 作者セレクター試行: div {'class': 'author'}
+2025-07-15 12:55:56,431 - INFO - セレクター div {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 12:55:56,437 - INFO - 作者セレクター試行: span {'class': 'author'}
+2025-07-15 12:55:56,445 - INFO - セレクター span {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 12:55:56,451 - INFO - 作者セレクター試行: a {'class': 'author'}
+2025-07-15 12:55:56,459 - INFO - セレクター a {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 12:55:56,469 - WARNING - 基本情報取得失敗、詳細調査を実行
+2025-07-15 12:55:56,476 - INFO - === ページ構造詳細調査 ===
+2025-07-15 12:55:56,491 - INFO - h1タグ数: 1
+2025-07-15 12:55:56,498 - INFO -   h1[0]: class=['siteTitle'], text=...
+2025-07-15 12:55:56,504 - INFO - リンク数: 94
+2025-07-15 12:55:56,510 - INFO - ユーザーリンク数: 0
+2025-07-15 12:55:56,515 - INFO - 関連クラス名: []
+2025-07-15 12:55:56,521 - INFO - 関連spanクラス名: []
+2025-07-15 12:55:56,528 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-15 12:55:56,616 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-15 12:55:56,642 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-15 12:55:56,676 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-15 12:55:56,703 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.gif HTTP/1.1" 200 811
+2025-07-15 12:55:56,742 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.gif HTTP/1.1" 200 1297
+2025-07-15 12:55:56,769 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.gif HTTP/1.1" 200 1294
+2025-07-15 12:55:56,795 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.gif HTTP/1.1" 200 833
+2025-07-15 12:55:56,821 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.gif HTTP/1.1" 200 1102
+2025-07-15 12:55:56,849 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.gif HTTP/1.1" 200 1072
+2025-07-15 12:55:56,876 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.gif HTTP/1.1" 200 1866
+2025-07-15 12:55:56,903 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.gif HTTP/1.1" 200 1014
+2025-07-15 12:55:56,931 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.gif HTTP/1.1" 200 927
+2025-07-15 12:55:56,958 - DEBUG - https://img.syosetu.org:443 "GET /image/square.gif HTTP/1.1" 200 816
+2025-07-15 12:55:56,995 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.gif HTTP/1.1" 200 874
+2025-07-15 12:55:57,024 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.gif HTTP/1.1" 200 833
+2025-07-15 12:55:57,050 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.gif HTTP/1.1" 200 834
+2025-07-15 12:55:57,077 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.gif HTTP/1.1" 200 1136
+2025-07-15 12:55:57,106 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.gif HTTP/1.1" 200 1136
+2025-07-15 12:55:57,134 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.gif HTTP/1.1" 200 898
+2025-07-15 12:55:57,161 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-15 12:55:57,186 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-15 12:55:57,215 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-15 12:55:57,241 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-15 12:55:57,268 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-15 12:55:57,295 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-15 12:55:57,320 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-15 12:55:57,349 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-15 12:55:57,375 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png HTTP/1.1" 200 4864
+2025-07-15 12:55:57,400 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png HTTP/1.1" 200 1566
+2025-07-15 12:55:57,427 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-15 12:55:57,454 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-15 12:55:57,480 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-15 12:55:57,507 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_mokuzi_pc_min.js?202008211 HTTP/1.1" 200 953
+2025-07-15 12:55:57,511 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-15 12:55:57,529 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-15 12:55:57,564 - DEBUG - https://img.syosetu.org:443 "GET /js/ad_dliste.min.js?202501083 HTTP/1.1" 200 536
+2025-07-15 12:55:57,590 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_g1.gif HTTP/1.1" 200 257
+2025-07-15 12:55:57,616 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_g4.gif HTTP/1.1" 200 247
+2025-07-15 12:55:57,645 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_g5.gif HTTP/1.1" 200 166
+2025-07-15 12:55:57,672 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_c2.gif HTTP/1.1" 200 248
+2025-07-15 12:55:57,704 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a5.gif HTTP/1.1" 200 166
+2025-07-15 12:55:57,708 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-15 12:55:57,835 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378639 HTTP/1.1" 200 None
+2025-07-15 12:55:57,933 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 12:55:57,983 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 12:55:58,072 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 12:55:58,158 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 12:55:58,165 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-15 12:55:58,167 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-15 12:55:58,179 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=378639
+2025-07-15 12:55:58,183 - INFO - ページ取得開始: https://syosetu.org/?mode=ss_detail&nid=378639
+2025-07-15 12:56:00,190 - INFO - CloudScraperで初回試行中...
+2025-07-15 12:56:00,243 - DEBUG - https://syosetu.org:443 "GET /?mode=ss_detail&nid=378639 HTTP/1.1" 200 None
+2025-07-15 12:56:00,248 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21889bytes
+2025-07-15 12:56:00,254 - INFO - CloudScraperで取得されたHTMLテキスト長: 20351
+2025-07-15 12:56:00,264 - INFO - CloudScraper取得ページ分析:
+2025-07-15 12:56:00,271 - INFO -   - タイトル: とあるロキ・ファミリアのモブ団員の小説情報 - ハーメルン
+2025-07-15 12:56:00,277 - INFO -   - 本文長: 926文字
+2025-07-15 12:56:00,287 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 12:56:00,294 - INFO -   - h1要素数: 1
+2025-07-15 12:56:00,299 - INFO -   - div要素数: 32
+2025-07-15 12:56:00,305 - INFO -   - a要素数: 70
+2025-07-15 12:56:00,310 - INFO -   - novel_body要素数: 0
+2025-07-15 12:56:00,315 - INFO -   - novel_view要素数: 0
+2025-07-15 12:56:00,322 - INFO - ページ検証: 正常なページ
+2025-07-15 12:56:00,327 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=ss_detail&nid=378639
+2025-07-15 12:56:00,354 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 12:56:00,382 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-15 12:56:00,416 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-15 12:56:00,444 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-15 12:56:00,471 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-15 12:56:00,500 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-15 12:56:00,530 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-15 12:56:00,559 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-15 12:56:00,586 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-15 12:56:00,616 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-15 12:56:00,646 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-15 12:56:00,678 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-15 12:56:00,706 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-15 12:56:00,737 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 12:56:00,770 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-15 12:56:00,775 - DEBUG - Starting new HTTPS connection (3): securepubads.g.doubleclick.net:443
+2025-07-15 12:56:00,777 - DEBUG - Starting new HTTPS connection (3): cpt.geniee.jp:443
+2025-07-15 12:56:00,791 - INFO - 小説情報ページ保存完了: とあるロキ・ファミリアのモブ団員 - 小説情報.html
+2025-07-15 12:56:00,797 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=378639
+2025-07-15 12:56:00,804 - INFO - 感想ページのページネーション検出を開始
+2025-07-15 12:56:00,810 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378639
+2025-07-15 12:56:02,816 - INFO - CloudScraperで初回試行中...
+2025-07-15 12:56:02,870 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378639 HTTP/1.1" 200 None
+2025-07-15 12:56:02,876 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=32183bytes
+2025-07-15 12:56:02,882 - INFO - CloudScraperで取得されたHTMLテキスト長: 27381
+2025-07-15 12:56:02,898 - INFO - CloudScraper取得ページ分析:
+2025-07-15 12:56:02,905 - INFO -   - タイトル: とあるロキ・ファミリアのモブ団員の感想 - ハーメルン
+2025-07-15 12:56:02,911 - INFO -   - 本文長: 3156文字
+2025-07-15 12:56:02,920 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 12:56:02,928 - INFO -   - h1要素数: 1
+2025-07-15 12:56:02,934 - INFO -   - div要素数: 29
+2025-07-15 12:56:02,939 - INFO -   - a要素数: 105
+2025-07-15 12:56:02,944 - INFO -   - novel_body要素数: 0
+2025-07-15 12:56:02,949 - INFO -   - novel_view要素数: 0
+2025-07-15 12:56:02,954 - INFO - ページ検証: 正常なページ
+2025-07-15 12:56:02,960 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378639
+2025-07-15 12:56:02,978 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (8個のリンク)
+2025-07-15 12:56:02,983 - INFO - 検出されたページ: 3ページ
+2025-07-15 12:56:02,990 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=378639
+2025-07-15 12:56:02,995 - INFO -   ページ2: https://syosetu.org/?mode=review&nid=378639&page=2
+2025-07-15 12:56:03,001 - INFO -   ページ3: https://syosetu.org/?mode=review&nid=378639&page=3
+2025-07-15 12:56:03,006 - INFO - 感想ページ数: 3ページ
+2025-07-15 12:56:03,012 - INFO - 感想ページ 1/3 を取得中: https://syosetu.org/?mode=review&nid=378639
+2025-07-15 12:56:03,023 - INFO - 抽出された感想: 0件
+2025-07-15 12:56:03,030 - INFO - 感想ページ 2/3 を取得中: https://syosetu.org/?mode=review&nid=378639&page=2
+2025-07-15 12:56:05,036 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378639&page=2
+2025-07-15 12:56:07,058 - INFO - CloudScraperで初回試行中...
+2025-07-15 12:56:07,116 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378639&page=2 HTTP/1.1" 200 None
+2025-07-15 12:56:07,124 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=33641bytes
+2025-07-15 12:56:07,130 - INFO - CloudScraperで取得されたHTMLテキスト長: 28111
+2025-07-15 12:56:07,146 - INFO - CloudScraper取得ページ分析:
+2025-07-15 12:56:07,154 - INFO -   - タイトル: とあるロキ・ファミリアのモブ団員の感想 - ハーメルン
+2025-07-15 12:56:07,159 - INFO -   - 本文長: 3554文字
+2025-07-15 12:56:07,180 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 12:56:07,185 - INFO -   - h1要素数: 1
+2025-07-15 12:56:07,190 - INFO -   - div要素数: 29
+2025-07-15 12:56:07,195 - INFO -   - a要素数: 109
+2025-07-15 12:56:07,199 - INFO -   - novel_body要素数: 0
+2025-07-15 12:56:07,204 - INFO -   - novel_view要素数: 0
+2025-07-15 12:56:07,210 - INFO - ページ検証: 正常なページ
+2025-07-15 12:56:07,217 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378639&page=2
+2025-07-15 12:56:07,228 - INFO - 抽出された感想: 0件
+2025-07-15 12:56:07,244 - INFO - 感想ページ 3/3 を取得中: https://syosetu.org/?mode=review&nid=378639&page=3
+2025-07-15 12:56:09,251 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=378639&page=3
+2025-07-15 12:56:11,258 - INFO - CloudScraperで初回試行中...
+2025-07-15 12:56:11,310 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=378639&page=3 HTTP/1.1" 200 None
+2025-07-15 12:56:11,316 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=24312bytes
+2025-07-15 12:56:11,324 - INFO - CloudScraperで取得されたHTMLテキスト長: 21412
+2025-07-15 12:56:11,335 - INFO - CloudScraper取得ページ分析:
+2025-07-15 12:56:11,341 - INFO -   - タイトル: とあるロキ・ファミリアのモブ団員の感想 - ハーメルン
+2025-07-15 12:56:11,347 - INFO -   - 本文長: 1773文字
+2025-07-15 12:56:11,358 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 12:56:11,364 - INFO -   - h1要素数: 1
+2025-07-15 12:56:11,371 - INFO -   - div要素数: 22
+2025-07-15 12:56:11,377 - INFO -   - a要素数: 70
+2025-07-15 12:56:11,381 - INFO -   - novel_body要素数: 0
+2025-07-15 12:56:11,386 - INFO -   - novel_view要素数: 0
+2025-07-15 12:56:11,391 - INFO - ページ検証: 正常なページ
+2025-07-15 12:56:11,398 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=378639&page=3
+2025-07-15 12:56:11,408 - INFO - 抽出された感想: 0件
+2025-07-15 12:56:11,413 - WARNING - 感想コンテンツが見つかりませんでした
+2025-07-15 12:56:11,441 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 12:56:11,481 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 12:56:11,489 - DEBUG - Starting new HTTPS connection (4): securepubads.g.doubleclick.net:443
+2025-07-15 12:56:11,491 - DEBUG - Starting new HTTPS connection (4): cpt.geniee.jp:443
+2025-07-15 12:56:11,547 - DEBUG - https://syosetu.org:443 "GET /registkey.cgi?1dSVPn1Kpn%21nbc23dbbzK HTTP/1.1" 200 107
+2025-07-15 12:56:11,567 - INFO - 感想ページ保存完了: とあるロキ・ファミリアのモブ団員 - 感想.html
+2025-07-15 12:56:11,573 - INFO - ページ取得開始: https://syosetu.org/novel/378639/1.html
+2025-07-15 12:56:13,579 - INFO - CloudScraperで初回試行中...
+2025-07-15 12:56:13,638 - DEBUG - https://syosetu.org:443 "GET /novel/378639/1.html HTTP/1.1" 200 None
+2025-07-15 12:56:13,643 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=26531bytes
+2025-07-15 12:56:13,649 - INFO - CloudScraperで取得されたHTMLテキスト長: 21955
+2025-07-15 12:56:13,663 - INFO - CloudScraper取得ページ分析:
+2025-07-15 12:56:13,671 - INFO -   - タイトル: とあるロキ・ファミリアのモブ団員 - プロローグ　覚醒前夜 - ハーメルン
+2025-07-15 12:56:13,677 - INFO -   - 本文長: 2505文字
+2025-07-15 12:56:13,687 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378639/1.html" property="og:url"/>
+<meta content="プロローグ　覚醒前夜 - とあるロキ・ファミリアのモブ団員 - ハーメルン" property="og:title"/>
+<meta content="これはとある道化師の眷族、モブ団員の眷族の物語" property...
+2025-07-15 12:56:13,694 - INFO -   - h1要素数: 1
+2025-07-15 12:56:13,699 - INFO -   - div要素数: 47
+2025-07-15 12:56:13,704 - INFO -   - a要素数: 77
+2025-07-15 12:56:13,708 - INFO -   - novel_body要素数: 0
+2025-07-15 12:56:13,714 - INFO -   - novel_view要素数: 0
+2025-07-15 12:56:13,720 - INFO - ページ検証: 正常なページ
+2025-07-15 12:56:13,725 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378639/1.html
+2025-07-15 12:56:13,811 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 12:56:13,861 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 12:56:13,945 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 12:56:14,032 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 12:56:14,095 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:14,180 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 12:56:14,268 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:14,357 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 12:56:14,442 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:14,489 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378639&v=1 HTTP/1.1" 200 None
+2025-07-15 12:56:17,506 - INFO - ページ取得開始: https://syosetu.org/novel/378639/2.html
+2025-07-15 12:56:19,512 - INFO - CloudScraperで初回試行中...
+2025-07-15 12:56:19,571 - DEBUG - https://syosetu.org:443 "GET /novel/378639/2.html HTTP/1.1" 200 None
+2025-07-15 12:56:19,577 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=43702bytes
+2025-07-15 12:56:19,581 - INFO - CloudScraperで取得されたHTMLテキスト長: 30542
+2025-07-15 12:56:19,601 - INFO - CloudScraper取得ページ分析:
+2025-07-15 12:56:19,609 - INFO -   - タイトル: とあるロキ・ファミリアのモブ団員 - 第一話　だから少年は走る - ハーメルン
+2025-07-15 12:56:19,615 - INFO -   - 本文長: 6873文字
+2025-07-15 12:56:19,627 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378639/2.html" property="og:url"/>
+<meta content="第一話　だから少年は走る - とあるロキ・ファミリアのモブ団員 - ハーメルン" property="og:title"/>
+<meta content="これはとある道化師の眷族、モブ団員の眷族の物語" proper...
+2025-07-15 12:56:19,634 - INFO -   - h1要素数: 1
+2025-07-15 12:56:19,638 - INFO -   - div要素数: 47
+2025-07-15 12:56:19,643 - INFO -   - a要素数: 77
+2025-07-15 12:56:19,648 - INFO -   - novel_body要素数: 0
+2025-07-15 12:56:19,653 - INFO -   - novel_view要素数: 0
+2025-07-15 12:56:19,658 - INFO - ページ検証: 正常なページ
+2025-07-15 12:56:19,663 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378639/2.html
+2025-07-15 12:56:19,712 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 12:56:19,762 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 12:56:19,814 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 12:56:19,862 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 12:56:19,914 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:19,962 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 12:56:20,013 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:20,063 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 12:56:20,113 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:20,161 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378639&v=2 HTTP/1.1" 200 None
+2025-07-15 12:56:23,183 - INFO - ページ取得開始: https://syosetu.org/novel/378639/3.html
+2025-07-15 12:56:25,189 - INFO - CloudScraperで初回試行中...
+2025-07-15 12:56:25,238 - DEBUG - https://syosetu.org:443 "GET /novel/378639/3.html HTTP/1.1" 200 None
+2025-07-15 12:56:25,244 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=42184bytes
+2025-07-15 12:56:25,248 - INFO - CloudScraperで取得されたHTMLテキスト長: 28922
+2025-07-15 12:56:25,263 - INFO - CloudScraper取得ページ分析:
+2025-07-15 12:56:25,271 - INFO -   - タイトル: とあるロキ・ファミリアのモブ団員 - 第二話　剣鬼襲来 - ハーメルン
+2025-07-15 12:56:25,279 - INFO -   - 本文長: 7000文字
+2025-07-15 12:56:25,292 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378639/3.html" property="og:url"/>
+<meta content="第二話　剣鬼襲来 - とあるロキ・ファミリアのモブ団員 - ハーメルン" property="og:title"/>
+<meta content="これはとある道化師の眷族、モブ団員の眷族の物語" property="...
+2025-07-15 12:56:25,304 - INFO -   - h1要素数: 1
+2025-07-15 12:56:25,310 - INFO -   - div要素数: 47
+2025-07-15 12:56:25,315 - INFO -   - a要素数: 77
+2025-07-15 12:56:25,320 - INFO -   - novel_body要素数: 0
+2025-07-15 12:56:25,325 - INFO -   - novel_view要素数: 0
+2025-07-15 12:56:25,330 - INFO - ページ検証: 正常なページ
+2025-07-15 12:56:25,335 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378639/3.html
+2025-07-15 12:56:25,387 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 12:56:25,449 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 12:56:25,506 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 12:56:25,553 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 12:56:25,604 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:25,656 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 12:56:25,705 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:25,755 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 12:56:25,804 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:25,851 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378639&v=3 HTTP/1.1" 200 None
+2025-07-15 12:56:28,871 - INFO - ページ取得開始: https://syosetu.org/novel/378639/4.html
+2025-07-15 12:56:30,876 - INFO - CloudScraperで初回試行中...
+2025-07-15 12:56:30,925 - DEBUG - https://syosetu.org:443 "GET /novel/378639/4.html HTTP/1.1" 200 None
+2025-07-15 12:56:30,949 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=52249bytes
+2025-07-15 12:56:30,954 - INFO - CloudScraperで取得されたHTMLテキスト長: 36733
+2025-07-15 12:56:30,972 - INFO - CloudScraper取得ページ分析:
+2025-07-15 12:56:30,979 - INFO -   - タイトル: とあるロキ・ファミリアのモブ団員 - 第三話　最初の死地(ファースト・ライン) - ハーメルン
+2025-07-15 12:56:30,985 - INFO -   - 本文長: 8287文字
+2025-07-15 12:56:30,998 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/378639/4.html" property="og:url"/>
+<meta content="第三話　最初の死地(ファースト・ライン) - とあるロキ・ファミリアのモブ団員 - ハーメルン" property="og:title"/>
+<meta content="これはとある道化師の眷族、モブ団員の眷族の物語...
+2025-07-15 12:56:31,006 - INFO -   - h1要素数: 1
+2025-07-15 12:56:31,011 - INFO -   - div要素数: 43
+2025-07-15 12:56:31,016 - INFO -   - a要素数: 109
+2025-07-15 12:56:31,021 - INFO -   - novel_body要素数: 0
+2025-07-15 12:56:31,027 - INFO -   - novel_view要素数: 0
+2025-07-15 12:56:31,031 - INFO - ページ検証: 正常なページ
+2025-07-15 12:56:31,038 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/378639/4.html
+2025-07-15 12:56:31,089 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 12:56:31,140 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 12:56:31,190 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 12:56:31,239 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 12:56:31,292 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:31,357 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 12:56:31,429 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:31,477 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 12:56:31,527 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 12:56:31,623 - DEBUG - https://syosetu.org:443 "GET /resources/ico_grade3_g3.gif HTTP/1.1" 404 None
+2025-07-15 12:56:31,713 - DEBUG - https://syosetu.org:443 "GET /resources/ico_grade3_a2.gif HTTP/1.1" 404 None
+2025-07-15 12:56:31,757 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378639&v=4 HTTP/1.1" 200 None
+2025-07-15 13:39:26,141 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 13:39:26,144 - INFO - CloudScraper初期化開始
+2025-07-15 13:39:26,174 - INFO - CloudScraper設定完了
+2025-07-15 13:39:26,176 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 13:39:28,201 - INFO - ページ取得開始: https://syosetu.org/novel/380313/
+2025-07-15 13:39:30,207 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:39:30,210 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 13:39:30,352 - DEBUG - https://syosetu.org:443 "GET /novel/380313/ HTTP/1.1" 200 None
+2025-07-15 13:39:30,359 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=33581bytes
+2025-07-15 13:39:30,365 - INFO - CloudScraperで取得されたHTMLテキスト長: 24467
+2025-07-15 13:39:30,380 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:39:30,387 - INFO -   - タイトル: 怖くない話 - 怖くない話 - ハーメルン
+2025-07-15 13:39:30,394 - INFO -   - 本文長: 4797文字
+2025-07-15 13:39:30,405 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380313/" property="og:url"/>
+<meta content="怖くない話 - 怖くない話 - ハーメルン" property="og:title"/>
+<meta content="怖くない話です。安心だね" property="og:description"/>
+<meta content...
+2025-07-15 13:39:30,411 - INFO -   - h1要素数: 1
+2025-07-15 13:39:30,418 - INFO -   - div要素数: 20
+2025-07-15 13:39:30,423 - INFO -   - a要素数: 72
+2025-07-15 13:39:30,429 - INFO -   - novel_body要素数: 0
+2025-07-15 13:39:30,434 - INFO -   - novel_view要素数: 0
+2025-07-15 13:39:30,441 - INFO - ページ検証: 正常なページ
+2025-07-15 13:39:30,447 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380313/
+2025-07-15 13:39:30,453 - INFO - 小説情報抽出開始
+2025-07-15 13:39:30,459 - INFO - タイトル抽出試行中...
+2025-07-15 13:39:30,464 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-15 13:39:30,470 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-15 13:39:30,476 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-15 13:39:30,481 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-15 13:39:30,490 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001E10C90D300>}
+2025-07-15 13:39:30,498 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001E10C90D300>} で要素が見つかりませんでした
+2025-07-15 13:39:30,504 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-15 13:39:30,512 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 13:39:30,518 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-15 13:39:30,526 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 13:39:30,532 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-15 13:39:30,539 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 13:39:30,546 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-15 13:39:30,552 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 13:39:30,559 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-15 13:39:30,564 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-15 13:39:30,569 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-15 13:39:30,575 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 13:39:30,579 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-15 13:39:30,585 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 13:39:30,590 - INFO - タイトルセレクター試行: h1 {}
+2025-07-15 13:39:30,596 - INFO - タイトルセレクター試行: title {}
+2025-07-15 13:39:30,601 - INFO - タイトル取得成功: 怖くない話 - 怖くない話
+2025-07-15 13:39:30,606 - INFO - 作者抽出試行中...
+2025-07-15 13:39:30,613 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-15 13:39:30,620 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 13:39:30,625 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-15 13:39:30,632 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 13:39:30,639 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-15 13:39:30,646 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-15 13:39:30,653 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-15 13:39:30,659 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-15 13:39:30,667 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001E10C90CCC0>}
+2025-07-15 13:39:30,676 - INFO - セレクター a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001E10C90CCC0>} で要素が見つかりませんでした
+2025-07-15 13:39:30,683 - INFO - 作者セレクター試行: div {'class': 'author'}
+2025-07-15 13:39:30,692 - INFO - セレクター div {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 13:39:30,699 - INFO - 作者セレクター試行: span {'class': 'author'}
+2025-07-15 13:39:30,706 - INFO - セレクター span {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 13:39:30,714 - INFO - 作者セレクター試行: a {'class': 'author'}
+2025-07-15 13:39:30,720 - INFO - セレクター a {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 13:39:30,727 - WARNING - 基本情報取得失敗、詳細調査を実行
+2025-07-15 13:39:30,734 - INFO - === ページ構造詳細調査 ===
+2025-07-15 13:39:30,741 - INFO - h1タグ数: 1
+2025-07-15 13:39:30,747 - INFO -   h1[0]: class=['siteTitle'], text=...
+2025-07-15 13:39:30,752 - INFO - リンク数: 72
+2025-07-15 13:39:30,758 - INFO - ユーザーリンク数: 0
+2025-07-15 13:39:30,763 - INFO - 関連クラス名: ['novelnavi']
+2025-07-15 13:39:30,769 - INFO - 関連spanクラス名: []
+2025-07-15 13:39:30,780 - INFO - ページ取得開始: https://syosetu.org/novel/380313/
+2025-07-15 13:39:32,786 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:39:32,842 - DEBUG - https://syosetu.org:443 "GET /novel/380313/ HTTP/1.1" 200 None
+2025-07-15 13:39:32,848 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=33581bytes
+2025-07-15 13:39:32,855 - INFO - CloudScraperで取得されたHTMLテキスト長: 24467
+2025-07-15 13:39:32,870 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:39:32,876 - INFO -   - タイトル: 怖くない話 - 怖くない話 - ハーメルン
+2025-07-15 13:39:32,882 - INFO -   - 本文長: 4797文字
+2025-07-15 13:39:32,896 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380313/" property="og:url"/>
+<meta content="怖くない話 - 怖くない話 - ハーメルン" property="og:title"/>
+<meta content="怖くない話です。安心だね" property="og:description"/>
+<meta content...
+2025-07-15 13:39:32,903 - INFO -   - h1要素数: 1
+2025-07-15 13:39:32,910 - INFO -   - div要素数: 20
+2025-07-15 13:39:32,917 - INFO -   - a要素数: 72
+2025-07-15 13:39:32,923 - INFO -   - novel_body要素数: 0
+2025-07-15 13:39:32,930 - INFO -   - novel_view要素数: 0
+2025-07-15 13:39:32,937 - INFO - ページ検証: 正常なページ
+2025-07-15 13:39:32,943 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380313/
+2025-07-15 13:54:41,990 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 13:54:41,993 - INFO - CloudScraper初期化開始
+2025-07-15 13:54:42,020 - INFO - CloudScraper設定完了
+2025-07-15 13:54:42,022 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 13:54:44,040 - INFO - ページ取得開始: https://syosetu.org/novel/380313/
+2025-07-15 13:54:46,045 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:54:46,048 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 13:54:46,154 - DEBUG - https://syosetu.org:443 "GET /novel/380313/ HTTP/1.1" 200 None
+2025-07-15 13:54:46,160 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=33581bytes
+2025-07-15 13:54:46,165 - INFO - CloudScraperで取得されたHTMLテキスト長: 24467
+2025-07-15 13:54:46,180 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:54:46,186 - INFO -   - タイトル: 怖くない話 - 怖くない話 - ハーメルン
+2025-07-15 13:54:46,191 - INFO -   - 本文長: 4797文字
+2025-07-15 13:54:46,210 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380313/" property="og:url"/>
+<meta content="怖くない話 - 怖くない話 - ハーメルン" property="og:title"/>
+<meta content="怖くない話です。安心だね" property="og:description"/>
+<meta content...
+2025-07-15 13:54:46,216 - INFO -   - h1要素数: 1
+2025-07-15 13:54:46,221 - INFO -   - div要素数: 20
+2025-07-15 13:54:46,226 - INFO -   - a要素数: 72
+2025-07-15 13:54:46,231 - INFO -   - novel_body要素数: 0
+2025-07-15 13:54:46,236 - INFO -   - novel_view要素数: 0
+2025-07-15 13:54:46,242 - INFO - ページ検証: 正常なページ
+2025-07-15 13:54:46,247 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380313/
+2025-07-15 13:54:46,252 - INFO - 小説情報抽出開始
+2025-07-15 13:54:46,258 - INFO - タイトル抽出試行中...
+2025-07-15 13:54:46,273 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-15 13:54:46,278 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-15 13:54:46,284 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-15 13:54:46,290 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-15 13:54:46,297 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC3125CC20>}
+2025-07-15 13:54:46,306 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC3125CC20>} で要素が見つかりませんでした
+2025-07-15 13:54:46,313 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-15 13:54:46,321 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 13:54:46,337 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-15 13:54:46,344 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 13:54:46,349 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-15 13:54:46,358 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 13:54:46,364 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-15 13:54:46,376 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 13:54:46,381 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-15 13:54:46,398 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-15 13:54:46,404 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-15 13:54:46,409 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 13:54:46,414 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-15 13:54:46,419 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 13:54:46,424 - INFO - タイトルセレクター試行: h1 {}
+2025-07-15 13:54:46,430 - INFO - タイトルセレクター試行: title {}
+2025-07-15 13:54:46,439 - INFO - タイトル取得成功: 怖くない話 - 怖くない話
+2025-07-15 13:54:46,444 - INFO - 作者抽出試行中...
+2025-07-15 13:54:46,449 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-15 13:54:46,462 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 13:54:46,468 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-15 13:54:46,475 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 13:54:46,481 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-15 13:54:46,489 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-15 13:54:46,500 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-15 13:54:46,506 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-15 13:54:46,515 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC3125D260>}
+2025-07-15 13:54:46,527 - INFO - セレクター a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC3125D260>} で要素が見つかりませんでした
+2025-07-15 13:54:46,534 - INFO - 作者セレクター試行: div {'class': 'author'}
+2025-07-15 13:54:46,544 - INFO - セレクター div {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 13:54:46,552 - INFO - 作者セレクター試行: span {'class': 'author'}
+2025-07-15 13:54:46,563 - INFO - セレクター span {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 13:54:46,570 - INFO - 作者セレクター試行: a {'class': 'author'}
+2025-07-15 13:54:46,588 - INFO - セレクター a {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 13:54:46,594 - WARNING - 基本情報取得失敗、詳細調査を実行
+2025-07-15 13:54:46,601 - INFO - === ページ構造詳細調査 ===
+2025-07-15 13:54:46,607 - INFO - h1タグ数: 1
+2025-07-15 13:54:46,613 - INFO -   h1[0]: class=['siteTitle'], text=...
+2025-07-15 13:54:46,620 - INFO - リンク数: 72
+2025-07-15 13:54:46,626 - INFO - ユーザーリンク数: 0
+2025-07-15 13:54:46,632 - INFO - 関連クラス名: ['novelnavi']
+2025-07-15 13:54:46,651 - INFO - 関連spanクラス名: []
+2025-07-15 13:54:46,662 - INFO - ページ取得開始: https://syosetu.org/novel/380313/
+2025-07-15 13:54:48,668 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:54:48,720 - DEBUG - https://syosetu.org:443 "GET /novel/380313/ HTTP/1.1" 200 None
+2025-07-15 13:54:48,725 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=33581bytes
+2025-07-15 13:54:48,730 - INFO - CloudScraperで取得されたHTMLテキスト長: 24467
+2025-07-15 13:54:48,744 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:54:48,749 - INFO -   - タイトル: 怖くない話 - 怖くない話 - ハーメルン
+2025-07-15 13:54:48,755 - INFO -   - 本文長: 4797文字
+2025-07-15 13:54:48,767 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380313/" property="og:url"/>
+<meta content="怖くない話 - 怖くない話 - ハーメルン" property="og:title"/>
+<meta content="怖くない話です。安心だね" property="og:description"/>
+<meta content...
+2025-07-15 13:54:48,773 - INFO -   - h1要素数: 1
+2025-07-15 13:54:48,778 - INFO -   - div要素数: 20
+2025-07-15 13:54:48,783 - INFO -   - a要素数: 72
+2025-07-15 13:54:48,787 - INFO -   - novel_body要素数: 0
+2025-07-15 13:54:48,794 - INFO -   - novel_view要素数: 0
+2025-07-15 13:54:48,800 - INFO - ページ検証: 正常なページ
+2025-07-15 13:54:48,805 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380313/
+2025-07-15 13:55:08,789 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 13:55:08,792 - INFO - CloudScraper初期化開始
+2025-07-15 13:55:08,818 - INFO - CloudScraper設定完了
+2025-07-15 13:55:08,820 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 13:55:10,836 - INFO - ページ取得開始: https://syosetu.org/novel/379807/
+2025-07-15 13:55:12,842 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:55:12,843 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 13:55:12,947 - DEBUG - https://syosetu.org:443 "GET /novel/379807/ HTTP/1.1" 200 None
+2025-07-15 13:55:12,952 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=22399bytes
+2025-07-15 13:55:12,958 - INFO - CloudScraperで取得されたHTMLテキスト長: 19887
+2025-07-15 13:55:12,968 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:55:12,973 - INFO -   - タイトル: ある小学校の校則 - ハーメルン
+2025-07-15 13:55:12,980 - INFO -   - 本文長: 1589文字
+2025-07-15 13:55:12,992 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379807/" property="og:url"/>
+<meta content="ある小学校の校則 - ハーメルン" property="og:title"/>
+<meta content="この小学校を探しています。どなたかご存じありませんか？" property="og:description"/>
+<me...
+2025-07-15 13:55:12,999 - INFO -   - h1要素数: 1
+2025-07-15 13:55:13,004 - INFO -   - div要素数: 21
+2025-07-15 13:55:13,010 - INFO -   - a要素数: 100
+2025-07-15 13:55:13,015 - INFO -   - novel_body要素数: 0
+2025-07-15 13:55:13,021 - INFO -   - novel_view要素数: 0
+2025-07-15 13:55:13,028 - INFO - ページ検証: 正常なページ
+2025-07-15 13:55:13,033 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379807/
+2025-07-15 13:55:13,039 - INFO - 小説情報抽出開始
+2025-07-15 13:55:13,045 - INFO - タイトル抽出試行中...
+2025-07-15 13:55:13,051 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-15 13:55:13,058 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-15 13:55:13,064 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-15 13:55:13,071 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-15 13:55:13,078 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC3125D800>}
+2025-07-15 13:55:13,087 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC3125D800>} で要素が見つかりませんでした
+2025-07-15 13:55:13,095 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-15 13:55:13,103 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 13:55:13,110 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-15 13:55:13,117 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 13:55:13,124 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-15 13:55:13,132 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 13:55:13,138 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-15 13:55:13,146 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 13:55:13,151 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-15 13:55:13,157 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-15 13:55:13,162 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-15 13:55:13,168 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 13:55:13,175 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-15 13:55:13,182 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 13:55:13,187 - INFO - タイトルセレクター試行: h1 {}
+2025-07-15 13:55:13,193 - INFO - タイトルセレクター試行: title {}
+2025-07-15 13:55:13,198 - INFO - タイトル取得成功: ある小学校の校則
+2025-07-15 13:55:13,204 - INFO - 作者抽出試行中...
+2025-07-15 13:55:13,210 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-15 13:55:13,216 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 13:55:13,222 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-15 13:55:13,230 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 13:55:13,237 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-15 13:55:13,244 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-15 13:55:13,250 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-15 13:55:13,256 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-15 13:55:13,263 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC3125D9E0>}
+2025-07-15 13:55:13,273 - INFO - 作者取得成功: 青ヤギ
+2025-07-15 13:55:13,279 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-15 13:55:13,365 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-15 13:55:13,392 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-15 13:55:13,419 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-15 13:55:13,447 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.gif HTTP/1.1" 200 811
+2025-07-15 13:55:13,482 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.gif HTTP/1.1" 200 1297
+2025-07-15 13:55:13,509 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.gif HTTP/1.1" 200 1294
+2025-07-15 13:55:13,546 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.gif HTTP/1.1" 200 833
+2025-07-15 13:55:13,578 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.gif HTTP/1.1" 200 1102
+2025-07-15 13:55:13,606 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.gif HTTP/1.1" 200 1072
+2025-07-15 13:55:13,639 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.gif HTTP/1.1" 200 1866
+2025-07-15 13:55:13,669 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.gif HTTP/1.1" 200 1014
+2025-07-15 13:55:13,715 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.gif HTTP/1.1" 200 927
+2025-07-15 13:55:13,742 - DEBUG - https://img.syosetu.org:443 "GET /image/square.gif HTTP/1.1" 200 816
+2025-07-15 13:55:13,774 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.gif HTTP/1.1" 200 874
+2025-07-15 13:55:13,805 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.gif HTTP/1.1" 200 833
+2025-07-15 13:55:13,835 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.gif HTTP/1.1" 200 834
+2025-07-15 13:55:13,862 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.gif HTTP/1.1" 200 1136
+2025-07-15 13:55:13,892 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.gif HTTP/1.1" 200 1136
+2025-07-15 13:55:13,924 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.gif HTTP/1.1" 200 898
+2025-07-15 13:55:13,951 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-15 13:55:13,978 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-15 13:55:14,007 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-15 13:55:14,034 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-15 13:55:14,071 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-15 13:55:14,107 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-15 13:55:14,135 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-15 13:55:14,165 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-15 13:55:14,192 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png HTTP/1.1" 200 4864
+2025-07-15 13:55:14,220 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png HTTP/1.1" 200 1566
+2025-07-15 13:55:14,251 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-15 13:55:14,288 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-15 13:55:14,324 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-15 13:55:14,357 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_mokuzi_pc_min.js?202008211 HTTP/1.1" 200 953
+2025-07-15 13:55:14,366 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-15 13:55:14,368 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-15 13:55:14,397 - DEBUG - https://img.syosetu.org:443 "GET /js/ad_dliste.min.js?202501083 HTTP/1.1" 200 536
+2025-07-15 13:55:14,433 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a5.gif HTTP/1.1" 200 166
+2025-07-15 13:55:14,466 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a1.gif HTTP/1.1" 200 236
+2025-07-15 13:55:14,494 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a2.gif HTTP/1.1" 200 244
+2025-07-15 13:55:14,498 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-15 13:55:14,619 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379807 HTTP/1.1" 200 None
+2025-07-15 13:55:14,675 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 13:55:14,726 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 13:55:14,812 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 13:55:14,903 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 13:55:14,909 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-15 13:55:14,910 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-15 13:55:14,923 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=379807
+2025-07-15 13:55:14,928 - INFO - ページ取得開始: https://syosetu.org/?mode=ss_detail&nid=379807
+2025-07-15 13:55:16,936 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:55:16,987 - DEBUG - https://syosetu.org:443 "GET /?mode=ss_detail&nid=379807 HTTP/1.1" 200 None
+2025-07-15 13:55:16,994 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=20290bytes
+2025-07-15 13:55:17,001 - INFO - CloudScraperで取得されたHTMLテキスト長: 18906
+2025-07-15 13:55:17,014 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:55:17,020 - INFO -   - タイトル: ある小学校の校則の小説情報 - ハーメルン
+2025-07-15 13:55:17,026 - INFO -   - 本文長: 832文字
+2025-07-15 13:55:17,035 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 13:55:17,043 - INFO -   - h1要素数: 1
+2025-07-15 13:55:17,048 - INFO -   - div要素数: 28
+2025-07-15 13:55:17,054 - INFO -   - a要素数: 65
+2025-07-15 13:55:17,060 - INFO -   - novel_body要素数: 0
+2025-07-15 13:55:17,065 - INFO -   - novel_view要素数: 0
+2025-07-15 13:55:17,071 - INFO - ページ検証: 正常なページ
+2025-07-15 13:55:17,077 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=ss_detail&nid=379807
+2025-07-15 13:55:17,106 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 13:55:17,141 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-15 13:55:17,179 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-15 13:55:17,208 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-15 13:55:17,237 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-15 13:55:17,272 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-15 13:55:17,303 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-15 13:55:17,337 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-15 13:55:17,370 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-15 13:55:17,401 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-15 13:55:17,430 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-15 13:55:17,460 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-15 13:55:17,489 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-15 13:55:17,525 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 13:55:17,555 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-15 13:55:17,559 - DEBUG - Starting new HTTPS connection (3): securepubads.g.doubleclick.net:443
+2025-07-15 13:55:17,561 - DEBUG - Starting new HTTPS connection (3): cpt.geniee.jp:443
+2025-07-15 13:55:17,588 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a3.gif HTTP/1.1" 200 249
+2025-07-15 13:55:17,600 - INFO - 小説情報ページ保存完了: ある小学校の校則 - 小説情報.html
+2025-07-15 13:55:17,605 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=379807
+2025-07-15 13:55:17,611 - INFO - 感想保存フォルダ作成: saved_novels\ある小学校の校則\感想
+2025-07-15 13:55:17,616 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=379807
+2025-07-15 13:55:19,624 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:55:19,681 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=379807 HTTP/1.1" 200 None
+2025-07-15 13:55:19,687 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30499bytes
+2025-07-15 13:55:19,692 - INFO - CloudScraperで取得されたHTMLテキスト長: 26937
+2025-07-15 13:55:19,706 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:55:19,712 - INFO -   - タイトル: ある小学校の校則の感想 - ハーメルン
+2025-07-15 13:55:19,717 - INFO -   - 本文長: 2494文字
+2025-07-15 13:55:19,727 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 13:55:19,732 - INFO -   - h1要素数: 1
+2025-07-15 13:55:19,738 - INFO -   - div要素数: 30
+2025-07-15 13:55:19,742 - INFO -   - a要素数: 111
+2025-07-15 13:55:19,747 - INFO -   - novel_body要素数: 0
+2025-07-15 13:55:19,751 - INFO -   - novel_view要素数: 0
+2025-07-15 13:55:19,755 - INFO - ページ検証: 正常なページ
+2025-07-15 13:55:19,760 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=379807
+2025-07-15 13:55:19,777 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (6個のリンク)
+2025-07-15 13:55:19,782 - INFO - 検出されたページ: 2ページ
+2025-07-15 13:55:19,789 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=379807
+2025-07-15 13:55:19,793 - INFO -   ページ2: https://syosetu.org/?mode=review&nid=379807&page=2
+2025-07-15 13:55:19,798 - INFO - 感想ページ数: 2ページ
+2025-07-15 13:55:19,804 - INFO - 感想ページ 1/2 を保存中: https://syosetu.org/?mode=review&nid=379807
+2025-07-15 13:55:19,835 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 13:55:19,861 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-15 13:55:19,891 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-15 13:55:19,921 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-15 13:55:19,953 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-15 13:55:19,980 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-15 13:55:20,010 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-15 13:55:20,036 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-15 13:55:20,065 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-15 13:55:20,094 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-15 13:55:20,125 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-15 13:55:20,153 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-15 13:55:20,179 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-15 13:55:20,208 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-15 13:55:20,237 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-15 13:55:20,268 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-15 13:55:20,296 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-15 13:55:20,327 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-15 13:55:20,357 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-15 13:55:20,392 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 13:55:20,463 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-15 13:55:20,538 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png?20230812 HTTP/1.1" 200 4864
+2025-07-15 13:55:20,572 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png?20230812 HTTP/1.1" 200 1566
+2025-07-15 13:55:20,604 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-15 13:55:20,691 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-15 13:55:20,748 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-15 13:55:20,783 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-15 13:55:20,789 - DEBUG - Starting new HTTPS connection (4): securepubads.g.doubleclick.net:443
+2025-07-15 13:55:20,792 - DEBUG - Starting new HTTPS connection (4): cpt.geniee.jp:443
+2025-07-15 13:55:20,859 - DEBUG - https://syosetu.org:443 "GET /registkey.cgi?1yJV0A1Kpn%21nbc23cgbrC HTTP/1.1" 200 146
+2025-07-15 13:55:20,898 - INFO - 感想ページ1保存完了: 感想 - ページ1.html
+2025-07-15 13:55:20,906 - INFO - 感想ページ 2/2 を保存中: https://syosetu.org/?mode=review&nid=379807&page=2
+2025-07-15 13:55:22,913 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=379807&page=2
+2025-07-15 13:55:24,921 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:55:24,973 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=379807&page=2 HTTP/1.1" 200 None
+2025-07-15 13:55:24,980 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=27006bytes
+2025-07-15 13:55:24,986 - INFO - CloudScraperで取得されたHTMLテキスト長: 24056
+2025-07-15 13:55:25,000 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:55:25,006 - INFO -   - タイトル: ある小学校の校則の感想 - ハーメルン
+2025-07-15 13:55:25,011 - INFO -   - 本文長: 1960文字
+2025-07-15 13:55:25,027 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-15 13:55:25,032 - INFO -   - h1要素数: 1
+2025-07-15 13:55:25,037 - INFO -   - div要素数: 26
+2025-07-15 13:55:25,041 - INFO -   - a要素数: 92
+2025-07-15 13:55:25,046 - INFO -   - novel_body要素数: 0
+2025-07-15 13:55:25,050 - INFO -   - novel_view要素数: 0
+2025-07-15 13:55:25,055 - INFO - ページ検証: 正常なページ
+2025-07-15 13:55:25,063 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=379807&page=2
+2025-07-15 13:55:25,091 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-15 13:55:25,130 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-15 13:55:25,137 - DEBUG - Starting new HTTPS connection (5): securepubads.g.doubleclick.net:443
+2025-07-15 13:55:25,139 - DEBUG - Starting new HTTPS connection (5): cpt.geniee.jp:443
+2025-07-15 13:55:25,156 - INFO - 感想ページ2保存完了: 感想 - ページ2.html
+2025-07-15 13:55:25,162 - INFO - 感想ページ保存完了: 2ページ保存
+2025-07-15 13:55:25,168 - INFO - ページ取得開始: https://syosetu.org/novel/379807/1.html
+2025-07-15 13:55:27,178 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:55:27,224 - DEBUG - https://syosetu.org:443 "GET /novel/379807/1.html HTTP/1.1" 200 None
+2025-07-15 13:55:27,253 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=50219bytes
+2025-07-15 13:55:27,260 - INFO - CloudScraperで取得されたHTMLテキスト長: 32733
+2025-07-15 13:55:27,282 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:55:27,289 - INFO -   - タイトル: ある小学校の校則 - ある小学校の校則 - ハーメルン
+2025-07-15 13:55:27,294 - INFO -   - 本文長: 8901文字
+2025-07-15 13:55:27,311 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379807/1.html" property="og:url"/>
+<meta content="ある小学校の校則 - ある小学校の校則 - ハーメルン" property="og:title"/>
+<meta content="この小学校を探しています。どなたかご存じありませんか？" property="og:d...
+2025-07-15 13:55:27,318 - INFO -   - h1要素数: 1
+2025-07-15 13:55:27,325 - INFO -   - div要素数: 20
+2025-07-15 13:55:27,331 - INFO -   - a要素数: 77
+2025-07-15 13:55:27,337 - INFO -   - novel_body要素数: 0
+2025-07-15 13:55:27,343 - INFO -   - novel_view要素数: 0
+2025-07-15 13:55:27,349 - INFO - ページ検証: 正常なページ
+2025-07-15 13:55:27,356 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379807/1.html
+2025-07-15 13:55:27,453 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 13:55:27,503 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 13:55:27,593 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 13:55:27,677 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 13:55:27,730 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:27,819 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 13:55:27,866 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:27,953 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 13:55:28,044 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:28,092 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379807&v=1 HTTP/1.1" 200 None
+2025-07-15 13:55:31,131 - INFO - ページ取得開始: https://syosetu.org/novel/379807/2.html
+2025-07-15 13:55:33,147 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:55:33,197 - DEBUG - https://syosetu.org:443 "GET /novel/379807/2.html HTTP/1.1" 200 None
+2025-07-15 13:55:33,207 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=33271bytes
+2025-07-15 13:55:33,212 - INFO - CloudScraperで取得されたHTMLテキスト長: 22529
+2025-07-15 13:55:33,225 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:55:33,237 - INFO -   - タイトル: ある小学校の校則 - 某オカルト雑誌掲載　短編「片思い」より - ハーメルン
+2025-07-15 13:55:33,243 - INFO -   - 本文長: 5603文字
+2025-07-15 13:55:33,254 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379807/2.html" property="og:url"/>
+<meta content="某オカルト雑誌掲載　短編「片思い」より - ある小学校の校則 - ハーメルン" property="og:title"/>
+<meta content="この小学校を探しています。どなたかご存じありませんか？" pro...
+2025-07-15 13:55:33,262 - INFO -   - h1要素数: 1
+2025-07-15 13:55:33,279 - INFO -   - div要素数: 18
+2025-07-15 13:55:33,284 - INFO -   - a要素数: 76
+2025-07-15 13:55:33,290 - INFO -   - novel_body要素数: 0
+2025-07-15 13:55:33,296 - INFO -   - novel_view要素数: 0
+2025-07-15 13:55:33,304 - INFO - ページ検証: 正常なページ
+2025-07-15 13:55:33,311 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379807/2.html
+2025-07-15 13:55:33,360 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 13:55:33,413 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 13:55:33,463 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 13:55:33,513 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 13:55:33,565 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:33,616 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 13:55:33,666 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:33,718 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 13:55:33,767 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:33,813 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379807&v=2 HTTP/1.1" 200 None
+2025-07-15 13:55:36,830 - INFO - ページ取得開始: https://syosetu.org/novel/379807/3.html
+2025-07-15 13:55:38,837 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:55:38,882 - DEBUG - https://syosetu.org:443 "GET /novel/379807/3.html HTTP/1.1" 200 None
+2025-07-15 13:55:38,889 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28400bytes
+2025-07-15 13:55:38,894 - INFO - CloudScraperで取得されたHTMLテキスト長: 23564
+2025-07-15 13:55:38,910 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:55:38,916 - INFO -   - タイトル: ある小学校の校則 - SNS、ある投稿でのやり取り - ハーメルン
+2025-07-15 13:55:38,922 - INFO -   - 本文長: 3182文字
+2025-07-15 13:55:38,937 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379807/3.html" property="og:url"/>
+<meta content="SNS、ある投稿でのやり取り - ある小学校の校則 - ハーメルン" property="og:title"/>
+<meta content="この小学校を探しています。どなたかご存じありませんか？" property...
+2025-07-15 13:55:38,945 - INFO -   - h1要素数: 1
+2025-07-15 13:55:38,952 - INFO -   - div要素数: 18
+2025-07-15 13:55:38,959 - INFO -   - a要素数: 76
+2025-07-15 13:55:38,964 - INFO -   - novel_body要素数: 0
+2025-07-15 13:55:38,970 - INFO -   - novel_view要素数: 0
+2025-07-15 13:55:38,976 - INFO - ページ検証: 正常なページ
+2025-07-15 13:55:38,981 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379807/3.html
+2025-07-15 13:55:39,031 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 13:55:39,080 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 13:55:39,131 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 13:55:39,183 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 13:55:39,236 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:39,287 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 13:55:39,337 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:39,386 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 13:55:39,436 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:39,481 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379807&v=3 HTTP/1.1" 200 None
+2025-07-15 13:55:42,501 - INFO - ページ取得開始: https://syosetu.org/novel/379807/4.html
+2025-07-15 13:55:44,507 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:55:44,560 - DEBUG - https://syosetu.org:443 "GET /novel/379807/4.html HTTP/1.1" 200 None
+2025-07-15 13:55:44,566 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=34059bytes
+2025-07-15 13:55:44,571 - INFO - CloudScraperで取得されたHTMLテキスト長: 26579
+2025-07-15 13:55:44,585 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:55:44,593 - INFO -   - タイトル: ある小学校の校則 - 某女性週刊誌掲載　『七夕特集』から一部抜擢 - ハーメルン
+2025-07-15 13:55:44,598 - INFO -   - 本文長: 4178文字
+2025-07-15 13:55:44,609 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/379807/4.html" property="og:url"/>
+<meta content="某女性週刊誌掲載　『七夕特集』から一部抜擢 - ある小学校の校則 - ハーメルン" property="og:title"/>
+<meta content="この小学校を探しています。どなたかご存じありませんか？" p...
+2025-07-15 13:55:44,615 - INFO -   - h1要素数: 1
+2025-07-15 13:55:44,620 - INFO -   - div要素数: 28
+2025-07-15 13:55:44,625 - INFO -   - a要素数: 118
+2025-07-15 13:55:44,629 - INFO -   - novel_body要素数: 0
+2025-07-15 13:55:44,634 - INFO -   - novel_view要素数: 0
+2025-07-15 13:55:44,640 - INFO - ページ検証: 正常なページ
+2025-07-15 13:55:44,646 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/379807/4.html
+2025-07-15 13:55:44,696 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-15 13:55:44,746 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-15 13:55:44,796 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-15 13:55:44,846 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-15 13:55:44,895 - DEBUG - https://syosetu.org:443 "GET /resources/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:44,945 - DEBUG - https://syosetu.org:443 "GET /resources/novel_pc_min.js HTTP/1.1" 404 None
+2025-07-15 13:55:45,003 - DEBUG - https://syosetu.org:443 "GET /resources/reading_record.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:45,049 - DEBUG - https://syosetu.org:443 "GET /resources/gpt.js HTTP/1.1" 404 None
+2025-07-15 13:55:45,099 - DEBUG - https://syosetu.org:443 "GET /resources/wrapper.min.js HTTP/1.1" 404 None
+2025-07-15 13:55:45,147 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379807&v=4 HTTP/1.1" 200 None
+2025-07-15 13:55:49,074 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-15 13:55:49,076 - INFO - CloudScraper初期化開始
+2025-07-15 13:55:49,102 - INFO - CloudScraper設定完了
+2025-07-15 13:55:49,104 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-15 13:55:51,119 - INFO - ページ取得開始: https://syosetu.org/novel/380313/
+2025-07-15 13:55:53,126 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:55:53,127 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-15 13:55:53,236 - DEBUG - https://syosetu.org:443 "GET /novel/380313/ HTTP/1.1" 200 None
+2025-07-15 13:55:53,242 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=33581bytes
+2025-07-15 13:55:53,247 - INFO - CloudScraperで取得されたHTMLテキスト長: 24467
+2025-07-15 13:55:53,260 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:55:53,265 - INFO -   - タイトル: 怖くない話 - 怖くない話 - ハーメルン
+2025-07-15 13:55:53,271 - INFO -   - 本文長: 4797文字
+2025-07-15 13:55:53,281 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380313/" property="og:url"/>
+<meta content="怖くない話 - 怖くない話 - ハーメルン" property="og:title"/>
+<meta content="怖くない話です。安心だね" property="og:description"/>
+<meta content...
+2025-07-15 13:55:53,287 - INFO -   - h1要素数: 1
+2025-07-15 13:55:53,293 - INFO -   - div要素数: 20
+2025-07-15 13:55:53,297 - INFO -   - a要素数: 72
+2025-07-15 13:55:53,302 - INFO -   - novel_body要素数: 0
+2025-07-15 13:55:53,307 - INFO -   - novel_view要素数: 0
+2025-07-15 13:55:53,313 - INFO - ページ検証: 正常なページ
+2025-07-15 13:55:53,318 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380313/
+2025-07-15 13:55:53,322 - INFO - 小説情報抽出開始
+2025-07-15 13:55:53,327 - INFO - タイトル抽出試行中...
+2025-07-15 13:55:53,333 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-15 13:55:53,339 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-15 13:55:53,344 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-15 13:55:53,350 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-15 13:55:53,356 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC3125CCC0>}
+2025-07-15 13:55:53,366 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC3125CCC0>} で要素が見つかりませんでした
+2025-07-15 13:55:53,372 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-15 13:55:53,381 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 13:55:53,386 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-15 13:55:53,393 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 13:55:53,400 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-15 13:55:53,409 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-15 13:55:53,415 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-15 13:55:53,424 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-15 13:55:53,431 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-15 13:55:53,438 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-15 13:55:53,444 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-15 13:55:53,449 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 13:55:53,454 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-15 13:55:53,461 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-15 13:55:53,467 - INFO - タイトルセレクター試行: h1 {}
+2025-07-15 13:55:53,473 - INFO - タイトルセレクター試行: title {}
+2025-07-15 13:55:53,480 - INFO - タイトル取得成功: 怖くない話 - 怖くない話
+2025-07-15 13:55:53,486 - INFO - 作者抽出試行中...
+2025-07-15 13:55:53,491 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-15 13:55:53,498 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 13:55:53,503 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-15 13:55:53,513 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-15 13:55:53,520 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-15 13:55:53,528 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-15 13:55:53,533 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-15 13:55:53,540 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-15 13:55:53,547 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC322302C0>}
+2025-07-15 13:55:53,559 - INFO - セレクター a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001EC322302C0>} で要素が見つかりませんでした
+2025-07-15 13:55:53,565 - INFO - 作者セレクター試行: div {'class': 'author'}
+2025-07-15 13:55:53,574 - INFO - セレクター div {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 13:55:53,580 - INFO - 作者セレクター試行: span {'class': 'author'}
+2025-07-15 13:55:53,587 - INFO - セレクター span {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 13:55:53,594 - INFO - 作者セレクター試行: a {'class': 'author'}
+2025-07-15 13:55:53,601 - INFO - セレクター a {'class': 'author'} で要素が見つかりませんでした
+2025-07-15 13:55:53,608 - WARNING - 基本情報取得失敗、詳細調査を実行
+2025-07-15 13:55:53,617 - INFO - === ページ構造詳細調査 ===
+2025-07-15 13:55:53,623 - INFO - h1タグ数: 1
+2025-07-15 13:55:53,628 - INFO -   h1[0]: class=['siteTitle'], text=...
+2025-07-15 13:55:53,633 - INFO - リンク数: 72
+2025-07-15 13:55:53,639 - INFO - ユーザーリンク数: 0
+2025-07-15 13:55:53,645 - INFO - 関連クラス名: ['novelnavi']
+2025-07-15 13:55:53,651 - INFO - 関連spanクラス名: []
+2025-07-15 13:55:53,660 - INFO - ページ取得開始: https://syosetu.org/novel/380313/
+2025-07-15 13:55:55,666 - INFO - CloudScraperで初回試行中...
+2025-07-15 13:55:55,716 - DEBUG - https://syosetu.org:443 "GET /novel/380313/ HTTP/1.1" 200 None
+2025-07-15 13:55:55,722 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=33581bytes
+2025-07-15 13:55:55,727 - INFO - CloudScraperで取得されたHTMLテキスト長: 24467
+2025-07-15 13:55:55,741 - INFO - CloudScraper取得ページ分析:
+2025-07-15 13:55:55,746 - INFO -   - タイトル: 怖くない話 - 怖くない話 - ハーメルン
+2025-07-15 13:55:55,751 - INFO -   - 本文長: 4797文字
+2025-07-15 13:55:55,763 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380313/" property="og:url"/>
+<meta content="怖くない話 - 怖くない話 - ハーメルン" property="og:title"/>
+<meta content="怖くない話です。安心だね" property="og:description"/>
+<meta content...
+2025-07-15 13:55:55,768 - INFO -   - h1要素数: 1
+2025-07-15 13:55:55,773 - INFO -   - div要素数: 20
+2025-07-15 13:55:55,778 - INFO -   - a要素数: 72
+2025-07-15 13:55:55,783 - INFO -   - novel_body要素数: 0
+2025-07-15 13:55:55,787 - INFO -   - novel_view要素数: 0
+2025-07-15 13:55:55,792 - INFO - ページ検証: 正常なページ
+2025-07-15 13:55:55,797 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380313/

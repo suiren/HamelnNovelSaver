@@ -2052,6 +2052,10 @@ class HamelnFinalScraper:
         chapter_links = self.get_chapter_links(soup, novel_url)
         print(f"章数: {len(chapter_links)}")
         
+        # 小説情報・感想ファイル名の初期化（章処理で使用するため事前に定義）
+        info_file_name = None
+        comments_file_name = None
+        
         # 目次ページの保存とリソースファイルのダウンロード
         if len(chapter_links) > 1:
             print("目次ページを保存中...")
@@ -2072,8 +2076,6 @@ class HamelnFinalScraper:
             print("📁 リソースファイルのダウンロードが完了しました。各章ではリソース再処理をスキップします。")
             
             # 🆕 新機能: 小説情報・感想保存（フラグで制御）
-            info_file_name = None
-            comments_file_name = None
             
             if self.enable_novel_info_saving:
                 print("小説情報ページを保存中...")
