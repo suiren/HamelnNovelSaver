@@ -1,6 +1,12 @@
 #!/bin/bash
 #
-# GitHub Actions ワークフロー実行履歴の一括削除スクリプト
+# GitHub Actions ワークフロー実行履歴の整理スクリプト
+# 
+# 削除方針:
+# - 失敗したワークフロー: 削除推奨（ノイズ除去）
+# - 成功したワークフロー: 保持推奨（貴重な履歴情報）
+# - GitHubが90日後に自動削除するため、手動削除は通常不要
+#
 # 使用前にGitHub CLIがインストール・認証済みであることを確認
 #
 
@@ -24,24 +30,11 @@ done
 
 echo "✅ 失敗したワークフロー実行の削除完了"
 
-# 古い成功したワークフローも削除したい場合（オプション）
+# 注意：成功したワークフローは貴重な履歴情報のため通常は削除不要
+# GitHubが90日後に自動削除するため、手動削除は推奨しません
 echo ""
-echo "🤔 古い成功したワークフローも削除しますか？ (y/N)"
-read -r response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    echo "📅 30日以上前の成功したワークフローを削除中..."
-    
-    # 30日以上前の成功したワークフローを削除
-    cutoff_date=$(date -d '30 days ago' '+%Y-%m-%d')
-    gh run list --repo "$REPO_OWNER/$REPO_NAME" --status success --created "<$cutoff_date" --json databaseId -q '.[].databaseId' | while read -r run_id; do
-        if [ -n "$run_id" ]; then
-            echo "  削除中: Run ID $run_id"
-            gh api "repos/$REPO_OWNER/$REPO_NAME/actions/runs/$run_id" -X DELETE || echo "    削除失敗: $run_id"
-        fi
-    done
-    
-    echo "✅ 古いワークフロー実行の削除完了"
-fi
+echo "ℹ️ 成功したワークフローは貴重な履歴のため保持を推奨"
+echo "ℹ️ GitHubが90日後に自動削除するため手動削除は通常不要"
 
 echo ""
 echo "🎉 ワークフロー実行履歴の整理が完了しました"
