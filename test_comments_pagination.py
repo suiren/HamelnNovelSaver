@@ -11,7 +11,7 @@ import os
 
 # テスト対象のモジュールをインポート
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from hameln_scraper_final import HamelnFinalScraper
+from hameln_scraper.core.scraper import HamelnScraper as HamelnFinalScraper
 
 class TestCommentsPagination(unittest.TestCase):
     """感想ページの複数ページ取得機能のテストクラス"""
