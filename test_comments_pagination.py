@@ -98,7 +98,7 @@ class TestCommentsPagination(unittest.TestCase):
         self.assertIn(4, page_numbers)
         self.assertIn(5, page_numbers)
         
-    @patch('hameln_scraper_final.HamelnFinalScraper.get_page')
+    @patch('hameln_scraper.network.client.NetworkClient.get_page')
     def test_get_all_comments_pages_multiple_pages(self, mock_get_page):
         """複数ページの感想取得統合テスト"""
         # 1ページ目のモックレスポンス
@@ -132,7 +132,7 @@ class TestCommentsPagination(unittest.TestCase):
         page2_soup = BeautifulSoup(page2_html, 'html.parser')
         
         # モックの設定
-        mock_get_page.side_effect = [page1_soup, page2_soup]
+        mock_get_page.side_effect = [page1_html, page2_html]
         
         # テスト実行
         result = self.scraper.get_all_comments_pages(self.test_base_url)

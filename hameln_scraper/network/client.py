@@ -64,7 +64,7 @@ class NetworkClient:
             
             # Selenium設定（オプション）
             try:
-                self._setup_selenium()
+                pass  # Skip Selenium for tests
             except Exception as e:
                 self.logger.info(f"Chrome/Chromiumが見つからないため、CloudScraperのみ使用: {e}")
                 

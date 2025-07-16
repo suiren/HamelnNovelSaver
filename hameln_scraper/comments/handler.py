@@ -6,6 +6,7 @@
 import time
 import copy
 import logging
+import os
 from urllib.parse import urlparse, parse_qs
 from bs4 import BeautifulSoup
 
