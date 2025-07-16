@@ -2,10 +2,25 @@
 """
 ハーメルン小説保存アプリケーション - 最終版
 完全なページ保存機能（CSS、JavaScript、画像等を含む）
+リファクタリング版 - モジュール化された構造
 """
 
-import time
 import os
+import sys
+from hameln_scraper.core.scraper import HamelnScraper
+from hameln_scraper.core.config import ScraperConfig
+
+class HamelnFinalScraper(HamelnScraper):
+    """後方互換性のためのラッパークラス"""
+    
+    def __init__(self):
+        config = ScraperConfig()
+        config.enable_novel_info_saving = False
+        config.enable_comments_saving = False
+        super().__init__(config)
+
+
+import time
 import re
 import base64
 import requests
@@ -28,7 +43,7 @@ import zlib
 import brotli
 import copy
 
-class HamelnFinalScraper:
+class HamelnFinalScraperLegacy:
     def __init__(self, base_url="https://syosetu.org"):
         self.base_url = base_url
         self.driver = None
@@ -2272,7 +2287,7 @@ class HamelnFinalScraper:
                 comments_url = self.extract_comments_url(soup)
                 if comments_url:
                     # index_filenameが定義されていない場合は単一ページなので None を渡す
-                    index_file_name = index_filename if 'index_filename' in locals() else None
+                    index_file_name = os.path.basename(index_file_path) if index_file_path else None
                     comments_file_path = self.save_comments_page(comments_url, output_dir, title, index_file_name)
                     if comments_file_path:
                         comments_file_name = os.path.basename(comments_file_path)
@@ -2291,7 +2306,7 @@ class HamelnFinalScraper:
                 info_url = self.extract_novel_info_url(soup)
                 if info_url:
                     # index_filenameが定義されていない場合は単一ページなので None を渡す
-                    index_file_name = index_filename if 'index_filename' in locals() else None
+                    index_file_name = os.path.basename(index_file_path) if index_file_path else None
                     info_file_path = self.save_novel_info_page(info_url, output_dir, title, index_file_name, comments_file_name)
                     if info_file_path:
                         info_file_name = os.path.basename(info_file_path)
