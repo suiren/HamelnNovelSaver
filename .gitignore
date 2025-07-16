@@ -62,7 +62,7 @@ venv.bak/
 saved_novels/
 Output/
 temp/
-resources/
+# resources/ - commented out to allow hameln_scraper/resources module
 
 # Windows specific
 *.exe
