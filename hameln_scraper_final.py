@@ -2567,11 +2567,8 @@ class HamelnFinalScraper:
         print(f"小説の保存が完了しました: {output_dir}")
         print(f"取得した章数: {len(chapters)}")
         
-        # 最初の章ファイルのパスを返す（従来の互換性のため）
-        if saved_chapters:
-            return saved_chapters[0]['file_path']
-        else:
-            return None
+        # 保存ディレクトリのパスを返す（GUI互換性のため）
+        return output_dir
         
     def get_cache_stats(self):
         """リソースキャッシュの統計情報を取得"""
