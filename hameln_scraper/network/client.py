@@ -157,6 +157,29 @@ class NetworkClient:
             self.logger.debug(f"Selenium エラー: {e}")
             return None
     
+    def get_resource(self, url: str) -> Optional[bytes]:
+        """
+        リソースファイル（画像、CSS、JS等）をダウンロード
+        
+        Args:
+            url: ダウンロードするリソースのURL
+            
+        Returns:
+            bytes: リソースの内容（バイナリ）
+        """
+        try:
+            # CloudScraperでリソース取得
+            response = self.cloudscraper.get(url, timeout=30)
+            if response.status_code == 200:
+                self.logger.debug(f"リソース取得成功: {url}")
+                return response.content
+            else:
+                self.logger.warning(f"リソース取得失敗: {response.status_code} - {url}")
+                return None
+        except Exception as e:
+            self.logger.debug(f"リソース取得エラー ({url}): {e}")
+            return None
+    
     def close(self):
         """リソースをクリーンアップ"""
         if self.driver:

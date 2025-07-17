@@ -1033,8 +1033,19 @@ class HamelnFinalScraper:
     def extract_comments_url(self, soup):
         """目次ページから感想ページのURLを抽出"""
         try:
-            # topicPathから感想リンクを検索
-            topic_path = soup.find('ol', class_='topicPath')
+            # topicPathから感想リンクを検索（複数のパターンに対応）
+            topic_path_selectors = [
+                'ol.topicPath',
+                'div.topicPath',
+                '.topicPath'
+            ]
+            
+            topic_path = None
+            for selector in topic_path_selectors:
+                topic_path = soup.select_one(selector)
+                if topic_path:
+                    break
+            
             if topic_path:
                 comments_link = topic_path.find('a', href=lambda x: x and 'mode=review' in x)
                 if comments_link:
@@ -1220,8 +1231,14 @@ class HamelnFinalScraper:
                     if not href:
                         continue
                     
-                    # 感想ページのURL形式を検出
-                    if 'mode=review' in href:
+                    # 感想ページのURL形式を検出（p=パラメータも含む、HTMLエスケープも考慮）
+                    is_comments_page = (
+                        'mode=review' in href or 
+                        ('p=' in href and '/novel/' in href) or
+                        ('&amp;p=' in href and '/novel/' in href)
+                    )
+                    
+                    if is_comments_page:
                         # より精密なマッチングを実装
                         matched_file = self.find_matching_comments_page(href, page_mapping)
                         if matched_file:
@@ -1254,6 +1271,14 @@ class HamelnFinalScraper:
     def find_matching_comments_page(self, href, page_mapping):
         """感想ページのURLから正確なローカルファイルを探す"""
         try:
+            # HTMLエスケープを解除
+            import html
+            href = html.unescape(href)
+            
+            # クエリパラメータの修正
+            if '?' not in href and ('&p=' in href or '&page=' in href):
+                href = href.replace('&', '?', 1)
+            
             # リンクからページ番号を抽出
             target_page_num = self.extract_page_number(href)
             
@@ -1285,9 +1310,11 @@ class HamelnFinalScraper:
             parsed = urlparse(url)
             params = parse_qs(parsed.query)
             
-            # page パラメータからページ番号を取得
+            # page または p パラメータからページ番号を取得
             if 'page' in params:
                 return int(params['page'][0])
+            elif 'p' in params:
+                return int(params['p'][0])
             else:
                 return 1  # デフォルトは1ページ目
                 
@@ -1393,7 +1420,9 @@ class HamelnFinalScraper:
                 'div.page-nav a',
                 # ハーメルン特有のパターン
                 'a[href*="mode=review"][href*="page="]',
-                'a[href*="&page="]'
+                'a[href*="&page="]',
+                'a[href*="mode=review"][href*="p="]',
+                'a[href*="&p="]'
             ]
             
             for selector in pagination_selectors:
@@ -1403,19 +1432,23 @@ class HamelnFinalScraper:
                     
                     for link in pagination_links:
                         href = link.get('href')
-                        if href and 'page=' in href:
+                        if href and ('page=' in href or 'p=' in href):
                             # 相対URLを絶対URLに変換
                             if href.startswith('?'):
-                                # ?page=2 形式
+                                # ?page=2 または ?p=2 形式
                                 full_url = base_url.split('?')[0] + href
                             elif href.startswith('./'):
-                                # ./?page=2 形式
+                                # ./?page=2 または ./?p=2 形式
                                 full_url = base_url.split('?')[0] + href[2:]  # ./ を削除して処理
                             elif href.startswith('//'):
                                 # プロトコル相対URLを絶対URLに変換
                                 full_url = f"https:{href}"
                             elif href.startswith('/'):
-                                # /path?page=2 形式
+                                # /path?page=2 または /path?p=2 形式
+                                # クエリパラメータの修正が必要な場合
+                                if '?' not in href and ('&p=' in href or '&page=' in href):
+                                    # &を最初の?に変換
+                                    href = href.replace('&', '?', 1)
                                 full_url = 'https://syosetu.org' + href
                             elif href.startswith('http'):
                                 # https://... 形式
