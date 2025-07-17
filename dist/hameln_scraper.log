@@ -15164,3 +15164,1202 @@ b'{console.log("undetected chromedriver 1337!")}                                
 2025-07-17 15:40:36,656 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
 2025-07-17 15:40:36,710 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446&v=9 HTTP/1.1" 200 None
 2025-07-17 15:40:37,108 - INFO - リソースキャッシュ統計: 70個のリソースをキャッシュしました
+2025-07-17 17:14:19,081 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 17:14:19,083 - INFO - CloudScraper初期化開始
+2025-07-17 17:14:19,111 - INFO - CloudScraper設定完了
+2025-07-17 17:14:19,113 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 17:14:23,132 - INFO - ページ取得開始: https://syosetu.org/novel/370348/
+2025-07-17 17:14:25,140 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:14:25,143 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-17 17:14:25,252 - DEBUG - https://syosetu.org:443 "GET /novel/370348/ HTTP/1.1" 200 None
+2025-07-17 17:14:25,260 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=23104bytes
+2025-07-17 17:14:25,266 - INFO - CloudScraperで取得されたHTMLテキスト長: 20144
+2025-07-17 17:14:25,279 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:14:25,287 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世 - ハーメルン
+2025-07-17 17:14:25,293 - INFO -   - 本文長: 1899文字
+2025-07-17 17:14:25,316 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/370348/" property="og:url"/>
+<meta content="ホグワーツ教師　ロード・エルメロイII世 - ハーメルン" property="og:title"/>
+<meta content="復活したヴォルデモート卿。 彼の復活を認めない魔法省。 不安定な情勢の中、一人の教師がホグワーツ...
+2025-07-17 17:14:25,326 - INFO -   - h1要素数: 1
+2025-07-17 17:14:25,333 - INFO -   - div要素数: 21
+2025-07-17 17:14:25,340 - INFO -   - a要素数: 92
+2025-07-17 17:14:25,348 - INFO -   - novel_body要素数: 0
+2025-07-17 17:14:25,355 - INFO -   - novel_view要素数: 0
+2025-07-17 17:14:25,364 - INFO - ページ検証: 正常なページ
+2025-07-17 17:14:25,372 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/370348/
+2025-07-17 17:14:25,381 - INFO - 小説情報抽出開始
+2025-07-17 17:14:25,386 - INFO - タイトル抽出試行中...
+2025-07-17 17:14:25,392 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-17 17:14:25,398 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-17 17:14:25,404 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-17 17:14:25,411 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-17 17:14:25,418 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000002703016CEA0>}
+2025-07-17 17:14:25,427 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000002703016CEA0>} で要素が見つかりませんでした
+2025-07-17 17:14:25,435 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-17 17:14:25,442 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-17 17:14:25,450 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-17 17:14:25,456 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-17 17:14:25,464 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-17 17:14:25,472 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-17 17:14:25,478 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-17 17:14:25,486 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-17 17:14:25,491 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-17 17:14:25,498 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-17 17:14:25,503 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-17 17:14:25,508 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-17 17:14:25,515 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-17 17:14:25,521 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-17 17:14:25,526 - INFO - タイトルセレクター試行: h1 {}
+2025-07-17 17:14:25,531 - INFO - タイトルセレクター試行: title {}
+2025-07-17 17:14:25,537 - INFO - タイトル取得成功: ホグワーツ教師　ロード・エルメロイII世
+2025-07-17 17:14:25,543 - INFO - 作者抽出試行中...
+2025-07-17 17:14:25,549 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-17 17:14:25,555 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-17 17:14:25,560 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-17 17:14:25,567 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-17 17:14:25,572 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-17 17:14:25,580 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-17 17:14:25,587 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-17 17:14:25,592 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-17 17:14:25,600 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000002703016CE00>}
+2025-07-17 17:14:25,610 - INFO - セレクター a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000002703016CE00>} で要素が見つかりませんでした
+2025-07-17 17:14:25,616 - INFO - 作者セレクター試行: div {'class': 'author'}
+2025-07-17 17:14:25,622 - INFO - セレクター div {'class': 'author'} で要素が見つかりませんでした
+2025-07-17 17:14:25,629 - INFO - 作者セレクター試行: span {'class': 'author'}
+2025-07-17 17:14:25,634 - INFO - セレクター span {'class': 'author'} で要素が見つかりませんでした
+2025-07-17 17:14:25,640 - INFO - 作者セレクター試行: a {'class': 'author'}
+2025-07-17 17:14:25,647 - INFO - セレクター a {'class': 'author'} で要素が見つかりませんでした
+2025-07-17 17:14:25,656 - WARNING - 基本情報取得失敗、詳細調査を実行
+2025-07-17 17:14:25,664 - INFO - === ページ構造詳細調査 ===
+2025-07-17 17:14:25,668 - INFO - h1タグ数: 1
+2025-07-17 17:14:25,673 - INFO -   h1[0]: class=['siteTitle'], text=...
+2025-07-17 17:14:25,678 - INFO - リンク数: 92
+2025-07-17 17:14:25,684 - INFO - ユーザーリンク数: 0
+2025-07-17 17:14:25,689 - INFO - 関連クラス名: []
+2025-07-17 17:14:25,695 - INFO - 関連spanクラス名: []
+2025-07-17 17:14:25,701 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-17 17:14:25,787 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-17 17:14:25,812 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-17 17:14:25,838 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-17 17:14:25,864 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.gif HTTP/1.1" 200 811
+2025-07-17 17:14:25,894 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.gif HTTP/1.1" 200 1297
+2025-07-17 17:14:25,924 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.gif HTTP/1.1" 200 1294
+2025-07-17 17:14:25,957 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.gif HTTP/1.1" 200 833
+2025-07-17 17:14:25,987 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.gif HTTP/1.1" 200 1102
+2025-07-17 17:14:26,012 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.gif HTTP/1.1" 200 1072
+2025-07-17 17:14:26,041 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.gif HTTP/1.1" 200 1866
+2025-07-17 17:14:26,067 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.gif HTTP/1.1" 200 1014
+2025-07-17 17:14:26,100 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.gif HTTP/1.1" 200 927
+2025-07-17 17:14:26,127 - DEBUG - https://img.syosetu.org:443 "GET /image/square.gif HTTP/1.1" 200 816
+2025-07-17 17:14:26,160 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.gif HTTP/1.1" 200 874
+2025-07-17 17:14:26,192 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.gif HTTP/1.1" 200 833
+2025-07-17 17:14:26,221 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.gif HTTP/1.1" 200 834
+2025-07-17 17:14:26,248 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.gif HTTP/1.1" 200 1136
+2025-07-17 17:14:26,275 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.gif HTTP/1.1" 200 1136
+2025-07-17 17:14:26,301 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.gif HTTP/1.1" 200 898
+2025-07-17 17:14:26,331 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-17 17:14:26,359 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-17 17:14:26,388 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-17 17:14:26,413 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-17 17:14:26,439 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-17 17:14:26,466 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-17 17:14:26,492 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-17 17:14:26,536 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-17 17:14:26,566 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png HTTP/1.1" 200 4864
+2025-07-17 17:14:26,593 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png HTTP/1.1" 200 1566
+2025-07-17 17:14:26,622 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-17 17:14:26,655 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-17 17:14:26,688 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-17 17:14:26,719 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_mokuzi_pc_min.js?202008211 HTTP/1.1" 200 953
+2025-07-17 17:14:26,725 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-17 17:14:26,780 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-17 17:14:26,822 - DEBUG - https://img.syosetu.org:443 "GET /js/ad_dliste.min.js?202501083 HTTP/1.1" 200 536
+2025-07-17 17:14:26,896 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_g5.gif HTTP/1.1" 200 166
+2025-07-17 17:14:26,928 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a5.gif HTTP/1.1" 200 166
+2025-07-17 17:14:26,932 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-17 17:14:27,094 - DEBUG - https://ct.syosetu.org:443 "GET /?n=370348 HTTP/1.1" 200 None
+2025-07-17 17:14:27,188 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 17:14:27,238 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 17:14:27,325 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 17:14:27,412 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 17:14:27,417 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-17 17:14:27,419 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-17 17:14:27,433 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=370348
+2025-07-17 17:14:27,439 - INFO - 感想保存フォルダ作成: saved_novels\ホグワーツ教師　ロード・エルメロイII世\感想
+2025-07-17 17:14:27,445 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348
+2025-07-17 17:14:29,453 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:14:29,512 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348 HTTP/1.1" 200 None
+2025-07-17 17:14:29,518 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=34422bytes
+2025-07-17 17:14:29,526 - INFO - CloudScraperで取得されたHTMLテキスト長: 28678
+2025-07-17 17:14:29,543 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:14:29,550 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:14:29,557 - INFO -   - 本文長: 3548文字
+2025-07-17 17:14:29,569 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:14:29,575 - INFO -   - h1要素数: 1
+2025-07-17 17:14:29,582 - INFO -   - div要素数: 30
+2025-07-17 17:14:29,589 - INFO -   - a要素数: 124
+2025-07-17 17:14:29,598 - INFO -   - novel_body要素数: 0
+2025-07-17 17:14:29,604 - INFO -   - novel_view要素数: 0
+2025-07-17 17:14:29,611 - INFO - ページ検証: 正常なページ
+2025-07-17 17:14:29,617 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348
+2025-07-17 17:14:29,638 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (22個のリンク)
+2025-07-17 17:14:29,647 - INFO - 検出されたページ: 11ページ
+2025-07-17 17:14:29,654 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=370348
+2025-07-17 17:14:29,661 - INFO -   ページ2: https://syosetu.org/?mode=review&nid=370348&page=2
+2025-07-17 17:14:29,668 - INFO -   ページ3: https://syosetu.org/?mode=review&nid=370348&page=3
+2025-07-17 17:14:29,675 - INFO -   ページ4: https://syosetu.org/?mode=review&nid=370348&page=4
+2025-07-17 17:14:29,682 - INFO -   ページ5: https://syosetu.org/?mode=review&nid=370348&page=5
+2025-07-17 17:14:29,688 - INFO -   ページ6: https://syosetu.org/?mode=review&nid=370348&page=6
+2025-07-17 17:14:29,696 - INFO -   ページ7: https://syosetu.org/?mode=review&nid=370348&page=7
+2025-07-17 17:14:29,702 - INFO -   ページ8: https://syosetu.org/?mode=review&nid=370348&page=8
+2025-07-17 17:14:29,707 - INFO -   ページ9: https://syosetu.org/?mode=review&nid=370348&page=9
+2025-07-17 17:14:29,714 - INFO -   ページ10: https://syosetu.org/?mode=review&nid=370348&page=10
+2025-07-17 17:14:29,720 - INFO -   ページ11: https://syosetu.org/?mode=review&nid=370348&page=21
+2025-07-17 17:14:29,726 - INFO - 感想ページ数: 11ページ
+2025-07-17 17:14:29,732 - INFO - 感想ページ 1/11 を保存中: https://syosetu.org/?mode=review&nid=370348
+2025-07-17 17:14:29,760 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:14:29,785 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-17 17:14:29,811 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-17 17:14:29,839 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-17 17:14:29,869 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-17 17:14:29,895 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-17 17:14:29,925 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-17 17:14:29,954 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-17 17:14:29,981 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-17 17:14:30,008 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-17 17:14:30,037 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-17 17:14:30,067 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-17 17:14:30,093 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-17 17:14:30,120 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-17 17:14:30,149 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-17 17:14:30,181 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-17 17:14:30,211 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-17 17:14:30,243 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-17 17:14:30,276 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-17 17:14:30,308 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:14:30,340 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-17 17:14:30,368 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png?20230812 HTTP/1.1" 200 4864
+2025-07-17 17:14:30,393 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png?20230812 HTTP/1.1" 200 1566
+2025-07-17 17:14:30,421 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-17 17:14:30,449 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-17 17:14:30,478 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-17 17:14:30,505 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-17 17:14:30,509 - DEBUG - Starting new HTTPS connection (3): securepubads.g.doubleclick.net:443
+2025-07-17 17:14:30,511 - DEBUG - Starting new HTTPS connection (3): cpt.geniee.jp:443
+2025-07-17 17:14:30,598 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?10TV%21A1Kpn%21nbbX3PAbEC HTTP/1.1" 403 None
+2025-07-17 17:14:30,616 - INFO - 感想ページ1保存完了: 感想 - ページ1.html
+2025-07-17 17:14:30,625 - INFO - 感想ページ 2/11 を保存中: https://syosetu.org/?mode=review&nid=370348&page=2
+2025-07-17 17:14:32,637 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348&page=2
+2025-07-17 17:14:34,651 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:14:34,735 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348&page=2 HTTP/1.1" 200 None
+2025-07-17 17:14:34,751 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=32343bytes
+2025-07-17 17:14:34,767 - INFO - CloudScraperで取得されたHTMLテキスト長: 27815
+2025-07-17 17:14:34,786 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:14:34,797 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:14:34,805 - INFO -   - 本文長: 2927文字
+2025-07-17 17:14:34,826 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:14:34,835 - INFO -   - h1要素数: 1
+2025-07-17 17:14:34,846 - INFO -   - div要素数: 29
+2025-07-17 17:14:34,852 - INFO -   - a要素数: 126
+2025-07-17 17:14:34,858 - INFO -   - novel_body要素数: 0
+2025-07-17 17:14:34,864 - INFO -   - novel_view要素数: 0
+2025-07-17 17:14:34,876 - INFO - ページ検証: 正常なページ
+2025-07-17 17:14:34,884 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348&page=2
+2025-07-17 17:14:34,917 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:14:34,960 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:14:34,969 - DEBUG - Starting new HTTPS connection (4): securepubads.g.doubleclick.net:443
+2025-07-17 17:14:34,971 - DEBUG - Starting new HTTPS connection (4): cpt.geniee.jp:443
+2025-07-17 17:14:35,020 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1yI5PO1Kpn%21nbbX3PAbEg HTTP/1.1" 403 None
+2025-07-17 17:14:35,040 - INFO - 感想ページ2保存完了: 感想 - ページ2.html
+2025-07-17 17:14:35,048 - INFO - 感想ページ 3/11 を保存中: https://syosetu.org/?mode=review&nid=370348&page=3
+2025-07-17 17:14:37,065 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348&page=3
+2025-07-17 17:14:39,076 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:14:39,135 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348&page=3 HTTP/1.1" 200 None
+2025-07-17 17:14:39,143 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=32785bytes
+2025-07-17 17:14:39,150 - INFO - CloudScraperで取得されたHTMLテキスト長: 28251
+2025-07-17 17:14:39,167 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:14:39,174 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:14:39,181 - INFO -   - 本文長: 2966文字
+2025-07-17 17:14:39,191 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:14:39,197 - INFO -   - h1要素数: 1
+2025-07-17 17:14:39,202 - INFO -   - div要素数: 30
+2025-07-17 17:14:39,207 - INFO -   - a要素数: 128
+2025-07-17 17:14:39,212 - INFO -   - novel_body要素数: 0
+2025-07-17 17:14:39,218 - INFO -   - novel_view要素数: 0
+2025-07-17 17:14:39,223 - INFO - ページ検証: 正常なページ
+2025-07-17 17:14:39,229 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348&page=3
+2025-07-17 17:14:39,257 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:14:39,293 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:14:39,301 - DEBUG - Starting new HTTPS connection (5): securepubads.g.doubleclick.net:443
+2025-07-17 17:14:39,302 - DEBUG - Starting new HTTPS connection (5): cpt.geniee.jp:443
+2025-07-17 17:14:39,347 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1%21kVyn1Kpn%21nbbX3PAKOC HTTP/1.1" 403 None
+2025-07-17 17:14:39,364 - INFO - 感想ページ3保存完了: 感想 - ページ3.html
+2025-07-17 17:14:39,371 - INFO - 感想ページ 4/11 を保存中: https://syosetu.org/?mode=review&nid=370348&page=4
+2025-07-17 17:14:41,379 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348&page=4
+2025-07-17 17:14:43,387 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:14:43,449 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348&page=4 HTTP/1.1" 200 None
+2025-07-17 17:14:43,455 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=32821bytes
+2025-07-17 17:14:43,461 - INFO - CloudScraperで取得されたHTMLテキスト長: 28239
+2025-07-17 17:14:43,478 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:14:43,484 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:14:43,490 - INFO -   - 本文長: 2980文字
+2025-07-17 17:14:43,500 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:14:43,505 - INFO -   - h1要素数: 1
+2025-07-17 17:14:43,510 - INFO -   - div要素数: 30
+2025-07-17 17:14:43,515 - INFO -   - a要素数: 128
+2025-07-17 17:14:43,519 - INFO -   - novel_body要素数: 0
+2025-07-17 17:14:43,523 - INFO -   - novel_view要素数: 0
+2025-07-17 17:14:43,529 - INFO - ページ検証: 正常なページ
+2025-07-17 17:14:43,535 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348&page=4
+2025-07-17 17:14:43,563 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:14:43,598 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:14:43,605 - DEBUG - Starting new HTTPS connection (6): securepubads.g.doubleclick.net:443
+2025-07-17 17:14:43,606 - DEBUG - Starting new HTTPS connection (6): cpt.geniee.jp:443
+2025-07-17 17:14:43,652 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1dT5dn1Kpn%21nbbX3PAKO4 HTTP/1.1" 403 None
+2025-07-17 17:14:43,667 - INFO - 感想ページ4保存完了: 感想 - ページ4.html
+2025-07-17 17:14:43,674 - INFO - 感想ページ 5/11 を保存中: https://syosetu.org/?mode=review&nid=370348&page=5
+2025-07-17 17:14:45,683 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348&page=5
+2025-07-17 17:14:47,689 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:14:47,751 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348&page=5 HTTP/1.1" 200 None
+2025-07-17 17:14:47,757 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31182bytes
+2025-07-17 17:14:47,763 - INFO - CloudScraperで取得されたHTMLテキスト長: 27388
+2025-07-17 17:14:47,782 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:14:47,788 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:14:47,796 - INFO -   - 本文長: 2557文字
+2025-07-17 17:14:47,807 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:14:47,813 - INFO -   - h1要素数: 1
+2025-07-17 17:14:47,818 - INFO -   - div要素数: 29
+2025-07-17 17:14:47,822 - INFO -   - a要素数: 126
+2025-07-17 17:14:47,828 - INFO -   - novel_body要素数: 0
+2025-07-17 17:14:47,833 - INFO -   - novel_view要素数: 0
+2025-07-17 17:14:47,839 - INFO - ページ検証: 正常なページ
+2025-07-17 17:14:47,845 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348&page=5
+2025-07-17 17:14:47,875 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:14:47,912 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:14:47,921 - DEBUG - Starting new HTTPS connection (7): securepubads.g.doubleclick.net:443
+2025-07-17 17:14:47,924 - DEBUG - Starting new HTTPS connection (7): cpt.geniee.jp:443
+2025-07-17 17:14:47,968 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1%21RVdj1Kpn%21nbbX3PAKOj HTTP/1.1" 403 None
+2025-07-17 17:14:47,986 - INFO - 感想ページ5保存完了: 感想 - ページ5.html
+2025-07-17 17:14:47,993 - INFO - 感想ページ 6/11 を保存中: https://syosetu.org/?mode=review&nid=370348&page=6
+2025-07-17 17:14:50,001 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348&page=6
+2025-07-17 17:14:52,010 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:14:52,081 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348&page=6 HTTP/1.1" 200 None
+2025-07-17 17:14:52,089 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31298bytes
+2025-07-17 17:14:52,096 - INFO - CloudScraperで取得されたHTMLテキスト長: 27688
+2025-07-17 17:14:52,112 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:14:52,122 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:14:52,130 - INFO -   - 本文長: 2476文字
+2025-07-17 17:14:52,142 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:14:52,149 - INFO -   - h1要素数: 1
+2025-07-17 17:14:52,155 - INFO -   - div要素数: 30
+2025-07-17 17:14:52,160 - INFO -   - a要素数: 128
+2025-07-17 17:14:52,166 - INFO -   - novel_body要素数: 0
+2025-07-17 17:14:52,172 - INFO -   - novel_view要素数: 0
+2025-07-17 17:14:52,179 - INFO - ページ検証: 正常なページ
+2025-07-17 17:14:52,186 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348&page=6
+2025-07-17 17:14:52,215 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:14:52,255 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:14:52,262 - DEBUG - Starting new HTTPS connection (8): securepubads.g.doubleclick.net:443
+2025-07-17 17:14:52,264 - DEBUG - Starting new HTTPS connection (8): cpt.geniee.jp:443
+2025-07-17 17:14:52,310 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1%21kVyj1Kpn%21nbbX3PAKKK HTTP/1.1" 403 None
+2025-07-17 17:14:52,326 - INFO - 感想ページ6保存完了: 感想 - ページ6.html
+2025-07-17 17:14:52,334 - INFO - 感想ページ 7/11 を保存中: https://syosetu.org/?mode=review&nid=370348&page=7
+2025-07-17 17:14:54,343 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348&page=7
+2025-07-17 17:14:56,353 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:14:56,417 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348&page=7 HTTP/1.1" 200 None
+2025-07-17 17:14:56,424 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=34978bytes
+2025-07-17 17:14:56,432 - INFO - CloudScraperで取得されたHTMLテキスト長: 28987
+2025-07-17 17:14:56,450 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:14:56,458 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:14:56,466 - INFO -   - 本文長: 3682文字
+2025-07-17 17:14:56,479 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:14:56,489 - INFO -   - h1要素数: 1
+2025-07-17 17:14:56,494 - INFO -   - div要素数: 30
+2025-07-17 17:14:56,500 - INFO -   - a要素数: 128
+2025-07-17 17:14:56,505 - INFO -   - novel_body要素数: 0
+2025-07-17 17:14:56,510 - INFO -   - novel_view要素数: 0
+2025-07-17 17:14:56,517 - INFO - ページ検証: 正常なページ
+2025-07-17 17:14:56,538 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348&page=7
+2025-07-17 17:14:56,568 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:14:56,618 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:14:56,628 - DEBUG - Starting new HTTPS connection (9): securepubads.g.doubleclick.net:443
+2025-07-17 17:14:56,630 - DEBUG - Starting new HTTPS connection (9): cpt.geniee.jp:443
+2025-07-17 17:14:56,677 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?13SV0A1Kpn%21nbbX3PAKKo HTTP/1.1" 403 None
+2025-07-17 17:14:56,701 - INFO - 感想ページ7保存完了: 感想 - ページ7.html
+2025-07-17 17:14:56,714 - INFO - 感想ページ 8/11 を保存中: https://syosetu.org/?mode=review&nid=370348&page=8
+2025-07-17 17:14:58,722 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348&page=8
+2025-07-17 17:15:00,729 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:00,791 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348&page=8 HTTP/1.1" 200 None
+2025-07-17 17:15:00,797 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31915bytes
+2025-07-17 17:15:00,804 - INFO - CloudScraperで取得されたHTMLテキスト長: 27889
+2025-07-17 17:15:00,821 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:00,827 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:15:00,833 - INFO -   - 本文長: 2686文字
+2025-07-17 17:15:00,845 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:15:00,852 - INFO -   - h1要素数: 1
+2025-07-17 17:15:00,856 - INFO -   - div要素数: 30
+2025-07-17 17:15:00,862 - INFO -   - a要素数: 128
+2025-07-17 17:15:00,867 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:00,872 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:00,881 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:00,886 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348&page=8
+2025-07-17 17:15:00,924 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:15:00,963 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:15:00,970 - DEBUG - Starting new HTTPS connection (10): securepubads.g.doubleclick.net:443
+2025-07-17 17:15:00,971 - DEBUG - Starting new HTTPS connection (10): cpt.geniee.jp:443
+2025-07-17 17:15:01,024 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1PJ5P11Kpn%21nbbX3P4bOb HTTP/1.1" 403 None
+2025-07-17 17:15:01,040 - INFO - 感想ページ8保存完了: 感想 - ページ8.html
+2025-07-17 17:15:01,046 - INFO - 感想ページ 9/11 を保存中: https://syosetu.org/?mode=review&nid=370348&page=9
+2025-07-17 17:15:03,054 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348&page=9
+2025-07-17 17:15:05,061 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:05,117 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348&page=9 HTTP/1.1" 200 None
+2025-07-17 17:15:05,122 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30282bytes
+2025-07-17 17:15:05,128 - INFO - CloudScraperで取得されたHTMLテキスト長: 27100
+2025-07-17 17:15:05,144 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:05,150 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:15:05,157 - INFO -   - 本文長: 2249文字
+2025-07-17 17:15:05,167 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:15:05,173 - INFO -   - h1要素数: 1
+2025-07-17 17:15:05,177 - INFO -   - div要素数: 29
+2025-07-17 17:15:05,182 - INFO -   - a要素数: 126
+2025-07-17 17:15:05,185 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:05,189 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:05,194 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:05,199 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348&page=9
+2025-07-17 17:15:05,226 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:15:05,260 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:15:05,267 - DEBUG - Starting new HTTPS connection (11): securepubads.g.doubleclick.net:443
+2025-07-17 17:15:05,268 - DEBUG - Starting new HTTPS connection (11): cpt.geniee.jp:443
+2025-07-17 17:15:05,311 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?ndIV0Q1Kpn%21nbbX3P4bOg HTTP/1.1" 403 None
+2025-07-17 17:15:05,327 - INFO - 感想ページ9保存完了: 感想 - ページ9.html
+2025-07-17 17:15:05,335 - INFO - 感想ページ 10/11 を保存中: https://syosetu.org/?mode=review&nid=370348&page=10
+2025-07-17 17:15:07,344 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348&page=10
+2025-07-17 17:15:09,352 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:09,410 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348&page=10 HTTP/1.1" 200 None
+2025-07-17 17:15:09,416 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=32940bytes
+2025-07-17 17:15:09,423 - INFO - CloudScraperで取得されたHTMLテキスト長: 28046
+2025-07-17 17:15:09,440 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:09,446 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:15:09,452 - INFO -   - 本文長: 3137文字
+2025-07-17 17:15:09,463 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:15:09,468 - INFO -   - h1要素数: 1
+2025-07-17 17:15:09,474 - INFO -   - div要素数: 29
+2025-07-17 17:15:09,478 - INFO -   - a要素数: 126
+2025-07-17 17:15:09,483 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:09,488 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:09,494 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:09,503 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348&page=10
+2025-07-17 17:15:09,537 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:15:09,581 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:15:09,589 - DEBUG - Starting new HTTPS connection (12): securepubads.g.doubleclick.net:443
+2025-07-17 17:15:09,595 - DEBUG - Starting new HTTPS connection (12): cpt.geniee.jp:443
+2025-07-17 17:15:09,647 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1yeVdp1Kpn%21nbbX3P4bKC HTTP/1.1" 403 None
+2025-07-17 17:15:09,666 - INFO - 感想ページ10保存完了: 感想 - ページ10.html
+2025-07-17 17:15:09,674 - INFO - 感想ページ 11/11 を保存中: https://syosetu.org/?mode=review&nid=370348&page=21
+2025-07-17 17:15:11,683 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=370348&page=21
+2025-07-17 17:15:13,691 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:13,749 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=370348&page=21 HTTP/1.1" 200 None
+2025-07-17 17:15:13,756 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28930bytes
+2025-07-17 17:15:13,764 - INFO - CloudScraperで取得されたHTMLテキスト長: 25826
+2025-07-17 17:15:13,782 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:13,789 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の感想 - ハーメルン
+2025-07-17 17:15:13,797 - INFO -   - 本文長: 2190文字
+2025-07-17 17:15:13,809 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:15:13,816 - INFO -   - h1要素数: 1
+2025-07-17 17:15:13,821 - INFO -   - div要素数: 27
+2025-07-17 17:15:13,826 - INFO -   - a要素数: 112
+2025-07-17 17:15:13,832 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:13,838 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:13,845 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:13,852 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=370348&page=21
+2025-07-17 17:15:13,880 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:15:13,920 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:15:13,930 - DEBUG - Starting new HTTPS connection (13): securepubads.g.doubleclick.net:443
+2025-07-17 17:15:13,932 - DEBUG - Starting new HTTPS connection (13): cpt.geniee.jp:443
+2025-07-17 17:15:13,979 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?13T5Px1Kpn%21nbbX3P4bKA HTTP/1.1" 403 None
+2025-07-17 17:15:13,997 - INFO - 感想ページ11保存完了: 感想 - ページ11.html
+2025-07-17 17:15:14,005 - INFO - 感想ページ間のリンクを修正中...
+2025-07-17 17:15:14,027 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:14,036 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:14,045 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:14,055 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:14,065 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:14,076 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:14,086 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:14,096 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:14,107 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:14,117 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:14,127 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:14,138 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:14,149 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:14,160 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:14,171 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:14,183 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:14,194 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:14,205 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,219 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:14,231 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:14,242 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:14,253 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:14,264 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:14,276 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:14,287 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:14,299 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:14,310 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:14,320 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:14,331 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:14,341 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:14,352 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,362 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:14,373 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:14,384 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:14,394 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:14,406 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:14,416 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:14,444 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:14,455 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:14,466 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:14,476 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:14,486 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:14,498 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:14,508 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,517 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,528 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,538 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:14,549 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:14,561 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:14,571 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:14,583 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:14,595 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:14,606 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:14,616 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:14,626 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:14,637 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:14,646 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,659 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,669 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,679 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,689 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:14,699 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:14,709 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:14,720 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:14,731 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:14,740 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:14,750 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:14,761 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:14,771 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:14,782 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:14,792 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:14,801 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,812 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:14,822 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:14,833 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:14,843 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:14,854 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:14,866 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:14,894 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:14,905 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:14,916 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:14,927 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:14,937 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:14,950 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:14,961 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,972 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:14,985 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:14,997 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:15,008 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:15,019 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:15,031 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:15,042 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:15,053 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:15,065 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:15,076 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:15,089 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:15,101 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:15,113 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:15,127 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:15,139 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:15,151 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:15,164 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:15,177 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:15,189 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:15,203 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:15,215 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:15,228 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:15,239 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:15,253 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:15,265 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:15,276 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:15,288 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:15,300 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:15,312 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:15,322 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:15,334 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:15,346 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:15,357 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:15,368 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:15,397 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:15,407 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:15,417 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:15,429 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:15,440 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:15,461 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:15,485 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:15,501 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:15,517 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:15,534 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:15,550 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:15,566 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:15,586 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:15,608 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:15,625 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:15,652 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:15,675 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:15,692 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:15,710 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:15,724 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:15,748 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:15,766 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:15,782 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:15,798 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:15,815 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:15,831 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:15,851 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:15,866 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:15,876 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:15,885 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:15,894 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:15,910 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:15,925 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:15,941 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:15,956 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:15,974 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:15,990 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:16,007 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:16,023 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:16,041 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:16,059 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:16,114 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:16,128 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:16,145 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:16,162 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:16,179 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:16,196 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:16,214 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:16,237 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:16,253 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:16,269 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:16,287 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:16,302 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:16,318 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:16,332 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:16,347 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:16,367 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:16,385 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:16,403 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:16,430 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:16,457 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:16,486 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:16,507 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:16,529 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:16,549 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:16,574 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:16,596 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:16,620 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:16,652 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:16,673 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:16,698 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:16,718 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:16,738 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:16,761 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:16,782 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:16,802 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:16,819 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:16,836 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:16,857 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:16,875 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:16,892 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:16,909 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:16,959 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:16,969 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:16,979 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:16,996 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:17,012 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:17,031 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:17,047 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:17,066 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:17,082 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:17,098 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:17,114 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:17,132 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:17,147 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:17,164 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:17,175 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:17,185 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:17,195 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:17,210 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:17,222 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:17,232 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:17,245 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:17,264 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:17,286 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:17,302 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:17,320 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:17,336 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:17,354 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:17,372 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:17,391 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:17,407 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:17,424 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:17,440 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:17,457 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:17,476 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:17,494 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:17,510 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:17,528 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:17,542 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:17,553 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:17,563 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:17,572 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:17,622 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:17,637 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:17,653 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:17,668 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:17,684 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:17,699 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:17,715 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:17,726 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:17,744 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:17,760 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:17,778 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:17,794 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:17,809 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:17,827 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:17,851 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:17,878 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:17,900 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:17,919 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:17,938 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:17,963 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:17,983 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:18,005 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=2 -> 感想 - ページ2.html
+2025-07-17 17:15:18,025 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:18,045 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:18,067 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:18,086 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:18,107 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:18,129 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:18,149 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:18,170 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:18,192 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:18,210 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:18,228 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:18,254 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:18,276 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:18,294 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:18,321 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:18,342 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:18,381 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:18,476 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:18,506 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:18,533 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:18,560 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:18,582 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:18,603 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:18,622 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:18,644 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:18,662 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:18,680 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:18,700 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:18,718 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:18,738 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:18,755 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:18,773 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:18,794 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:18,810 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:18,826 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:18,849 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:18,876 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:18,892 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=3 -> 感想 - ページ3.html
+2025-07-17 17:15:18,912 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:18,935 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:18,952 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:18,973 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:19,003 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:19,019 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:19,037 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:19,063 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:19,079 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:19,101 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:19,126 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:19,142 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:19,162 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:19,186 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:19,206 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:19,227 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:19,294 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:19,318 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:19,337 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:19,360 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:19,381 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:19,403 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:19,431 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:19,453 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:19,478 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:19,503 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:19,524 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:19,545 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:19,567 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:19,585 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:19,605 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:19,632 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:19,649 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:19,671 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:19,688 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:19,703 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=4 -> 感想 - ページ4.html
+2025-07-17 17:15:19,719 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:19,728 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:19,753 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:19,768 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:19,787 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:19,811 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=10 -> 感想 - ページ10.html
+2025-07-17 17:15:19,825 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:19,841 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:19,858 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:19,877 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:19,893 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:19,916 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:19,939 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:19,958 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:19,970 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:20,018 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:20,042 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:20,064 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:20,083 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:20,100 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:20,126 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:20,144 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:20,161 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:20,190 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:20,206 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:20,223 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:20,247 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:20,262 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:20,282 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:20,291 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:20,315 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:20,331 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:20,350 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=5 -> 感想 - ページ5.html
+2025-07-17 17:15:20,377 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=6 -> 感想 - ページ6.html
+2025-07-17 17:15:20,392 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=7 -> 感想 - ページ7.html
+2025-07-17 17:15:20,403 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=8 -> 感想 - ページ8.html
+2025-07-17 17:15:20,417 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=9 -> 感想 - ページ9.html
+2025-07-17 17:15:20,435 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=21 -> 感想 - ページ11.html
+2025-07-17 17:15:20,443 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:20,452 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:20,462 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:20,473 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:20,485 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:20,508 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:20,527 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:20,545 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:20,599 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:20,617 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:20,637 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:20,667 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:20,705 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=370348 -> ../小説情報.html
+2025-07-17 17:15:20,726 - INFO - 目次リンク修正: https://syosetu.org/novel/370348/ -> ../ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:20,755 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:20,779 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&type=1 -> 感想 - ページ1.html
+2025-07-17 17:15:20,814 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&page=1 -> 感想 - ページ1.html
+2025-07-17 17:15:20,851 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想 - ページ1.html
+2025-07-17 17:15:20,879 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=1 -> 感想 - ページ1.html
+2025-07-17 17:15:20,917 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=2 -> 感想 - ページ1.html
+2025-07-17 17:15:20,953 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=3 -> 感想 - ページ1.html
+2025-07-17 17:15:20,974 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=4 -> 感想 - ページ1.html
+2025-07-17 17:15:20,992 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=5 -> 感想 - ページ1.html
+2025-07-17 17:15:21,011 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=6 -> 感想 - ページ1.html
+2025-07-17 17:15:21,032 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=370348&volume=7 -> 感想 - ページ1.html
+2025-07-17 17:15:21,060 - INFO - 感想ページ保存完了: 11ページ保存
+2025-07-17 17:15:21,083 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=370348
+2025-07-17 17:15:21,093 - INFO - ページ取得開始: https://syosetu.org/?mode=ss_detail&nid=370348
+2025-07-17 17:15:23,106 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:23,165 - DEBUG - https://syosetu.org:443 "GET /?mode=ss_detail&nid=370348 HTTP/1.1" 200 None
+2025-07-17 17:15:23,177 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21471bytes
+2025-07-17 17:15:23,190 - INFO - CloudScraperで取得されたHTMLテキスト長: 19857
+2025-07-17 17:15:23,215 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:23,228 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世の小説情報 - ハーメルン
+2025-07-17 17:15:23,239 - INFO -   - 本文長: 980文字
+2025-07-17 17:15:23,256 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 17:15:23,264 - INFO -   - h1要素数: 1
+2025-07-17 17:15:23,271 - INFO -   - div要素数: 33
+2025-07-17 17:15:23,279 - INFO -   - a要素数: 65
+2025-07-17 17:15:23,288 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:23,296 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:23,303 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:23,313 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=ss_detail&nid=370348
+2025-07-17 17:15:23,323 - INFO - 小説情報ページ目次リンク修正: https://syosetu.org/novel/370348/ -> ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:23,336 - INFO - 小説情報ページ感想リンク修正: https://syosetu.org/?mode=review&nid=370348 -> 感想/感想 - ページ1.html
+2025-07-17 17:15:23,348 - INFO - 小説情報ページ目次リンク修正: https://syosetu.org/novel/370348/ -> ホグワーツ教師　ロード・エルメロイII世 - 目次.html
+2025-07-17 17:15:23,360 - INFO - 小説情報ページ感想リンク修正: ./?mode=review&nid=370348 -> 感想/感想 - ページ1.html
+2025-07-17 17:15:23,395 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 17:15:23,428 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-17 17:15:23,471 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-17 17:15:23,510 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-17 17:15:23,546 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-17 17:15:23,580 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-17 17:15:23,613 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-17 17:15:23,652 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-17 17:15:23,694 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-17 17:15:23,729 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-17 17:15:23,762 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-17 17:15:23,804 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-17 17:15:23,837 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-17 17:15:23,951 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 17:15:23,986 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-17 17:15:24,033 - DEBUG - Starting new HTTPS connection (14): securepubads.g.doubleclick.net:443
+2025-07-17 17:15:24,041 - DEBUG - Starting new HTTPS connection (14): cpt.geniee.jp:443
+2025-07-17 17:15:24,089 - INFO - 小説情報ページ保存完了: ホグワーツ教師　ロード・エルメロイII世 - 小説情報.html
+2025-07-17 17:15:24,106 - INFO - ページ取得開始: https://syosetu.org/novel/370348/1.html
+2025-07-17 17:15:26,116 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:26,172 - DEBUG - https://syosetu.org:443 "GET /novel/370348/1.html HTTP/1.1" 200 None
+2025-07-17 17:15:26,207 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=80432bytes
+2025-07-17 17:15:26,221 - INFO - CloudScraperで取得されたHTMLテキスト長: 43786
+2025-07-17 17:15:26,271 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:26,287 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世 - File.1 - ハーメルン
+2025-07-17 17:15:26,302 - INFO -   - 本文長: 18510文字
+2025-07-17 17:15:26,376 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/370348/1.html" property="og:url"/>
+<meta content="File.1 - ホグワーツ教師　ロード・エルメロイII世 - ハーメルン" property="og:title"/>
+<meta content="復活したヴォルデモート卿。 彼の復活を認めない魔法省。 不安定な情...
+2025-07-17 17:15:26,398 - INFO -   - h1要素数: 1
+2025-07-17 17:15:26,417 - INFO -   - div要素数: 22
+2025-07-17 17:15:26,436 - INFO -   - a要素数: 77
+2025-07-17 17:15:26,453 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:26,480 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:26,498 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:26,514 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/370348/1.html
+2025-07-17 17:15:26,627 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 17:15:26,676 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 17:15:26,770 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 17:15:26,856 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 17:15:26,897 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 200 3923
+2025-07-17 17:15:26,931 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_pc_min.js HTTP/1.1" 200 10775
+2025-07-17 17:15:26,961 - DEBUG - https://img.syosetu.org:443 "GET /js/reading_record.min.js HTTP/1.1" 200 1116
+2025-07-17 17:15:27,013 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 17:15:27,064 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 17:15:27,147 - DEBUG - https://ct.syosetu.org:443 "GET /?n=370348&v=1 HTTP/1.1" 200 None
+2025-07-17 17:15:30,194 - INFO - ページ取得開始: https://syosetu.org/novel/370348/2.html
+2025-07-17 17:15:32,201 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:32,251 - DEBUG - https://syosetu.org:443 "GET /novel/370348/2.html HTTP/1.1" 200 None
+2025-07-17 17:15:32,283 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=81522bytes
+2025-07-17 17:15:32,289 - INFO - CloudScraperで取得されたHTMLテキスト長: 46504
+2025-07-17 17:15:32,319 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:32,326 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世 - File.2 - ハーメルン
+2025-07-17 17:15:32,333 - INFO -   - 本文長: 17723文字
+2025-07-17 17:15:32,350 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/370348/2.html" property="og:url"/>
+<meta content="File.2 - ホグワーツ教師　ロード・エルメロイII世 - ハーメルン" property="og:title"/>
+<meta content="復活したヴォルデモート卿。 彼の復活を認めない魔法省。 不安定な情...
+2025-07-17 17:15:32,357 - INFO -   - h1要素数: 1
+2025-07-17 17:15:32,364 - INFO -   - div要素数: 22
+2025-07-17 17:15:32,371 - INFO -   - a要素数: 77
+2025-07-17 17:15:32,376 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:32,381 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:32,387 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:32,392 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/370348/2.html
+2025-07-17 17:15:32,446 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 17:15:32,496 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 17:15:32,546 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 17:15:32,595 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 17:15:32,628 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 17:15:32,654 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 17:15:32,696 - DEBUG - https://ct.syosetu.org:443 "GET /?n=370348&v=2 HTTP/1.1" 200 None
+2025-07-17 17:15:35,726 - INFO - ページ取得開始: https://syosetu.org/novel/370348/3.html
+2025-07-17 17:15:37,731 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:37,791 - DEBUG - https://syosetu.org:443 "GET /novel/370348/3.html HTTP/1.1" 200 None
+2025-07-17 17:15:37,819 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=77907bytes
+2025-07-17 17:15:37,824 - INFO - CloudScraperで取得されたHTMLテキスト長: 43177
+2025-07-17 17:15:37,845 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:37,864 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世 - File.3 - ハーメルン
+2025-07-17 17:15:37,884 - INFO -   - 本文長: 17662文字
+2025-07-17 17:15:37,927 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/370348/3.html" property="og:url"/>
+<meta content="File.3 - ホグワーツ教師　ロード・エルメロイII世 - ハーメルン" property="og:title"/>
+<meta content="復活したヴォルデモート卿。 彼の復活を認めない魔法省。 不安定な情...
+2025-07-17 17:15:37,940 - INFO -   - h1要素数: 1
+2025-07-17 17:15:37,959 - INFO -   - div要素数: 22
+2025-07-17 17:15:37,981 - INFO -   - a要素数: 77
+2025-07-17 17:15:37,999 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:38,006 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:38,015 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:38,026 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/370348/3.html
+2025-07-17 17:15:38,082 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 17:15:38,129 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 17:15:38,181 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 17:15:38,229 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 17:15:38,269 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 17:15:38,297 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 17:15:38,339 - DEBUG - https://ct.syosetu.org:443 "GET /?n=370348&v=3 HTTP/1.1" 200 None
+2025-07-17 17:15:41,366 - INFO - ページ取得開始: https://syosetu.org/novel/370348/4.html
+2025-07-17 17:15:43,377 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:43,434 - DEBUG - https://syosetu.org:443 "GET /novel/370348/4.html HTTP/1.1" 200 None
+2025-07-17 17:15:43,469 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=95970bytes
+2025-07-17 17:15:43,479 - INFO - CloudScraperで取得されたHTMLテキスト長: 52996
+2025-07-17 17:15:43,540 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:43,550 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世 - File.4 - ハーメルン
+2025-07-17 17:15:43,561 - INFO -   - 本文長: 21807文字
+2025-07-17 17:15:43,602 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/370348/4.html" property="og:url"/>
+<meta content="File.4 - ホグワーツ教師　ロード・エルメロイII世 - ハーメルン" property="og:title"/>
+<meta content="復活したヴォルデモート卿。 彼の復活を認めない魔法省。 不安定な情...
+2025-07-17 17:15:43,619 - INFO -   - h1要素数: 1
+2025-07-17 17:15:43,632 - INFO -   - div要素数: 22
+2025-07-17 17:15:43,643 - INFO -   - a要素数: 77
+2025-07-17 17:15:43,651 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:43,664 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:43,674 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:43,682 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/370348/4.html
+2025-07-17 17:15:43,759 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 17:15:43,804 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 17:15:43,853 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 17:15:43,903 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 17:15:43,935 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 17:15:43,960 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 17:15:44,002 - DEBUG - https://ct.syosetu.org:443 "GET /?n=370348&v=4 HTTP/1.1" 200 None
+2025-07-17 17:15:47,037 - INFO - ページ取得開始: https://syosetu.org/novel/370348/5.html
+2025-07-17 17:15:49,043 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:49,095 - DEBUG - https://syosetu.org:443 "GET /novel/370348/5.html HTTP/1.1" 200 None
+2025-07-17 17:15:49,126 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=86387bytes
+2025-07-17 17:15:49,130 - INFO - CloudScraperで取得されたHTMLテキスト長: 45685
+2025-07-17 17:15:49,150 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:49,158 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世 - File.5 - ハーメルン
+2025-07-17 17:15:49,165 - INFO -   - 本文長: 20541文字
+2025-07-17 17:15:49,199 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/370348/5.html" property="og:url"/>
+<meta content="File.5 - ホグワーツ教師　ロード・エルメロイII世 - ハーメルン" property="og:title"/>
+<meta content="復活したヴォルデモート卿。 彼の復活を認めない魔法省。 不安定な情...
+2025-07-17 17:15:49,211 - INFO -   - h1要素数: 1
+2025-07-17 17:15:49,222 - INFO -   - div要素数: 22
+2025-07-17 17:15:49,228 - INFO -   - a要素数: 77
+2025-07-17 17:15:49,237 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:49,247 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:49,253 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:49,257 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/370348/5.html
+2025-07-17 17:15:49,311 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 17:15:49,362 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 17:15:49,416 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 17:15:49,470 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 17:15:49,505 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 17:15:49,531 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 17:15:49,572 - DEBUG - https://ct.syosetu.org:443 "GET /?n=370348&v=5 HTTP/1.1" 200 None
+2025-07-17 17:15:52,607 - INFO - ページ取得開始: https://syosetu.org/novel/370348/6.html
+2025-07-17 17:15:54,613 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:15:54,664 - DEBUG - https://syosetu.org:443 "GET /novel/370348/6.html HTTP/1.1" 200 None
+2025-07-17 17:15:54,694 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=96223bytes
+2025-07-17 17:15:54,698 - INFO - CloudScraperで取得されたHTMLテキスト長: 49115
+2025-07-17 17:15:54,718 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:15:54,724 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世 - File.6 - ハーメルン
+2025-07-17 17:15:54,729 - INFO -   - 本文長: 23808文字
+2025-07-17 17:15:54,744 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/370348/6.html" property="og:url"/>
+<meta content="File.6 - ホグワーツ教師　ロード・エルメロイII世 - ハーメルン" property="og:title"/>
+<meta content="復活したヴォルデモート卿。 彼の復活を認めない魔法省。 不安定な情...
+2025-07-17 17:15:54,752 - INFO -   - h1要素数: 1
+2025-07-17 17:15:54,762 - INFO -   - div要素数: 22
+2025-07-17 17:15:54,768 - INFO -   - a要素数: 77
+2025-07-17 17:15:54,773 - INFO -   - novel_body要素数: 0
+2025-07-17 17:15:54,778 - INFO -   - novel_view要素数: 0
+2025-07-17 17:15:54,786 - INFO - ページ検証: 正常なページ
+2025-07-17 17:15:54,790 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/370348/6.html
+2025-07-17 17:15:54,842 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 17:15:54,892 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 17:15:54,941 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 17:15:54,992 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 17:15:55,038 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 17:15:55,067 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 17:15:55,111 - DEBUG - https://ct.syosetu.org:443 "GET /?n=370348&v=6 HTTP/1.1" 200 None
+2025-07-17 17:15:58,164 - INFO - ページ取得開始: https://syosetu.org/novel/370348/7.html
+2025-07-17 17:16:00,173 - INFO - CloudScraperで初回試行中...
+2025-07-17 17:16:00,231 - DEBUG - https://syosetu.org:443 "GET /novel/370348/7.html HTTP/1.1" 200 None
+2025-07-17 17:16:00,270 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=132285bytes
+2025-07-17 17:16:00,279 - INFO - CloudScraperで取得されたHTMLテキスト長: 69931
+2025-07-17 17:16:00,347 - INFO - CloudScraper取得ページ分析:
+2025-07-17 17:16:00,361 - INFO -   - タイトル: ホグワーツ教師　ロード・エルメロイII世 - File.7 - ハーメルン
+2025-07-17 17:16:00,376 - INFO -   - 本文長: 31911文字
+2025-07-17 17:16:00,423 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/370348/7.html" property="og:url"/>
+<meta content="File.7 - ホグワーツ教師　ロード・エルメロイII世 - ハーメルン" property="og:title"/>
+<meta content="復活したヴォルデモート卿。 彼の復活を認めない魔法省。 不安定な情...
+2025-07-17 17:16:00,441 - INFO -   - h1要素数: 1
+2025-07-17 17:16:00,452 - INFO -   - div要素数: 32
+2025-07-17 17:16:00,463 - INFO -   - a要素数: 109
+2025-07-17 17:16:00,474 - INFO -   - novel_body要素数: 0
+2025-07-17 17:16:00,479 - INFO -   - novel_view要素数: 0
+2025-07-17 17:16:00,487 - INFO - ページ検証: 正常なページ
+2025-07-17 17:16:00,499 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/370348/7.html
+2025-07-17 17:16:00,563 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 17:16:00,615 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 17:16:00,667 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 17:16:00,724 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 17:16:00,765 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 17:16:00,793 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 17:16:00,847 - DEBUG - https://ct.syosetu.org:443 "GET /?n=370348&v=7 HTTP/1.1" 200 None
+2025-07-17 17:16:50,904 - INFO - リソースキャッシュ統計: 70個のリソースをキャッシュしました

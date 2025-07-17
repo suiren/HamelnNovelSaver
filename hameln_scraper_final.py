@@ -1143,7 +1143,7 @@ class HamelnFinalScraper:
             self.debug_log(f"小説情報ページリンク修正エラー: {e}", "ERROR")
             return soup
 
-    def save_comments_page(self, comments_url, output_dir, novel_title, index_file_name=None):
+    def save_comments_page(self, comments_url, output_dir, novel_title, index_file_name=None, info_file_name=None):
         """🆕 感想ページを各ページ個別に保存（ハーメルン元構造保持）"""
         try:
             self.debug_log(f"感想ページを取得中: {comments_url}")
@@ -1199,7 +1199,7 @@ class HamelnFinalScraper:
             if saved_files:
                 # 感想ページ間のリンクを修正
                 self.debug_log("感想ページ間のリンクを修正中...")
-                self.fix_comments_page_links(saved_files, page_links, index_file_name)
+                self.fix_comments_page_links(saved_files, page_links, index_file_name, info_file_name)
                 self.debug_log(f"感想ページ保存完了: {len(saved_files)}ページ保存")
                 return saved_files[0]  # 最初のページのパスを返す（互換性のため）
             else:
@@ -1210,7 +1210,7 @@ class HamelnFinalScraper:
             self.debug_log(f"感想ページ保存エラー: {e}", "ERROR")
             return None
     
-    def fix_comments_page_links(self, saved_files, page_urls, index_file_name=None):
+    def fix_comments_page_links(self, saved_files, page_urls, index_file_name=None, info_file_name=None):
         """感想ページ間のリンクを修正"""
         try:
             # ページファイル名とURLのマッピングを作成
@@ -1258,8 +1258,12 @@ class HamelnFinalScraper:
                     # 小説情報ページへのリンクを修正
                     elif 'mode=ss_detail' in href or '小説情報' in link.get_text():
                         # 親ディレクトリの小説情報ページへのリンクに修正
-                        link['href'] = '../小説情報.html'
-                        self.debug_log(f"小説情報リンク修正: {href} -> ../小説情報.html")
+                        if info_file_name:
+                            link['href'] = f'../{info_file_name}'
+                            self.debug_log(f"小説情報リンク修正: {href} -> ../{info_file_name}")
+                        else:
+                            link['href'] = '../小説情報.html'
+                            self.debug_log(f"小説情報リンク修正: {href} -> ../小説情報.html")
                 
                 # 修正されたコンテンツを保存
                 with open(file_path, 'w', encoding='utf-8') as f:
@@ -2306,7 +2310,7 @@ class HamelnFinalScraper:
                 if comments_url:
                     # index_file_pathが定義されていない場合は単一ページなので None を渡す
                     index_file_name = os.path.basename(index_file_path) if index_file_path else None
-                    comments_file_path = self.save_comments_page(comments_url, output_dir, title, index_file_name)
+                    comments_file_path = self.save_comments_page(comments_url, output_dir, title, index_file_name, info_file_name)
                     if comments_file_path:
                         comments_file_name = os.path.basename(comments_file_path)
                         print(f"💬 感想ページ保存完了: {comments_file_name}")
@@ -2329,6 +2333,30 @@ class HamelnFinalScraper:
                     if info_file_path:
                         info_file_name = os.path.basename(info_file_path)
                         print(f"📝 小説情報ページ保存完了: {info_file_name}")
+                        
+                        # 感想ページのリンクを再修正（小説情報ページへのリンクを追加）
+                        if comments_file_path and os.path.exists(comments_file_path):
+                            print("感想ページの小説情報リンクを再修正中...")
+                            comments_dir = os.path.dirname(comments_file_path)
+                            if os.path.exists(comments_dir):
+                                # 感想フォルダ内のすべてのHTMLファイルを処理
+                                for comments_file in os.listdir(comments_dir):
+                                    if comments_file.endswith('.html'):
+                                        comments_file_full_path = os.path.join(comments_dir, comments_file)
+                                        with open(comments_file_full_path, 'r', encoding='utf-8') as f:
+                                            content = f.read()
+                                        
+                                        soup_comments = BeautifulSoup(content, 'html.parser')
+                                        
+                                        # 小説情報ページへのリンクを修正
+                                        for link in soup_comments.find_all('a', href=True):
+                                            href = link.get('href')
+                                            if href and ('mode=ss_detail' in href or '小説情報' in link.get_text()):
+                                                link['href'] = f'../{info_file_name}'
+                                                self.debug_log(f"感想ページ小説情報リンク再修正: {href} -> ../{info_file_name}")
+                                        
+                                        with open(comments_file_full_path, 'w', encoding='utf-8') as f:
+                                            f.write(str(soup_comments))
                     else:
                         print("⚠️ 小説情報ページの保存に失敗しました")
                 else:
