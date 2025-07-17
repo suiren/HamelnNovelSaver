@@ -1411,10 +1411,11 @@ class HamelnFinalScraper:
             return None
 
     def detect_comments_pagination(self, soup, base_url):
-        """🆕 感想ページのページネーションを検出"""
+        """🆕 感想ページのページネーションを検出（改良版）"""
         try:
             page_links = []
             base_page_num = self.extract_page_number(base_url)
+            max_page_num = 1
             
             # ページネーションの検出パターン
             pagination_selectors = [
@@ -1423,48 +1424,114 @@ class HamelnFinalScraper:
                 'div.pager a', 
                 'div.page-nav a',
                 # ハーメルン特有のパターン
-                'a[href*="mode=review"][href*="page="]',
+                'a[href*="mode=review"]',
                 'a[href*="&page="]',
-                'a[href*="mode=review"][href*="p="]',
                 'a[href*="&p="]'
             ]
             
+            all_pagination_links = []
+            
+            # すべてのselectorからページネーションリンクを収集
             for selector in pagination_selectors:
                 pagination_links = soup.select(selector)
                 if pagination_links:
                     self.debug_log(f"ページネーション発見: {selector} ({len(pagination_links)}個のリンク)")
+                    all_pagination_links.extend(pagination_links)
+            
+            # 重複を除去
+            unique_links = []
+            seen_hrefs = set()
+            for link in all_pagination_links:
+                href = link.get('href')
+                if href and href not in seen_hrefs:
+                    seen_hrefs.add(href)
+                    unique_links.append(link)
+            
+            # リンクからページURLを抽出
+            for link in unique_links:
+                href = link.get('href')
+                link_text = link.get_text(strip=True)
+                
+                if href and ('page=' in href or 'p=' in href or 'mode=review' in href):
+                    # 相対URLを絶対URLに変換
+                    if href.startswith('?'):
+                        # ?page=2 または ?p=2 形式
+                        full_url = base_url.split('?')[0] + href
+                    elif href.startswith('./'):
+                        # ./?page=2 または ./?p=2 形式
+                        full_url = base_url.split('?')[0] + href[2:]  # ./ を削除して処理
+                    elif href.startswith('//'):
+                        # プロトコル相対URLを絶対URLに変換
+                        full_url = f"https:{href}"
+                    elif href.startswith('/'):
+                        # /path?page=2 または /path?p=2 形式
+                        # クエリパラメータの修正が必要な場合
+                        if '?' not in href and ('&p=' in href or '&page=' in href):
+                            # &を最初の?に変換
+                            href = href.replace('&', '?', 1)
+                        full_url = 'https://syosetu.org' + href
+                    elif href.startswith('http'):
+                        # https://... 形式
+                        full_url = href
+                    else:
+                        continue
                     
-                    for link in pagination_links:
-                        href = link.get('href')
-                        if href and ('page=' in href or 'p=' in href):
-                            # 相対URLを絶対URLに変換
-                            if href.startswith('?'):
-                                # ?page=2 または ?p=2 形式
-                                full_url = base_url.split('?')[0] + href
-                            elif href.startswith('./'):
-                                # ./?page=2 または ./?p=2 形式
-                                full_url = base_url.split('?')[0] + href[2:]  # ./ を削除して処理
-                            elif href.startswith('//'):
-                                # プロトコル相対URLを絶対URLに変換
-                                full_url = f"https:{href}"
-                            elif href.startswith('/'):
-                                # /path?page=2 または /path?p=2 形式
-                                # クエリパラメータの修正が必要な場合
-                                if '?' not in href and ('&p=' in href or '&page=' in href):
-                                    # &を最初の?に変換
-                                    href = href.replace('&', '?', 1)
-                                full_url = 'https://syosetu.org' + href
-                            elif href.startswith('http'):
-                                # https://... 形式
-                                full_url = href
+                    # ページ番号を抽出
+                    page_num = self.extract_page_number(full_url)
+                    max_page_num = max(max_page_num, page_num)
+                    
+                    # 重複チェック（ページ番号ベース）
+                    if not any(self.extract_page_number(existing_url) == page_num for existing_url in page_links):
+                        page_links.append(full_url)
+                        self.debug_log(f"ページリンク追加: {link_text} -> {full_url} (ページ{page_num})")
+                
+                # 数字のリンクテキストからページ番号を推定
+                elif link_text.isdigit():
+                    page_num = int(link_text)
+                    max_page_num = max(max_page_num, page_num)
+                    
+                    # ベースURLからページURLを構築
+                    if 'p=' in base_url:
+                        constructed_url = base_url.split('p=')[0] + f'p={page_num}'
+                    elif 'page=' in base_url:
+                        constructed_url = base_url.split('page=')[0] + f'page={page_num}'
+                    else:
+                        # デフォルトのパラメータ形式で構築
+                        if '?' in base_url:
+                            constructed_url = base_url + f'&p={page_num}'
+                        else:
+                            constructed_url = base_url + f'?p={page_num}'
+                    
+                    if not any(self.extract_page_number(existing_url) == page_num for existing_url in page_links):
+                        page_links.append(constructed_url)
+                        self.debug_log(f"数字リンクからページ構築: {link_text} -> {constructed_url} (ページ{page_num})")
+            
+            # 最大ページ番号を検出した場合、不足しているページを補完
+            if max_page_num > len(page_links):
+                self.debug_log(f"最大ページ番号 {max_page_num} を検出、不足ページを補完中...")
+                
+                # ベースURLのパラメータ形式を確認
+                if 'p=' in base_url:
+                    param_format = 'p='
+                elif 'page=' in base_url:
+                    param_format = 'page='
+                else:
+                    param_format = 'p='
+                
+                # 1からmax_page_numまでのすべてのページURLを生成
+                for page_num in range(1, max_page_num + 1):
+                    if not any(self.extract_page_number(existing_url) == page_num for existing_url in page_links):
+                        if param_format in base_url:
+                            constructed_url = base_url.split(param_format)[0] + f'{param_format}{page_num}'
+                        else:
+                            # デフォルトのパラメータ形式で構築
+                            if '?' in base_url:
+                                constructed_url = base_url + f'&{param_format}{page_num}'
                             else:
-                                continue
-                            
-                            # 重複チェック（ページ番号ベース）
-                            page_num = self.extract_page_number(full_url)
-                            if not any(self.extract_page_number(existing_url) == page_num for existing_url in page_links):
-                                page_links.append(full_url)
-                    break
+                                constructed_url = base_url + f'?{param_format}{page_num}'
+                        
+                        page_links.append(constructed_url)
+                        self.debug_log(f"補完ページ追加: ページ{page_num} -> {constructed_url}")
             
             # ベースURLがリストに含まれていない場合は追加
             if not any(self.extract_page_number(url) == base_page_num for url in page_links):
@@ -1473,7 +1540,7 @@ class HamelnFinalScraper:
             # ページ番号順にソート
             page_links.sort(key=lambda url: self.extract_page_number(url))
             
-            self.debug_log(f"検出されたページ: {len(page_links)}ページ")
+            self.debug_log(f"検出されたページ: {len(page_links)}ページ (最大ページ番号: {max_page_num})")
             for i, url in enumerate(page_links, 1):
                 self.debug_log(f"  ページ{i}: {url}")
             
