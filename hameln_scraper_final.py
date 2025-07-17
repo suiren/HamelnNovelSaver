@@ -2304,8 +2304,8 @@ class HamelnFinalScraper:
                 print("感想ページを保存中...")
                 comments_url = self.extract_comments_url(soup)
                 if comments_url:
-                    # index_filenameが定義されていない場合は単一ページなので None を渡す
-                    index_file_name = index_filename if 'index_filename' in locals() else None
+                    # index_file_pathが定義されていない場合は単一ページなので None を渡す
+                    index_file_name = os.path.basename(index_file_path) if index_file_path else None
                     comments_file_path = self.save_comments_page(comments_url, output_dir, title, index_file_name)
                     if comments_file_path:
                         comments_file_name = os.path.basename(comments_file_path)
@@ -2323,8 +2323,8 @@ class HamelnFinalScraper:
                 print("小説情報ページを保存中...")
                 info_url = self.extract_novel_info_url(soup)
                 if info_url:
-                    # index_filenameが定義されていない場合は単一ページなので None を渡す
-                    index_file_name = index_filename if 'index_filename' in locals() else None
+                    # index_file_pathが定義されていない場合は単一ページなので None を渡す
+                    index_file_name = os.path.basename(index_file_path) if index_file_path else None
                     info_file_path = self.save_novel_info_page(info_url, output_dir, title, index_file_name, comments_file_name)
                     if info_file_path:
                         info_file_name = os.path.basename(info_file_path)
@@ -2391,7 +2391,7 @@ class HamelnFinalScraper:
                         chapter_soup, 
                         chapter_mapping, 
                         chapter_url, 
-                        index_filename,
+                        os.path.basename(index_file_path) if index_file_path else None,
                         info_file_name,
                         comments_file_name
                     )
@@ -2435,7 +2435,7 @@ class HamelnFinalScraper:
                         soup, 
                         chapter_mapping, 
                         chapter_info['url'], 
-                        index_filename,
+                        os.path.basename(index_file_path) if index_file_path else None,
                         info_file_name,
                         comments_file_name
                     )

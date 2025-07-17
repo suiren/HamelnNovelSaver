@@ -13894,3 +13894,1273 @@ b'{console.log("undetected chromedriver 1337!")}                                
 2025-07-15 19:26:37,200 - DEBUG - https://img.syosetu.org:443 "GET /js/ad_dliste.min.js HTTP/1.1" 200 536
 2025-07-15 19:26:37,205 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
 2025-07-15 19:26:37,318 - DEBUG - https://ct.syosetu.org:443 "GET /?n=380313&v=1 HTTP/1.1" 200 None
+2025-07-17 15:38:39,075 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 15:38:39,079 - INFO - CloudScraper初期化開始
+2025-07-17 15:38:39,115 - INFO - CloudScraper設定完了
+2025-07-17 15:38:39,118 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 15:38:53,571 - INFO - ページ取得開始: https://syosetu.org/novel/375446/
+2025-07-17 15:38:55,575 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:38:55,578 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-17 15:38:55,703 - DEBUG - https://syosetu.org:443 "GET /novel/375446/ HTTP/1.1" 200 None
+2025-07-17 15:38:55,706 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=24749bytes
+2025-07-17 15:38:55,708 - INFO - CloudScraperで取得されたHTMLテキスト長: 20837
+2025-07-17 15:38:55,719 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:38:55,722 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン
+2025-07-17 15:38:55,730 - INFO -   - 本文長: 2352文字
+2025-07-17 15:38:55,748 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/375446/" property="og:url"/>
+<meta content="転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン" property="og:title"/>
+<meta content="　転生したら織田信広、誰だよ。信長の兄？謀反？こんな可愛い妹(異母なのでほぼ他人...
+2025-07-17 15:38:55,754 - INFO -   - h1要素数: 1
+2025-07-17 15:38:55,759 - INFO -   - div要素数: 21
+2025-07-17 15:38:55,762 - INFO -   - a要素数: 97
+2025-07-17 15:38:55,766 - INFO -   - novel_body要素数: 0
+2025-07-17 15:38:55,769 - INFO -   - novel_view要素数: 0
+2025-07-17 15:38:55,771 - INFO - ページ検証: 正常なページ
+2025-07-17 15:38:55,774 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/375446/
+2025-07-17 15:38:55,780 - INFO - 小説情報抽出開始
+2025-07-17 15:38:55,783 - INFO - タイトル抽出試行中...
+2025-07-17 15:38:55,785 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-17 15:38:55,790 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-17 15:38:55,794 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-17 15:38:55,797 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-17 15:38:55,800 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x0000020724F20360>}
+2025-07-17 15:38:55,806 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x0000020724F20360>} で要素が見つかりませんでした
+2025-07-17 15:38:55,811 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-17 15:38:55,814 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-17 15:38:55,817 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-17 15:38:55,819 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-17 15:38:55,822 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-17 15:38:55,825 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-17 15:38:55,829 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-17 15:38:55,832 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-17 15:38:55,835 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-17 15:38:55,838 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-17 15:38:55,841 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-17 15:38:55,844 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-17 15:38:55,847 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-17 15:38:55,850 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-17 15:38:55,852 - INFO - タイトルセレクター試行: h1 {}
+2025-07-17 15:38:55,855 - INFO - タイトルセレクター試行: title {}
+2025-07-17 15:38:55,858 - INFO - タイトル取得成功: 転生したら織田信広だったので信長(妹)をコマそうと思う。
+2025-07-17 15:38:55,861 - INFO - 作者抽出試行中...
+2025-07-17 15:38:55,864 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-17 15:38:55,868 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-17 15:38:55,871 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-17 15:38:55,873 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-17 15:38:55,876 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-17 15:38:55,879 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-17 15:38:55,883 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-17 15:38:55,886 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-17 15:38:55,889 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x0000020724F20540>}
+2025-07-17 15:38:55,892 - INFO - 作者取得成功: 鴉の子
+2025-07-17 15:38:55,951 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-17 15:38:56,041 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-17 15:38:56,067 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-17 15:38:56,094 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-17 15:38:56,122 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.gif HTTP/1.1" 200 811
+2025-07-17 15:38:56,152 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.gif HTTP/1.1" 200 1297
+2025-07-17 15:38:56,180 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.gif HTTP/1.1" 200 1294
+2025-07-17 15:38:56,207 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.gif HTTP/1.1" 200 833
+2025-07-17 15:38:56,235 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.gif HTTP/1.1" 200 1102
+2025-07-17 15:38:56,262 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.gif HTTP/1.1" 200 1072
+2025-07-17 15:38:56,290 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.gif HTTP/1.1" 200 1866
+2025-07-17 15:38:56,319 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.gif HTTP/1.1" 200 1014
+2025-07-17 15:38:56,350 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.gif HTTP/1.1" 200 927
+2025-07-17 15:38:56,379 - DEBUG - https://img.syosetu.org:443 "GET /image/square.gif HTTP/1.1" 200 816
+2025-07-17 15:38:56,408 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.gif HTTP/1.1" 200 874
+2025-07-17 15:38:56,437 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.gif HTTP/1.1" 200 833
+2025-07-17 15:38:56,466 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.gif HTTP/1.1" 200 834
+2025-07-17 15:38:56,499 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.gif HTTP/1.1" 200 1136
+2025-07-17 15:38:56,529 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.gif HTTP/1.1" 200 1136
+2025-07-17 15:38:56,561 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.gif HTTP/1.1" 200 898
+2025-07-17 15:38:56,588 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-17 15:38:56,618 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-17 15:38:56,647 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-17 15:38:56,678 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-17 15:38:56,710 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-17 15:38:56,739 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-17 15:38:56,766 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-17 15:38:56,795 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-17 15:38:56,826 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png HTTP/1.1" 200 4864
+2025-07-17 15:38:56,853 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png HTTP/1.1" 200 1566
+2025-07-17 15:38:56,878 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-17 15:38:56,909 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-17 15:38:56,936 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-17 15:38:56,965 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_mokuzi_pc_min.js?202008211 HTTP/1.1" 200 953
+2025-07-17 15:38:56,970 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-17 15:38:56,986 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-17 15:38:57,022 - DEBUG - https://img.syosetu.org:443 "GET /js/ad_dliste.min.js?202501083 HTTP/1.1" 200 536
+2025-07-17 15:38:57,053 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a5.gif HTTP/1.1" 200 166
+2025-07-17 15:38:57,062 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-17 15:38:57,178 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446 HTTP/1.1" 200 None
+2025-07-17 15:38:57,296 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 15:38:57,365 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 15:38:57,460 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 15:38:57,550 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 15:38:57,568 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-17 15:38:57,572 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-17 15:38:57,595 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=375446
+2025-07-17 15:38:57,599 - INFO - 感想保存フォルダ作成: saved_novels\転生したら織田信広だったので信長(妹)をコマそうと思う。\感想
+2025-07-17 15:38:57,604 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446
+2025-07-17 15:38:59,609 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:38:59,672 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446 HTTP/1.1" 200 None
+2025-07-17 15:38:59,675 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30186bytes
+2025-07-17 15:38:59,678 - INFO - CloudScraperで取得されたHTMLテキスト長: 27022
+2025-07-17 15:38:59,690 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:38:59,696 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:38:59,699 - INFO -   - 本文長: 2218文字
+2025-07-17 15:38:59,708 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:38:59,715 - INFO -   - h1要素数: 1
+2025-07-17 15:38:59,718 - INFO -   - div要素数: 29
+2025-07-17 15:38:59,721 - INFO -   - a要素数: 125
+2025-07-17 15:38:59,723 - INFO -   - novel_body要素数: 0
+2025-07-17 15:38:59,726 - INFO -   - novel_view要素数: 0
+2025-07-17 15:38:59,729 - INFO - ページ検証: 正常なページ
+2025-07-17 15:38:59,732 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446
+2025-07-17 15:38:59,747 - INFO - ページネーション発見: a[href*="mode=review"][href*="page="] (22個のリンク)
+2025-07-17 15:38:59,755 - INFO - 検出されたページ: 11ページ
+2025-07-17 15:38:59,761 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=375446
+2025-07-17 15:38:59,764 - INFO -   ページ2: https://syosetu.org/?mode=review&nid=375446&page=2
+2025-07-17 15:38:59,767 - INFO -   ページ3: https://syosetu.org/?mode=review&nid=375446&page=3
+2025-07-17 15:38:59,770 - INFO -   ページ4: https://syosetu.org/?mode=review&nid=375446&page=4
+2025-07-17 15:38:59,773 - INFO -   ページ5: https://syosetu.org/?mode=review&nid=375446&page=5
+2025-07-17 15:38:59,776 - INFO -   ページ6: https://syosetu.org/?mode=review&nid=375446&page=6
+2025-07-17 15:38:59,779 - INFO -   ページ7: https://syosetu.org/?mode=review&nid=375446&page=7
+2025-07-17 15:38:59,782 - INFO -   ページ8: https://syosetu.org/?mode=review&nid=375446&page=8
+2025-07-17 15:38:59,785 - INFO -   ページ9: https://syosetu.org/?mode=review&nid=375446&page=9
+2025-07-17 15:38:59,787 - INFO -   ページ10: https://syosetu.org/?mode=review&nid=375446&page=10
+2025-07-17 15:38:59,790 - INFO -   ページ11: https://syosetu.org/?mode=review&nid=375446&page=23
+2025-07-17 15:38:59,793 - INFO - 感想ページ数: 11ページ
+2025-07-17 15:38:59,797 - INFO - 感想ページ 1/11 を保存中: https://syosetu.org/?mode=review&nid=375446
+2025-07-17 15:38:59,826 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:38:59,852 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-17 15:38:59,883 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-17 15:38:59,912 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-17 15:38:59,943 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-17 15:38:59,973 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-17 15:39:00,001 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-17 15:39:00,040 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-17 15:39:00,070 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-17 15:39:00,096 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-17 15:39:00,193 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-17 15:39:00,246 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-17 15:39:00,286 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-17 15:39:00,312 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-17 15:39:00,346 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-17 15:39:00,378 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-17 15:39:00,415 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-17 15:39:00,448 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-17 15:39:00,481 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-17 15:39:00,525 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:00,556 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-17 15:39:00,585 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png?20230812 HTTP/1.1" 200 4864
+2025-07-17 15:39:00,617 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png?20230812 HTTP/1.1" 200 1566
+2025-07-17 15:39:00,652 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-17 15:39:00,688 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-17 15:39:00,724 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-17 15:39:00,757 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-17 15:39:00,764 - DEBUG - Starting new HTTPS connection (3): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:00,768 - DEBUG - Starting new HTTPS connection (3): cpt.geniee.jp:443
+2025-07-17 15:39:00,815 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1dhVd11Kpn%21nbbZ30gbGC HTTP/1.1" 403 None
+2025-07-17 15:39:00,838 - INFO - 感想ページ1保存完了: 感想 - ページ1.html
+2025-07-17 15:39:00,841 - INFO - 感想ページ 2/11 を保存中: https://syosetu.org/?mode=review&nid=375446&page=2
+2025-07-17 15:39:02,845 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446&page=2
+2025-07-17 15:39:04,849 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:04,925 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446&page=2 HTTP/1.1" 200 None
+2025-07-17 15:39:04,929 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30321bytes
+2025-07-17 15:39:04,933 - INFO - CloudScraperで取得されたHTMLテキスト長: 27241
+2025-07-17 15:39:04,947 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:04,951 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:39:04,955 - INFO -   - 本文長: 2202文字
+2025-07-17 15:39:04,967 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:04,974 - INFO -   - h1要素数: 1
+2025-07-17 15:39:04,977 - INFO -   - div要素数: 29
+2025-07-17 15:39:04,981 - INFO -   - a要素数: 129
+2025-07-17 15:39:04,985 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:04,989 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:04,993 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:04,997 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446&page=2
+2025-07-17 15:39:05,030 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:05,113 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:05,129 - DEBUG - Starting new HTTPS connection (4): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:05,133 - DEBUG - Starting new HTTPS connection (4): cpt.geniee.jp:443
+2025-07-17 15:39:05,180 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1yS5Pp1Kpn%21nbbZ30gbGg HTTP/1.1" 403 None
+2025-07-17 15:39:05,198 - INFO - 感想ページ2保存完了: 感想 - ページ2.html
+2025-07-17 15:39:05,200 - INFO - 感想ページ 3/11 を保存中: https://syosetu.org/?mode=review&nid=375446&page=3
+2025-07-17 15:39:07,204 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446&page=3
+2025-07-17 15:39:09,207 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:09,270 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446&page=3 HTTP/1.1" 200 None
+2025-07-17 15:39:09,274 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30485bytes
+2025-07-17 15:39:09,277 - INFO - CloudScraperで取得されたHTMLテキスト長: 27317
+2025-07-17 15:39:09,289 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:09,291 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:39:09,297 - INFO -   - 本文長: 2241文字
+2025-07-17 15:39:09,307 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:09,322 - INFO -   - h1要素数: 1
+2025-07-17 15:39:09,325 - INFO -   - div要素数: 29
+2025-07-17 15:39:09,328 - INFO -   - a要素数: 129
+2025-07-17 15:39:09,331 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:09,334 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:09,337 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:09,340 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446&page=3
+2025-07-17 15:39:09,372 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:09,477 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:09,499 - DEBUG - Starting new HTTPS connection (5): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:09,511 - DEBUG - Starting new HTTPS connection (5): cpt.geniee.jp:443
+2025-07-17 15:39:09,556 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?ndkV0j1Kpn%21nbbZ30gbkC HTTP/1.1" 403 None
+2025-07-17 15:39:09,582 - INFO - 感想ページ3保存完了: 感想 - ページ3.html
+2025-07-17 15:39:09,585 - INFO - 感想ページ 4/11 を保存中: https://syosetu.org/?mode=review&nid=375446&page=4
+2025-07-17 15:39:11,588 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446&page=4
+2025-07-17 15:39:13,592 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:13,651 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446&page=4 HTTP/1.1" 200 None
+2025-07-17 15:39:13,654 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30778bytes
+2025-07-17 15:39:13,657 - INFO - CloudScraperで取得されたHTMLテキスト長: 27406
+2025-07-17 15:39:13,669 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:13,672 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:39:13,675 - INFO -   - 本文長: 2334文字
+2025-07-17 15:39:13,685 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:13,692 - INFO -   - h1要素数: 1
+2025-07-17 15:39:13,695 - INFO -   - div要素数: 29
+2025-07-17 15:39:13,698 - INFO -   - a要素数: 129
+2025-07-17 15:39:13,702 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:13,705 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:13,708 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:13,712 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446&page=4
+2025-07-17 15:39:13,740 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:13,827 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:13,845 - DEBUG - Starting new HTTPS connection (6): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:13,849 - DEBUG - Starting new HTTPS connection (6): cpt.geniee.jp:443
+2025-07-17 15:39:13,893 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1yRVbA1Kpn%21nbbZ30gbk4 HTTP/1.1" 403 None
+2025-07-17 15:39:13,911 - INFO - 感想ページ4保存完了: 感想 - ページ4.html
+2025-07-17 15:39:13,915 - INFO - 感想ページ 5/11 を保存中: https://syosetu.org/?mode=review&nid=375446&page=5
+2025-07-17 15:39:15,920 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446&page=5
+2025-07-17 15:39:17,924 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:17,981 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446&page=5 HTTP/1.1" 200 None
+2025-07-17 15:39:17,986 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30645bytes
+2025-07-17 15:39:17,989 - INFO - CloudScraperで取得されたHTMLテキスト長: 27355
+2025-07-17 15:39:18,005 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:18,012 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:39:18,017 - INFO -   - 本文長: 2302文字
+2025-07-17 15:39:18,027 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:18,034 - INFO -   - h1要素数: 1
+2025-07-17 15:39:18,037 - INFO -   - div要素数: 29
+2025-07-17 15:39:18,045 - INFO -   - a要素数: 129
+2025-07-17 15:39:18,048 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:18,051 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:18,055 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:18,059 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446&page=5
+2025-07-17 15:39:18,092 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:18,265 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:18,314 - DEBUG - Starting new HTTPS connection (7): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:18,344 - DEBUG - Starting new HTTPS connection (7): cpt.geniee.jp:443
+2025-07-17 15:39:18,406 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1y%21V3x1Kpn%21nbbZ30gbkj HTTP/1.1" 403 None
+2025-07-17 15:39:18,435 - INFO - 感想ページ5保存完了: 感想 - ページ5.html
+2025-07-17 15:39:18,447 - INFO - 感想ページ 6/11 を保存中: https://syosetu.org/?mode=review&nid=375446&page=6
+2025-07-17 15:39:20,452 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446&page=6
+2025-07-17 15:39:22,457 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:22,521 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446&page=6 HTTP/1.1" 200 None
+2025-07-17 15:39:22,525 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30706bytes
+2025-07-17 15:39:22,529 - INFO - CloudScraperで取得されたHTMLテキスト長: 27584
+2025-07-17 15:39:22,541 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:22,544 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:39:22,547 - INFO -   - 本文長: 2211文字
+2025-07-17 15:39:22,557 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:22,564 - INFO -   - h1要素数: 1
+2025-07-17 15:39:22,567 - INFO -   - div要素数: 30
+2025-07-17 15:39:22,570 - INFO -   - a要素数: 131
+2025-07-17 15:39:22,574 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:22,578 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:22,581 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:22,584 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446&page=6
+2025-07-17 15:39:22,617 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:22,707 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:22,731 - DEBUG - Starting new HTTPS connection (8): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:22,734 - DEBUG - Starting new HTTPS connection (8): cpt.geniee.jp:443
+2025-07-17 15:39:22,780 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1%21J5PA1Kpn%21nbbZ30gbzK HTTP/1.1" 403 None
+2025-07-17 15:39:22,797 - INFO - 感想ページ6保存完了: 感想 - ページ6.html
+2025-07-17 15:39:22,800 - INFO - 感想ページ 7/11 を保存中: https://syosetu.org/?mode=review&nid=375446&page=7
+2025-07-17 15:39:24,805 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446&page=7
+2025-07-17 15:39:26,809 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:26,868 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446&page=7 HTTP/1.1" 200 None
+2025-07-17 15:39:26,872 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31068bytes
+2025-07-17 15:39:26,877 - INFO - CloudScraperで取得されたHTMLテキスト長: 27518
+2025-07-17 15:39:26,894 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:26,897 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:39:26,901 - INFO -   - 本文長: 2437文字
+2025-07-17 15:39:26,911 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:26,917 - INFO -   - h1要素数: 1
+2025-07-17 15:39:26,922 - INFO -   - div要素数: 29
+2025-07-17 15:39:26,925 - INFO -   - a要素数: 129
+2025-07-17 15:39:26,929 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:26,932 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:26,938 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:26,945 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446&page=7
+2025-07-17 15:39:26,973 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:27,155 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:27,187 - DEBUG - Starting new HTTPS connection (9): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:27,196 - DEBUG - Starting new HTTPS connection (9): cpt.geniee.jp:443
+2025-07-17 15:39:27,244 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1be5PQ1Kpn%21nbbZ30gbzo HTTP/1.1" 403 None
+2025-07-17 15:39:27,283 - INFO - 感想ページ7保存完了: 感想 - ページ7.html
+2025-07-17 15:39:27,288 - INFO - 感想ページ 8/11 を保存中: https://syosetu.org/?mode=review&nid=375446&page=8
+2025-07-17 15:39:29,291 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446&page=8
+2025-07-17 15:39:31,295 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:31,369 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446&page=8 HTTP/1.1" 200 None
+2025-07-17 15:39:31,372 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=30537bytes
+2025-07-17 15:39:31,375 - INFO - CloudScraperで取得されたHTMLテキスト長: 27327
+2025-07-17 15:39:31,387 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:31,391 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:39:31,394 - INFO -   - 本文長: 2254文字
+2025-07-17 15:39:31,403 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:31,409 - INFO -   - h1要素数: 1
+2025-07-17 15:39:31,413 - INFO -   - div要素数: 29
+2025-07-17 15:39:31,416 - INFO -   - a要素数: 129
+2025-07-17 15:39:31,420 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:31,423 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:31,426 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:31,429 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446&page=8
+2025-07-17 15:39:31,461 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:31,547 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:31,566 - DEBUG - Starting new HTTPS connection (10): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:31,570 - DEBUG - Starting new HTTPS connection (10): cpt.geniee.jp:443
+2025-07-17 15:39:31,618 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?nPkVc11Kpn%21nbbZ30gbEb HTTP/1.1" 403 None
+2025-07-17 15:39:31,635 - INFO - 感想ページ8保存完了: 感想 - ページ8.html
+2025-07-17 15:39:31,638 - INFO - 感想ページ 9/11 を保存中: https://syosetu.org/?mode=review&nid=375446&page=9
+2025-07-17 15:39:33,641 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446&page=9
+2025-07-17 15:39:35,645 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:35,715 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446&page=9 HTTP/1.1" 200 None
+2025-07-17 15:39:35,718 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31554bytes
+2025-07-17 15:39:35,721 - INFO - CloudScraperで取得されたHTMLテキスト長: 28005
+2025-07-17 15:39:35,733 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:35,736 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:39:35,738 - INFO -   - 本文長: 2482文字
+2025-07-17 15:39:35,750 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:35,764 - INFO -   - h1要素数: 1
+2025-07-17 15:39:35,767 - INFO -   - div要素数: 30
+2025-07-17 15:39:35,771 - INFO -   - a要素数: 131
+2025-07-17 15:39:35,774 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:35,778 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:35,781 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:35,784 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446&page=9
+2025-07-17 15:39:35,817 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:35,925 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:35,961 - DEBUG - Starting new HTTPS connection (11): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:35,966 - DEBUG - Starting new HTTPS connection (11): cpt.geniee.jp:443
+2025-07-17 15:39:36,013 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1dSVPA1Kpn%21nbbZ30gbEg HTTP/1.1" 403 None
+2025-07-17 15:39:36,031 - INFO - 感想ページ9保存完了: 感想 - ページ9.html
+2025-07-17 15:39:36,035 - INFO - 感想ページ 10/11 を保存中: https://syosetu.org/?mode=review&nid=375446&page=10
+2025-07-17 15:39:38,038 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446&page=10
+2025-07-17 15:39:40,042 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:40,105 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446&page=10 HTTP/1.1" 200 None
+2025-07-17 15:39:40,109 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31659bytes
+2025-07-17 15:39:40,112 - INFO - CloudScraperで取得されたHTMLテキスト長: 27937
+2025-07-17 15:39:40,124 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:40,127 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:39:40,130 - INFO -   - 本文長: 2519文字
+2025-07-17 15:39:40,139 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:40,146 - INFO -   - h1要素数: 1
+2025-07-17 15:39:40,150 - INFO -   - div要素数: 30
+2025-07-17 15:39:40,155 - INFO -   - a要素数: 131
+2025-07-17 15:39:40,158 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:40,161 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:40,163 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:40,166 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446&page=10
+2025-07-17 15:39:40,194 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:40,280 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:40,299 - DEBUG - Starting new HTTPS connection (12): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:40,303 - DEBUG - Starting new HTTPS connection (12): cpt.geniee.jp:443
+2025-07-17 15:39:40,350 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1ceVc11Kpn%21nbbZ30gKO8 HTTP/1.1" 403 None
+2025-07-17 15:39:40,367 - INFO - 感想ページ10保存完了: 感想 - ページ10.html
+2025-07-17 15:39:40,371 - INFO - 感想ページ 11/11 を保存中: https://syosetu.org/?mode=review&nid=375446&page=23
+2025-07-17 15:39:42,374 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=375446&page=23
+2025-07-17 15:39:44,378 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:44,444 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=375446&page=23 HTTP/1.1" 200 None
+2025-07-17 15:39:44,447 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=28966bytes
+2025-07-17 15:39:44,452 - INFO - CloudScraperで取得されたHTMLテキスト長: 25834
+2025-07-17 15:39:44,462 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:44,466 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の感想 - ハーメルン
+2025-07-17 15:39:44,469 - INFO -   - 本文長: 2131文字
+2025-07-17 15:39:44,479 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:44,489 - INFO -   - h1要素数: 1
+2025-07-17 15:39:44,492 - INFO -   - div要素数: 27
+2025-07-17 15:39:44,495 - INFO -   - a要素数: 115
+2025-07-17 15:39:44,499 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:44,505 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:44,513 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:44,516 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=375446&page=23
+2025-07-17 15:39:44,546 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:44,644 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:44,663 - DEBUG - Starting new HTTPS connection (13): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:44,667 - DEBUG - Starting new HTTPS connection (13): cpt.geniee.jp:443
+2025-07-17 15:39:44,716 - DEBUG - https://img.syosetu.org:443 "GET /image/registkey.cgi?1%21IVyp1Kpn%21nbbZ30gKOA HTTP/1.1" 403 None
+2025-07-17 15:39:44,734 - INFO - 感想ページ11保存完了: 感想 - ページ11.html
+2025-07-17 15:39:44,738 - INFO - 感想ページ間のリンクを修正中...
+2025-07-17 15:39:44,753 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:44,760 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:44,762 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:44,765 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:44,768 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:44,771 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:44,775 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:44,778 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:44,782 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:44,785 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:44,789 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:44,792 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:44,799 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:44,802 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:44,806 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:44,810 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:44,820 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:44,823 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:44,828 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:44,831 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:44,835 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:44,838 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:44,843 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:44,846 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:44,849 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:44,852 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:44,855 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:44,859 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:44,862 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:44,865 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:44,868 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:44,871 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:44,876 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:44,883 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:44,886 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:44,889 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:44,893 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:44,896 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:44,901 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:44,923 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:44,927 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:44,931 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:44,935 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:44,948 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:44,952 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:44,955 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:44,958 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:44,961 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:44,964 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:44,967 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:44,970 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:44,974 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:44,977 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:44,980 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:44,986 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:44,989 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:44,993 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:44,996 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:45,005 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,014 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,017 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,020 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,023 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,027 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,031 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,035 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:45,038 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,041 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:45,047 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:45,050 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:45,054 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,057 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:45,060 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:45,070 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,073 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:45,078 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:45,082 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:45,084 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:45,088 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:45,091 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:45,094 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:45,097 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:45,116 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:45,119 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,123 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,132 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:45,136 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,138 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:45,141 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,145 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,148 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,151 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,155 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,157 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,160 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:45,165 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,168 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:45,173 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:45,176 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:45,181 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,185 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:45,195 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,201 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,204 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,207 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,211 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,217 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,221 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,225 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:45,229 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,236 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:45,240 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:45,244 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:45,249 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,261 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:45,265 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:45,269 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,273 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:45,276 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:45,282 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:45,286 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:45,290 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:45,298 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:45,302 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:45,307 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:45,343 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:45,347 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,351 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,355 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:45,361 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,365 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:45,370 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,373 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,387 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,391 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,395 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,400 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,405 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:45,410 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,414 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:45,417 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:45,422 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:45,426 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,431 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:45,435 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,447 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,452 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,458 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,462 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,467 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,470 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,474 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:45,477 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,481 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:45,487 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:45,491 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:45,496 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,500 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:45,512 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:45,515 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,518 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:45,521 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:45,525 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:45,528 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:45,532 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:45,536 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:45,540 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:45,544 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:45,566 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:45,571 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,574 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,576 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:45,579 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,583 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:45,586 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,589 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,594 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,598 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,601 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,604 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,608 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:45,611 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,614 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:45,618 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:45,621 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:45,632 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:45,635 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:45,639 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,644 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,648 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,652 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,655 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,658 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,662 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,665 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:45,672 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,675 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:45,678 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:45,685 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:45,694 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:45,697 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:45,700 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:45,702 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,706 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:45,709 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:45,713 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:45,717 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:45,720 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:45,725 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:45,729 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:45,734 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:45,755 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:45,761 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,764 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,768 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:45,771 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,776 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:45,781 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,785 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,789 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,793 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,797 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,800 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,803 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,807 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,820 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:45,824 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:45,828 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:45,832 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,835 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:45,838 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,844 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,847 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,851 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,855 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,860 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,864 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,867 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:45,871 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,873 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:45,884 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:45,888 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:45,890 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:45,893 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:45,896 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:45,901 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,905 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:45,908 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:45,911 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:45,915 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:45,918 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:45,924 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:45,928 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:45,932 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:45,954 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:45,957 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,961 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,965 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:45,968 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:45,972 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:45,975 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:45,978 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:45,985 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:45,988 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:45,991 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:45,994 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:46,008 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:46,013 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:46,016 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:46,019 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:46,021 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:46,025 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:46,028 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,034 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,037 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:46,040 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=2 -> 感想 - ページ2.html
+2025-07-17 15:39:46,048 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:46,051 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:46,055 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:46,058 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:46,067 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:46,071 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:46,074 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:46,077 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:46,080 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:46,083 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:46,086 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,089 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:46,092 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:46,095 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:46,098 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:46,101 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:46,104 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:46,110 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:46,114 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:46,134 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:46,137 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,139 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,142 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:46,146 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,149 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:46,152 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,155 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:46,159 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:46,164 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:46,167 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:46,172 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:46,175 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:46,178 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:46,183 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:46,195 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:46,199 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:46,202 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,207 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,210 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:46,214 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=3 -> 感想 - ページ3.html
+2025-07-17 15:39:46,217 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:46,221 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:46,225 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:46,228 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:46,230 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:46,235 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:46,239 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:46,242 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:46,246 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:46,257 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,260 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:46,263 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:46,266 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:46,269 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:46,271 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:46,275 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:46,279 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:46,283 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:46,307 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:46,310 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,317 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,323 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:46,327 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,330 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:46,333 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,337 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:46,340 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:46,343 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:46,348 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:46,350 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:46,353 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:46,359 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:46,363 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:46,367 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:46,370 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,380 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,390 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:46,393 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=4 -> 感想 - ページ4.html
+2025-07-17 15:39:46,398 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:46,402 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:46,405 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:46,408 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:46,411 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:46,415 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=10 -> 感想 - ページ10.html
+2025-07-17 15:39:46,422 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:46,426 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:46,430 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,434 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:46,444 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:46,448 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:46,450 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:46,454 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:46,458 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:46,461 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:46,464 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:46,485 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:46,487 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,490 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,494 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:46,497 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,500 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:46,503 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,506 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:46,510 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:46,513 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:46,517 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:46,520 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:46,523 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:46,527 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:46,530 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,535 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,539 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:46,542 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=5 -> 感想 - ページ5.html
+2025-07-17 15:39:46,545 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=6 -> 感想 - ページ6.html
+2025-07-17 15:39:46,548 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=7 -> 感想 - ページ7.html
+2025-07-17 15:39:46,552 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=8 -> 感想 - ページ8.html
+2025-07-17 15:39:46,556 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=9 -> 感想 - ページ9.html
+2025-07-17 15:39:46,561 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=23 -> 感想 - ページ11.html
+2025-07-17 15:39:46,565 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:46,570 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,573 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:46,576 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:46,580 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:46,584 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:46,588 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:46,591 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:46,595 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:46,600 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:46,622 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:46,625 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,628 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,632 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:46,635 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=375446 -> ../小説情報.html
+2025-07-17 15:39:46,639 - INFO - 目次リンク修正: https://syosetu.org/novel/375446/ -> ../目次.html
+2025-07-17 15:39:46,643 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,647 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&type=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,653 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&page=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,658 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想 - ページ1.html
+2025-07-17 15:39:46,661 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=1 -> 感想 - ページ1.html
+2025-07-17 15:39:46,665 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=2 -> 感想 - ページ1.html
+2025-07-17 15:39:46,669 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=3 -> 感想 - ページ1.html
+2025-07-17 15:39:46,673 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=4 -> 感想 - ページ1.html
+2025-07-17 15:39:46,676 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=5 -> 感想 - ページ1.html
+2025-07-17 15:39:46,680 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=6 -> 感想 - ページ1.html
+2025-07-17 15:39:46,684 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=7 -> 感想 - ページ1.html
+2025-07-17 15:39:46,688 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=8 -> 感想 - ページ1.html
+2025-07-17 15:39:46,691 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=375446&volume=9 -> 感想 - ページ1.html
+2025-07-17 15:39:46,700 - INFO - 感想ページ保存完了: 11ページ保存
+2025-07-17 15:39:46,706 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=375446
+2025-07-17 15:39:46,709 - INFO - ページ取得開始: https://syosetu.org/?mode=ss_detail&nid=375446
+2025-07-17 15:39:48,712 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:48,779 - DEBUG - https://syosetu.org:443 "GET /?mode=ss_detail&nid=375446 HTTP/1.1" 200 None
+2025-07-17 15:39:48,782 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21747bytes
+2025-07-17 15:39:48,785 - INFO - CloudScraperで取得されたHTMLテキスト長: 19947
+2025-07-17 15:39:48,792 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:48,794 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。の小説情報 - ハーメルン
+2025-07-17 15:39:48,797 - INFO -   - 本文長: 1081文字
+2025-07-17 15:39:48,805 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-17 15:39:48,811 - INFO -   - h1要素数: 1
+2025-07-17 15:39:48,814 - INFO -   - div要素数: 33
+2025-07-17 15:39:48,817 - INFO -   - a要素数: 68
+2025-07-17 15:39:48,819 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:48,822 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:48,826 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:48,828 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=ss_detail&nid=375446
+2025-07-17 15:39:48,831 - INFO - 小説情報ページ目次リンク修正: https://syosetu.org/novel/375446/ -> 目次.html
+2025-07-17 15:39:48,834 - INFO - 小説情報ページ感想リンク修正: https://syosetu.org/?mode=review&nid=375446 -> 感想/感想 - ページ1.html
+2025-07-17 15:39:48,837 - INFO - 小説情報ページ目次リンク修正: https://syosetu.org/novel/375446/ -> 目次.html
+2025-07-17 15:39:48,839 - INFO - 小説情報ページ感想リンク修正: ./?mode=review&nid=375446 -> 感想/感想 - ページ1.html
+2025-07-17 15:39:48,870 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-17 15:39:48,904 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-17 15:39:48,935 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-17 15:39:48,963 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-17 15:39:48,992 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-17 15:39:49,024 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-17 15:39:49,052 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-17 15:39:49,079 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-17 15:39:49,107 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-17 15:39:49,134 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-17 15:39:49,165 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-17 15:39:49,205 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-17 15:39:49,236 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-17 15:39:49,316 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-17 15:39:49,368 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-17 15:39:49,387 - DEBUG - Starting new HTTPS connection (14): securepubads.g.doubleclick.net:443
+2025-07-17 15:39:49,397 - DEBUG - Starting new HTTPS connection (14): cpt.geniee.jp:443
+2025-07-17 15:39:49,443 - INFO - 小説情報ページ保存完了: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - 小説情報.html
+2025-07-17 15:39:49,449 - INFO - ページ取得開始: https://syosetu.org/novel/375446/1.html
+2025-07-17 15:39:51,455 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:51,509 - DEBUG - https://syosetu.org:443 "GET /novel/375446/1.html HTTP/1.1" 200 None
+2025-07-17 15:39:51,513 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=35266bytes
+2025-07-17 15:39:51,515 - INFO - CloudScraperで取得されたHTMLテキスト長: 24536
+2025-07-17 15:39:51,527 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:51,531 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - 一話:「身に覚えのない好感度って怖いね！」 - ハーメルン
+2025-07-17 15:39:51,534 - INFO -   - 本文長: 5481文字
+2025-07-17 15:39:51,543 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/375446/1.html" property="og:url"/>
+<meta content="一話:「身に覚えのない好感度って怖いね！」 - 転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン" property="og:title"/>
+<meta content="　転生したら織田信広...
+2025-07-17 15:39:51,549 - INFO -   - h1要素数: 1
+2025-07-17 15:39:51,551 - INFO -   - div要素数: 22
+2025-07-17 15:39:51,555 - INFO -   - a要素数: 78
+2025-07-17 15:39:51,559 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:51,562 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:51,565 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:51,567 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/375446/1.html
+2025-07-17 15:39:51,679 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 15:39:51,733 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 15:39:51,829 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 15:39:51,915 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 15:39:51,954 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 200 3923
+2025-07-17 15:39:52,081 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_pc_min.js HTTP/1.1" 200 10775
+2025-07-17 15:39:52,197 - DEBUG - https://img.syosetu.org:443 "GET /js/reading_record.min.js HTTP/1.1" 200 1116
+2025-07-17 15:39:52,375 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 15:39:52,460 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 15:39:52,507 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446&v=1 HTTP/1.1" 200 None
+2025-07-17 15:39:55,572 - INFO - ページ取得開始: https://syosetu.org/novel/375446/2.html
+2025-07-17 15:39:57,576 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:39:57,628 - DEBUG - https://syosetu.org:443 "GET /novel/375446/2.html HTTP/1.1" 200 None
+2025-07-17 15:39:57,632 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=32040bytes
+2025-07-17 15:39:57,636 - INFO - CloudScraperで取得されたHTMLテキスト長: 23056
+2025-07-17 15:39:57,649 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:39:57,654 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - 二話:バーっと行って、ドン！これが勝利の方程式よ。 - ハーメルン
+2025-07-17 15:39:57,658 - INFO -   - 本文長: 4579文字
+2025-07-17 15:39:57,667 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/375446/2.html" property="og:url"/>
+<meta content="二話:バーっと行って、ドン！これが勝利の方程式よ。 - 転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン" property="og:title"/>
+<meta content="　転生したら...
+2025-07-17 15:39:57,674 - INFO -   - h1要素数: 1
+2025-07-17 15:39:57,678 - INFO -   - div要素数: 22
+2025-07-17 15:39:57,682 - INFO -   - a要素数: 79
+2025-07-17 15:39:57,686 - INFO -   - novel_body要素数: 0
+2025-07-17 15:39:57,690 - INFO -   - novel_view要素数: 0
+2025-07-17 15:39:57,694 - INFO - ページ検証: 正常なページ
+2025-07-17 15:39:57,698 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/375446/2.html
+2025-07-17 15:39:57,772 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 15:39:57,824 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 15:39:57,879 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 15:39:57,928 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 15:39:57,973 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 15:39:58,004 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 15:39:58,050 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446&v=2 HTTP/1.1" 200 None
+2025-07-17 15:40:01,072 - INFO - ページ取得開始: https://syosetu.org/novel/375446/3.html
+2025-07-17 15:40:03,077 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:40:03,137 - DEBUG - https://syosetu.org:443 "GET /novel/375446/3.html HTTP/1.1" 200 None
+2025-07-17 15:40:03,141 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=33405bytes
+2025-07-17 15:40:03,145 - INFO - CloudScraperで取得されたHTMLテキスト長: 24075
+2025-07-17 15:40:03,159 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:40:03,165 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - 三話:弟って大変だね、えっ？　こいつはそれ以前にストーカー？　 - ハーメルン
+2025-07-17 15:40:03,170 - INFO -   - 本文長: 4766文字
+2025-07-17 15:40:03,182 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/375446/3.html" property="og:url"/>
+<meta content="三話:弟って大変だね、えっ？　こいつはそれ以前にストーカー？　 - 転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン" property="og:title"/>
+<meta content="...
+2025-07-17 15:40:03,191 - INFO -   - h1要素数: 1
+2025-07-17 15:40:03,195 - INFO -   - div要素数: 22
+2025-07-17 15:40:03,198 - INFO -   - a要素数: 78
+2025-07-17 15:40:03,201 - INFO -   - novel_body要素数: 0
+2025-07-17 15:40:03,205 - INFO -   - novel_view要素数: 0
+2025-07-17 15:40:03,208 - INFO - ページ検証: 正常なページ
+2025-07-17 15:40:03,213 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/375446/3.html
+2025-07-17 15:40:03,317 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 15:40:03,376 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 15:40:03,436 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 15:40:03,499 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 15:40:03,551 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 15:40:03,578 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 15:40:03,621 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446&v=3 HTTP/1.1" 200 None
+2025-07-17 15:40:06,652 - INFO - ページ取得開始: https://syosetu.org/novel/375446/4.html
+2025-07-17 15:40:08,655 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:40:08,709 - DEBUG - https://syosetu.org:443 "GET /novel/375446/4.html HTTP/1.1" 200 None
+2025-07-17 15:40:08,713 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=32202bytes
+2025-07-17 15:40:08,717 - INFO - CloudScraperで取得されたHTMLテキスト長: 23386
+2025-07-17 15:40:08,728 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:40:08,732 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - 四話:小豆坂ってめっちゃ滑りそうだよな。えっ、小豆撒かれた坂じゃない？　 - ハーメルン
+2025-07-17 15:40:08,737 - INFO -   - 本文長: 4490文字
+2025-07-17 15:40:08,752 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/375446/4.html" property="og:url"/>
+<meta content="四話:小豆坂ってめっちゃ滑りそうだよな。えっ、小豆撒かれた坂じゃない？　 - 転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン" property="og:title"/>
+<meta cont...
+2025-07-17 15:40:08,758 - INFO -   - h1要素数: 1
+2025-07-17 15:40:08,763 - INFO -   - div要素数: 22
+2025-07-17 15:40:08,765 - INFO -   - a要素数: 78
+2025-07-17 15:40:08,768 - INFO -   - novel_body要素数: 0
+2025-07-17 15:40:08,772 - INFO -   - novel_view要素数: 0
+2025-07-17 15:40:08,776 - INFO - ページ検証: 正常なページ
+2025-07-17 15:40:08,780 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/375446/4.html
+2025-07-17 15:40:08,859 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 15:40:08,911 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 15:40:08,966 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 15:40:09,018 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 15:40:09,066 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 15:40:09,092 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 15:40:09,135 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446&v=4 HTTP/1.1" 200 None
+2025-07-17 15:40:12,158 - INFO - ページ取得開始: https://syosetu.org/novel/375446/5.html
+2025-07-17 15:40:14,162 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:40:14,216 - DEBUG - https://syosetu.org:443 "GET /novel/375446/5.html HTTP/1.1" 200 None
+2025-07-17 15:40:14,220 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=35272bytes
+2025-07-17 15:40:14,222 - INFO - CloudScraperで取得されたHTMLテキスト長: 24806
+2025-07-17 15:40:14,236 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:40:14,239 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - 五話:戦争ごっこが無くならない限り、戦争なんて無くならねぇんだ - ハーメルン
+2025-07-17 15:40:14,244 - INFO -   - 本文長: 5324文字
+2025-07-17 15:40:14,255 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/375446/5.html" property="og:url"/>
+<meta content="五話:戦争ごっこが無くならない限り、戦争なんて無くならねぇんだ - 転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン" property="og:title"/>
+<meta content="...
+2025-07-17 15:40:14,261 - INFO -   - h1要素数: 1
+2025-07-17 15:40:14,265 - INFO -   - div要素数: 22
+2025-07-17 15:40:14,268 - INFO -   - a要素数: 78
+2025-07-17 15:40:14,271 - INFO -   - novel_body要素数: 0
+2025-07-17 15:40:14,274 - INFO -   - novel_view要素数: 0
+2025-07-17 15:40:14,278 - INFO - ページ検証: 正常なページ
+2025-07-17 15:40:14,280 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/375446/5.html
+2025-07-17 15:40:14,364 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 15:40:14,422 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 15:40:14,483 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 15:40:14,538 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 15:40:14,582 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 15:40:14,610 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 15:40:14,654 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446&v=5 HTTP/1.1" 200 None
+2025-07-17 15:40:17,676 - INFO - ページ取得開始: https://syosetu.org/novel/375446/6.html
+2025-07-17 15:40:19,681 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:40:19,736 - DEBUG - https://syosetu.org:443 "GET /novel/375446/6.html HTTP/1.1" 200 None
+2025-07-17 15:40:19,740 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=36272bytes
+2025-07-17 15:40:19,745 - INFO - CloudScraperで取得されたHTMLテキスト長: 25962
+2025-07-17 15:40:19,759 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:40:19,763 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - 六話:悪巧みで苦労するの下っ端、諦めるな！やれば出来る！ - ハーメルン
+2025-07-17 15:40:19,766 - INFO -   - 本文長: 5271文字
+2025-07-17 15:40:19,779 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/375446/6.html" property="og:url"/>
+<meta content="六話:悪巧みで苦労するの下っ端、諦めるな！やれば出来る！ - 転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン" property="og:title"/>
+<meta content="　転生...
+2025-07-17 15:40:19,785 - INFO -   - h1要素数: 1
+2025-07-17 15:40:19,788 - INFO -   - div要素数: 22
+2025-07-17 15:40:19,790 - INFO -   - a要素数: 78
+2025-07-17 15:40:19,793 - INFO -   - novel_body要素数: 0
+2025-07-17 15:40:19,795 - INFO -   - novel_view要素数: 0
+2025-07-17 15:40:19,798 - INFO - ページ検証: 正常なページ
+2025-07-17 15:40:19,800 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/375446/6.html
+2025-07-17 15:40:19,883 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 15:40:19,933 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 15:40:19,987 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 15:40:20,040 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 15:40:20,085 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 15:40:20,114 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 15:40:20,157 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446&v=6 HTTP/1.1" 200 None
+2025-07-17 15:40:23,182 - INFO - ページ取得開始: https://syosetu.org/novel/375446/7.html
+2025-07-17 15:40:25,185 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:40:25,236 - DEBUG - https://syosetu.org:443 "GET /novel/375446/7.html HTTP/1.1" 200 None
+2025-07-17 15:40:25,240 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=33922bytes
+2025-07-17 15:40:25,244 - INFO - CloudScraperで取得されたHTMLテキスト長: 24516
+2025-07-17 15:40:25,256 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:40:25,260 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - 七話:むさ苦しいおじさんに囲まれて死にそう - ハーメルン
+2025-07-17 15:40:25,264 - INFO -   - 本文長: 4795文字
+2025-07-17 15:40:25,274 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/375446/7.html" property="og:url"/>
+<meta content="七話:むさ苦しいおじさんに囲まれて死にそう - 転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン" property="og:title"/>
+<meta content="　転生したら織田信広...
+2025-07-17 15:40:25,282 - INFO -   - h1要素数: 1
+2025-07-17 15:40:25,284 - INFO -   - div要素数: 22
+2025-07-17 15:40:25,287 - INFO -   - a要素数: 78
+2025-07-17 15:40:25,290 - INFO -   - novel_body要素数: 0
+2025-07-17 15:40:25,295 - INFO -   - novel_view要素数: 0
+2025-07-17 15:40:25,299 - INFO - ページ検証: 正常なページ
+2025-07-17 15:40:25,302 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/375446/7.html
+2025-07-17 15:40:25,377 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 15:40:25,428 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 15:40:25,486 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 15:40:25,537 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 15:40:25,591 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 15:40:25,617 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 15:40:25,662 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446&v=7 HTTP/1.1" 200 None
+2025-07-17 15:40:28,688 - INFO - ページ取得開始: https://syosetu.org/novel/375446/8.html
+2025-07-17 15:40:30,692 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:40:30,746 - DEBUG - https://syosetu.org:443 "GET /novel/375446/8.html HTTP/1.1" 200 None
+2025-07-17 15:40:30,756 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31201bytes
+2025-07-17 15:40:30,759 - INFO - CloudScraperで取得されたHTMLテキスト長: 22777
+2025-07-17 15:40:30,769 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:40:30,772 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - 八話:婚約騒動x2 - ハーメルン
+2025-07-17 15:40:30,776 - INFO -   - 本文長: 4338文字
+2025-07-17 15:40:30,784 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/375446/8.html" property="og:url"/>
+<meta content="八話:婚約騒動x2 - 転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン" property="og:title"/>
+<meta content="　転生したら織田信広、誰だよ。信長の兄？謀反...
+2025-07-17 15:40:30,790 - INFO -   - h1要素数: 1
+2025-07-17 15:40:30,795 - INFO -   - div要素数: 22
+2025-07-17 15:40:30,798 - INFO -   - a要素数: 78
+2025-07-17 15:40:30,800 - INFO -   - novel_body要素数: 0
+2025-07-17 15:40:30,803 - INFO -   - novel_view要素数: 0
+2025-07-17 15:40:30,807 - INFO - ページ検証: 正常なページ
+2025-07-17 15:40:30,810 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/375446/8.html
+2025-07-17 15:40:30,890 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 15:40:30,943 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 15:40:30,995 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 15:40:31,044 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 15:40:31,100 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 15:40:31,127 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 15:40:31,175 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446&v=8 HTTP/1.1" 200 None
+2025-07-17 15:40:34,201 - INFO - ページ取得開始: https://syosetu.org/novel/375446/9.html
+2025-07-17 15:40:36,204 - INFO - CloudScraperで初回試行中...
+2025-07-17 15:40:36,261 - DEBUG - https://syosetu.org:443 "GET /novel/375446/9.html HTTP/1.1" 200 None
+2025-07-17 15:40:36,264 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=38934bytes
+2025-07-17 15:40:36,267 - INFO - CloudScraperで取得されたHTMLテキスト長: 29144
+2025-07-17 15:40:36,281 - INFO - CloudScraper取得ページ分析:
+2025-07-17 15:40:36,284 - INFO -   - タイトル: 転生したら織田信広だったので信長(妹)をコマそうと思う。 - 九話:謀反！謀反！えっ、意外と穏便に済んだな(戦国時代としては) - ハーメルン
+2025-07-17 15:40:36,287 - INFO -   - 本文長: 5290文字
+2025-07-17 15:40:36,298 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/375446/9.html" property="og:url"/>
+<meta content="九話:謀反！謀反！えっ、意外と穏便に済んだな(戦国時代としては) - 転生したら織田信広だったので信長(妹)をコマそうと思う。 - ハーメルン" property="og:title"/>
+<meta content=...
+2025-07-17 15:40:36,307 - INFO -   - h1要素数: 1
+2025-07-17 15:40:36,310 - INFO -   - div要素数: 32
+2025-07-17 15:40:36,313 - INFO -   - a要素数: 111
+2025-07-17 15:40:36,315 - INFO -   - novel_body要素数: 0
+2025-07-17 15:40:36,318 - INFO -   - novel_view要素数: 0
+2025-07-17 15:40:36,321 - INFO - ページ検証: 正常なページ
+2025-07-17 15:40:36,325 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/375446/9.html
+2025-07-17 15:40:36,408 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-17 15:40:36,458 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-17 15:40:36,514 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-17 15:40:36,566 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-17 15:40:36,626 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-17 15:40:36,656 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-17 15:40:36,710 - DEBUG - https://ct.syosetu.org:443 "GET /?n=375446&v=9 HTTP/1.1" 200 None
+2025-07-17 15:40:37,108 - INFO - リソースキャッシュ統計: 70個のリソースをキャッシュしました
