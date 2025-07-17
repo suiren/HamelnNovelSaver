@@ -2586,6 +2586,167 @@ class HamelnFinalScraper:
         stats = self.get_cache_stats()
         self.debug_log(f"リソースキャッシュ統計: {stats['cached_resources']}個のリソースをキャッシュしました")
 
+    def extract_vertical_reading_link(self, soup):
+        """縦書きリンクをHTML構造から抽出"""
+        try:
+            # topicPath内の縦書きリンクを探す
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                if href and 'mode=ss_detail3' in href:
+                    self.debug_log(f"縦書きリンク発見: {href}")
+                    return href
+            return None
+        except Exception as e:
+            self.debug_log(f"縦書きリンク抽出エラー: {e}", "ERROR")
+            return None
+    
+    def extract_novel_info_link(self, soup):
+        """小説情報リンクをHTML構造から抽出"""
+        try:
+            # topicPath内の小説情報リンクを探す
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                if href and 'mode=ss_detail' in href and 'mode=ss_detail3' not in href:
+                    self.debug_log(f"小説情報リンク発見: {href}")
+                    return href
+            return None
+        except Exception as e:
+            self.debug_log(f"小説情報リンク抽出エラー: {e}", "ERROR")
+            return None
+    
+    def extract_additional_links_from_vertical_page(self, soup):
+        """縦書きページから追加リンクを抽出"""
+        try:
+            additional_links = []
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                if href and any(mode in href for mode in ['mode=review', 'mode=rating_input', 'mode=correct_view']):
+                    additional_links.append(href)
+                    self.debug_log(f"追加リンク発見: {href}")
+            return additional_links
+        except Exception as e:
+            self.debug_log(f"追加リンク抽出エラー: {e}", "ERROR")
+            return []
+    
+    def save_vertical_reading_page(self, vertical_url, output_dir, novel_title):
+        """縦書きページを保存"""
+        try:
+            self.debug_log(f"縦書きページ保存開始: {vertical_url}")
+            
+            # URLが相対パスの場合は絶対パスに変換
+            if vertical_url.startswith('//'):
+                vertical_url = 'https:' + vertical_url
+            elif vertical_url.startswith('/'):
+                vertical_url = 'https://syosetu.org' + vertical_url
+            
+            # 縦書きページを取得
+            soup = self.get_page(vertical_url)
+            if not soup:
+                self.debug_log("縦書きページの取得に失敗", "ERROR")
+                return None
+            
+            # 縦書きページ内の追加リンクを抽出
+            additional_links = self.extract_additional_links_from_vertical_page(soup)
+            
+            # 縦書きページを保存
+            safe_title = re.sub(r'[<>:"/\\|?*]', '_', novel_title)
+            filename = f"{safe_title} - 縦書き"
+            
+            file_path = self.save_complete_page(soup, vertical_url, filename, output_dir, vertical_url)
+            
+            if file_path:
+                self.debug_log(f"縦書きページ保存完了: {file_path}")
+                return {
+                    'file_path': file_path,
+                    'additional_links': additional_links
+                }
+            return None
+            
+        except Exception as e:
+            self.debug_log(f"縦書きページ保存エラー: {e}", "ERROR")
+            return None
+    
+    def save_novel_info_page_with_vertical_link(self, info_url, output_dir, novel_title):
+        """小説情報ページを保存（縦書きリンク対応）"""
+        try:
+            self.debug_log(f"小説情報ページ保存開始: {info_url}")
+            
+            # URLが相対パスの場合は絶対パスに変換
+            if info_url.startswith('//'):
+                info_url = 'https:' + info_url
+            elif info_url.startswith('/'):
+                info_url = 'https://syosetu.org' + info_url
+            
+            # 小説情報ページを取得
+            soup = self.get_page(info_url)
+            if not soup:
+                self.debug_log("小説情報ページの取得に失敗", "ERROR")
+                return None
+            
+            # 小説情報ページを保存
+            safe_title = re.sub(r'[<>:"/\\|?*]', '_', novel_title)
+            filename = f"{safe_title} - 小説情報"
+            
+            file_path = self.save_complete_page(soup, info_url, filename, output_dir, info_url)
+            
+            if file_path:
+                self.debug_log(f"小説情報ページ保存完了: {file_path}")
+                return file_path
+            return None
+            
+        except Exception as e:
+            self.debug_log(f"小説情報ページ保存エラー: {e}", "ERROR")
+            return None
+    
+    def process_vertical_reading_links(self, soup, output_dir, novel_title):
+        """縦書きリンクの処理（統合機能）"""
+        try:
+            result = {}
+            
+            # 縦書きリンクを抽出
+            vertical_link = self.extract_vertical_reading_link(soup)
+            if vertical_link:
+                vertical_result = self.save_vertical_reading_page(vertical_link, output_dir, novel_title)
+                if vertical_result:
+                    result['vertical_page'] = vertical_result
+            
+            # 小説情報リンクを抽出
+            info_link = self.extract_novel_info_link(soup)
+            if info_link:
+                info_result = self.save_novel_info_page_with_vertical_link(info_link, output_dir, novel_title)
+                if info_result:
+                    result['info_page'] = info_result
+            
+            return result if result else None
+            
+        except Exception as e:
+            self.debug_log(f"縦書きリンク処理エラー: {e}", "ERROR")
+            return None
+    
+    def update_navigation_links_with_vertical_pages(self, soup, index_file, info_file, vertical_file):
+        """ナビゲーションリンクを更新（縦書きページ対応）"""
+        try:
+            # 目次リンクの更新
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                text = link.get_text(strip=True)
+                
+                if text == "目次" or ('/novel/' in href and href.endswith('/')):
+                    link['href'] = index_file
+                    self.debug_log(f"目次リンク更新: {href} -> {index_file}")
+                elif text == "縦書き" or 'mode=ss_detail3' in href:
+                    link['href'] = vertical_file
+                    self.debug_log(f"縦書きリンク更新: {href} -> {vertical_file}")
+                elif text == "小説情報" or ('mode=ss_detail' in href and 'mode=ss_detail3' not in href):
+                    link['href'] = info_file
+                    self.debug_log(f"小説情報リンク更新: {href} -> {info_file}")
+            
+            return soup
+            
+        except Exception as e:
+            self.debug_log(f"ナビゲーションリンク更新エラー: {e}", "ERROR")
+            return soup
+
 def main():
     """メイン関数"""
     scraper = None
@@ -2624,5 +2785,9 @@ def main():
         if scraper:
             scraper.close()
 
+# 縦書きリンク処理をHamelnFinalScraperクラスに追加
+def add_vertical_reading_methods():
+    """縦書きリンク処理メソッドをHamelnFinalScraperクラスに追加"""
+    
 if __name__ == "__main__":
     main()

@@ -10844,3 +10844,18 @@ b'{console.log("undetected chromedriver 1337!")}                                
 2025-07-17 14:29:11,337 - INFO - 感想ページを取得中: https://syosetu.org/novel/n123456/mode=review
 2025-07-17 14:29:11,338 - INFO - 感想保存フォルダ作成: /tmp/tmpg9wt4l4u/感想
 2025-07-17 14:29:11,338 - ERROR - 感想ページの取得に失敗しました
+2025-07-18 00:58:18,987 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-18 00:58:18,988 - INFO - CloudScraper初期化開始
+2025-07-18 00:58:18,991 - INFO - CloudScraper設定完了
+2025-07-18 00:58:18,991 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-18 00:58:18,992 - INFO - 目次リンク更新: //syosetu.org/novel/378070/ -> 目次.html
+2025-07-18 00:58:18,992 - INFO - 小説情報リンク更新: //syosetu.org/?mode=ss_detail&nid=378070 -> 小説情報.html
+2025-07-18 00:58:18,993 - INFO - リソースキャッシュ統計: 0個のリソースをキャッシュしました
+2025-07-18 00:58:41,271 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-18 00:58:41,271 - INFO - CloudScraper初期化開始
+2025-07-18 00:58:41,276 - INFO - CloudScraper設定完了
+2025-07-18 00:58:41,277 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-18 00:58:41,278 - INFO - 目次リンク更新: //syosetu.org/novel/378070/ -> 目次.html
+2025-07-18 00:58:41,278 - INFO - 小説情報リンク更新: //syosetu.org/?mode=ss_detail&nid=378070 -> 小説情報.html
+2025-07-18 00:58:41,278 - INFO - 縦書きリンク更新: //syosetu.org/?mode=ss_detail3&nid=378070 -> 縦書き.html
+2025-07-18 00:58:41,278 - INFO - リソースキャッシュ統計: 0個のリソースをキャッシュしました
