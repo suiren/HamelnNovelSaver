@@ -2426,11 +2426,48 @@ class HamelnFinalScraper:
                                             f.write(str(soup_comments))
                     else:
                         print("⚠️ 小説情報ページの保存に失敗しました")
+                        info_file_name = None
                 else:
                     print("⚠️ 小説情報ページのURLが見つかりませんでした")
+                    info_file_name = None
+            else:
+                info_file_name = None
+            
+            # 🆕 縦書きページ処理機能
+            print("縦書きページと関連リンクを処理中...")
+            vertical_result = self.process_vertical_reading_links(soup, output_dir, title)
+            if vertical_result:
+                if 'vertical_page' in vertical_result:
+                    print(f"📖 縦書きページ保存完了: {os.path.basename(vertical_result['vertical_page']['file_path'])}")
+                    additional_links = vertical_result['vertical_page'].get('additional_links', [])
+                    if additional_links:
+                        print(f"🔗 縦書きページ内関連リンク: {len(additional_links)}個発見")
+                
+                if 'info_page' in vertical_result:
+                    print(f"📝 小説情報ページ（縦書き用）保存完了: {os.path.basename(vertical_result['info_page'])}")
+            else:
+                print("⚠️ 縦書きページまたは小説情報ページが見つかりませんでした")
+                vertical_result = None
         
         if not chapter_links:
             print("章リンクが見つかりませんでした。単一ページとして処理します。")
+            
+            # 単一ページの場合でも縦書きページ処理を実行
+            print("縦書きページと関連リンクを処理中...")
+            vertical_result = self.process_vertical_reading_links(soup, output_dir, title)
+            if vertical_result:
+                if 'vertical_page' in vertical_result:
+                    print(f"📖 縦書きページ保存完了: {os.path.basename(vertical_result['vertical_page']['file_path'])}")
+                    additional_links = vertical_result['vertical_page'].get('additional_links', [])
+                    if additional_links:
+                        print(f"🔗 縦書きページ内関連リンク: {len(additional_links)}個発見")
+                
+                if 'info_page' in vertical_result:
+                    print(f"📝 小説情報ページ（縦書き用）保存完了: {os.path.basename(vertical_result['info_page'])}")
+            else:
+                print("⚠️ 縦書きページまたは小説情報ページが見つかりませんでした")
+                vertical_result = None
+            
             # 単一ページの場合
             chapter_content = self.extract_chapter_content(soup, novel_url)
             if chapter_content:
@@ -2490,6 +2527,23 @@ class HamelnFinalScraper:
                         info_file_name,
                         comments_file_name
                     )
+                    
+                    # 縦書きページ対応のナビゲーションリンク修正
+                    vertical_file_name = None
+                    if vertical_result and 'vertical_page' in vertical_result:
+                        vertical_file_name = os.path.basename(vertical_result['vertical_page']['file_path'])
+                    
+                    info_file_name_for_vertical = None
+                    if vertical_result and 'info_page' in vertical_result:
+                        info_file_name_for_vertical = os.path.basename(vertical_result['info_page'])
+                    
+                    if vertical_file_name or info_file_name_for_vertical:
+                        chapter_soup = self.update_navigation_links_with_vertical_pages(
+                            chapter_soup,
+                            os.path.basename(index_file_path) if index_file_path else None,
+                            info_file_name_for_vertical or info_file_name,
+                            vertical_file_name
+                        )
                     
                     # 章を個別ファイルとして保存
                     safe_chapter_title = re.sub(r'[<>:"/\\|?*]', '_', chapter_title_text)
