@@ -9,7 +9,8 @@ from tkinter import ttk, messagebox, filedialog
 import threading
 import os
 import time
-from hameln_scraper_final import HamelnFinalScraper
+from hameln_scraper.core.scraper import HamelnScraper
+from hameln_scraper.core.config import ScraperConfig
 
 class HamelnGUI:
     def __init__(self, root):
@@ -229,11 +230,10 @@ class HamelnGUI:
             self.log("完全モード（CSS・画像・JavaScript含む完全保存）で実行します")
             
             # スクレイパーを初期化（GUIログ連携）
-            self.scraper = HamelnFinalScraper()
-            
-            # 🎛️ 新機能制御（Norton検出回避のため無効化、必要時にTrueに変更）
-            # self.scraper.enable_novel_info_saving = True   # 小説情報保存を有効化
-            self.scraper.enable_comments_saving = True     # 感想保存を有効化
+            config = ScraperConfig()
+            config.enable_novel_info_saving = False
+            config.enable_comments_saving = True
+            self.scraper = HamelnScraper(config)
             
             # スクレイパーのデバッグログをGUIに転送
             original_debug_log = self.scraper.debug_log

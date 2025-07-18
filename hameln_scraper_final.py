@@ -2,10 +2,25 @@
 """
 ハーメルン小説保存アプリケーション - 最終版
 完全なページ保存機能（CSS、JavaScript、画像等を含む）
+リファクタリング版 - モジュール化された構造
 """
 
-import time
 import os
+import sys
+from hameln_scraper.core.scraper import HamelnScraper
+from hameln_scraper.core.config import ScraperConfig
+
+class HamelnFinalScraper(HamelnScraper):
+    """後方互換性のためのラッパークラス"""
+    
+    def __init__(self):
+        config = ScraperConfig()
+        config.enable_novel_info_saving = False
+        config.enable_comments_saving = False
+        super().__init__(config)
+
+
+import time
 import re
 import base64
 import requests
@@ -28,7 +43,7 @@ import zlib
 import brotli
 import copy
 
-class HamelnFinalScraper:
+class HamelnFinalScraperLegacy:
     def __init__(self, base_url="https://syosetu.org"):
         self.base_url = base_url
         self.driver = None
