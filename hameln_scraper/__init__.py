@@ -5,6 +5,6 @@
 __version__ = "2.0.0"
 __author__ = "suiren"
 
-from .core.scraper import HamelnFinalScraper
+# from .core.scraper import HamelnFinalScraper
 
-__all__ = ['HamelnFinalScraper']
+__all__ = []

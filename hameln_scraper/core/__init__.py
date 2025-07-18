@@ -3,6 +3,6 @@
 """
 
 from .config import HamelnConfig
-from .scraper import HamelnFinalScraper
+# from .scraper import HamelnFinalScraper
 
-__all__ = ['HamelnConfig', 'HamelnFinalScraper']
+__all__ = ['HamelnConfig']
