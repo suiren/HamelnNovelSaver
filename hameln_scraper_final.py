@@ -2244,6 +2244,7 @@ class HamelnFinalScraper:
         # 小説情報・感想ファイル名の初期化（章処理で使用するため事前に定義）
         info_file_name = None
         comments_file_name = None
+        saved_chapters = []  # 章情報を保存するリストを初期化
         
         # 目次ページの保存とリソースファイルのダウンロード
         if len(chapter_links) > 1:
@@ -2317,7 +2318,6 @@ class HamelnFinalScraper:
             # 各章を個別ファイルとして保存
             chapters = []
             chapter_mapping = {}  # URL -> ローカルファイルパスのマッピング
-            saved_chapters = []
             
             # まず目次ページのローカルファイル名を決定
             if index_file_path:
