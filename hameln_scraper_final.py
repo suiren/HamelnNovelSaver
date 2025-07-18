@@ -2950,7 +2950,17 @@ class HamelnFinalScraper:
             # ダウンロード関連のリンクを検索
             for link in soup.find_all('a', href=True):
                 href = link.get('href')
-                if href and ('download' in href or 'txtdownload' in href or 'pdfdownload' in href):
+                # 大文字小文字を区別しないでチェック（より精密な条件）
+                href_lower = href.lower()
+                if href and (
+                    'txtdownload' in href_lower or 
+                    'pdfdownload' in href_lower or 
+                    'epubdownload' in href_lower or
+                    ('/conv/pdf/' in href_lower and href_lower.startswith('/conv/')) or
+                    ('/conv/txt/' in href_lower and href_lower.startswith('/conv/')) or 
+                    ('/conv/epub/' in href_lower and href_lower.startswith('/conv/')) or
+                    ('api/download' in href_lower and 'format=' in href_lower)
+                ):
                     # 相対URLを絶対URLに変換
                     if href.startswith('//'):
                         full_url = 'https:' + href
