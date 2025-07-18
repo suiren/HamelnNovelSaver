@@ -7,6 +7,7 @@
 
 import os
 import sys
+from datetime import datetime
 from hameln_scraper.core.scraper import HamelnScraper
 from hameln_scraper.core.config import ScraperConfig
 
@@ -18,6 +19,132 @@ class HamelnFinalScraper(HamelnScraper):
         config.enable_novel_info_saving = False
         config.enable_comments_saving = False
         super().__init__(config)
+        
+        # Legacy機能のための設定
+        self.base_url = "https://syosetu.org"
+        self.debug_mode = True
+        self.enable_novel_info_saving = True
+        self.enable_comments_saving = True
+        
+    def extract_pdf_links_from_vertical_page(self, soup):
+        """縦書きページからPDF・テキストダウンロードリンクを抽出"""
+        try:
+            # soupが文字列の場合は BeautifulSoup オブジェクトに変換
+            if isinstance(soup, str):
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(soup, 'html.parser')
+            
+            pdf_links = []
+            
+            # ダウンロード関連のリンクを検索
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                # 大文字小文字を区別しないでチェック（より精密な条件）
+                href_lower = href.lower()
+                if href and (
+                    'txtdownload' in href_lower or 
+                    'pdfdownload' in href_lower or 
+                    'epubdownload' in href_lower or
+                    '/conv/pdf/' in href_lower or
+                    '/conv/txt/' in href_lower or 
+                    '/conv/epub/' in href_lower or
+                    ('api/download' in href_lower and 'format=' in href_lower)
+                ):
+                    pdf_links.append(href)
+                    self.debug_log(f"ダウンロードリンク発見: {href}")
+            
+            return pdf_links
+        except Exception as e:
+            self.debug_log(f"PDFリンク抽出エラー: {e}", "ERROR")
+            return []
+            
+    def download_file(self, url, output_dir, filename=None):
+        """ファイルをダウンロード"""
+        try:
+            # 相対URLを絶対URLに変換
+            if url.startswith('//'):
+                url = 'https:' + url
+            elif url.startswith('/'):
+                url = self.base_url + url
+            
+            # ファイル名が指定されていない場合は、URLから推測
+            if not filename:
+                filename = url.split('/')[-1]
+                if not filename or '.' not in filename:
+                    filename = 'downloaded_file.pdf'
+                    
+            output_path = os.path.join(output_dir, filename)
+            
+            # ダウンロード実行
+            response = self.network_client.session.get(url, stream=True)
+            response.raise_for_status()
+            
+            with open(output_path, 'wb') as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    f.write(chunk)
+                    
+            return output_path
+            
+        except Exception as e:
+            self.debug_log(f"ファイルダウンロードエラー: {e}", "ERROR")
+            return None
+            
+    def download_and_localize_pdf_links(self, soup, output_dir, novel_title):
+        """PDFリンクをダウンロードしてローカルリンクに変換"""
+        try:
+            # soupが文字列の場合は BeautifulSoup オブジェクトに変換
+            if isinstance(soup, str):
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(soup, 'html.parser')
+            
+            # PDFリンクを抽出
+            pdf_links = self.extract_pdf_links_from_vertical_page(soup)
+            
+            if not pdf_links:
+                return soup
+                
+            # 各リンクをダウンロードしてローカル化
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                if href in pdf_links:
+                    link_text = link.get_text(strip=True)
+                    
+                    # ファイル名を決定
+                    if 'PDF' in link_text or 'pdf' in href:
+                        filename = f"{novel_title}.pdf"
+                    elif 'SJIS' in link_text or 'sjis' in href:
+                        filename = f"{novel_title}_SJIS版.txt"
+                    elif 'UTF' in link_text or 'utf8' in href:
+                        filename = f"{novel_title}_UTF8版.txt"
+                    else:
+                        filename = f"{novel_title}_ダウンロード.txt"
+                        
+                    # ファイルをダウンロード
+                    local_path = self.download_file(href, output_dir, filename)
+                    
+                    if local_path:
+                        # リンクをローカルファイルに更新
+                        relative_path = os.path.basename(local_path)
+                        link['href'] = relative_path
+                        self.debug_log(f"PDFリンクローカル化成功: {href} -> {relative_path}")
+                    else:
+                        # ダウンロードに失敗した場合、リンクを無効化
+                        link['href'] = "#"
+                        link['onclick'] = "alert('PDFダウンロードが制限されています。元のハーメルンサイトでダウンロードしてください。'); return false;"
+                        link['title'] = f"ダウンロード制限：{href}"
+                        self.debug_log(f"PDFダウンロード失敗、リンクを無効化: {href}")
+                        
+            return soup
+            
+        except Exception as e:
+            self.debug_log(f"PDFダウンロード・ローカル化エラー: {e}", "ERROR")
+            return soup
+            
+    def debug_log(self, message, level="INFO"):
+        """デバッグログ出力"""
+        timestamp = datetime.now().strftime("%H:%M:%S")
+        formatted_message = f"[{timestamp}] {level}: {message}"
+        print(formatted_message)
 
 
 import time
