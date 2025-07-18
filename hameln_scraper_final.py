@@ -7,6 +7,7 @@
 
 import os
 import sys
+from datetime import datetime
 from hameln_scraper.core.scraper import HamelnScraper
 from hameln_scraper.core.config import ScraperConfig
 
@@ -18,6 +19,132 @@ class HamelnFinalScraper(HamelnScraper):
         config.enable_novel_info_saving = False
         config.enable_comments_saving = False
         super().__init__(config)
+        
+        # Legacy機能のための設定
+        self.base_url = "https://syosetu.org"
+        self.debug_mode = True
+        self.enable_novel_info_saving = True
+        self.enable_comments_saving = True
+        
+    def extract_pdf_links_from_vertical_page(self, soup):
+        """縦書きページからPDF・テキストダウンロードリンクを抽出"""
+        try:
+            # soupが文字列の場合は BeautifulSoup オブジェクトに変換
+            if isinstance(soup, str):
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(soup, 'html.parser')
+            
+            pdf_links = []
+            
+            # ダウンロード関連のリンクを検索
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                # 大文字小文字を区別しないでチェック（より精密な条件）
+                href_lower = href.lower()
+                if href and (
+                    'txtdownload' in href_lower or 
+                    'pdfdownload' in href_lower or 
+                    'epubdownload' in href_lower or
+                    '/conv/pdf/' in href_lower or
+                    '/conv/txt/' in href_lower or 
+                    '/conv/epub/' in href_lower or
+                    ('api/download' in href_lower and 'format=' in href_lower)
+                ):
+                    pdf_links.append(href)
+                    self.debug_log(f"ダウンロードリンク発見: {href}")
+            
+            return pdf_links
+        except Exception as e:
+            self.debug_log(f"PDFリンク抽出エラー: {e}", "ERROR")
+            return []
+            
+    def download_file(self, url, output_dir, filename=None):
+        """ファイルをダウンロード"""
+        try:
+            # 相対URLを絶対URLに変換
+            if url.startswith('//'):
+                url = 'https:' + url
+            elif url.startswith('/'):
+                url = self.base_url + url
+            
+            # ファイル名が指定されていない場合は、URLから推測
+            if not filename:
+                filename = url.split('/')[-1]
+                if not filename or '.' not in filename:
+                    filename = 'downloaded_file.pdf'
+                    
+            output_path = os.path.join(output_dir, filename)
+            
+            # ダウンロード実行
+            response = self.network_client.session.get(url, stream=True)
+            response.raise_for_status()
+            
+            with open(output_path, 'wb') as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    f.write(chunk)
+                    
+            return output_path
+            
+        except Exception as e:
+            self.debug_log(f"ファイルダウンロードエラー: {e}", "ERROR")
+            return None
+            
+    def download_and_localize_pdf_links(self, soup, output_dir, novel_title):
+        """PDFリンクをダウンロードしてローカルリンクに変換"""
+        try:
+            # soupが文字列の場合は BeautifulSoup オブジェクトに変換
+            if isinstance(soup, str):
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(soup, 'html.parser')
+            
+            # PDFリンクを抽出
+            pdf_links = self.extract_pdf_links_from_vertical_page(soup)
+            
+            if not pdf_links:
+                return soup
+                
+            # 各リンクをダウンロードしてローカル化
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                if href in pdf_links:
+                    link_text = link.get_text(strip=True)
+                    
+                    # ファイル名を決定
+                    if 'PDF' in link_text or 'pdf' in href:
+                        filename = f"{novel_title}.pdf"
+                    elif 'SJIS' in link_text or 'sjis' in href:
+                        filename = f"{novel_title}_SJIS版.txt"
+                    elif 'UTF' in link_text or 'utf8' in href:
+                        filename = f"{novel_title}_UTF8版.txt"
+                    else:
+                        filename = f"{novel_title}_ダウンロード.txt"
+                        
+                    # ファイルをダウンロード
+                    local_path = self.download_file(href, output_dir, filename)
+                    
+                    if local_path:
+                        # リンクをローカルファイルに更新
+                        relative_path = os.path.basename(local_path)
+                        link['href'] = relative_path
+                        self.debug_log(f"PDFリンクローカル化成功: {href} -> {relative_path}")
+                    else:
+                        # ダウンロードに失敗した場合、リンクを無効化
+                        link['href'] = "#"
+                        link['onclick'] = "alert('PDFダウンロードが制限されています。元のハーメルンサイトでダウンロードしてください。'); return false;"
+                        link['title'] = f"ダウンロード制限：{href}"
+                        self.debug_log(f"PDFダウンロード失敗、リンクを無効化: {href}")
+                        
+            return soup
+            
+        except Exception as e:
+            self.debug_log(f"PDFダウンロード・ローカル化エラー: {e}", "ERROR")
+            return soup
+            
+    def debug_log(self, message, level="INFO"):
+        """デバッグログ出力"""
+        timestamp = datetime.now().strftime("%H:%M:%S")
+        formatted_message = f"[{timestamp}] {level}: {message}"
+        print(formatted_message)
 
 
 import time
@@ -1048,8 +1175,19 @@ class HamelnFinalScraperLegacy:
     def extract_comments_url(self, soup):
         """目次ページから感想ページのURLを抽出"""
         try:
-            # topicPathから感想リンクを検索
-            topic_path = soup.find('ol', class_='topicPath')
+            # topicPathから感想リンクを検索（複数のパターンに対応）
+            topic_path_selectors = [
+                'ol.topicPath',
+                'div.topicPath',
+                '.topicPath'
+            ]
+            
+            topic_path = None
+            for selector in topic_path_selectors:
+                topic_path = soup.select_one(selector)
+                if topic_path:
+                    break
+            
             if topic_path:
                 comments_link = topic_path.find('a', href=lambda x: x and 'mode=review' in x)
                 if comments_link:
@@ -1071,7 +1209,7 @@ class HamelnFinalScraperLegacy:
             self.debug_log(f"感想URL抽出エラー: {e}", "ERROR")
             return None
 
-    def save_novel_info_page(self, info_url, output_dir, novel_title, index_file_name=None, comments_file_name=None):
+    def save_novel_info_page(self, info_url, output_dir, novel_title, index_file_name=None, comments_file_name=None, vertical_file_name=None):
         """小説情報ページを取得・保存"""
         try:
             self.debug_log(f"小説情報ページを取得中: {info_url}")
@@ -1083,7 +1221,7 @@ class HamelnFinalScraperLegacy:
                 return None
             
             # 保存前に小説情報ページのリンク修正
-            info_soup = self.fix_novel_info_page_links(info_soup, index_file_name, comments_file_name)
+            info_soup = self.fix_novel_info_page_links(info_soup, index_file_name, comments_file_name, vertical_file_name)
             
             # 保存処理
             safe_title = re.sub(r'[<>:"/\\|?*]', '_', novel_title)
@@ -1108,7 +1246,7 @@ class HamelnFinalScraperLegacy:
             self.debug_log(f"小説情報ページ保存エラー: {e}", "ERROR")
             return None
     
-    def fix_novel_info_page_links(self, soup, index_file_name=None, comments_file_name=None):
+    def fix_novel_info_page_links(self, soup, index_file_name=None, comments_file_name=None, vertical_file_name=None):
         """小説情報ページのリンクを修正"""
         try:
             # 小説情報ページから感想ページへのリンクを修正
@@ -1140,6 +1278,11 @@ class HamelnFinalScraperLegacy:
                         chapter_title = f"第{chapter_num.group(1)}話"
                         link['href'] = f"{chapter_title}.html"
                         self.debug_log(f"小説情報ページ章リンク修正: {href} -> {chapter_title}.html")
+                
+                # 縦書きページへのリンクを修正
+                elif 'mode=ss_detail3' in href and vertical_file_name:
+                    link['href'] = vertical_file_name
+                    self.debug_log(f"小説情報ページ縦書きリンク修正: {href} -> {vertical_file_name}")
             
             return soup
             
@@ -1147,7 +1290,7 @@ class HamelnFinalScraperLegacy:
             self.debug_log(f"小説情報ページリンク修正エラー: {e}", "ERROR")
             return soup
 
-    def save_comments_page(self, comments_url, output_dir, novel_title, index_file_name=None):
+    def save_comments_page(self, comments_url, output_dir, novel_title, index_file_name=None, info_file_name=None):
         """🆕 感想ページを各ページ個別に保存（ハーメルン元構造保持）"""
         try:
             self.debug_log(f"感想ページを取得中: {comments_url}")
@@ -1203,7 +1346,7 @@ class HamelnFinalScraperLegacy:
             if saved_files:
                 # 感想ページ間のリンクを修正
                 self.debug_log("感想ページ間のリンクを修正中...")
-                self.fix_comments_page_links(saved_files, page_links, index_file_name)
+                self.fix_comments_page_links(saved_files, page_links, index_file_name, info_file_name)
                 self.debug_log(f"感想ページ保存完了: {len(saved_files)}ページ保存")
                 return saved_files[0]  # 最初のページのパスを返す（互換性のため）
             else:
@@ -1214,7 +1357,7 @@ class HamelnFinalScraperLegacy:
             self.debug_log(f"感想ページ保存エラー: {e}", "ERROR")
             return None
     
-    def fix_comments_page_links(self, saved_files, page_urls, index_file_name=None):
+    def fix_comments_page_links(self, saved_files, page_urls, index_file_name=None, info_file_name=None):
         """感想ページ間のリンクを修正"""
         try:
             # ページファイル名とURLのマッピングを作成
@@ -1235,8 +1378,14 @@ class HamelnFinalScraperLegacy:
                     if not href:
                         continue
                     
-                    # 感想ページのURL形式を検出
-                    if 'mode=review' in href:
+                    # 感想ページのURL形式を検出（p=パラメータも含む、HTMLエスケープも考慮）
+                    is_comments_page = (
+                        'mode=review' in href or 
+                        ('p=' in href and '/novel/' in href) or
+                        ('&amp;p=' in href and '/novel/' in href)
+                    )
+                    
+                    if is_comments_page:
                         # より精密なマッチングを実装
                         matched_file = self.find_matching_comments_page(href, page_mapping)
                         if matched_file:
@@ -1256,8 +1405,12 @@ class HamelnFinalScraperLegacy:
                     # 小説情報ページへのリンクを修正
                     elif 'mode=ss_detail' in href or '小説情報' in link.get_text():
                         # 親ディレクトリの小説情報ページへのリンクに修正
-                        link['href'] = '../小説情報.html'
-                        self.debug_log(f"小説情報リンク修正: {href} -> ../小説情報.html")
+                        if info_file_name:
+                            link['href'] = f'../{info_file_name}'
+                            self.debug_log(f"小説情報リンク修正: {href} -> ../{info_file_name}")
+                        else:
+                            link['href'] = '../小説情報.html'
+                            self.debug_log(f"小説情報リンク修正: {href} -> ../小説情報.html")
                 
                 # 修正されたコンテンツを保存
                 with open(file_path, 'w', encoding='utf-8') as f:
@@ -1269,6 +1422,14 @@ class HamelnFinalScraperLegacy:
     def find_matching_comments_page(self, href, page_mapping):
         """感想ページのURLから正確なローカルファイルを探す"""
         try:
+            # HTMLエスケープを解除
+            import html
+            href = html.unescape(href)
+            
+            # クエリパラメータの修正
+            if '?' not in href and ('&p=' in href or '&page=' in href):
+                href = href.replace('&', '?', 1)
+            
             # リンクからページ番号を抽出
             target_page_num = self.extract_page_number(href)
             
@@ -1300,9 +1461,11 @@ class HamelnFinalScraperLegacy:
             parsed = urlparse(url)
             params = parse_qs(parsed.query)
             
-            # page パラメータからページ番号を取得
+            # page または p パラメータからページ番号を取得
             if 'page' in params:
                 return int(params['page'][0])
+            elif 'p' in params:
+                return int(params['p'][0])
             else:
                 return 1  # デフォルトは1ページ目
                 
@@ -1395,10 +1558,11 @@ class HamelnFinalScraperLegacy:
             return None
 
     def detect_comments_pagination(self, soup, base_url):
-        """🆕 感想ページのページネーションを検出"""
+        """🆕 感想ページのページネーションを検出（改良版）"""
         try:
             page_links = []
             base_page_num = self.extract_page_number(base_url)
+            max_page_num = 1
             
             # ページネーションの検出パターン
             pagination_selectors = [
@@ -1407,42 +1571,114 @@ class HamelnFinalScraperLegacy:
                 'div.pager a', 
                 'div.page-nav a',
                 # ハーメルン特有のパターン
-                'a[href*="mode=review"][href*="page="]',
-                'a[href*="&page="]'
+                'a[href*="mode=review"]',
+                'a[href*="&page="]',
+                'a[href*="&p="]'
             ]
             
+            all_pagination_links = []
+            
+            # すべてのselectorからページネーションリンクを収集
             for selector in pagination_selectors:
                 pagination_links = soup.select(selector)
                 if pagination_links:
                     self.debug_log(f"ページネーション発見: {selector} ({len(pagination_links)}個のリンク)")
+                    all_pagination_links.extend(pagination_links)
+            
+            # 重複を除去
+            unique_links = []
+            seen_hrefs = set()
+            for link in all_pagination_links:
+                href = link.get('href')
+                if href and href not in seen_hrefs:
+                    seen_hrefs.add(href)
+                    unique_links.append(link)
+            
+            # リンクからページURLを抽出
+            for link in unique_links:
+                href = link.get('href')
+                link_text = link.get_text(strip=True)
+                
+                if href and ('page=' in href or 'p=' in href or 'mode=review' in href):
+                    # 相対URLを絶対URLに変換
+                    if href.startswith('?'):
+                        # ?page=2 または ?p=2 形式
+                        full_url = base_url.split('?')[0] + href
+                    elif href.startswith('./'):
+                        # ./?page=2 または ./?p=2 形式
+                        full_url = base_url.split('?')[0] + href[2:]  # ./ を削除して処理
+                    elif href.startswith('//'):
+                        # プロトコル相対URLを絶対URLに変換
+                        full_url = f"https:{href}"
+                    elif href.startswith('/'):
+                        # /path?page=2 または /path?p=2 形式
+                        # クエリパラメータの修正が必要な場合
+                        if '?' not in href and ('&p=' in href or '&page=' in href):
+                            # &を最初の?に変換
+                            href = href.replace('&', '?', 1)
+                        full_url = 'https://syosetu.org' + href
+                    elif href.startswith('http'):
+                        # https://... 形式
+                        full_url = href
+                    else:
+                        continue
                     
-                    for link in pagination_links:
-                        href = link.get('href')
-                        if href and 'page=' in href:
-                            # 相対URLを絶対URLに変換
-                            if href.startswith('?'):
-                                # ?page=2 形式
-                                full_url = base_url.split('?')[0] + href
-                            elif href.startswith('./'):
-                                # ./?page=2 形式
-                                full_url = base_url.split('?')[0] + href[2:]  # ./ を削除して処理
-                            elif href.startswith('//'):
-                                # プロトコル相対URLを絶対URLに変換
-                                full_url = f"https:{href}"
-                            elif href.startswith('/'):
-                                # /path?page=2 形式
-                                full_url = 'https://syosetu.org' + href
-                            elif href.startswith('http'):
-                                # https://... 形式
-                                full_url = href
+                    # ページ番号を抽出
+                    page_num = self.extract_page_number(full_url)
+                    max_page_num = max(max_page_num, page_num)
+                    
+                    # 重複チェック（ページ番号ベース）
+                    if not any(self.extract_page_number(existing_url) == page_num for existing_url in page_links):
+                        page_links.append(full_url)
+                        self.debug_log(f"ページリンク追加: {link_text} -> {full_url} (ページ{page_num})")
+                
+                # 数字のリンクテキストからページ番号を推定
+                elif link_text.isdigit():
+                    page_num = int(link_text)
+                    max_page_num = max(max_page_num, page_num)
+                    
+                    # ベースURLからページURLを構築
+                    if 'p=' in base_url:
+                        constructed_url = base_url.split('p=')[0] + f'p={page_num}'
+                    elif 'page=' in base_url:
+                        constructed_url = base_url.split('page=')[0] + f'page={page_num}'
+                    else:
+                        # デフォルトのパラメータ形式で構築
+                        if '?' in base_url:
+                            constructed_url = base_url + f'&p={page_num}'
+                        else:
+                            constructed_url = base_url + f'?p={page_num}'
+                    
+                    if not any(self.extract_page_number(existing_url) == page_num for existing_url in page_links):
+                        page_links.append(constructed_url)
+                        self.debug_log(f"数字リンクからページ構築: {link_text} -> {constructed_url} (ページ{page_num})")
+            
+            # 最大ページ番号を検出した場合、不足しているページを補完
+            if max_page_num > len(page_links):
+                self.debug_log(f"最大ページ番号 {max_page_num} を検出、不足ページを補完中...")
+                
+                # ベースURLのパラメータ形式を確認
+                if 'p=' in base_url:
+                    param_format = 'p='
+                elif 'page=' in base_url:
+                    param_format = 'page='
+                else:
+                    param_format = 'p='
+                
+                # 1からmax_page_numまでのすべてのページURLを生成
+                for page_num in range(1, max_page_num + 1):
+                    if not any(self.extract_page_number(existing_url) == page_num for existing_url in page_links):
+                        if param_format in base_url:
+                            constructed_url = base_url.split(param_format)[0] + f'{param_format}{page_num}'
+                        else:
+                            # デフォルトのパラメータ形式で構築
+                            if '?' in base_url:
+                                constructed_url = base_url + f'&{param_format}{page_num}'
                             else:
-                                continue
-                            
-                            # 重複チェック（ページ番号ベース）
-                            page_num = self.extract_page_number(full_url)
-                            if not any(self.extract_page_number(existing_url) == page_num for existing_url in page_links):
-                                page_links.append(full_url)
-                    break
+                                constructed_url = base_url + f'?{param_format}{page_num}'
+                        
+                        page_links.append(constructed_url)
+                        self.debug_log(f"補完ページ追加: ページ{page_num} -> {constructed_url}")
             
             # ベースURLがリストに含まれていない場合は追加
             if not any(self.extract_page_number(url) == base_page_num for url in page_links):
@@ -1451,7 +1687,7 @@ class HamelnFinalScraperLegacy:
             # ページ番号順にソート
             page_links.sort(key=lambda url: self.extract_page_number(url))
             
-            self.debug_log(f"検出されたページ: {len(page_links)}ページ")
+            self.debug_log(f"検出されたページ: {len(page_links)}ページ (最大ページ番号: {max_page_num})")
             for i, url in enumerate(page_links, 1):
                 self.debug_log(f"  ページ{i}: {url}")
             
@@ -2286,9 +2522,9 @@ class HamelnFinalScraperLegacy:
                 print("感想ページを保存中...")
                 comments_url = self.extract_comments_url(soup)
                 if comments_url:
-                    # index_filenameが定義されていない場合は単一ページなので None を渡す
+                    # index_file_pathが定義されていない場合は単一ページなので None を渡す
                     index_file_name = os.path.basename(index_file_path) if index_file_path else None
-                    comments_file_path = self.save_comments_page(comments_url, output_dir, title, index_file_name)
+                    comments_file_path = self.save_comments_page(comments_url, output_dir, title, index_file_name, info_file_name)
                     if comments_file_path:
                         comments_file_name = os.path.basename(comments_file_path)
                         print(f"💬 感想ページ保存完了: {comments_file_name}")
@@ -2305,19 +2541,148 @@ class HamelnFinalScraperLegacy:
                 print("小説情報ページを保存中...")
                 info_url = self.extract_novel_info_url(soup)
                 if info_url:
-                    # index_filenameが定義されていない場合は単一ページなので None を渡す
+                    # index_file_pathが定義されていない場合は単一ページなので None を渡す
                     index_file_name = os.path.basename(index_file_path) if index_file_path else None
                     info_file_path = self.save_novel_info_page(info_url, output_dir, title, index_file_name, comments_file_name)
                     if info_file_path:
                         info_file_name = os.path.basename(info_file_path)
                         print(f"📝 小説情報ページ保存完了: {info_file_name}")
+                        
+                        # 感想ページのリンクを再修正（小説情報ページへのリンクを追加）
+                        if comments_file_path and os.path.exists(comments_file_path):
+                            print("感想ページの小説情報リンクを再修正中...")
+                            comments_dir = os.path.dirname(comments_file_path)
+                            if os.path.exists(comments_dir):
+                                # 感想フォルダ内のすべてのHTMLファイルを処理
+                                for comments_file in os.listdir(comments_dir):
+                                    if comments_file.endswith('.html'):
+                                        comments_file_full_path = os.path.join(comments_dir, comments_file)
+                                        with open(comments_file_full_path, 'r', encoding='utf-8') as f:
+                                            content = f.read()
+                                        
+                                        soup_comments = BeautifulSoup(content, 'html.parser')
+                                        
+                                        # 小説情報ページへのリンクを修正
+                                        for link in soup_comments.find_all('a', href=True):
+                                            href = link.get('href')
+                                            if href and ('mode=ss_detail' in href or '小説情報' in link.get_text()):
+                                                link['href'] = f'../{info_file_name}'
+                                                self.debug_log(f"感想ページ小説情報リンク再修正: {href} -> ../{info_file_name}")
+                                        
+                                        with open(comments_file_full_path, 'w', encoding='utf-8') as f:
+                                            f.write(str(soup_comments))
                     else:
                         print("⚠️ 小説情報ページの保存に失敗しました")
+                        info_file_name = None
                 else:
                     print("⚠️ 小説情報ページのURLが見つかりませんでした")
+                    info_file_name = None
+            else:
+                info_file_name = None
+            
+            # 🆕 縦書きページ処理機能
+            print("縦書きページと関連リンクを処理中...")
+            # 縦書きページ内のナビゲーションリンク修正のため、適切なファイル名を渡す
+            index_file_for_vertical = os.path.basename(index_file_path) if index_file_path else None
+            comments_file_for_vertical = f"感想/感想 - ページ1.html" if comments_file_name else None
+            
+            vertical_result = self.process_vertical_reading_links(
+                soup, 
+                output_dir, 
+                title,
+                index_file=index_file_for_vertical,
+                info_file=info_file_name,
+                comments_file=comments_file_for_vertical
+            )
+            if vertical_result:
+                if 'vertical_page' in vertical_result:
+                    print(f"📖 縦書きページ保存完了: {os.path.basename(vertical_result['vertical_page']['file_path'])}")
+                    additional_links = vertical_result['vertical_page'].get('additional_links', [])
+                    if additional_links:
+                        print(f"🔗 縦書きページ内関連リンク: {len(additional_links)}個発見")
+                
+                if 'info_page' in vertical_result:
+                    print(f"📝 小説情報ページ（縦書き用）保存完了: {os.path.basename(vertical_result['info_page'])}")
+            else:
+                print("⚠️ 縦書きページまたは小説情報ページが見つかりませんでした")
+                vertical_result = None
+            
+            # 縦書きページ処理完了後、既存の小説情報ページと感想ページの縦書きリンクを修正
+            if vertical_result and 'vertical_page' in vertical_result:
+                vertical_file_name = os.path.basename(vertical_result['vertical_page']['file_path'])
+                print("既存ページの縦書きリンクを修正中...")
+                
+                # 小説情報ページの縦書きリンク修正
+                if info_file_name and info_file_path and os.path.exists(info_file_path):
+                    print(f"小説情報ページの縦書きリンクを修正中: {info_file_name}")
+                    with open(info_file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    
+                    soup_info = BeautifulSoup(content, 'html.parser')
+                    soup_info = self.fix_vertical_links_in_all_pages(
+                        soup_info,
+                        index_file_name,
+                        None,  # 小説情報ページ自身なのでinfo_file=None
+                        vertical_file_name
+                    )
+                    
+                    with open(info_file_path, 'w', encoding='utf-8') as f:
+                        f.write(str(soup_info))
+                    print(f"✓ 小説情報ページの縦書きリンク修正完了")
+                
+                # 感想ページの縦書きリンク修正（複数ページある場合）
+                if comments_file_name:
+                    comments_dir = os.path.join(output_dir, "感想")
+                    if os.path.exists(comments_dir):
+                        print("感想ページの縦書きリンクを修正中...")
+                        for filename in os.listdir(comments_dir):
+                            if filename.endswith('.html'):
+                                file_path = os.path.join(comments_dir, filename)
+                                with open(file_path, 'r', encoding='utf-8') as f:
+                                    content = f.read()
+                                
+                                soup_comment = BeautifulSoup(content, 'html.parser')
+                                soup_comment = self.fix_vertical_links_in_all_pages(
+                                    soup_comment,
+                                    f"../{index_file_name}" if index_file_name else "../目次.html",
+                                    f"../{info_file_name}" if info_file_name else None,
+                                    f"../{vertical_file_name}"
+                                )
+                                
+                                with open(file_path, 'w', encoding='utf-8') as f:
+                                    f.write(str(soup_comment))
+                        print(f"✓ 感想ページの縦書きリンク修正完了")
         
         if not chapter_links:
             print("章リンクが見つかりませんでした。単一ページとして処理します。")
+            
+            # 単一ページの場合でも縦書きページ処理を実行
+            print("縦書きページと関連リンクを処理中...")
+            # 単一ページの場合、index_file_pathは未定義なので目次ファイル名は推定
+            index_file_for_vertical = f"{safe_title} - 目次.html" if index_file_path else None
+            comments_file_for_vertical = f"感想/感想 - ページ1.html" if comments_file_name else None
+            
+            vertical_result = self.process_vertical_reading_links(
+                soup, 
+                output_dir, 
+                title,
+                index_file=index_file_for_vertical,
+                info_file=info_file_name,
+                comments_file=comments_file_for_vertical
+            )
+            if vertical_result:
+                if 'vertical_page' in vertical_result:
+                    print(f"📖 縦書きページ保存完了: {os.path.basename(vertical_result['vertical_page']['file_path'])}")
+                    additional_links = vertical_result['vertical_page'].get('additional_links', [])
+                    if additional_links:
+                        print(f"🔗 縦書きページ内関連リンク: {len(additional_links)}個発見")
+                
+                if 'info_page' in vertical_result:
+                    print(f"📝 小説情報ページ（縦書き用）保存完了: {os.path.basename(vertical_result['info_page'])}")
+            else:
+                print("⚠️ 縦書きページまたは小説情報ページが見つかりませんでした")
+                vertical_result = None
+            
             # 単一ページの場合
             chapter_content = self.extract_chapter_content(soup, novel_url)
             if chapter_content:
@@ -2373,10 +2738,27 @@ class HamelnFinalScraperLegacy:
                         chapter_soup, 
                         chapter_mapping, 
                         chapter_url, 
-                        index_filename,
+                        os.path.basename(index_file_path) if index_file_path else None,
                         info_file_name,
                         comments_file_name
                     )
+                    
+                    # 縦書きページ対応のナビゲーションリンク修正
+                    vertical_file_name = None
+                    if vertical_result and 'vertical_page' in vertical_result:
+                        vertical_file_name = os.path.basename(vertical_result['vertical_page']['file_path'])
+                    
+                    info_file_name_for_vertical = None
+                    if vertical_result and 'info_page' in vertical_result:
+                        info_file_name_for_vertical = os.path.basename(vertical_result['info_page'])
+                    
+                    if vertical_file_name or info_file_name_for_vertical:
+                        chapter_soup = self.update_navigation_links_with_vertical_pages(
+                            chapter_soup,
+                            os.path.basename(index_file_path) if index_file_path else None,
+                            info_file_name_for_vertical or info_file_name,
+                            vertical_file_name
+                        )
                     
                     # 章を個別ファイルとして保存
                     safe_chapter_title = re.sub(r'[<>:"/\\|?*]', '_', chapter_title_text)
@@ -2417,7 +2799,7 @@ class HamelnFinalScraperLegacy:
                         soup, 
                         chapter_mapping, 
                         chapter_info['url'], 
-                        index_filename,
+                        os.path.basename(index_file_path) if index_file_path else None,
                         info_file_name,
                         comments_file_name
                     )
@@ -2441,6 +2823,19 @@ class HamelnFinalScraperLegacy:
                     comments_file_name
                 )
                 
+                # 縦書きページのリンクも修正
+                vertical_file_name = None
+                if vertical_result and 'vertical_page' in vertical_result:
+                    vertical_file_name = os.path.basename(vertical_result['vertical_page']['file_path'])
+                
+                if vertical_file_name:
+                    soup = self.fix_vertical_links_in_all_pages(
+                        soup,
+                        None,  # 目次ページ自身なのでindex_file=None
+                        info_file_name,
+                        vertical_file_name
+                    )
+                
                 with open(index_file_path, 'w', encoding='utf-8') as f:
                     f.write(str(soup))
             
@@ -2454,11 +2849,8 @@ class HamelnFinalScraperLegacy:
         print(f"小説の保存が完了しました: {output_dir}")
         print(f"取得した章数: {len(chapters)}")
         
-        # 最初の章ファイルのパスを返す（従来の互換性のため）
-        if saved_chapters:
-            return saved_chapters[0]['file_path']
-        else:
-            return None
+        # 保存ディレクトリのパスを返す（GUI互換性のため）
+        return output_dir
         
     def get_cache_stats(self):
         """リソースキャッシュの統計情報を取得"""
@@ -2475,6 +2867,471 @@ class HamelnFinalScraperLegacy:
         
         stats = self.get_cache_stats()
         self.debug_log(f"リソースキャッシュ統計: {stats['cached_resources']}個のリソースをキャッシュしました")
+
+    def extract_vertical_reading_link(self, soup):
+        """縦書きリンクをHTML構造から抽出"""
+        try:
+            # topicPath内の縦書きリンクを探す
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                if href and 'mode=ss_detail3' in href:
+                    self.debug_log(f"縦書きリンク発見: {href}")
+                    return href
+            return None
+        except Exception as e:
+            self.debug_log(f"縦書きリンク抽出エラー: {e}", "ERROR")
+            return None
+    
+    def extract_novel_info_link(self, soup):
+        """小説情報リンクをHTML構造から抽出"""
+        try:
+            # topicPath内の小説情報リンクを探す
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                if href and 'mode=ss_detail' in href and 'mode=ss_detail3' not in href:
+                    self.debug_log(f"小説情報リンク発見: {href}")
+                    return href
+            return None
+        except Exception as e:
+            self.debug_log(f"小説情報リンク抽出エラー: {e}", "ERROR")
+            return None
+    
+    def extract_additional_links_from_vertical_page(self, soup):
+        """縦書きページから追加リンクを抽出"""
+        try:
+            additional_links = []
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                if href and any(mode in href for mode in ['mode=review', 'mode=rating_input', 'mode=correct_view']):
+                    additional_links.append(href)
+                    self.debug_log(f"追加リンク発見: {href}")
+            return additional_links
+        except Exception as e:
+            self.debug_log(f"追加リンク抽出エラー: {e}", "ERROR")
+            return []
+    
+    def save_vertical_reading_page(self, vertical_url, output_dir, novel_title, index_file=None, info_file=None, comments_file=None):
+        """縦書きページを保存（ナビゲーションリンク修正とPDFダウンロード機能付き）"""
+        try:
+            self.debug_log(f"縦書きページ保存開始: {vertical_url}")
+            
+            # URLが相対パスの場合は絶対パスに変換
+            if vertical_url.startswith('//'):
+                vertical_url = 'https:' + vertical_url
+            elif vertical_url.startswith('/'):
+                vertical_url = 'https://syosetu.org' + vertical_url
+            
+            # 縦書きページを取得
+            soup = self.get_page(vertical_url)
+            if not soup:
+                self.debug_log("縦書きページの取得に失敗", "ERROR")
+                return None
+            
+            # 1. 縦書きページ内のナビゲーションリンクを修正
+            if index_file or info_file or comments_file:
+                self.debug_log("縦書きページ内のナビゲーションリンクを修正中...")
+                soup = self.fix_navigation_links_in_vertical_page(
+                    soup, 
+                    index_file=index_file,
+                    info_file=info_file,
+                    comments_file=comments_file
+                )
+            
+            # 2. 縦書きページ内の追加リンクを抽出
+            additional_links = self.extract_additional_links_from_vertical_page(soup)
+            
+            # 3. PDFリンクをダウンロード・ローカル化
+            self.debug_log("PDFリンクのダウンロード・ローカル化を実行中...")
+            soup = self.download_and_localize_pdf_links(soup, output_dir, novel_title)
+            
+            # 4. 縦書きページを保存
+            safe_title = re.sub(r'[<>:"/\\|?*]', '_', novel_title)
+            filename = f"{safe_title} - 縦書き"
+            
+            file_path = self.save_complete_page(soup, vertical_url, filename, output_dir, vertical_url)
+            
+            if file_path:
+                self.debug_log(f"縦書きページ保存完了: {file_path}")
+                return {
+                    'file_path': file_path,
+                    'additional_links': additional_links
+                }
+            return None
+            
+        except Exception as e:
+            self.debug_log(f"縦書きページ保存エラー: {e}", "ERROR")
+            return None
+    
+    def save_novel_info_page_with_vertical_link(self, info_url, output_dir, novel_title):
+        """小説情報ページを保存（縦書きリンク対応）"""
+        try:
+            self.debug_log(f"小説情報ページ保存開始: {info_url}")
+            
+            # URLが相対パスの場合は絶対パスに変換
+            if info_url.startswith('//'):
+                info_url = 'https:' + info_url
+            elif info_url.startswith('/'):
+                info_url = 'https://syosetu.org' + info_url
+            
+            # 小説情報ページを取得
+            soup = self.get_page(info_url)
+            if not soup:
+                self.debug_log("小説情報ページの取得に失敗", "ERROR")
+                return None
+            
+            # 小説情報ページを保存
+            safe_title = re.sub(r'[<>:"/\\|?*]', '_', novel_title)
+            filename = f"{safe_title} - 小説情報"
+            
+            file_path = self.save_complete_page(soup, info_url, filename, output_dir, info_url)
+            
+            if file_path:
+                self.debug_log(f"小説情報ページ保存完了: {file_path}")
+                return file_path
+            return None
+            
+        except Exception as e:
+            self.debug_log(f"小説情報ページ保存エラー: {e}", "ERROR")
+            return None
+    
+    def process_vertical_reading_links(self, soup, output_dir, novel_title, index_file=None, info_file=None, comments_file=None):
+        """縦書きリンクの処理（統合機能：ナビゲーションリンク修正対応）"""
+        try:
+            result = {}
+            
+            # 縦書きリンクを抽出
+            vertical_link = self.extract_vertical_reading_link(soup)
+            if vertical_link:
+                self.debug_log(f"縦書きリンクを処理中: {vertical_link}")
+                vertical_result = self.save_vertical_reading_page(
+                    vertical_link, 
+                    output_dir, 
+                    novel_title,
+                    index_file=index_file,
+                    info_file=info_file,
+                    comments_file=comments_file
+                )
+                if vertical_result:
+                    result['vertical_page'] = vertical_result
+                    self.debug_log("縦書きページ保存完了（ナビゲーションリンク修正済み）")
+            
+            # 小説情報リンクを抽出
+            info_link = self.extract_novel_info_link(soup)
+            if info_link:
+                info_result = self.save_novel_info_page_with_vertical_link(info_link, output_dir, novel_title)
+                if info_result:
+                    result['info_page'] = info_result
+            
+            return result if result else None
+            
+        except Exception as e:
+            self.debug_log(f"縦書きリンク処理エラー: {e}", "ERROR")
+            return None
+    
+    def update_navigation_links_with_vertical_pages(self, soup, index_file, info_file, vertical_file):
+        """ナビゲーションリンクを更新（縦書きページ対応）"""
+        try:
+            # 目次リンクの更新
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                text = link.get_text(strip=True)
+                
+                if text == "目次" or ('/novel/' in href and href.endswith('/')):
+                    link['href'] = index_file
+                    self.debug_log(f"目次リンク更新: {href} -> {index_file}")
+                elif text == "縦書き" or 'mode=ss_detail3' in href:
+                    link['href'] = vertical_file
+                    self.debug_log(f"縦書きリンク更新: {href} -> {vertical_file}")
+                elif text == "小説情報" or ('mode=ss_detail' in href and 'mode=ss_detail3' not in href):
+                    link['href'] = info_file
+                    self.debug_log(f"小説情報リンク更新: {href} -> {info_file}")
+            
+            return soup
+            
+        except Exception as e:
+            self.debug_log(f"ナビゲーションリンク更新エラー: {e}", "ERROR")
+            return soup
+
+    def fix_vertical_links_in_all_pages(self, soup, index_file, info_file, vertical_file):
+        """全ページの縦書きリンク修正（目次・感想・小説情報ページ対応）"""
+        try:
+            # 全てのナビゲーションリンクを更新
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                text = link.get_text(strip=True)
+                
+                # 目次リンクの更新
+                if text == "目次" or ('/novel/' in href and href.endswith('/')):
+                    if index_file:
+                        link['href'] = index_file
+                        self.debug_log(f"目次リンク更新: {href} -> {index_file}")
+                
+                # 縦書きリンクの更新
+                elif text == "縦書き" or 'mode=ss_detail3' in href:
+                    if vertical_file:
+                        link['href'] = vertical_file
+                        self.debug_log(f"縦書きリンク更新: {href} -> {vertical_file}")
+                
+                # 小説情報リンクの更新
+                elif text == "小説情報" or ('mode=ss_detail' in href and 'mode=ss_detail3' not in href):
+                    if info_file:
+                        link['href'] = info_file
+                        self.debug_log(f"小説情報リンク更新: {href} -> {info_file}")
+            
+            return soup
+            
+        except Exception as e:
+            self.debug_log(f"全ページナビゲーションリンク更新エラー: {e}", "ERROR")
+            return soup
+
+    def extract_pdf_links_from_vertical_page(self, soup):
+        """縦書きページからPDF・テキストダウンロードリンクを抽出"""
+        try:
+            pdf_links = []
+            
+            # ダウンロード関連のリンクを検索
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                # 大文字小文字を区別しないでチェック（より精密な条件）
+                href_lower = href.lower()
+                if href and (
+                    'txtdownload' in href_lower or 
+                    'pdfdownload' in href_lower or 
+                    'epubdownload' in href_lower or
+                    ('/conv/pdf/' in href_lower and href_lower.startswith('/conv/')) or
+                    ('/conv/txt/' in href_lower and href_lower.startswith('/conv/')) or 
+                    ('/conv/epub/' in href_lower and href_lower.startswith('/conv/')) or
+                    ('api/download' in href_lower and 'format=' in href_lower)
+                ):
+                    # 相対URLを絶対URLに変換
+                    if href.startswith('//'):
+                        full_url = 'https:' + href
+                    elif href.startswith('/'):
+                        full_url = self.base_url + href
+                    elif not href.startswith('http'):
+                        full_url = urljoin(self.base_url, href)
+                    else:
+                        full_url = href
+                    
+                    pdf_links.append(href)  # 元のhrefを返す（テスト用）
+                    self.debug_log(f"ダウンロードリンク発見: {href}")
+            
+            return pdf_links
+            
+        except Exception as e:
+            self.debug_log(f"PDFリンク抽出エラー: {e}", "ERROR")
+            return []
+
+    def download_file(self, url, output_dir, filename=None):
+        """ファイルをダウンロードしてローカルに保存（デバッグ強化版）"""
+        try:
+            self.debug_log(f"ダウンロード開始: 元URL={url}")
+            
+            # 絶対URLに変換
+            if url.startswith('//'):
+                url = 'https:' + url
+            elif url.startswith('/'):
+                url = self.base_url + url
+            elif not url.startswith('http'):
+                url = urljoin(self.base_url, url)
+            
+            self.debug_log(f"正規化後URL: {url}")
+            
+            # ファイル名を決定
+            if not filename:
+                parsed = urlparse(url)
+                filename = os.path.basename(parsed.path)
+                if not filename or '.' not in filename:
+                    # URLパラメータからファイル名を推測
+                    if 'txtdownload' in url:
+                        if 'code=sjis' in url:
+                            filename = "小説_SJIS版.txt"
+                        elif 'code=utf8' in url:
+                            filename = "小説_UTF8版.txt"
+                        else:
+                            filename = "小説.txt"
+                    elif 'pdfdownload' in url:
+                        filename = "小説.pdf"
+                    else:
+                        filename = "download_file"
+            
+            self.debug_log(f"ファイル名決定: {filename}")
+            
+            # 出力パスを作成
+            output_path = os.path.join(output_dir, filename)
+            self.debug_log(f"保存先パス: {output_path}")
+            
+            # ダウンロード実行
+            self.debug_log("HTTPリクエスト開始...")
+            response = self.cloudscraper.get(url, timeout=30)
+            self.debug_log(f"HTTPレスポンス: status={response.status_code}, content-length={len(response.content)}")
+            response.raise_for_status()
+            
+            # ファイルを保存
+            self.debug_log("ファイル書き込み開始...")
+            with open(output_path, 'wb') as f:
+                f.write(response.content)
+            
+            # ファイルサイズを確認
+            file_size = os.path.getsize(output_path)
+            self.debug_log(f"✓ ファイル保存完了: {output_path} (サイズ: {file_size}バイト)")
+            return output_path
+            
+        except Exception as e:
+            self.debug_log(f"✗ ファイルダウンロードエラー: {e}", "ERROR")
+            import traceback
+            self.debug_log(f"詳細エラー: {traceback.format_exc()}", "ERROR")
+            return None
+
+    def download_and_localize_pdf_links(self, soup, output_dir, novel_title):
+        """PDFリンクをダウンロードしてローカルリンクに変換（デバッグ強化版）"""
+        try:
+            self.debug_log("PDFリンクのダウンロード・ローカル化を開始...")
+            
+            # PDFリンクを抽出
+            pdf_links = self.extract_pdf_links_from_vertical_page(soup)
+            self.debug_log(f"抽出されたPDFリンク数: {len(pdf_links)}")
+            
+            if not pdf_links:
+                self.debug_log("ダウンロード対象のリンクが見つかりません")
+                return soup
+            
+            # 抽出されたリンクを詳細表示
+            for i, link in enumerate(pdf_links):
+                self.debug_log(f"PDFリンク{i+1}: {link}")
+            
+            download_count = 0
+            # 各リンクをダウンロードしてローカル化
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                link_text = link.get_text(strip=True)
+                self.debug_log(f"検査中のリンク: href='{href}', text='{link_text}'")
+                
+                if href in pdf_links:
+                    self.debug_log(f"PDFダウンロード対象リンク発見: {href}")
+                    
+                    # ファイル名を決定
+                    if 'SJIS' in link_text or 'sjis' in href:
+                        filename = f"{novel_title}_SJIS版.txt"
+                    elif 'UTF' in link_text or 'utf8' in href:
+                        filename = f"{novel_title}_UTF8版.txt"
+                    elif 'PDF' in link_text or 'pdf' in href:
+                        filename = f"{novel_title}.pdf"
+                    else:
+                        filename = f"{novel_title}_ダウンロード.txt"
+                    
+                    self.debug_log(f"ダウンロード実行: {href} -> {filename}")
+                    
+                    # ファイルをダウンロード
+                    local_path = self.download_file(href, output_dir, filename)
+                    
+                    if local_path:
+                        # リンクをローカルファイルに更新
+                        relative_path = os.path.basename(local_path)
+                        link['href'] = relative_path
+                        download_count += 1
+                        self.debug_log(f"✓ リンクローカル化成功: {href} -> {relative_path}")
+                    else:
+                        self.debug_log(f"✗ ダウンロード失敗: {href}")
+            
+            self.debug_log(f"PDFダウンロード完了: {download_count}個のファイルを処理")
+            return soup
+            
+        except Exception as e:
+            self.debug_log(f"PDFリンクローカル化エラー: {e}", "ERROR")
+            import traceback
+            self.debug_log(f"詳細エラー: {traceback.format_exc()}", "ERROR")
+            return soup
+
+    def fix_navigation_links_in_vertical_page(self, soup, index_file=None, info_file=None, comments_file=None):
+        """縦書きページ内のナビゲーションリンクをローカルファイルに修正"""
+        try:
+            # 縦書きページ内の全てのリンクを調査
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                text = link.get_text(strip=True)
+                
+                if not href:
+                    continue
+                
+                # 目次リンクの修正
+                if text == "目次" or ('/novel/' in href and href.endswith('/')):
+                    if index_file:
+                        link['href'] = index_file
+                        self.debug_log(f"縦書きページ内目次リンク修正: {href} -> {index_file}")
+                
+                # 小説情報リンクの修正
+                elif text == "小説情報" or ('mode=ss_detail' in href and 'mode=ss_detail3' not in href):
+                    if info_file:
+                        link['href'] = info_file
+                        self.debug_log(f"縦書きページ内小説情報リンク修正: {href} -> {info_file}")
+                
+                # 感想リンクの修正
+                elif text == "感想" or 'mode=review' in href:
+                    if comments_file:
+                        link['href'] = comments_file
+                        self.debug_log(f"縦書きページ内感想リンク修正: {href} -> {comments_file}")
+                
+                # 評価、ここすき、誤字報告などのリンクは無効化
+                elif any(mode in href for mode in ['mode=rating_input', 'mode=ss_detail_like_line', 'mode=correct_view']):
+                    link['href'] = 'javascript:void(0);'
+                    link['style'] = 'color: #999; cursor: not-allowed; text-decoration: none;'
+                    self.debug_log(f"縦書きページ内リンク無効化: {href} ({text})")
+            
+            return soup
+            
+        except Exception as e:
+            self.debug_log(f"縦書きページナビゲーションリンク修正エラー: {e}", "ERROR")
+            return soup
+
+    def save_vertical_reading_page_with_full_fixes(self, vertical_url, output_dir, novel_title, index_file=None, info_file=None, comments_file=None):
+        """縦書きページを保存（完全修正版：ナビゲーションリンク修正とPDFダウンロード含む）"""
+        try:
+            self.debug_log(f"縦書きページ保存開始（完全修正版）: {vertical_url}")
+            
+            # URLが相対パスの場合は絶対パスに変換
+            if vertical_url.startswith('//'):
+                vertical_url = 'https:' + vertical_url
+            elif vertical_url.startswith('/'):
+                vertical_url = 'https://syosetu.org' + vertical_url
+            
+            # 縦書きページを取得
+            soup = self.get_page(vertical_url)
+            if not soup:
+                self.debug_log("縦書きページの取得に失敗", "ERROR")
+                return None
+            
+            # 1. 縦書きページ内のナビゲーションリンクを修正
+            soup = self.fix_navigation_links_in_vertical_page(
+                soup, 
+                index_file=index_file,
+                info_file=info_file,
+                comments_file=comments_file
+            )
+            
+            # 2. PDFリンクをダウンロード・ローカル化
+            soup = self.download_and_localize_pdf_links(soup, output_dir, novel_title)
+            
+            # 3. 縦書きページ内の追加リンクを抽出
+            additional_links = self.extract_additional_links_from_vertical_page(soup)
+            
+            # 4. 縦書きページを保存
+            safe_title = re.sub(r'[<>:"/\\|?*]', '_', novel_title)
+            filename = f"{safe_title} - 縦書き"
+            
+            file_path = self.save_complete_page(soup, vertical_url, filename, output_dir, vertical_url)
+            
+            if file_path:
+                self.debug_log(f"縦書きページ保存完了（完全修正版）: {file_path}")
+                return {
+                    'file_path': file_path,
+                    'additional_links': additional_links
+                }
+            return None
+            
+        except Exception as e:
+            self.debug_log(f"縦書きページ保存エラー（完全修正版）: {e}", "ERROR")
+            return None
 
 def main():
     """メイン関数"""
@@ -2514,5 +3371,9 @@ def main():
         if scraper:
             scraper.close()
 
+# 縦書きリンク処理をHamelnFinalScraperクラスに追加
+def add_vertical_reading_methods():
+    """縦書きリンク処理メソッドをHamelnFinalScraperクラスに追加"""
+    
 if __name__ == "__main__":
     main()

@@ -10542,3 +10542,320 @@
 2025-07-15 19:33:44,476 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
 2025-07-15 19:33:44,504 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
 2025-07-15 19:33:44,547 - DEBUG - https://ct.syosetu.org:443 "GET /?n=379807&v=4 HTTP/1.1" 200 None
+2025-07-16 16:46:49,791 - INFO - CloudScraper初期化開始
+2025-07-16 16:46:49,797 - INFO - CloudScraper設定完了
+2025-07-16 16:46:49,800 - DEBUG - getting release number from /last-known-good-versions-with-downloads.json
+2025-07-16 16:46:49,907 - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.157/linux64/chromedriver-linux64.zip
+2025-07-16 16:46:50,296 - DEBUG - unzipping /tmp/tmpxgi80tf5
+2025-07-16 16:46:50,414 - INFO - patching driver executable /home/suiren/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-07-16 16:46:50,432 - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-07-16 16:46:50,436 - DEBUG - patching took us 0.02 seconds
+2025-07-16 16:46:50,713 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用: Binary Location Must be a String
+2025-07-16 16:46:50,713 - INFO - ハーメルンスクレイパー初期化完了（リファクタリング版）
+2025-07-16 16:46:50,713 - INFO - 小説取得開始: https://syosetu.org/novel/123456/
+2025-07-16 16:46:50,715 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-16 16:46:50,839 - DEBUG - https://syosetu.org:443 "GET /novel/123456/ HTTP/1.1" 200 None
+2025-07-16 16:46:50,846 - INFO - 小説情報取得: ハーメルン - SS･小説投稿サイト- by 不明な作者
+2025-07-16 16:46:50,846 - INFO - リソースダウンロード開始
+2025-07-16 16:46:50,847 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-16 16:46:50,934 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202103311 HTTP/1.1" 200 5834
+2025-07-16 16:46:50,935 - DEBUG - リソース取得成功: https://img.syosetu.org/css/style_v2.css?202103311
+2025-07-16 16:46:50,979 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png);width:220px;height:70px;display:block%7Dbody.night%20 HTTP/1.1" 404 None
+2025-07-16 16:46:50,980 - WARNING - リソース取得失敗: 404 - https://img.syosetu.org/image/banner.png);width:220px;height:70px;display:block}body.night #header h1.siteTitle a{background:#000 url(https://img.syosetu.org/image/banner_inverted.png)}#header p.catch{margin:0 0 10px}#header p.catch strong{font-weight:400}#header ul.guide{position:absolute;top:25px;right:10px;margin:0;padding:0;list-style-type:none}#header ul.guide li{display:inline;padding:0 4px 0 8px;background:url(../image/menu_line_gray.png) no-repeat left}#header ul.guide li.first{background:0 0}#header div.opening{margin-bottom:2px}#header div.opening h2{margin:0}#header ul.nl{width:948px;margin:0;padding:0;background:#847b65 url(../image/hor_menu8_off.png) repeat-x top;border:1px solid;border-color:#7d735f #cbc0a7 #cbc0a7 #7d735f;list-style-type:none;text-align:center}#header ul.nl li{width:158px;float:left;line-height:100%}#header ul.nl li a{display:block;position:relative;padding:10px 2px;border:1px solid;border-color:#cbc0a7 #7d735f #7d735f #cbc0a7;text-decoration:none;font-weight:700;color:#fff}#header ul.nl li a:hover,#header ul.nl li.active a{background:#938b76 url(../image/hor_menu8_on.png) repeat-x top;color:#fdf8e9}#header ul.spotlight{margin:2px 0 0;padding:6px;background-color:#4d4d4d;list-style-type:none;text-align:center}#header ul.spotlight li{display:inline;padding:0 25px 0 11px;background:url(../image/menu_triangle2.png) no-repeat 0 .2em;line-height:100%}#header ul.spotlight li a{color:#f0f0f0}#header ol.topicPath{margin:0;padding:7px 2px;border-bottom:1px silver solid;text-align:center;list-style-type:none}#header ol.topicPath li{display:inline}#header ol.topicPath li a{font-size:110%;padding-right:12px;padding-left:5px;background:url(../image/menu_line_gray.png) no-repeat right}#header ol.topicPath li a.last{background-image:none}hr.none{display:none}#content{float:left;width:680px;margin-bottom:10px}#content2{width:800px;margin:0 auto}#maind{float:right;width:950px;text-align:center;margin-bottom:10px;font-size:120%;line-height:2}#main{float:right;width:770px;margin-bottom:10px}#content #main{float:right;width:500px;margin-bottom:0}#content2 #main{width:800px;margin-bottom:0}#main div.pageTitle{padding:7px 10px;background:#4d4d4d url(../image/heading_back6.png) repeat-x top;margin:0 15px 15px}#content #main div.pageTitle{margin:0 15px 15px}#main div.pageTitle h1{margin:0;color:#f0f0f0;font-size:150%;line-height:100%}#main div.section{margin:0 15px 2em 1.4em}#content #main div.section{margin:0 15px 1.4em}#main div.normal div.heading{margin:0 0 1em;padding:6px 8px 5px;background:#f9f9f9 url(../image/heading_back1.png) repeat-x;border:1px silver solid}#main div.normal div.heading h2{margin:0;font-size:120%;line-height:100%}#main div.normal p{margin:0 5px 1em;line-height:160%}#main div.emphasis{padding:1.3em 15px .5em;background:#f0e7ce url(../image/emphasis_back4.png) repeat-x top;border:1px silver solid}#main div.emphasis h2{margin:0 0 .8em;font-size:130%;color:#94845a}#main div.emphasis p{margin:0 0 1em;line-height:150%}#main div.topics ul.tabs{width:468px;margin:0;padding:0;background:#f9f9f9 url(../image/tab_gen.png) repeat-x top;border:1px silver;border-style:solid solid none;list-style-type:none}#main div.topics ul.tabs li{position:relative;z-index:1;width:94px;margin-bottom:-1px;text-align:center;line-height:100%;float:left}#main div.topics ul.tabs li.first,#main div.topics ul.tabs li.last{width:93px}#main div.topics ul.tabs li a{display:block;position:relative;padding:5px 2px;border-left:1px #fff solid;border-right:1px silver solid;outline:0;text-decoration:none}#main div.topics ul.tabs li a:hover{text-decoration:underline}#main div.topics ul.tabs li.last a{border-right:none}#main div.topics ul.tabs li.active{z-index:3;background:#fff url(../image/tab_act.png) repeat-x top;font-weight:700}#main div.topics ul.tabs li.active a{color:#000}#main div.topics ul.tabs li.active a:hover{text-decoration:none}#main div.topics div.topicArea{position:relative;z-index:2;height:11em;overflow:auto;padding:10px 15px 0;background-color:#fff;border:1px silver solid}#main div.topics div.topicArea div.topic{padding-top:.7em;border-bottom:1px silver solid}#main div.topics div.topicArea p{margin:0 0 .7em;line-height:130%}#main div.topics div.topicArea ul{margin:0 0 .7em;padding:0;list-style-type:none}#main div.topics div.topicArea ul li{padding:0 0 1px 12px;background:url(../image/square.png) no-repeat 3px .4em;line-height:120%}#main div.topics div.topicArea div.catch{float:right;width:150px;margin-bottom:.7em;padding-top:5px;background-color:#f9f9f9;border:1px silver solid;text-align:center}#main div.topics div.topicArea div.catch p{margin:0 10px 5px}#main div.topics div.topicArea div.catch img{border:1px silver solid}#main div.topics div.topicArea div.text{margin-right:165px}#main div.update{padding-bottom:15px;border:1px silver solid}#main div.update div.heading{margin:0 0 .5em;border-style:none none solid}#main div.update dl{width:450px;margin:0 auto}#main div.update dt{width:6.7em;float:left;padding:7px 0 6px 3px;line-height:120%}#main div.update dd{margin:0;padding:7px 3px 6px 6.6em;border-bottom:1px silver dotted;line-height:120%}#nav{float:right;width:180px;margin-bottom:10px}#nav div.section{margin-bottom:10px;padding:2px;border:1px silver solid}#nav div.section h2{margin:0 0 .7em;padding:3px 8px;font-size:120%;line-height:100%}#nav div.section p{margin:0 5px .7em;line-height:130%}#nav div.normal{background-color:#f9f9f9}#nav div.normal h2{background-color:#e5e5e5;color:#666}#nav div.subMenu{background:#f9f9f9 url(../image/box_back_gray4.png)}#nav div.subMenu h2{margin:0 0 10px;background-color:#b3a98c;color:#fff}#nav div.subMenu ul.nl{margin:0 0 2px;padding:0;list-style-type:none}#nav div.subMenu ul.nl li{padding:0 2px 8px 14px;background:url(../image/menu_triangle6.png) no-repeat 2px .15em}#nav div.subMenu ul.nl li a{text-decoration:none;display:block}#nav div.subMenu ul.nl li a:hover{text-decoration:underline}#nav hr.none{display:none}#content hr.clear{clear:right;width:100%;margin:0;visibility:hidden}#aside{float:left;width:270px;margin-bottom:10px}#aside div.section{margin-bottom:10px;padding:2px;border:1px silver solid}#aside div.section h2{margin:0 0 .7em;padding:3px 8px;font-size:120%;line-height:100%}#aside div.section p{margin:0 10px .7em;line-height:130%}#aside div.normal h2{background-color:#e5e5e5;color:#666}#aside div.emphasis h2{background-color:#b3a98c;color:#fff}#aside div.emphasis ul{margin:0 10px .3em;padding:0;list-style-type:none}#aside div.emphasis ul li{padding:0 0 8px 15px;background:url(../image/menu_triangle6_box.png) no-repeat 0 .3em;line-height:130%}#aside div.strong{background-color:#fffef4}#aside div.strong h2{background-color:#fb894b;color:#fff}#aside div.strong dl{width:248px;margin:0 auto .7em}#aside div.strong dl dt{width:105px;float:left}#aside div.strong dl dt img{border:1px silver solid}#aside div.strong dl dd{margin:0 0 0 105px;line-height:130%}#aside div.pickup{background-color:#fbf8f1}#aside div.pickup h2{margin:0;background-color:#bd6a4b;color:#fff}#aside div.pickup ul{margin:0;padding:0;list-style-type:none}#aside div.pickup ul li{padding:10px 8px;border-bottom:1px #b3a98c solid}#aside div.pickup ul li.last{border-bottom:none}#aside div.pickup ul dl{width:100%;margin:0}#aside div.pickup ul dt{width:105px;float:left}#aside div.pickup ul dt img{border:1px silver solid}#aside div.pickup ul dd{margin:0 0 0 105px;line-height:130%}#aside div.contact{padding-bottom:.3em}#aside div.contact p{margin-bottom:.4em}#aside div.contact p.tel{margin-bottom:.1em;font-size:150%;font-weight:700;color:#bd6a4b}#aside div.contact p.form{width:14em;margin-top:.7em;padding:3px;background-color:#fff;border:1px solid;border-color:#e0e0e0 #ccc #ccc #e0e0e0;text-align:center;line-height:100%}#aside div.contact p.form a{display:block;position:relative;padding:12px 2px;background:#978e75 url(../image/form_back3_off.png) repeat-x top;font-size:110%;font-weight:700;color:#fff;text-decoration:none}#aside div.contact p.form a:hover{background:#a59d85 url(../image/form_back3_on.png) repeat-x top}#aside hr.none{display:none}#footer{clear:both;width:100%;padding:15px 0 20px;border-top:1px silver solid}#footer ul.nl{margin:0 0 10px;padding:0;list-style-type:none;text-align:center}#footer ul.nl li{padding:0 4px 0 8px;background:url(../image/menu_line_gray.png
+2025-07-16 16:46:51,002 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-16 16:46:51,003 - DEBUG - リソース取得成功: https://img.syosetu.org/image/required1.png
+2025-07-16 16:46:51,046 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png)%20no-repeat%203px%20.4em%7Dbody.night%20 HTTP/1.1" 404 None
+2025-07-16 16:46:51,047 - WARNING - リソース取得失敗: 404 - https://img.syosetu.org/image/square.png) no-repeat 3px .4em}body.night #main div.topics div.topicArea div.catch{background-color:#060606;border:1px #cecece solid}body.night #main div.topics div.topicArea div.catch img{border:1px #cecece solid}body.night #main div.update{padding-bottom:15px;border:1px #cecece solid}body.night #main div.update dd{border-bottom:1px #cecece dotted}body.night #nav div.section{border:1px #cecece solid}body.night #nav div.normal{background-color:#060606}body.night #nav div.subMenu{background:#060606}body.night #nav div.subMenu ul.nl li{background:url(/image/menu_triangle6.png) no-repeat 2px .15em}body.night #aside div.section{border:1px #cecece solid}body.night #aside div.normal h2{background-color:#1a1a1a;color:#999}body.night #aside div.emphasis ul li{background:url(/image/menu_triangle6_box.png) no-repeat 0 .3em}body.night #aside div.strong{background-color:#000}body.night #aside div.strong h2{background-color:#ffd799;color:#000}body.night #aside div.strong dl dt img{border:1px #cecece solid}body.night #aside div.pickup{background-color:#292724}body.night #aside div.pickup ul li{border-bottom:1px #fff7da solid}body.night #aside div.pickup ul dt img{border:1px #cecece solid}body.night #aside div.contact p.tel{color:#ffd2b3}body.night #aside div.contact p.form{background-color:#000;border-color:#1f1f1f #444 #444 #1f1f1f}body.night #aside div.contact p.form a{background:#e5dcc3;color:#000}body.night #aside div.contact p.form a:hover{background:#f3ebd3}body.night #footer{border-top:1px #cecece solid}body.night div.section3{background-color:#000;border:1px #cecece solid}body.night div.section3 h3{background-color:#6f6f6f;border-bottom:1px #cecece solid}body.night div.paging ul.nl li a{background-color:#000;border:1px #cecece solid}body.night div.paging ul.nl li a:hover{background-color:#1f1f1f;border:1px #cecece solid}body.night div.paging ul.nl li strong{background-color:#1f1f1f;border:1px #cecece solid;color:#f33}body.night div.paging ul.nl li span{background-color:#000;border:1px #cecece solid;color:#b4b4b4}body.night form.contact div.fields{background-color:#060606;border:1px #cecece solid}body.night form.contact table{border-color:#cecece #666 #666 #cecece}body.night form.contact caption{background-color:#666;border-color:#cecece #666 #666 #cecece;color:#fff}body.night form.contact th{background-color:#777;border-bottom:1px #cecece dotted}body.night form.contact td{background-color:#000;border-bottom:1px #cecece dotted}body.night form.contact td span.supplement{color:#b4b4b4}body.night form.contact td.required{background:#d1cbba url(/image/required1.png) no-repeat center center}body.night form.contact td.arbitrary{background-color:#fbf8f1}body.night .highlight{background:#444}body.night .file{border:1px solid #777;background-color:#444;border:1px solid #777}body.night .blo_bunpu{border-left:dotted 1px #aaa}body.night .blo_bunpu td{color:#fff}body.night .blo_bunpu span.l0{background:0 0;border-color:transparent}body.night .blo_bunpu span.l1{border:1px solid #aaa}body.night a.button:hover{background-color:#1f1f1f}body.night .footnote_tip{border:1px solid #929292;background:#000}body.night .footnote{border-top:#929292 solid 1px}body.night .diff_view{background-color:#333}body.night .selected_line{background-color:#443521;color:#dfdfdf}body.night ins{background-color:#1e881e}body.night del{background-color:#8d3a3a}body.night hr{border-top:1px #999 solid}body.night .alert_color{color:#ff8282!important}body.night .l-search__text{color:#333!important}body.night .cse .gsc-control-cse,body.night .gsc-control-cse{background:#222;border:1px solid #222}body.night .gsc-webResult.gsc-result{border:1px solid #222}body.night .gsc-control-cse .gs-promotion em,body.night .gsc-control-cse .gs-snippet,body.night .gsc-preview-reviews{color:#fff}body.night .gsc-results .gsc-cursor-box .gsc-cursor-page{color:#99d6ff}body.night .gsc-results .gsc-cursor-box .gsc-cursor-current-page{color:#c00}body.night .textareaClone,body.night [type=email],body.night [type=password],body.night input[type=number],body.night input[type=text],body.night textarea{border:1px solid #c6c6c6;background:#222;color:#fff}body.night option,body.night select{background:#222;color:#fff}body.night .d2h-change,body.night .d2h-del,body.night .d2h-ins{color:#444!important}body.night .d2h-change del,body.night .d2h-change ins{color:#fff!important}div.section3 p.review_res{padding:1em 10px}.review_res{background-color:#ffffdf;margin:0;padding:1em 10px}body.night .review_res{background-color:#636353!important;color:#fff!important;margin:0;padding:1em 10px}body.night .d2h-diff-tbody{color:#fff!important}body.night ul.tagit input[type=text]{color:#fff}body.night ul.tagit li.tagit-new{border:none}table.table1{border-top:1px solid #999;border-left:1px solid #999;border-collapse:collapse;table-layout:fixed;width:100%}table.table1 tr{border-right:1px solid #999;border-bottom:1px solid #999;padding:4px}table.no_border,table.table1 td.no_border,table.table1 tr.no_border{border:none;padding:4px}table.table1 td,table.table1 th{padding:4px;border:1px solid #999}table.table1 td{word-wrap:break-word}table.table1 th{text-align:center}table.table1 .label{background-color:#ddd}body.night table.table1{border-top:1px solid #cecece;border-left:1px solid #cecece}body.night table.table1 tr{border-right:1px solid #cecece;border-bottom:1px solid #cecece}body.night table.table1 td,body.night table.table1 th{border:1px solid #cecece}body.night table.table1 .label{background-color:#666;color:#fff}body.night table.no_border,body.night table.table1 td.no_border,body.night table.table1 tr.no_border{border:none;padding:4px}body.night table.table1 th{background-color:#666;color:#fff}body.night .mytable1 td{background-color:#222;color:#fff}body.night .mytable2 td{background-color:#222;color:#fff}body.night .mytable2 th{background-color:#824630;color:#fff}body.night .blo_hyouka{color:#fff}body.night .all_arasuji{background-color:#222}body.night .all_base{color:#fff}body.night .blo_rank{color:#fff;background-color:#222}body.night .blo_title_sak{opacity:.9}body.night .pop_base{background-color:#636053}body.night .spanTC2.blo_bunpu{color:#fff!important;background-color:#222!important}body.night #enquete_box span.bgcolor{background:#6a777d}body.night #enquete_box.votable .enquete_view:not(.voted
+2025-07-16 16:46:51,071 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-16 16:46:51,073 - DEBUG - リソース取得成功: https://img.syosetu.org/js/jquery.min.js
+2025-07-16 16:46:51,096 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-16 16:46:51,096 - DEBUG - リソース取得成功: https://img.syosetu.org/js/jquery.cookie.min.js?20220619
+2025-07-16 16:46:51,123 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-16 16:46:51,123 - DEBUG - リソース取得成功: https://img.syosetu.org/js/night_mode.js?201908031
+2025-07-16 16:46:51,124 - INFO - リソースダウンロード完了
+2025-07-16 16:46:51,126 - INFO - CloudScraper初期化開始
+2025-07-16 16:46:51,128 - INFO - CloudScraper設定完了
+2025-07-16 16:46:51,130 - DEBUG - getting release number from /last-known-good-versions-with-downloads.json
+2025-07-16 16:46:51,234 - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.157/linux64/chromedriver-linux64.zip
+2025-07-16 16:46:51,559 - DEBUG - unzipping /tmp/tmp5d1hpqft
+2025-07-16 16:46:51,680 - INFO - patching driver executable /home/suiren/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-07-16 16:46:51,696 - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-07-16 16:46:51,700 - DEBUG - patching took us 0.02 seconds
+2025-07-16 16:46:52,187 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用: Binary Location Must be a String
+2025-07-16 17:00:00,871 - INFO - CloudScraper初期化開始
+2025-07-16 17:00:00,876 - INFO - CloudScraper設定完了
+2025-07-16 17:00:00,877 - DEBUG - getting release number from /last-known-good-versions-with-downloads.json
+2025-07-16 17:00:00,980 - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.157/linux64/chromedriver-linux64.zip
+2025-07-16 17:00:01,272 - DEBUG - unzipping /tmp/tmp4gqbm3py
+2025-07-16 17:00:01,381 - INFO - patching driver executable /home/suiren/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-07-16 17:00:01,400 - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-07-16 17:00:01,404 - DEBUG - patching took us 0.02 seconds
+2025-07-16 17:00:01,664 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用: Binary Location Must be a String
+2025-07-16 17:00:01,665 - INFO - ハーメルンスクレイパー初期化完了（リファクタリング版）
+2025-07-16 17:00:01,665 - INFO - 小説取得開始: https://syosetu.org/novel/378070/1.html
+2025-07-16 17:00:01,666 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-16 17:00:01,815 - DEBUG - https://syosetu.org:443 "GET /novel/378070/1.html HTTP/1.1" 200 None
+2025-07-16 17:00:01,840 - INFO - 小説情報取得: ダウナー女神のアクア様 - 序章　彼と彼女の出会い - ハーメルン by 全智一皆
+2025-07-16 17:00:01,840 - INFO - リソースダウンロード開始
+2025-07-16 17:00:01,846 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-16 17:00:01,951 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-16 17:00:01,951 - DEBUG - リソース取得成功: https://img.syosetu.org/css/style.css?20240131
+2025-07-16 17:00:02,035 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png);%20%20%20%20width:%20220px;%20%20%20%20height:%2070px;%20%20%20%20display:%20block%7Dbody.night%20 HTTP/1.1" 404 None
+2025-07-16 17:00:02,036 - WARNING - リソース取得失敗: 404 - https://img.syosetu.org/image/banner.png);    width: 220px;    height: 70px;    display: block}body.night #header h1.siteTitle a {    background: #000 url(https://img.syosetu.org/image/banner_inverted.png)}#header p.catch {    margin: 0 0 10px}#header p.catch strong {    font-weight: 400}#header ul.guide {    position: absolute;    top: 25px;    right: 10px;    margin: 0;    padding: 0;    list-style-type: none}#header ul.guide li {    display: inline;    padding: 0 4px 0 8px;    background: url(../image/menu_line_gray.gif) left no-repeat}#header ul.guide li.first {    background: 0}#header div.opening {    margin-bottom: 2px}#header div.opening h2 {    margin: 0}#header ul.nl {    width: 948px;    margin: 0;    padding: 0;    background: url(../image/hor_menu8_off.gif) top repeat-x #847b65;    border: 1px solid;    border-color: #7d735f #cbc0a7 #cbc0a7 #7d735f;    list-style-type: none;    text-align: center}#header ul.nl li {    width: 158px;    float: left;    line-height: 100%}#header ul.nl li a {    display: block;    position: relative;    padding: 10px 2px;    border: 1px solid;    border-color: #cbc0a7 #7d735f #7d735f #cbc0a7;    text-decoration: none;    font-weight: 700;    color: #fff}#footer #header ul.nl li a {    display: block;    position: relative;    padding: 10px 2px;    border: 1px solid;    border-color: #cbc0a7 #7d735f #7d735f #cbc0a7;    text-decoration: none;    font-weight: 700;    color: #fff}#header ul.nl li a:hover,#header ul.nl li.active a {    background: url(../image/hor_menu8_on.gif) top repeat-x #938b76;    color: #fdf8e9}#header ul.spotlight {    margin: 2px 0 0;    padding: 6px;    background-color: #4d4d4d;    list-style-type: none;    text-align: center}#header ul.spotlight li {    display: inline;    padding: 0 25px 0 11px;    background: url(../image/menu_triangle2.gif) 0 .2em no-repeat;    line-height: 100%}#header ul.spotlight li a {    color: #f0f0f0}#header hr.none {    display: none}#content {    float: left;    width: 680px;    margin-bottom: 10px}#content2 {    width: 50pc;    margin: 0 auto}#maind {    width: 950px;    text-align: center;    font-size: 120%;    line-height: 2}#main,#maind {    float: right;    margin-bottom: 10px}#main {    width: 770px}#content #main {    float: right;    width: 500px;    margin-bottom: 0}#content2 #main {    width: 50pc;    margin-bottom: 0}#main div.pageTitle {    padding: 7px 10px;    background: url(../image/heading_back6.gif) top repeat-x #4d4d4d;    margin: 0 15px 15px}#content #main div.pageTitle {    margin: 0 15px 15px}#main div.pageTitle h1 {    margin: 0;    color: #f0f0f0;    font-size: 150%;    line-height: 100%}#main div.section {    margin: 0 15px 2em 1.4em}#content #main div.section {    margin: 0 15px 1.4em}#main div.normal div.heading {    margin: 0 0 1em;    padding: 6px 8px 5px;    background: url(../image/heading_back1.gif) repeat-x #f9f9f9;    border: 1px solid silver}#main div.normal div.heading h2 {    margin: 0;    font-size: 120%;    line-height: 100%}#main div.normal p {    margin: 0 5px 1em;    line-height: 160%}#main div.emphasis {    padding: 1.3em 15px .5em;    background: url(../image/emphasis_back4.gif) top repeat-x #f0e7ce;    border: 1px solid silver}#main div.emphasis h2 {    margin: 0 0 .8em;    font-size: 130%;    color: #94845a}#main div.emphasis p {    margin: 0 0 1em;    line-height: 150%}#main div.topics ul.tabs {    width: 468px;    margin: 0;    padding: 0;    background: url(../image/tab_gen.gif) top repeat-x #f9f9f9;    border: 1px silver;    border-style: solid solid none;    list-style-type: none}#main div.topics ul.tabs li {    position: relative;    z-index: 1;    width: 94px;    margin-bottom: -1px;    text-align: center;    line-height: 100%;    float: left}#main div.topics ul.tabs li.first,#main div.topics ul.tabs li.last {    width: 93px}#main div.topics ul.tabs li a {    display: block;    position: relative;    padding: 5px 2px;    border-left: 1px #fff solid;    border-right: 1px silver solid;    outline: 0;    text-decoration: none}#main div.topics ul.tabs li a:hover {    text-decoration: underline}#main div.topics ul.tabs li.active a:hover,#nav div.subMenu ul.nl li a {    text-decoration: none}#main div.topics ul.tabs li.last a {    border-right: 0}#main div.topics ul.tabs li.active {    z-index: 3;    background: url(../image/tab_act.gif) top repeat-x #fff;    font-weight: 700}#main div.topics ul.tabs li.active a {    color: #000}#main div.topics div.topicArea {    position: relative;    z-index: 2;    height: 11em;    overflow: auto;    padding: 10px 15px 0;    background-color: #fff;    border: 1px solid silver}#main div.topics div.topicArea div.topic {    padding-top: .7em;    border-bottom: 1px silver solid}#main div.topics div.topicArea div.catch img,#main div.update {    border: 1px solid silver}#main div.topics div.topicArea p {    margin: 0 0 .7em;    line-height: 130%}#main div.topics div.topicArea ul {    margin: 0 0 .7em;    padding: 0;    list-style-type: none}#main div.topics div.topicArea ul li {    padding: 0 0 1px 9pt;    background: url(../image/square.gif) 3px .4em no-repeat;    line-height: 120%}#main div.topics div.topicArea div.catch {    float: right;    width: 150px;    margin-bottom: .7em;    padding-top: 5px;    background-color: #f9f9f9;    border: 1px solid silver;    text-align: center}#main div.topics div.topicArea div.catch p {    margin: 0 10px 5px}#main div.topics div.topicArea div.text {    margin-right: 165px}#main div.update {    padding-bottom: 15px}#main div.update div.heading {    margin: 0 0 .5em;    border-style: none none solid}#main div.update dl {    width: 450px;    margin: 0 auto}#main div.update dt {    width: 6.7em;    float: left;    padding: 7px 0 6px 3px;    line-height: 120%}#main div.update dd {    margin: 0;    padding: 7px 3px 6px 6.6em;    border-bottom: 1px silver dotted;    line-height: 120%}#aside div.section,#aside div.strong dl dt img,#nav div.section {    border: 1px solid silver}#nav {    float: right;    width: 180px;    margin-bottom: 10px}#nav div.section {    margin-bottom: 10px;    padding: 2px}#nav div.section h2 {    margin: 0 0 .7em;    padding: 3px 8px;    font-size: 120%;    line-height: 100%}#nav div.section p {    margin: 0 5px .7em;    line-height: 130%}#nav div.normal {    background-color: #f9f9f9}#nav div.normal h2 {    background-color: #e5e5e5;    color: #666}#nav div.subMenu {    background: url(../image/box_back_gray4.gif) #f9f9f9}#nav div.subMenu h2 {    margin: 0 0 10px;    background-color: #b3a98c;    color: #fff}#nav div.subMenu ul.nl {    margin: 0 0 2px;    padding: 0;    list-style-type: none}#nav div.subMenu ul.nl li {    padding: 0 2px 8px 14px;    background: url(../image/menu_triangle6.gif) 2px .15em no-repeat}#nav div.subMenu ul.nl li a:hover {    text-decoration: underline}#nav hr.none {    display: none}#content hr.clear {    clear: right;    width: 100%;    margin: 0;    visibility: hidden}#aside {    float: left;    width: 270px;    margin-bottom: 10px}#aside div.section {    margin-bottom: 10px;    padding: 2px}#aside div.section h2 {    margin: 0 0 .7em;    padding: 3px 8px;    font-size: 120%;    line-height: 100%}#aside div.section p {    margin: 0 10px .7em;    line-height: 130%}#aside div.normal h2 {    background-color: #e5e5e5;    color: #666}#aside div.emphasis h2 {    background-color: #b3a98c;    color: #fff}#aside div.emphasis ul {    margin: 0 10px .3em;    padding: 0;    list-style-type: none}#aside div.emphasis ul li {    padding: 0 0 8px 15px;    background: url(../image/menu_triangle6_box.gif) 0 .3em no-repeat;    line-height: 130%}#aside div.strong {    background-color: #fffef4}#aside div.strong h2 {    background-color: #fb894b;    color: #fff}#aside div.strong dl {    width: 248px;    margin: 0 auto .7em}#aside div.strong dl dt {    width: 105px;    float: left}#aside div.strong dl dd {    margin: 0 0 0 105px;    line-height: 130%}#aside div.pickup {    background-color: #fbf8f1}#aside div.pickup h2 {    margin: 0;    background-color: #bd6a4b;    color: #fff}#aside div.pickup ul {    margin: 0;    padding: 0;    list-style-type: none}#aside div.pickup ul li {    padding: 10px 8px;    border-bottom: 1px #b3a98c solid}#aside div.pickup ul li.last {    border-bottom: 0}#aside div.pickup ul dl {    width: 100%;    margin: 0}#aside div.pickup ul dt {    width: 105px;    float: left}#aside div.pickup ul dt img {    border: 1px solid silver}#aside div.pickup ul dd {    margin: 0 0 0 105px;    line-height: 130%}#aside div.contact {    padding-bottom: .3em}#aside div.contact p {    margin-bottom: .4em}#aside div.contact p.tel {    margin-bottom: .1em;    font-size: 150%;    font-weight: 700;    color: #bd6a4b}#aside div.contact p.form {    width: 14em;    margin-top: .7em;    padding: 3px;    background-color: #fff;    border: 1px solid;    border-color: #e0e0e0 #ccc #ccc #e0e0e0;    text-align: center;    line-height: 100%}#aside div.contact p.form a {    display: block;    position: relative;    padding: 9pt 2px;    background: url(../image/form_back3_off.gif) top repeat-x #978e75;    font-size: 110%;    font-weight: 700;    color: #fff;    text-decoration: none}#aside div.contact p.form a:hover {    background: url(../image/form_back3_on.gif) top repeat-x #a59d85}#aside hr.none {    display: none}#footer {    clear: both;    width: 100%;    border-top: 1px silver solid}#footer ul.nl {    margin: 15px 0 10px;    padding: 0;    list-style-type: none;    text-align: center}#footer ul.nl li {    padding: 0 4px 0 8px;    background: url(../image/menu_line_gray.gif
+2025-07-16 17:00:02,079 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.gif)%20right%20no-repeat%7Dol.topicPath%20li%20a.last%20%7B%20%20%20%20background-image:%20none%7Dform.contact%20%7B%20%20%20%20width:%20100%25;%20%20%20%20font-size:%20100%25%7Dform.contact%20p.attention%20img%20%7B%20%20%20%20vertical-align:%20middle%7Dform.contact%20div.fields%20%7B%20%20%20%20margin-bottom:%2020px;%20%20%20%20padding:%202px;%20%20%20%20background-color:%20 HTTP/1.1" 403 None
+2025-07-16 17:00:02,080 - WARNING - リソース取得失敗: 403 - https://img.syosetu.org/image/menu_line_gray.gif) right no-repeat}ol.topicPath li a.last {    background-image: none}form.contact {    width: 100%;    font-size: 100%}form.contact p.attention img {    vertical-align: middle}form.contact div.fields {    margin-bottom: 20px;    padding: 2px;    background-color: #f9f9f9;    border: 1px solid silver}form.contact caption,form.contact table {    border: 1px solid;    border-color: silver #999 #999 silver}form.contact caption {    margin-bottom: 2px;    padding: 10px 8px;    background-color: #f9f9f9;    text-align: left;    color: #404040;    font-size: 120%;    font-weight: 700}form.contact td,form.contact th {    color: #202020;    border-bottom: 1px silver dotted}form.contact th {    width: 16%;    padding: 10px 8px;    background-color: #e6e6e6;    text-align: left}form.contact th span.supplement {    font-weight: 400}form.contact td {    padding: 10px 5px 7px;    background-color: #fff}form.contact td span.supplement {    color: gray}form.contact td.required {    width: 26px;    padding: 10px 3px;    background: url(/image/required1.gif
+2025-07-16 17:00:02,124 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png)%20no-repeat%203px%20.4em%7Dbody.night%20 HTTP/1.1" 404 None
+2025-07-16 17:00:02,124 - WARNING - リソース取得失敗: 404 - https://img.syosetu.org/image/square.png) no-repeat 3px .4em}body.night #main div.topics div.topicArea div.catch {    background-color: #060606;    border: 1px #cecece solid}body.night #main div.topics div.topicArea div.catch img {    border: 1px #cecece solid}body.night #main div.update {    padding-bottom: 15px;    border: 1px #cecece solid}body.night #main div.update dd {    border-bottom: 1px #cecece dotted}body.night #nav div.section {    border: 1px #cecece solid}body.night #nav div.normal {    background-color: #060606}body.night #nav div.subMenu {    background: #060606}body.night #nav div.subMenu ul.nl li {    background: url(/image/menu_triangle6.png) no-repeat 2px .15em}body.night #aside div.section {    border: 1px #cecece solid}body.night #aside div.normal h2 {    background-color: #1a1a1a;    color: #999}body.night #aside div.emphasis ul li {    background: url(/image/menu_triangle6_box.png) no-repeat 0 .3em}body.night #aside div.strong {    background-color: #000}body.night #aside div.strong h2 {    background-color: #ffd799;    color: #000}body.night #aside div.strong dl dt img {    border: 1px #cecece solid}body.night #aside div.pickup {    background-color: #292724#292724}body.night #aside div.pickup ul li {    border-bottom: 1px #fff7da solid}body.night #aside div.pickup ul dt img {    border: 1px #cecece solid}body.night #aside div.contact p.tel {    color: #ffd2b3}body.night #aside div.contact p.form {    background-color: #000;    border-color: #1f1f1f #444 #444 #1f1f1f}body.night #aside div.contact p.form a {    background: #e5dcc3;    color: #000}body.night #aside div.contact p.form a:hover {    background: #f3ebd3}body.night #footer {    border-top: 1px #cecece solid}body.night div.section3 {    background-color: #000;    border: 1px #cecece solid}body.night div.section3 h3 {    background-color: #6f6f6f;    border-bottom: 1px #cecece solid}body.night form.contact div.fields {    background-color: #060606;    border: 1px #cecece solid}body.night form.contact table {    border-color: #cecece #666 #666 #cecece}body.night form.contact caption {    background-color: #666;    border-color: #cecece #666 #666 #cecece;    color: #fff}body.night form.contact th {    background-color: #777;    border-bottom: 1px #cecece dotted;    color: #fff}body.night form.contact td {    background-color: #000;    border-bottom: 1px #cecece dotted;    color: #fff}body.night form.contact td span.supplement {    color: #b4b4b4}body.night form.contact td.required {    background: #d1cbba url(/image/required1.png) no-repeat center center}body.night form.contact td.arbitrary {    background-color: #fbf8f1}body.night .highlight {    background: #444}body.night .file {    border: 1px solid #777;    background-color: #444;    border: 1px solid #777}body.night .blo_bunpu {    border-left: dotted 1px #aaa}body.night .blo_bunpu td {    color: #fff}body.night .blo_bunpu span.l0 {    background: 0 0;    border-color: transparent}body.night .blo_bunpu span.l1 {    border: 1px solid #aaa}body.night a.button:hover {    background-color: #1f1f1f}body.night .footnote_tip {    border: 1px solid #929292;    background: #000}body.night .footnote {    border-top: #929292 solid 1px}body.night .diff_view {    background-color: #333}body.night .selected_line {    background-color: #443521;    color: #dfdfdf}body.night ins {    background-color: #1e881e}body.night del {    background-color: #8d3a3a}body.night hr {    border-top: 1px #999 solid}body.night .alert_color {    color: #ff8282 !important}body.night .l-search__text {    color: #333 !important}body.night .cse .gsc-control-cse,body.night .gsc-control-cse {    background: #222;    border: 1px solid #222}body.night .gsc-webResult.gsc-result {    border: 1px solid #222}body.night .gsc-control-cse .gs-promotion em,body.night .gsc-control-cse .gs-snippet,body.night .gsc-preview-reviews {    color: #fff}body.night .gsc-results .gsc-cursor-box .gsc-cursor-page {    color: #99d6ff}body.night .gsc-results .gsc-cursor-box .gsc-cursor-current-page {    color: #c00}body.night .textareaClone,body.night [type=email],body.night [type=password],body.night input[type=number],body.night input[type=text],body.night textarea {    border: 1px solid #c6c6c6;    background: #222;    color: #fff}body.night option,body.night select {    background: #222;    color: #fff}body.night .d2h-change,body.night .d2h-del,body.night .d2h-ins {    color: #444 !important}body.night .d2h-change del,body.night .d2h-change ins {    color: #fff !important}.review_res {    background-color: #ffffdf;    margin: 0;    padding: 1em 10px}body.night .review_res {    background-color: #636353 !important;    color: #fff !important;    margin: 0;    padding: 1em 10px}body.night .d2h-diff-tbody {    color: #fff !important}body.night ul.tagit input[type=text] {    color: #fff}body.night ul.tagit li.tagit-new {    border: none}table.table1 {    border-top: 1px solid #999;    border-left: 1px solid #999;    border-collapse: collapse;    table-layout: fixed;    width: 100%}table.table1 tr {    border-right: 1px solid #999;    border-bottom: 1px solid #999;    padding: 4px}table.no_border,table.table1 td.no_border,table.table1 tr.no_border {    border: none;    padding: 4px}table.table1 td,table.table1 th {    padding: 4px;    border: 1px solid #999}table.table1 td {    word-wrap: break-word}table.table1 th {    text-align: center}table.table1 .label {    background-color: #ddd}body.night table.table1 {    border-top: 1px solid #cecece;    border-left: 1px solid #cecece}body.night table.table1 tr {    border-right: 1px solid #cecece;    border-bottom: 1px solid #cecece}body.night table.table1 td,body.night table.table1 th {    border: 1px solid #cecece}body.night table.table1 .label {    background-color: #666;    color: #fff}body.night table.no_border,body.night table.table1 td.no_border,body.night table.table1 tr.no_border {    border: none;    padding: 4px}body.night table.table1 th {    background-color: #666;    color: #fff}body.night .mytable1 td {    background-color: #222;    color: #fff}body.night .mytable2 td {    background-color: #222;    color: #fff}body.night .mytable2 th {    background-color: #824630;    color: #fff}body.night .ss {    color: #fff}body.night .ss .bgcolor {    color: #444}body.night div.ss a:link {    color: #99d6ff}body.night ul.guide a:link {    color: #99d6ff}body.night ol.topicPath a:link {    color: #99d6ff}body.night #footer ul.nl a:link {    color: #99d6ff}body.night div.ss a:visited {    color: #bbd5e7}body.night div.ss a:visited {    color: #bbd5e7}body.night ul.guide a:visited {    color: #bbd5e7}body.night ol.topicPath a:visited {    color: #bbd5e7}body.night #footer ul.nl a:visited {    color: #bbd5e7}body.night .bgcolor2,body.night .bgcolor3 {    background-color: #222}body.night #header .topicPath {    background-color: #222}body.night #enquete_box span.bgcolor {    background: #6a777d}body.night #enquete_box.votable .enquete_view:not(.voted):hover {    background: #666}div.novelnavi {    margin: 0;    padding: 0;    display: block;    width: 100%;    overflow: hidden;}div.novelnavi ul.nl {    margin: 0;    padding: 4px 0;    list-style-type: none;    text-align: center;    font-size: 100%;    box-sizing: border-box;}div.novelnavi ul.nl li {    display: inline;    float: left;    margin-right: -1px}div.novelnavi a {    background-color: #fff;    border: 1px silver solid;    text-decoration: none;    text-align: center;    display: block;    padding: 4px 0;    width: 100%;    box-sizing: border-box;}div.novelnavi a:hover {    background-color: #e0e0e0;    border: 1px #999 solid;    text-decoration: underline}div.novelnavi .novelmokuzi {    width: 20%;}div.novelnavi .novelnb {    width: 40%;}body.night div.novelnavi a {    background-color: #000;    border: 1px #cecece solid}body.night div.novelnavi a:hover {    background-color: #1f1f1f;    border: 1px #cecece solid}audio {    display: none;}.voice_setting_menu {    position: absolute;    background-color: #fff;    z-index: 255;    box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, .3);    top: -120px;    right: 0;    line-height: 23px;    border: 1px solid #000;    width: 200px;    height: 110px;    display: none;    color: #444444;}.likevote_tip {    padding: 2px;    position: absolute;    bottom: 20px;    width: 300px;    height: 60px;    z-index: 9999;    box-sizing: border-box;    display: block;    text-align: center}.likevote_selected_line {    border-top: 1px solid red;    border-bottom: 1px solid red;    opacity: .9;    text-decoration: underline}body.night .like-button {    color: #878787}.like-button {    background: #fff;    border: 2px solid #c7c7c7;    border-radius: 40px;    padding: .45rem .75rem;    color: #878787;    font-weight: 700;    display: -webkit-box;    display: flex;    -webkit-box-align: center;    align-items: center;    -webkit-box-pack: center;    justify-content: center;    font-size: 1rem;    -webkit-transition: all .25s cubic-bezier(.175, .885, .32, 1.275);    transition: all .25s cubic-bezier(.175, .885, .32, 1.275);    -webkit-filter: grayscale(100%);    filter: grayscale(100%);    -webkit-user-select: none;    -moz-user-select: none;    -ms-user-select: none;    user-select: none}.like-button.liked {    color: #ff6e6f;    border-color: currentColor;    -webkit-filter: grayscale(0);    filter: grayscale(0)}.like-button:hover {    border-color: currentColor}.like-icon {    width: 18px;    height: 16px;    display: inline-block;    position: relative;    margin-right: .25em;    font-size: 1.5rem;    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMSAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAuMTAxIDQuNDE3UzguODk1LjIwNyA1LjExMS4yMDdjLTQuNDY1IDAtMTAuOTY3IDYuODQ2IDUuMDgyIDE3LjU5MkMyNS4yMzcgNy4wMyAxOS42NjUuMjAyIDE1LjUwMS4yMDJjLTQuMTYyIDAtNS40IDQuMjE1LTUuNCA0LjIxNXoiIGZpbGw9IiNGRjZFNkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) no-repeat center;    background-size: 100%;    -webkit-animation: heartUnlike .25s cubic-bezier(.175, .885, .32, 1.275) both;    animation: heartUnlike .25s cubic-bezier(.175, .885, .32, 1.275) both}.liked .like-icon {    -webkit-animation: heartPulse .25s cubic-bezier(.175, .885, .32, 1.275) both;    animation: heartPulse .25s cubic-bezier(.175, .885, .32, 1.275) both}.liked .like-icon [class^=heart-animation-] {    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMSAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAuMTAxIDQuNDE3UzguODk1LjIwNyA1LjExMS4yMDdjLTQuNDY1IDAtMTAuOTY3IDYuODQ2IDUuMDgyIDE3LjU5MkMyNS4yMzcgNy4wMyAxOS42NjUuMjAyIDE1LjUwMS4yMDJjLTQuMTYyIDAtNS40IDQuMjE1LTUuNCA0LjIxNXoiIGZpbGw9IiNGRjZFNkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==
+2025-07-16 17:00:02,150 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-16 17:00:02,150 - DEBUG - リソース取得成功: https://img.syosetu.org/css/ss_style-.css
+2025-07-16 17:00:02,177 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-16 17:00:02,178 - DEBUG - リソース取得成功: https://img.syosetu.org/css/blank.css
+2025-07-16 17:00:02,208 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-16 17:00:02,208 - DEBUG - リソース取得成功: https://img.syosetu.org/css/tmp_check3.css?202501083
+2025-07-16 17:00:02,236 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-16 17:00:02,237 - DEBUG - リソース取得成功: https://img.syosetu.org/js/jquery.min.js
+2025-07-16 17:00:02,266 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-16 17:00:02,267 - DEBUG - リソース取得成功: https://img.syosetu.org/js/jquery.cookie.min.js?20220619
+2025-07-16 17:00:02,296 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-16 17:00:02,296 - DEBUG - リソース取得成功: https://img.syosetu.org/js/night_mode.js?201908031
+2025-07-16 17:00:02,321 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 200 3923
+2025-07-16 17:00:02,322 - DEBUG - リソース取得成功: https://img.syosetu.org/js/jquery.color.plus-names-2.1.2.min.js
+2025-07-16 17:00:02,350 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_pc_min.js?202503091 HTTP/1.1" 200 10775
+2025-07-16 17:00:02,350 - DEBUG - リソース取得成功: https://img.syosetu.org/js/novel_pc_min.js?202503091
+2025-07-16 17:00:02,383 - DEBUG - https://img.syosetu.org:443 "GET /js/reading_record.min.js?202411301 HTTP/1.1" 200 1116
+2025-07-16 17:00:02,384 - DEBUG - リソース取得成功: https://img.syosetu.org/js/reading_record.min.js?202411301
+2025-07-16 17:00:02,385 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-16 17:00:02,409 - DEBUG - リソース取得エラー (https://securepubads.g.doubleclick.net/tag/js/gpt.js): HTTPSConnectionPool(host='securepubads.g.doubleclick.net', port=443): Max retries exceeded with url: /tag/js/gpt.js (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x78f35b6ba620>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-07-16 17:00:02,410 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-16 17:00:02,426 - DEBUG - リソース取得エラー (https://cpt.geniee.jp/hb/v1/112059/26/wrapper.min.js): HTTPSConnectionPool(host='cpt.geniee.jp', port=443): Max retries exceeded with url: /hb/v1/112059/26/wrapper.min.js (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x78f35b6bb100>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-07-16 17:00:02,453 - DEBUG - https://img.syosetu.org:443 "GET /js/ad_dliste.min.js?202501083 HTTP/1.1" 200 536
+2025-07-16 17:00:02,453 - DEBUG - リソース取得成功: https://img.syosetu.org/js/ad_dliste.min.js?202501083
+2025-07-16 17:00:02,454 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-16 17:00:02,623 - DEBUG - https://ct.syosetu.org:443 "GET /?n=378070&v=1 HTTP/1.1" 200 None
+2025-07-16 17:00:02,624 - DEBUG - リソース取得成功: https://ct.syosetu.org/?n=378070&v=1
+2025-07-16 17:00:02,624 - INFO - リソースダウンロード完了
+2025-07-16 17:00:02,629 - INFO - スクレイパー終了
+2025-07-17 10:52:15,981 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 10:52:15,983 - INFO - CloudScraper初期化開始
+2025-07-17 10:52:15,987 - INFO - CloudScraper設定完了
+2025-07-17 10:52:15,987 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 10:52:15,990 - INFO - ページネーション発見: div.pager a (3個のリンク)
+2025-07-17 10:52:15,990 - INFO - 検出されたページ: 1ページ
+2025-07-17 10:52:15,990 - INFO -   ページ1: https://syosetu.org/novel/n123456/mode=review
+2025-07-17 10:52:16,002 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 10:52:16,002 - INFO - CloudScraper初期化開始
+2025-07-17 10:52:16,005 - INFO - CloudScraper設定完了
+2025-07-17 10:52:16,006 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 10:52:16,007 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-17 10:52:16,007 - INFO - 抽出された感想: 2件
+2025-07-17 10:52:16,007 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 10:52:16,008 - INFO - CloudScraper初期化開始
+2025-07-17 10:52:16,010 - INFO - CloudScraper設定完了
+2025-07-17 10:52:16,011 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 10:52:16,011 - WARNING - 感想URLが見つかりませんでした
+2025-07-17 10:52:16,012 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 10:52:16,012 - INFO - CloudScraper初期化開始
+2025-07-17 10:52:16,014 - INFO - CloudScraper設定完了
+2025-07-17 10:52:16,014 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 10:52:16,015 - WARNING - 感想URLが見つかりませんでした
+2025-07-17 10:52:16,015 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 10:52:16,016 - INFO - CloudScraper初期化開始
+2025-07-17 10:52:16,019 - INFO - CloudScraper設定完了
+2025-07-17 10:52:16,019 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 10:52:16,021 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 10:52:16,022 - INFO - CloudScraper初期化開始
+2025-07-17 10:52:16,026 - INFO - CloudScraper設定完了
+2025-07-17 10:52:16,026 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 10:52:16,027 - INFO - 感想ページを取得中: https://syosetu.org/novel/n123456/mode=review
+2025-07-17 10:52:16,027 - INFO - 感想保存フォルダ作成: /tmp/tmp2_vrno7s/感想
+2025-07-17 10:52:16,028 - ERROR - 感想ページの取得に失敗しました
+2025-07-17 12:38:21,628 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:38:21,630 - INFO - CloudScraper初期化開始
+2025-07-17 12:38:21,636 - INFO - CloudScraper設定完了
+2025-07-17 12:38:21,637 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:38:21,640 - INFO - ページネーション発見: div.pager a (3個のリンク)
+2025-07-17 12:38:21,641 - INFO - 検出されたページ: 1ページ
+2025-07-17 12:38:21,641 - INFO -   ページ1: https://syosetu.org/novel/n123456/mode=review&p=1
+2025-07-17 12:38:21,662 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:38:21,662 - INFO - CloudScraper初期化開始
+2025-07-17 12:38:21,665 - INFO - CloudScraper設定完了
+2025-07-17 12:38:21,666 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:38:21,667 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-17 12:38:21,667 - INFO - 抽出された感想: 2件
+2025-07-17 12:38:21,667 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:38:21,668 - INFO - CloudScraper初期化開始
+2025-07-17 12:38:21,671 - INFO - CloudScraper設定完了
+2025-07-17 12:38:21,671 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:38:21,673 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:38:21,673 - INFO - CloudScraper初期化開始
+2025-07-17 12:38:21,678 - INFO - CloudScraper設定完了
+2025-07-17 12:38:21,679 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:38:21,680 - WARNING - 感想URLが見つかりませんでした
+2025-07-17 12:38:21,681 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:38:21,681 - INFO - CloudScraper初期化開始
+2025-07-17 12:38:21,685 - INFO - CloudScraper設定完了
+2025-07-17 12:38:21,685 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:38:21,687 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:38:21,687 - INFO - CloudScraper初期化開始
+2025-07-17 12:38:21,691 - INFO - CloudScraper設定完了
+2025-07-17 12:38:21,691 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:38:21,692 - INFO - 感想ページを取得中: https://syosetu.org/novel/n123456/mode=review
+2025-07-17 12:38:21,693 - INFO - 感想保存フォルダ作成: /tmp/tmpdw8_ulyx/感想
+2025-07-17 12:38:21,693 - ERROR - 感想ページの取得に失敗しました
+2025-07-17 12:41:27,567 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:41:27,569 - INFO - CloudScraper初期化開始
+2025-07-17 12:41:27,575 - INFO - CloudScraper設定完了
+2025-07-17 12:41:27,575 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:41:27,577 - INFO - ページネーション発見: div.pager a (3個のリンク)
+2025-07-17 12:41:27,578 - INFO - 検出されたページ: 1ページ
+2025-07-17 12:41:27,578 - INFO -   ページ1: https://syosetu.org/novel/n123456/mode=review&p=1
+2025-07-17 12:43:37,019 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:43:37,019 - INFO - CloudScraper初期化開始
+2025-07-17 12:43:37,025 - INFO - CloudScraper設定完了
+2025-07-17 12:43:37,025 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:48:44,444 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:48:44,444 - INFO - CloudScraper初期化開始
+2025-07-17 12:48:44,449 - INFO - CloudScraper設定完了
+2025-07-17 12:48:44,449 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:48:50,134 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:48:50,134 - INFO - CloudScraper初期化開始
+2025-07-17 12:48:50,139 - INFO - CloudScraper設定完了
+2025-07-17 12:48:50,139 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:48:50,140 - INFO - ページネーション発見: div.pager a (3個のリンク)
+2025-07-17 12:48:50,141 - INFO - 検出されたページ: 3ページ
+2025-07-17 12:48:50,141 - INFO -   ページ1: https://syosetu.org/novel/n123456/mode=review?p=1
+2025-07-17 12:48:50,141 - INFO -   ページ2: https://syosetu.org/novel/n123456/mode=review?p=2
+2025-07-17 12:48:50,141 - INFO -   ページ3: https://syosetu.org/novel/n123456/mode=review?p=3
+2025-07-17 12:48:57,615 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:48:57,615 - INFO - CloudScraper初期化開始
+2025-07-17 12:48:57,621 - INFO - CloudScraper設定完了
+2025-07-17 12:48:57,622 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:48:57,624 - INFO - ページネーション発見: div.pager a (3個のリンク)
+2025-07-17 12:48:57,625 - INFO - 検出されたページ: 3ページ
+2025-07-17 12:48:57,625 - INFO -   ページ1: https://syosetu.org/novel/n123456/mode=review?p=1
+2025-07-17 12:48:57,625 - INFO -   ページ2: https://syosetu.org/novel/n123456/mode=review?p=2
+2025-07-17 12:48:57,625 - INFO -   ページ3: https://syosetu.org/novel/n123456/mode=review?p=3
+2025-07-17 12:48:57,644 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:48:57,644 - INFO - CloudScraper初期化開始
+2025-07-17 12:48:57,650 - INFO - CloudScraper設定完了
+2025-07-17 12:48:57,651 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:48:57,652 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-17 12:48:57,653 - INFO - 抽出された感想: 2件
+2025-07-17 12:48:57,653 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:48:57,653 - INFO - CloudScraper初期化開始
+2025-07-17 12:48:57,657 - INFO - CloudScraper設定完了
+2025-07-17 12:48:57,657 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:48:57,658 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:48:57,658 - INFO - CloudScraper初期化開始
+2025-07-17 12:48:57,662 - INFO - CloudScraper設定完了
+2025-07-17 12:48:57,662 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:48:57,663 - WARNING - 感想URLが見つかりませんでした
+2025-07-17 12:48:57,663 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:48:57,663 - INFO - CloudScraper初期化開始
+2025-07-17 12:48:57,667 - INFO - CloudScraper設定完了
+2025-07-17 12:48:57,667 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:48:57,669 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 12:48:57,669 - INFO - CloudScraper初期化開始
+2025-07-17 12:48:57,672 - INFO - CloudScraper設定完了
+2025-07-17 12:48:57,673 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 12:48:57,673 - INFO - 感想ページを取得中: https://syosetu.org/novel/n123456/mode=review
+2025-07-17 12:48:57,674 - INFO - 感想保存フォルダ作成: /tmp/tmpuub7l8b0/感想
+2025-07-17 12:48:57,674 - ERROR - 感想ページの取得に失敗しました
+2025-07-17 13:24:46,757 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 13:24:46,759 - INFO - CloudScraper初期化開始
+2025-07-17 13:24:46,764 - INFO - CloudScraper設定完了
+2025-07-17 13:24:46,764 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 13:24:46,766 - INFO - ページネーション発見: div.pager a (3個のリンク)
+2025-07-17 13:24:46,766 - INFO - 検出されたページ: 3ページ
+2025-07-17 13:24:46,766 - INFO -   ページ1: https://syosetu.org/novel/n123456/mode=review?p=1
+2025-07-17 13:24:46,766 - INFO -   ページ2: https://syosetu.org/novel/n123456/mode=review?p=2
+2025-07-17 13:24:46,767 - INFO -   ページ3: https://syosetu.org/novel/n123456/mode=review?p=3
+2025-07-17 13:24:46,768 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 13:24:46,768 - INFO - CloudScraper初期化開始
+2025-07-17 13:24:46,772 - INFO - CloudScraper設定完了
+2025-07-17 13:24:46,772 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 13:24:46,787 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-17 13:24:46,787 - INFO - 抽出された感想: 2件
+2025-07-17 13:24:46,788 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 13:24:46,788 - INFO - CloudScraper初期化開始
+2025-07-17 13:24:46,791 - INFO - CloudScraper設定完了
+2025-07-17 13:24:46,791 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 13:24:46,794 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 13:24:46,794 - INFO - CloudScraper初期化開始
+2025-07-17 13:24:46,797 - INFO - CloudScraper設定完了
+2025-07-17 13:24:46,797 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 13:24:46,798 - WARNING - 感想URLが見つかりませんでした
+2025-07-17 13:24:46,799 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 13:24:46,799 - INFO - CloudScraper初期化開始
+2025-07-17 13:24:46,803 - INFO - CloudScraper設定完了
+2025-07-17 13:24:46,804 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 13:24:46,806 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 13:24:46,806 - INFO - CloudScraper初期化開始
+2025-07-17 13:24:46,810 - INFO - CloudScraper設定完了
+2025-07-17 13:24:46,810 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 13:24:46,811 - INFO - 感想ページを取得中: https://syosetu.org/novel/n123456/mode=review
+2025-07-17 13:24:46,812 - INFO - 感想保存フォルダ作成: /tmp/tmpy42ccrrw/感想
+2025-07-17 13:24:46,812 - ERROR - 感想ページの取得に失敗しました
+2025-07-17 13:38:12,291 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 13:38:12,293 - INFO - CloudScraper初期化開始
+2025-07-17 13:38:12,299 - INFO - CloudScraper設定完了
+2025-07-17 13:38:12,299 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 14:29:11,265 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 14:29:11,267 - INFO - CloudScraper初期化開始
+2025-07-17 14:29:11,274 - INFO - CloudScraper設定完了
+2025-07-17 14:29:11,275 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 14:29:11,279 - INFO - ページネーション発見: div.pager a (3個のリンク)
+2025-07-17 14:29:11,279 - INFO - 検出されたページ: 3ページ
+2025-07-17 14:29:11,280 - INFO -   ページ1: https://syosetu.org/novel/n123456/mode=review?p=1
+2025-07-17 14:29:11,280 - INFO -   ページ2: https://syosetu.org/novel/n123456/mode=review?p=2
+2025-07-17 14:29:11,280 - INFO -   ページ3: https://syosetu.org/novel/n123456/mode=review?p=3
+2025-07-17 14:29:11,298 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 14:29:11,299 - INFO - CloudScraper初期化開始
+2025-07-17 14:29:11,305 - INFO - CloudScraper設定完了
+2025-07-17 14:29:11,305 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 14:29:11,307 - INFO - 感想要素発見: div.review-item (2件)
+2025-07-17 14:29:11,308 - INFO - 抽出された感想: 2件
+2025-07-17 14:29:11,309 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 14:29:11,309 - INFO - CloudScraper初期化開始
+2025-07-17 14:29:11,313 - INFO - CloudScraper設定完了
+2025-07-17 14:29:11,313 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 14:29:11,315 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 14:29:11,315 - INFO - CloudScraper初期化開始
+2025-07-17 14:29:11,319 - INFO - CloudScraper設定完了
+2025-07-17 14:29:11,320 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 14:29:11,322 - WARNING - 感想URLが見つかりませんでした
+2025-07-17 14:29:11,322 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 14:29:11,322 - INFO - CloudScraper初期化開始
+2025-07-17 14:29:11,327 - INFO - CloudScraper設定完了
+2025-07-17 14:29:11,328 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 14:29:11,331 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-17 14:29:11,331 - INFO - CloudScraper初期化開始
+2025-07-17 14:29:11,336 - INFO - CloudScraper設定完了
+2025-07-17 14:29:11,336 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-17 14:29:11,337 - INFO - 感想ページを取得中: https://syosetu.org/novel/n123456/mode=review
+2025-07-17 14:29:11,338 - INFO - 感想保存フォルダ作成: /tmp/tmpg9wt4l4u/感想
+2025-07-17 14:29:11,338 - ERROR - 感想ページの取得に失敗しました
+2025-07-18 00:58:18,987 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-18 00:58:18,988 - INFO - CloudScraper初期化開始
+2025-07-18 00:58:18,991 - INFO - CloudScraper設定完了
+2025-07-18 00:58:18,991 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-18 00:58:18,992 - INFO - 目次リンク更新: //syosetu.org/novel/378070/ -> 目次.html
+2025-07-18 00:58:18,992 - INFO - 小説情報リンク更新: //syosetu.org/?mode=ss_detail&nid=378070 -> 小説情報.html
+2025-07-18 00:58:18,993 - INFO - リソースキャッシュ統計: 0個のリソースをキャッシュしました
+2025-07-18 00:58:41,271 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-18 00:58:41,271 - INFO - CloudScraper初期化開始
+2025-07-18 00:58:41,276 - INFO - CloudScraper設定完了
+2025-07-18 00:58:41,277 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-18 00:58:41,278 - INFO - 目次リンク更新: //syosetu.org/novel/378070/ -> 目次.html
+2025-07-18 00:58:41,278 - INFO - 小説情報リンク更新: //syosetu.org/?mode=ss_detail&nid=378070 -> 小説情報.html
+2025-07-18 00:58:41,278 - INFO - 縦書きリンク更新: //syosetu.org/?mode=ss_detail3&nid=378070 -> 縦書き.html
+2025-07-18 00:58:41,278 - INFO - リソースキャッシュ統計: 0個のリソースをキャッシュしました

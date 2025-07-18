@@ -1,0 +1,570 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut icon"/>
+<link href="https://img.syosetu.org/image/apple-touch-icon-180x180.png?20230812" rel="apple-touch-icon" type="image/png"/>
+<link href="https://img.syosetu.org/image/icon-192x192.png?20230812" rel="icon" type="image/png"/>
+<meta content="二次創作,小説,SS,ハーメルン,投稿,検索" name="keywords"/>
+<link href="https://img.syosetu.org/css/style_v2.css?202210101" rel="stylesheet" type="text/css"/>
+<script src="https://img.syosetu.org/js/jquery.min.js"></script>
+<script src="https://img.syosetu.org/js/jquery.cookie.min.js?20220619"></script>
+<script async="" src="https://img.syosetu.org/js/night_mode.js?201908031"></script>
+<link href="https://img.syosetu.org/css/select2.min.css?202212171" rel="stylesheet"/>
+<script src="https://img.syosetu.org/js/select2.min.js?202212171"></script>
+<script>
+"use strict";(()=>{var n=e=>e?(e^Math.random()*16>>e/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,n);var o=e=>{let d=new Blob([JSON.stringify(e)],{type:"text/plain"});navigator.sendBeacon("https://beacon.geniee.jp",d)};var t,a,r;window.gn_pvid=(r=(a=(t=self.crypto).randomUUID)==null?void 0:a.call(t))!=null?r:n();window.gn_beacon_rate=10;window.gn_beacon_enabled=Math.random()*100<window.gn_beacon_rate;var i={t:0,mediaId:112059,loc:window.location.href,eventType:"head",elapsedTime:Math.floor(performance.now()),rate:100,pvId:window.gn_pvid};o(i);})();
+</script>
+<script>
+  window.gnshbrequest = window.gnshbrequest || {cmd:[]};
+  window.gnshbrequest.cmd.push(function(){
+    window.gnshbrequest.registerPassback("1050753");
+    window.gnshbrequest.registerPassback("1409644");
+    window.gnshbrequest.forceInternalRequest();
+  });
+</script>
+<script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script async="" src="https://cpt.geniee.jp/hb/v1/112059/26/wrapper.min.js"></script>
+<script type="text/javascript"><!--
+var nowLength = {};
+var nowAsyncTextCount = {};
+function ShowLength(idn,str) {
+	if(!nowLength[idn] || nowLength[idn] <= 1000){
+		textCount(idn,str);
+	}else{
+		if(!nowAsyncTextCount[idn]){
+			nowAsyncTextCount[idn] = true;
+			setTimeout(textCount, 3000, idn, str);
+		}
+	}
+}
+function textCount(idn,str){
+	str = str.replace(/(\n|\r)/g, "");
+	str = str.replace(/( |　)/g, "");
+	
+	document.getElementById(idn).innerHTML = str.length.toLocaleString() + "文字";
+	nowLength[idn] = str.length;
+	nowAsyncTextCount[idn] = false;
+}
+function changeView() {
+    var date = new Date();
+    date.setTime(date.getTime() + ( 1000 * 60 * 60 * 24 * 300 ));
+    $.cookie("viewmode", "sp", { path: "/", domain: '.syosetu.org',expires: date });
+		location.reload(true);
+}
+
+// -->
+</script>
+<title>ある小学校の校則の感想 - ハーメルン</title>
+<script>
+  var _mtm = window._mtm = window._mtm || [];
+  _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+  (function() {
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://img.syosetu.org/js/c_LG09JvSe.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+</head>
+<body>
+<script>
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	if (typeof localStorage === 'undefined' || (typeof localStorage !== 'undefined' && localStorage.getItem('NIGHT_MODE') != 2)) document.body.className += ' night';
+} else {
+	if (typeof localStorage !== 'undefined' && localStorage.getItem('NIGHT_MODE') == 1) document.body.className += ' night';
+}
+$(function(){
+    $('select.js-basic-single').select2({
+    	dropdownAutoWidth: true,
+    	language: {"noResults": function(){ return "見つかりません。";}},
+        escapeMarkup: function (markup) { return markup; }
+    });
+    $('select.js-basic-hide-search').select2({
+    	minimumResultsForSearch: Infinity,
+    	dropdownAutoWidth: true,
+    	language: {"noResults": function(){ return "見つかりません。";}},
+        escapeMarkup: function (markup) { return markup; }
+    });
+	
+	function convertToHalfWidth(text) {
+		// 全角英数を半角英数に変換する
+		return text.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
+			return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+		});
+	}
+    $('select.js-basic-hide-search-add-option').select2({
+    	//minimumResultsForSearch: Infinity,
+    	dropdownAutoWidth: true,
+		tags: true,
+    	language: {"noResults": function(){ return "見つかりません。";}},
+        escapeMarkup: function (markup) { return markup; },
+		createTag: function (params) {
+			var term = $.trim(params.term);
+
+			// 入力されたテキストを半角英数字に変換する
+			var convertedTerm = convertToHalfWidth(term);
+			convertedTerm = convertedTerm.replace(/[^0-9]/g, ''); // 半角英数字以外の文字を削除
+
+			// 新しいタグを作成
+			return {
+				id: convertedTerm,
+				text: convertedTerm,
+				newTag: true // 新しいタグであることを示す
+			};
+		}
+    });
+
+	$('select.js-basic-single').on('select2:open', function() {
+		if( window.ontouchstart !== undefined && 0 < navigator.maxTouchPoints ) {
+			$('.select2-search__field').prop('focus', true);
+		}
+	});
+	
+	$("select.js-auto-open").next(".select2").mouseenter(function() {
+		$(this).prev("select.js-auto-open").select2("open");
+	});
+	$(document).on("mouseleave", ".select2-container", function(e) {
+		if ($(e.toElement || e.relatedTarget).closest(".select2-container").length == 0) {
+			$("select.js-auto-open").select2("close");
+		}    
+	});
+});
+</script>
+<style>
+.select2-container .select2-selection--single .select2-selection__rendered{
+	padding-left:4px;
+    margin-right: 20px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	padding-left:5px;
+	margin-right: 20px;
+	line-height: 24px;
+}
+.select2-container,.select2-container--default{
+	min-width: 45px;
+}
+select{
+	height:25px;
+}
+</style>
+<!-- Google Tag Manager -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-Z5K3" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-Z5K3');</script>
+<!-- End Google Tag Manager -->
+<!-- コンテナ開始 -->
+<div id="container">
+<!-- ページ開始 -->
+<div id="page">
+<!-- ヘッダ開始 -->
+<div id="header">
+<h1 class="siteTitle"><a href="https://syosetu.org/"></a></h1>
+<ul class="guide">
+<li class="first"><a href="https://syosetu.org/?mode=rireki">小説閲覧履歴</a></li>
+<li><a href="https://syosetu.org/rule.html">利用規約</a></li>
+<li><a href="https://syosetu.org/?mode=faq_list">FAQ</a></li>
+<li><a href="https://syosetu.org/?mode=readme_list">取扱説明書</a></li>
+<li><a href="https://syosetu.org/?mode=adskip">広告スキップ</a></li>
+</ul>
+<ul class="nl clearFix">
+<li><a href="https://syosetu.org/">ホーム</a></li>
+<li><a href="https://syosetu.org/?mode=recommended_list">推薦一覧</a></li>
+<li><a href="https://syosetu.org/?mode=login">マイページ</a></li>
+<li><a href="https://syosetu.org/search/?mode=search">小説検索</a></li>
+<li><a href="https://syosetu.org/?mode=rank">ランキング</a></li>
+<li><a href="https://syosetu.org/?mode=seek_list">捜索掲示板</a></li>
+</ul>
+<ol class="topicPath">
+<li><a href="ある小学校の校則 - ハーメルン - 目次.html">目次</a></li>
+<li><a href="ある小学校の校則 - ハーメルン - 小説情報.html">小説情報</a></li>
+<li><a href="ある小学校の校則 - ハーメルン - 小説情報.html">縦書き</a></li>
+<li><a href="https://syosetu.org/?mode=favo_input&amp;nid=379807">お気に入り登録</a></li>
+<li><a href="https://syosetu.org/?mode=rating_input&amp;nid=379807">評価</a></li>
+<li><a href="ある小学校の校則 - ハーメルン - 感想.html">感想</a></li>
+<li><a href="https://syosetu.org/?mode=recommended_list&amp;nid=379807">推薦</a></li>
+<li><a href="ある小学校の校則 - ハーメルン - 小説情報.html">ここすき</a></li>
+<li><a class="last" href="https://syosetu.org/?mode=ss_config&amp;nid=379807">閲覧設定</a></li>
+</ol>
+<hr class="none"/>
+</div>
+<!-- ヘッダ終了 -->
+<!-- メインカラム開始 -->
+<script language="JavaScript"><!--
+function review_vote(rid,nid,gb){
+var script = document.createElement( 'script' );
+script.type = 'text/javascript';
+script.src = 'https://cs.syosetu.org/?rid='+rid+'&nid='+nid+'&gb='+gb;
+var voteScript = document.getElementsByTagName( 'script' )[ 0 ];
+voteScript.parentNode.insertBefore( script, voteScript );
+}
+//--></script>
+<div id="main">
+<div class="section normal">
+<script language="JavaScript"><!--
+function ot_hiraku(geID,geIDB1,geIDB2){
+	document.getElementById(geID).style.display = "block"; //文表示
+	document.getElementById(geIDB1).style.display = "none"; //ボタン1非表示
+	document.getElementById(geIDB2).style.display = "inline"; //ボタン2表示
+}
+function ot_hiraku_inline(geID,geIDB1,geIDB2){
+	document.getElementById(geID).style.display = "inline"; //文表示
+	document.getElementById(geIDB1).style.display = "none"; //ボタン1非表示
+	document.getElementById(geIDB2).style.display = "inline"; //ボタン2表示
+}
+function ot_tatamu(geID,geIDB1,geIDB2){
+	document.getElementById(geID).style.display = "none"; //文非表示
+	document.getElementById(geIDB1).style.display = "inline"; //ボタン1表示
+	document.getElementById(geIDB2).style.display = "none"; //ボタン2非表示
+}
+//--></script>
+<style>
+span.button_menu{
+	float:right;
+	font-weight:normal;
+	display:inline-block;
+}
+span.button_menu a.button{
+	padding-top:0px;
+	padding-bottom:0px;
+	border:0px;
+	margin:0px;
+}
+#main div.normal p {
+    margin: 0.5em 5px 0.5em;
+    line-height: 160%;
+}
+#main div.normal p.review_res {
+    margin: 0;
+}
+</style>
+<span style="font-size:large"><a href="ある小学校の校則 - ハーメルン - 目次.html">ある小学校の校則</a></span>
+<div align="right">作者：<a href="https://syosetu.org/user/161153/">青ヤギ</a></div>
+<br/><a href="#review">▼感想を書く</a>
+
+　<span class="alert_color">※この作品はログインせずに感想を書くことが出来ます</span><br/><div class="paging"><ul class="nl">
+<li><strong>1</strong></li><li><a href="ある小学校の校則 - ハーメルン - 感想.html">2</a></li><li><a href="ある小学校の校則 - ハーメルン - 感想.html" rel="next">NEXT &gt;&gt;</a></li><li><a href="ある小学校の校則 - ハーメルン - 感想.html">&gt;&gt;</a></li>
+</ul></div>
+<div class="normal">
+<div class="heading"><h2>投稿話順全話感想<span class="button_menu"><a class="button" href="ある小学校の校則 - ハーメルン - 感想.html">新着順</a></span></h2></div>
+</div>
+<div class="section3">
+<h3>検閲済み <a href="./?mode=setting&amp;mode2=blockuser_end&amp;nologin=1&amp;uid=/Tqt4SBg">ID:/Tqt4SBg</a>　<span class="date">2025年07月14日(月) 12:32</span></h3>
+<p>おいおいお前らwww「　　様」なんているわけねぇだろwwwこんなやばい校則のある学校とかwww今時ないからwww 情報お待ちしてますとかwwwこんな嘘話信じてんのかよwww馬鹿じゃねぇの？www<br/><br/><br/><br/> <a href="JavaScript:ot_hiraku('review_7621115','review_7621115_1','review_7621115_2');" id="review_7621115_1"><br/>(6行省略されています)</a></p><div id="review_7621115" style="display:none;"><p><br/><br/><br/><br/>あれ窓ににににににににに　ごめんなさいごめんなさいごめんなさいごめんなさいごめんなさいごめんなさいイイコになりますから許して下さs    <br/><br/>学校に行きましょう皆さんも一緒に学校に行きましょう学校に行きましょう学校に行きましょう</p><p><a href="JavaScript:ot_tatamu('review_7621115','review_7621115_1','review_7621115_2');" id="review_7621115_2" style="display:none">▲短縮する</a></p></div>
+<hr class="separator"/>
+<p>
+(<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7621115,379807,1);return false;">Good</a>:<span id="rid_7621115_g">1</span>／<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7621115,379807,0);return false;">Bad</a>:<span id="rid_7621115_b">0</span>)　<a href="https://syosetu.org/novel/379807/4.html">4話</a>　<a href="https://syosetu.org/?mode=tuho_review_message&amp;nid=379807&amp;rid=7621115">報告</a>
+</p>
+<h3><a href="https://syosetu.org/user/161153/">青ヤギ</a>　<span class="date">2025年07月16日(水) 13:40</span></h3>
+<p class="review_res">情報お待ちしております情報お待ちしております情報お待ちしております。</p>
+</div>
+<br/>
+<div class="section3">
+<h3>◆bRDcV/Y/ug <a href="./?mode=setting&amp;mode2=blockuser_end&amp;nologin=1&amp;uid=9xnjKtcQ">ID:9xnjKtcQ</a>　<span class="date">2025年07月13日(日) 02:07</span></h3>
+<p>　　　の　　　の　　　　　　　　　　　　　にありますね。でも　　がいくのはおすすめしません。</p>
+<hr class="separator"/>
+<p>
+(<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7618345,379807,1);return false;">Good</a>:<span id="rid_7618345_g">0</span>／<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7618345,379807,0);return false;">Bad</a>:<span id="rid_7618345_b">0</span>)　<a href="https://syosetu.org/novel/379807/4.html">4話</a>　<a href="https://syosetu.org/?mode=tuho_review_message&amp;nid=379807&amp;rid=7618345">報告</a>
+</p>
+<h3><a href="https://syosetu.org/user/161153/">青ヤギ</a>　<span class="date">2025年07月16日(水) 13:40</span></h3>
+<p class="review_res">見えない見えない見えない。</p>
+</div>
+<br/>
+<div class="section3">
+<h3>名無し <a href="./?mode=setting&amp;mode2=blockuser_end&amp;nologin=1&amp;uid=mNfTR9Yo">ID:mNfTR9Yo</a>　<span class="date">2025年07月12日(土) 23:04</span></h3>
+<p>あなたは、私の小学校を特定して、どうするつもりなのですか？</p>
+<hr class="separator"/>
+<p>
+(<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7618003,379807,1);return false;">Good</a>:<span id="rid_7618003_g">3</span>／<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7618003,379807,0);return false;">Bad</a>:<span id="rid_7618003_b">1</span>)　<a href="https://syosetu.org/novel/379807/4.html">4話</a>　<a href="https://syosetu.org/?mode=tuho_review_message&amp;nid=379807&amp;rid=7618003">報告</a>
+</p>
+<h3><a href="https://syosetu.org/user/161153/">青ヤギ</a>　<span class="date">2025年07月16日(水) 13:39</span></h3>
+<p class="review_res">言えません。<br/>情報お待ちしております。</p>
+</div>
+<br/>
+<div class="section3">
+<h3><a href="https://syosetu.org/user/477358/">ネギーマッ</a>　<span class="date">2025年07月07日(月) 17:01</span></h3>
+<p>近畿地方のある場所について的な怖さがある</p>
+<hr class="separator"/>
+<p>
+(<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7606297,379807,1);return false;">Good</a>:<span id="rid_7606297_g">1</span>／<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7606297,379807,0);return false;">Bad</a>:<span id="rid_7606297_b">1</span>)　<a href="https://syosetu.org/novel/379807/3.html">3話</a>　<a href="https://syosetu.org/?mode=tuho_review_message&amp;nid=379807&amp;rid=7606297">報告</a>
+</p>
+<h3><a href="https://syosetu.org/user/161153/">青ヤギ</a>　<span class="date">2025年07月12日(土) 14:48</span></h3>
+<p class="review_res">情報お待ちしております。</p>
+</div>
+<br/>
+<div class="section3">
+<h3><a href="https://syosetu.org/user/33514/">ベルク@チョモランマ</a>　<span class="date">2025年07月07日(月) 00:57</span></h3>
+<p>そもそも入学時に見初められてるの悲しすぎる<br/>もう少しで『ナリタイモノ』に……か<br/><br/>ある意味大人として自立するまでの縛りみたいな状態なんだろうか?</p>
+<hr class="separator"/>
+<p>
+(<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7605139,379807,1);return false;">Good</a>:<span id="rid_7605139_g">0</span>／<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7605139,379807,0);return false;">Bad</a>:<span id="rid_7605139_b">0</span>)　<a href="https://syosetu.org/novel/379807/2.html">2話</a>　<a href="https://syosetu.org/?mode=tuho_review_message&amp;nid=379807&amp;rid=7605139">報告</a>
+</p>
+<h3><a href="https://syosetu.org/user/161153/">青ヤギ</a>　<span class="date">2025年07月07日(月) 14:48</span></h3>
+<p class="review_res">情報お待ちしております。</p>
+</div>
+<br/>
+<div class="section3">
+<h3>はひふへほ <a href="./?mode=setting&amp;mode2=blockuser_end&amp;nologin=1&amp;uid=43JAg0aI">ID:43JAg0aI</a>　<span class="date">2025年07月14日(月) 19:39</span></h3>
+<p>この校則、教職が書いたのかアカシ様が書いたのか。<br/>アカシ様とすずり様は夫婦か何かか。<br/>教職は誰がやっているのか。<br/><br/>いいですね、むっちゃ楽しみです</p>
+<hr class="separator"/>
+<p>
+(<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7621715,379807,1);return false;">Good</a>:<span id="rid_7621715_g">1</span>／<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7621715,379807,0);return false;">Bad</a>:<span id="rid_7621715_b">0</span>)　<a href="https://syosetu.org/novel/379807/1.html">1話</a>　<a href="https://syosetu.org/?mode=tuho_review_message&amp;nid=379807&amp;rid=7621715">報告</a>
+</p>
+<h3><a href="https://syosetu.org/user/161153/">青ヤギ</a>　<span class="date">2025年07月16日(水) 13:39</span></h3>
+<p class="review_res">情報お待ちしております。</p>
+</div>
+<br/>
+<div class="section3">
+<h3><a href="https://syosetu.org/user/419989/">俄かの光</a>　<span class="date">2025年07月12日(土) 15:51</span></h3>
+<p>何故貴方は教授しないのでしょうか<br/>何故貴方は探しているのでしょうか<br/>何故貴方はここにいるのでしょうか<br/>何故貴方は破っているのでしょうか<br/><br/>「アカシ」様は貴方を赦すのでしょうか？</p>
+<hr class="separator"/>
+<p>
+(<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7617114,379807,1);return false;">Good</a>:<span id="rid_7617114_g">0</span>／<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7617114,379807,0);return false;">Bad</a>:<span id="rid_7617114_b">0</span>)　<a href="https://syosetu.org/novel/379807/1.html">1話</a>　<a href="https://syosetu.org/?mode=tuho_review_message&amp;nid=379807&amp;rid=7617114">報告</a>
+</p>
+<h3><a href="https://syosetu.org/user/161153/">青ヤギ</a>　<span class="date">2025年07月16日(水) 13:39</span></h3>
+<p class="review_res">言えない言えない言えない。</p>
+</div>
+<br/>
+<div class="section3">
+<h3><a href="https://syosetu.org/user/159329/">凡庸</a>　<span class="date">2025年07月07日(月) 17:12</span></h3>
+<p>色々な怖さがあってとても恐ろしい<br/>好きです</p>
+<hr class="separator"/>
+<p>
+(<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7606309,379807,1);return false;">Good</a>:<span id="rid_7606309_g">0</span>／<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7606309,379807,0);return false;">Bad</a>:<span id="rid_7606309_b">0</span>)　<a href="https://syosetu.org/novel/379807/1.html">1話</a>　<a href="https://syosetu.org/?mode=tuho_review_message&amp;nid=379807&amp;rid=7606309">報告</a>
+</p>
+<h3><a href="https://syosetu.org/user/161153/">青ヤギ</a>　<span class="date">2025年07月12日(土) 14:47</span></h3>
+<p class="review_res">情報お待ちしております。</p>
+</div>
+<br/>
+<div class="section3">
+<h3><a href="https://syosetu.org/user/76677/">渚さん</a>　<span class="date">2025年07月06日(日) 21:37</span></h3>
+<p>校則守らないと死ぬだけじゃなくて守ってても運ゲー要求なのが最悪すぎる</p>
+<hr class="separator"/>
+<p>
+(<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7604621,379807,1);return false;">Good</a>:<span id="rid_7604621_g">0</span>／<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7604621,379807,0);return false;">Bad</a>:<span id="rid_7604621_b">0</span>)　<a href="https://syosetu.org/novel/379807/1.html">1話</a>　<a href="https://syosetu.org/?mode=tuho_review_message&amp;nid=379807&amp;rid=7604621">報告</a>
+</p>
+<h3><a href="https://syosetu.org/user/161153/">青ヤギ</a>　<span class="date">2025年07月07日(月) 14:48</span></h3>
+<p class="review_res">情報お待ちしております。</p>
+</div>
+<br/>
+<div class="section3">
+<h3><a href="https://syosetu.org/user/193160/">solver</a>　<span class="date">2025年07月06日(日) 10:50</span></h3>
+<p>おそらくそもそも入学しないことが一番な学校ではあるけど知らない人は逃げられなくなるし知ってる人はナリタイモノになることがエサになりかねない…<br/><br/><br/>&gt;大きいものであるほど、卒業できる確率が高まります。<br/>これみて必要なカッターナイフのかわりにドラゴンころし持ち込みたい欲が出た</p>
+<hr class="separator"/>
+<p>
+(<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7603478,379807,1);return false;">Good</a>:<span id="rid_7603478_g">0</span>／<a href="ある小学校の校則 - ハーメルン - 感想.html" onclick="review_vote(7603478,379807,0);return false;">Bad</a>:<span id="rid_7603478_b">0</span>)　<a href="https://syosetu.org/novel/379807/1.html">1話</a>　<a href="https://syosetu.org/?mode=tuho_review_message&amp;nid=379807&amp;rid=7603478">報告</a>
+</p>
+<h3><a href="https://syosetu.org/user/161153/">青ヤギ</a>　<span class="date">2025年07月07日(月) 14:48</span></h3>
+<p class="review_res">情報お待ちしております。</p>
+</div>
+<br/>
+<div class="paging"><ul class="nl">
+<li><strong>1</strong></li><li><a href="ある小学校の校則 - ハーメルン - 感想.html">2</a></li><li><a href="ある小学校の校則 - ハーメルン - 感想.html" rel="next">NEXT &gt;&gt;</a></li><li><a href="ある小学校の校則 - ハーメルン - 感想.html">&gt;&gt;</a></li>
+</ul></div>
+</div>
+<div class="section normal">
+<script>
+"use strict";(()=>{var e=n=>n?(n^Math.random()*16>>n/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,e);var o=n=>{let c=new Blob([JSON.stringify(n)],{type:"text/plain"});navigator.sendBeacon("https://beacon.geniee.jp",c)};var a,d,t,i;window.gn_pvid=(i=(t=window.gn_pvid)!=null?t:(d=(a=self.crypto).randomUUID)==null?void 0:d.call(a))!=null?i:e();var r;window.gn_beacon_rate=(r=window.gn_beacon_rate)!=null?r:1;var w;window.gn_beacon_enabled=(w=window.gn_beacon_enabled)!=null?w:Math.random()*100<=window.gn_beacon_rate;if(window.gn_beacon_enabled){let n={t:0,mediaId:112059,divId:"1409644",loc:window.location.href,eventType:"body",elapsedTime:Math.floor(performance.now()),rate:window.gn_beacon_rate,pvId:window.gn_pvid};o(n)}})();
+</script>
+<div data-cptid="1409644" style="display: block;margin:0 auto;height:90px; width:728px;">
+<script>
+  window.gnshbrequest.cmd.push(function() {
+    window.gnshbrequest.applyPassback("1409644", "[data-cptid='1409644']");
+  });
+</script>
+</div>
+<br/>
+<form action="./" class="contact" method="POST">
+<input name="csrf_token" type="hidden" value=""/>
+<div class="fields">
+<table id="review">
+<caption>感想を書く</caption>
+<tbody>
+<tr><td colspan="3">
+非ログイン時のみ、名前と投稿キーを入力してください
+</td></tr>
+<tr>
+<th>名前</th>
+<td class="arbitrary"></td>
+<td><input name="trip_name" type="text" value=""/>　<span class="supplement">2～20文字 	
+<br/>「名前#任意の文字列」と入力すると、「名前◆暗号化された文字列」と表示されます</span>
+</td>
+</tr>
+<tr>
+<th>投稿キー</th>
+<td class="arbitrary"></td>
+<td>
+<input name="regikey" size="6" style="ime-mode:inactive" type="text"/>
+<input name="str_crypt" type="hidden" value="1chV0O1Kpn%21nb3X3yKbEK"/>
+　<span class="supplement">（<img align="absmiddle" alt="投稿キー" src="./registkey.cgi?1chV0O1Kpn%21nb3X3yKbEK"/> を入力してください）</span>
+</td>
+</tr>
+<tr>
+<th>内容</th>
+<td class="required"></td>
+<td>
+対象話：<select class="js-basic-hide-search" name="volume" style="width:80px"><option value="1">第1話</option><option value="2">第2話</option><option value="3">第3話</option><option value="4">第4話</option><option selected="" value="5">第5話</option></select><br/>
+<textarea cols="70" name="text" onchange="ShowLength( 'text2' , value );" onclick="ShowLength( 'text2' , value );" onkeyup="ShowLength( 'text2' , value );" rows="8" style="width:540px;height:150px;"></textarea>
+<br/><span id="text2">0文字</span> <span class="supplement">10～5000文字</span>
+</td>
+</tr>
+<tr><td colspan="3">
+<span class="alert_color">感想を書き込む前に
+<a href="https://syosetu.org/?mode=faq_view&amp;fid=114">感想を投稿する際のガイドライン</a>
+に違反していないか確認して下さい。</span><br/>
+※展開予想はネタ潰しになるだけですので、感想欄ではご遠慮ください。
+</td></tr>
+<tr>
+<td colspan="3">
+<p class="button">
+<input type="submit" value="投稿する"/>
+</p>
+</td></tr>
+</tbody>
+</table>
+<input name="mode" type="hidden" value="review_end"/>
+<input name="nid" type="hidden" value="379807"/>
+</div></form>
+</div>
+<br/>
+<form action="./" class="contact" method="GET" name="search">
+<div class="fields">
+<table>
+<caption>感想検索</caption>
+<tbody>
+<tr>
+<th>キーワード</th>
+<td colspan="5"><input class="btext" name="word" placeholder="検索ワードを入力..." type="text" value=""/>
+<label><input checked="" name="include_res" type="radio" value="1"/>両方</label>
+<label><input name="include_res" type="radio" value="2"/>投稿</label>
+<label><input name="include_res" type="radio" value="3"/>返信</label>
+</td>
+<td rowspan="3" width="10%">
+<input style="width:100%;height:80px;" type="submit" value="検索"/>
+</td>
+</tr>
+<tr>
+<th>ユーザー名</th>
+<td>
+<input class="ctext" name="uname" placeholder="ユーザー名を入力..." type="text" value=""/>
+</td>
+<th>話数</th>
+<td>
+<select class="js-basic-hide-search" name="volume" style="width:60px">
+<option value="">全て
+<option value="1">1話<option value="2">2話<option value="3">3話<option value="4">4話<option value="5">5話</option></option></option></option></option></option></select>
+</td>
+<th>並び替え</th>
+<td>
+<select class="js-basic-hide-search" name="type" style="width:100px">
+<option value="1">▼投稿日
+<option value="2">▲投稿日
+<option value="3">▼話数
+<option value="4">▲話数
+<option value="5">▼Good
+<option value="6">▲Good
+<option value="7">▼Bad
+<option value="8">▲Bad
+<option value="9">▼Good率
+<option value="10">▲Good率
+<option value="11">▼投稿話順
+<option value="12">▲投稿話順
+<option value="13">▼返信日
+<option value="14">▲返信日
+</option></option></option></option></option></option></option></option></option></option></option></option></option></option></select>
+</td>
+</tr>
+<tr>
+<th>絞り込み</th>
+<td colspan="5">
+<label><input name="unreplied" type="checkbox" value="1"/>未返信</label>　
+<label><input name="replied" type="checkbox" value="1"/>返信済</label>　
+<label><input name="unview" type="checkbox" value="1"/>一覧非表示</label>
+</td>
+</tr>
+</tbody>
+</table>
+<input name="mode" type="hidden" value="review"/>
+<input name="nid" type="hidden" value="379807"/>
+</div></form>
+</div>
+</div>
+</div>
+<div id="nav">
+<div class="section subMenu">
+<h2>感想一覧</h2>
+<ul class="nl">
+<li><a href="ある小学校の校則 - ハーメルン - 感想.html">感想全件</a></li>
+<li>(0) 話数無し</li>
+<li><a href="ある小学校の校則 - ハーメルン - 感想.html">(11) ある小学校の校則</a></li>
+<li><a href="ある小学校の校則 - ハーメルン - 感想.html">(1) 某オカルト雑誌掲載　短編「片思い」より</a></li>
+<li><a href="ある小学校の校則 - ハーメルン - 感想.html">(1) SNS、ある投稿でのやり取り</a></li>
+<li><a href="ある小学校の校則 - ハーメルン - 感想.html">(3) 某女性週刊誌掲載　『七夕特集』から一部抜擢</a></li>
+<li><a href="ある小学校の校則 - ハーメルン - 感想.html">(0) 某書店　電話録音データ</a></li>
+</ul>
+</div>
+<script>
+"use strict";(()=>{var e=n=>n?(n^Math.random()*16>>n/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,e);var o=n=>{let c=new Blob([JSON.stringify(n)],{type:"text/plain"});navigator.sendBeacon("https://beacon.geniee.jp",c)};var a,d,t,i;window.gn_pvid=(i=(t=window.gn_pvid)!=null?t:(d=(a=self.crypto).randomUUID)==null?void 0:d.call(a))!=null?i:e();var r;window.gn_beacon_rate=(r=window.gn_beacon_rate)!=null?r:1;var w;window.gn_beacon_enabled=(w=window.gn_beacon_enabled)!=null?w:Math.random()*100<=window.gn_beacon_rate;if(window.gn_beacon_enabled){let n={t:0,mediaId:112059,divId:"1050753",loc:window.location.href,eventType:"body",elapsedTime:Math.floor(performance.now()),rate:window.gn_beacon_rate,pvId:window.gn_pvid};o(n)}})();
+</script>
+<div data-cptid="1050753" style="display: block;margin:0 auto;height:600px; width:160px;">
+<script>
+  window.gnshbrequest.cmd.push(function() {
+    window.gnshbrequest.applyPassback("1050753", "[data-cptid='1050753']");
+  });
+</script>
+</div>
+</div>
+<!-- フッタ開始 -->
+<div id="footer">
+<style>
+#footer #header ul.nl li { 
+    padding: initial;
+    background:initial;
+    display: initial;
+}
+</style>
+<!-- メニュー -->
+<div id="header">
+<ul class="nl clearFix">
+<li><a href="https://syosetu.org/">ホーム</a></li>
+<li><a href="https://syosetu.org/?mode=recommended_list">推薦一覧</a></li>
+<li><a href="https://syosetu.org/?mode=login">マイページ</a></li>
+<li><a href="https://syosetu.org/search/?mode=search">小説検索</a></li>
+<li><a href="https://syosetu.org/?mode=rank">ランキング</a></li>
+<li><a href="https://syosetu.org/?mode=seek_list">捜索掲示板</a></li>
+</ul>
+</div>
+<!-- メニュー -->
+<ul class="nl">
+<li class="first"><a href="https://syosetu.org/">ホーム</a></li>
+<li><a href="https://syosetu.org/rule.html">利用規約</a></li>
+<li><a href="https://syosetu.org/?mode=faq_list">FAQ</a></li>
+<li><a href="https://syosetu.org/info.html">運営情報</a></li>
+<li><a href="https://syosetu.org/?mode=readme_list">取扱説明書</a></li>
+<li><a href="https://syosetu.org/privacy.html">プライバシーポリシー</a></li>
+<li><a href="https://syosetu.org/?mode=tuho_message">情報提供</a></li>
+<li><a href="https://syosetu.org/?mode=teian_message">機能提案</a></li>
+<li><a href="https://syosetu.org/font_maker/?mode=font_search">自作フォント</a></li>
+<li><a href="https://syosetu.org/?mode=logout">ログアウト</a></li>
+</ul>
+<ul class="nl">
+<li class="first"><a href="#" onclick="changeView()">スマホ用ページ</a></li>
+<li>夜間モード：
+<input class="toggle_cbx hidden" id="nightmode_check" type="checkbox"/>
+<label class="toggle_lbl" for="nightmode_check"></label></li>
+</ul>
+<address>
+サイト内の小説の無断転載は固くお断りしております。
+
+</address>
+</div>
+<!-- フッタ終了 -->
+<!-- ページ終了 -->
+</body>
+</html>

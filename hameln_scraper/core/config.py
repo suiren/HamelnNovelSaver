@@ -18,6 +18,7 @@ class ScraperConfig:
     # 機能制御フラグ
     enable_novel_info_saving: bool = True
     enable_comments_saving: bool = True
+    enable_resource_saving: bool = True
     
     # ネットワーク設定
     retry_count: int = 3

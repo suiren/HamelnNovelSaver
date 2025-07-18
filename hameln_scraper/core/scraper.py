@@ -4,6 +4,7 @@
 """
 
 import logging
+import os
 from typing import Optional, Dict, Any
 from bs4 import BeautifulSoup
 
@@ -34,12 +35,13 @@ class HamelnScraper:
         
         self.logger.info("ハーメルンスクレイパー初期化完了（リファクタリング版）")
     
-    def scrape_novel(self, novel_url: str) -> Dict[str, Any]:
+    def scrape_novel(self, novel_url: str, output_dir: str = "./saved_novels") -> Dict[str, Any]:
         """
         小説を取得（メイン機能）
         
         Args:
             novel_url: 小説のURL
+            output_dir: 出力ディレクトリ
             
         Returns:
             Dict[str, Any]: 取得結果
@@ -64,12 +66,23 @@ class HamelnScraper:
             
             self.logger.info(f"小説情報取得: {title} by {author}")
             
+            # 出力ディレクトリ準備
+            novel_dir = os.path.join(output_dir, title)
+            os.makedirs(novel_dir, exist_ok=True)
+            
+            # リソースダウンロード（CSS、JS、画像）
+            if self.config.enable_resource_saving:
+                self.logger.info("リソースダウンロード開始")
+                soup = self.resource_downloader.download_all_resources(soup, novel_url, novel_dir)
+                self.logger.info("リソースダウンロード完了")
+            
             return {
                 "success": True,
                 "title": title,
                 "author": author,
                 "url": novel_url,
-                "html_content": html_content
+                "html_content": str(soup),
+                "output_dir": novel_dir
             }
             
         except Exception as e:
