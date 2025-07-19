@@ -7,20 +7,20 @@ import logging
 from typing import Optional, Dict, Any
 from bs4 import BeautifulSoup
 
-from .config import ScraperConfig
-from ..network.client import NetworkClient
+from .config import HamelnConfig
+from ..network.client import HamelnNetworkClient
 from ..parsing.validator import PageValidator
 
 
 class HamelnScraper:
     """ハーメルンスクレイパー - リファクタリング版"""
     
-    def __init__(self, config: Optional[ScraperConfig] = None):
-        self.config = config or ScraperConfig()
+    def __init__(self, config: Optional[HamelnConfig] = None):
+        self.config = config or HamelnConfig()
         self.logger = self.config.setup_logging()
         
         # 各モジュールを初期化
-        self.network_client = NetworkClient(self.config)
+        self.network_client = HamelnNetworkClient()
         self.validator = PageValidator()
         
         self.logger.info("ハーメルンスクレイパー初期化完了（リファクタリング版）")
@@ -38,12 +38,10 @@ class HamelnScraper:
         self.logger.info(f"小説取得開始: {novel_url}")
         
         try:
-            # メインページ取得
-            html_content = self.network_client.get_page(novel_url)
-            if not html_content:
+            # メインページ取得（BeautifulSoupオブジェクトを返す）
+            soup = self.network_client.get_page(novel_url)
+            if not soup:
                 return {"success": False, "error": "ページ取得失敗"}
-            
-            soup = BeautifulSoup(html_content, 'html.parser')
             
             # ページ検証
             if not self.validator.validate_page(soup, novel_url):
@@ -60,7 +58,7 @@ class HamelnScraper:
                 "title": title,
                 "author": author,
                 "url": novel_url,
-                "html_content": html_content
+                "html_content": str(soup)
             }
             
         except Exception as e:
