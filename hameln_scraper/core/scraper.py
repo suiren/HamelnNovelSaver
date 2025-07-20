@@ -640,7 +640,7 @@ class HamelnModularScraper:
     
     def process_html_resources(self, soup, base_url, output_dir, **kwargs):
         """HTMLリソースを処理"""
-        return self.resource_processor.process_html_resources(soup, base_url, output_dir, **kwargs)
+        return self.resource_processor.process_html_resources(soup, output_dir)
     
     def extract_novel_info(self, html_content, url):
         """小説情報を抽出"""
@@ -649,11 +649,47 @@ class HamelnModularScraper:
             soup = BeautifulSoup(html_content, 'html.parser')
         else:
             soup = html_content
-        return self.novel_processor.extract_novel_info(soup)
+        
+        info = self.novel_processor.extract_novel_info(soup)
+        
+        # テストが期待する辞書形式で返す
+        if info and isinstance(info, dict) and info.get('title'):
+            return {
+                'success': True,
+                'title': info.get('title', ''),
+                'author': info.get('author', ''),
+                'genre': info.get('genre', ''),
+                'summary': info.get('summary', ''),
+                'tags': info.get('tags', []),
+                'url': url
+            }
+        else:
+            return {
+                'success': False,
+                'title': '',
+                'author': '',
+                'genre': '',
+                'summary': '',
+                'tags': [],
+                'url': url,
+                'error': '小説情報を抽出できませんでした'
+            }
     
-    def get_chapter_links(self, soup, base_url):
+    def get_chapter_links(self, html_content, base_url):
         """章リンクを取得"""
-        return self.novel_processor.get_chapter_links(soup, base_url)
+        from bs4 import BeautifulSoup
+        if isinstance(html_content, str):
+            soup = BeautifulSoup(html_content, 'html.parser')
+        else:
+            soup = html_content
+        
+        links = self.url_extractor.get_chapter_links(soup, base_url)
+        
+        # テストが期待する形式で返す
+        return {
+            'success': True,
+            'chapter_links': [link['url'] if isinstance(link, dict) else link for link in links]
+        }
     
     
     def save_complete_page(self, html_content=None, output_dir=None, filename=None, original_url=None, title=None, **kwargs):
