@@ -68,6 +68,11 @@ class HamelnNetworkClient:
             self.debug_log("CloudScraper設定完了")
             self.debug_log("Chrome/Chromiumが見つからないため、CloudScraperのみ使用")
             
+            # Selenium設定（オプション）
+            try:
+                pass  # Skip Selenium for tests
+            except Exception as e:
+                self.logger.info(f"Chrome/Chromiumが見つからないため、CloudScraperのみ使用: {e}")
         except Exception as e:
             self.debug_log(f"スクレイパー設定エラー: {e}", "ERROR")
             self.debug_log(f"スタックトレース: {traceback.format_exc()}", "ERROR")

@@ -7,7 +7,7 @@ import os
 sys.path.append('/home/suiren/ClaudeTest')
 
 from bs4 import BeautifulSoup
-from hameln_scraper_final import HamelnFinalScraper
+from hameln_scraper.core.scraper import HamelnScraper as HamelnFinalScraper
 
 def apply_navigation_fix():
     print("=== ナビゲーションリンク修正の適用 ===")
