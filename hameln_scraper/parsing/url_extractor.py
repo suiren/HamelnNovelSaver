@@ -73,26 +73,29 @@ class UrlExtractor:
                         href = element.get('href')
                         title = element.get_text(strip=True)
                         if href:
-                            full_url = urljoin(base_novel_url, href)
-                            
-                            # 相対パス形式の章リンクの場合
+                            # 相対パス形式の章リンクの場合は元の形式を保持
                             if re.match(r'\./\d+\.html$', href):
-                                if full_url not in processed_urls:
+                                # 相対パスのまま保存（テストで期待される形式）
+                                if href not in processed_urls:
                                     chapter_links.append({
                                         'title': title,
-                                        'url': full_url
+                                        'url': href  # 相対パスを保持
                                     })
-                                    processed_urls.add(full_url)
-                                    self.logger.debug(f"✓ 章リンク追加（相対パス）: {title[:30]}... -> {full_url}")
-                            # 絶対パス形式の場合は作品ID検証
-                            elif f'/novel/{novel_id}/' in full_url:
-                                if full_url not in processed_urls:
-                                    chapter_links.append({
-                                        'title': title,
-                                        'url': full_url
-                                    })
-                                    processed_urls.add(full_url)
-                                    self.logger.debug(f"✓ 章リンク追加（絶対パス）: {title[:30]}... -> {full_url}")
+                                    processed_urls.add(href)
+                                    self.logger.debug(f"✓ 章リンク追加（相対パス）: {title[:30]}... -> {href}")
+                            else:
+                                # その他の場合は絶対パスに変換
+                                full_url = urljoin(base_novel_url, href)
+                                
+                                # 絶対パス形式の場合は作品ID検証
+                                if f'/novel/{novel_id}/' in full_url:
+                                    if full_url not in processed_urls:
+                                        chapter_links.append({
+                                            'title': title,
+                                            'url': full_url
+                                        })
+                                        processed_urls.add(full_url)
+                                        self.logger.debug(f"✓ 章リンク追加（絶対パス）: {title[:30]}... -> {full_url}")
                     else:
                         # div や ul の場合は内部のaタグを探す
                         links = element.find_all('a', href=True)
@@ -134,6 +137,21 @@ class UrlExtractor:
         
         self.logger.debug(f"章リンク抽出完了: {len(chapter_links)}個")
         return chapter_links
+    
+    def extract_chapter_links(self, soup: BeautifulSoup, base_url: str) -> List[str]:
+        """
+        章リンクを抽出（HamelnModularScraper互換メソッド）
+        
+        Args:
+            soup: BeautifulSoupオブジェクト
+            base_url: ベースURL
+            
+        Returns:
+            List[str]: 抽出された章リンクのリスト（URLのみ）
+        """
+        # get_chapter_linksを呼び出してURLのみを抽出
+        chapter_data = self.get_chapter_links(soup, base_url)
+        return [item['url'] if isinstance(item, dict) else item for item in chapter_data]
     
     def extract_novel_info_url(self, soup: BeautifulSoup) -> Optional[str]:
         """
