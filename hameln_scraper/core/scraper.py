@@ -52,7 +52,7 @@ class HamelnModularScraper:
         self.debug_mode = True
         
         # Phase 1: 設定管理
-        self.config = HamelnConfig()
+        self.config = HamelnConfig(base_url=base_url)
         self.logger = self._setup_logging()
         
         # Phase 2: ネットワーク処理
@@ -71,7 +71,8 @@ class HamelnModularScraper:
             network_client=self.network_client.cloudscraper
         )
         self.resource_processor = ResourceProcessor(
-            downloader=self.resource_downloader
+            config=self.config,
+            network_client=self.network_client
         )
         self.page_saver = PageSaver(
             processor=self.resource_processor
