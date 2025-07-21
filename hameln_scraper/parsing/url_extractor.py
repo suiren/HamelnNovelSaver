@@ -73,16 +73,17 @@ class UrlExtractor:
                         href = element.get('href')
                         title = element.get_text(strip=True)
                         if href:
-                            # 相対パス形式の章リンクの場合は元の形式を保持
+                            # 相対パス形式の章リンクの場合は絶対URLに変換
                             if re.match(r'\./\d+\.html$', href):
-                                # 相対パスのまま保存（テストで期待される形式）
-                                if href not in processed_urls:
+                                # 相対パスを絶対URLに変換
+                                full_url = urljoin(base_novel_url, href)
+                                if full_url not in processed_urls:
                                     chapter_links.append({
                                         'title': title,
-                                        'url': href  # 相対パスを保持
+                                        'url': full_url  # 絶対URLに変換
                                     })
-                                    processed_urls.add(href)
-                                    self.logger.debug(f"✓ 章リンク追加（相対パス）: {title[:30]}... -> {href}")
+                                    processed_urls.add(full_url)
+                                    self.logger.debug(f"✓ 章リンク追加（相対→絶対）: {title[:30]}... -> {full_url}")
                             else:
                                 # その他の場合は絶対パスに変換
                                 full_url = urljoin(base_novel_url, href)

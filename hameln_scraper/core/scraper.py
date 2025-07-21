@@ -630,8 +630,8 @@ class HamelnModularScraper:
         """感想ページを保存"""
         return self.comments_handler.save_comments_page(comments_url, output_dir, title, index_file_name)
     
-    def get_page(self, url, **kwargs):
-        """ページを取得"""
+    def get_page_raw(self, url, **kwargs):
+        """ページを取得（生のBeautifulSoupオブジェクト）"""
         return self.network_client.get_page(url, **kwargs)
     
     def download_resource(self, url, output_dir, **kwargs):
