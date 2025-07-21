@@ -188,19 +188,31 @@ class ResourceProcessor:
         """リソースパスのみを調整（ダウンロードは行わない）"""
         resources_dir_name = getattr(self, 'browser_compatible_name', 'resources')
         
+        self.logger.info("リソースパス調整開始（ダウンロードなし）")
+        
+        # CSSリンクのパス調整
         for link in soup.find_all('link', rel='stylesheet'):
             href = link.get('href')
-            if href and href.startswith('./'):
-                continue
+            if href and not href.startswith('./'):
+                filename = os.path.basename(href) or f"style_{hash(href) % 10000}.css"
+                link['href'] = f"./{resources_dir_name}/{filename}"
+                self.logger.debug(f"CSSパス調整: {href} → {link['href']}")
         
+        # 画像のパス調整
         for img in soup.find_all('img', src=True):
             src = img.get('src')
-            if src and src.startswith('./'):
-                continue
+            if src and not src.startswith('./') and not src.startswith('data:'):
+                filename = os.path.basename(src) or f"img_{hash(src) % 10000}.jpg"
+                img['src'] = f"./{resources_dir_name}/{filename}"
+                self.logger.debug(f"画像パス調整: {src} → {img['src']}")
         
+        # JSスクリプトのパス調整
         for script in soup.find_all('script', src=True):
             src = script.get('src')
-            if src and src.startswith('./'):
-                continue
+            if src and not src.startswith('./'):
+                filename = os.path.basename(src) or f"script_{hash(src) % 10000}.js"
+                script['src'] = f"./{resources_dir_name}/{filename}"
+                self.logger.debug(f"JSパス調整: {src} → {script['src']}")
         
+        self.logger.info("リソースパス調整完了")
         return soup
