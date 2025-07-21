@@ -87,3 +87,6 @@ build.bat
 build.ps1
 build.sh
 # *.spec - コメントアウト：プロジェクトで必要
+
+# 自動追加: バックアップファイル除外
+backup_original_files/

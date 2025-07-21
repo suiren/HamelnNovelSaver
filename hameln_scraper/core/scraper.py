@@ -642,66 +642,66 @@ class HamelnModularScraper:
         """HTMLリソースを処理"""
         return self.resource_processor.process_html_resources(soup, output_dir)
     
-    def extract_novel_info(self, html_content, url):
-        """小説情報を抽出"""
-        from bs4 import BeautifulSoup
-        if isinstance(html_content, str):
-            soup = BeautifulSoup(html_content, 'html.parser')
-        else:
-            soup = html_content
+    # DUPLICATE REMOVED: def extract_novel_info(self, html_content, url):
+    #         """小説情報を抽出"""
+    #         from bs4 import BeautifulSoup
+    #         if isinstance(html_content, str):
+    #             soup = BeautifulSoup(html_content, 'html.parser')
+    #         else:
+    #             soup = html_content
         
-        info = self.novel_processor.extract_novel_info(soup)
+    #         info = self.novel_processor.extract_novel_info(soup)
         
         # テストが期待する辞書形式で返す
-        if info and isinstance(info, dict) and info.get('title'):
-            return {
-                'success': True,
-                'title': info.get('title', ''),
-                'author': info.get('author', ''),
-                'genre': info.get('genre', ''),
-                'summary': info.get('summary', ''),
-                'tags': info.get('tags', []),
-                'url': url
-            }
-        else:
-            return {
-                'success': False,
-                'title': '',
-                'author': '',
-                'genre': '',
-                'summary': '',
-                'tags': [],
-                'url': url,
-                'error': '小説情報を抽出できませんでした'
-            }
+    #         if info and isinstance(info, dict) and info.get('title'):
+    #             return {
+    #                 'success': True,
+    #                 'title': info.get('title', ''),
+    #                 'author': info.get('author', ''),
+    #                 'genre': info.get('genre', ''),
+    #                 'summary': info.get('summary', ''),
+    #                 'tags': info.get('tags', []),
+    #                 'url': url
+    #             }
+    #         else:
+    #             return {
+    #                 'success': False,
+    #                 'title': '',
+    #                 'author': '',
+    #                 'genre': '',
+    #                 'summary': '',
+    #                 'tags': [],
+    #                 'url': url,
+    #                 'error': '小説情報を抽出できませんでした'
+    #             }
     
-    def get_chapter_links(self, html_content, base_url):
-        """章リンクを取得"""
-        from bs4 import BeautifulSoup
-        if isinstance(html_content, str):
-            soup = BeautifulSoup(html_content, 'html.parser')
-        else:
-            soup = html_content
+    # DUPLICATE REMOVED: def get_chapter_links(self, html_content, base_url):
+    #         """章リンクを取得"""
+    #         from bs4 import BeautifulSoup
+    #         if isinstance(html_content, str):
+    #             soup = BeautifulSoup(html_content, 'html.parser')
+    #         else:
+    #             soup = html_content
         
-        links = self.url_extractor.get_chapter_links(soup, base_url)
+    #         links = self.url_extractor.get_chapter_links(soup, base_url)
         
         # テストが期待する形式で返す
-        return {
-            'success': True,
-            'chapter_links': [link['url'] if isinstance(link, dict) else link for link in links]
-        }
+    #         return {
+    #             'success': True,
+    #             'chapter_links': [link['url'] if isinstance(link, dict) else link for link in links]
+    #         }
     
     
-    def save_complete_page(self, html_content=None, output_dir=None, filename=None, original_url=None, title=None, **kwargs):
-        """完全なページを保存"""
-        return self.page_saver.save_complete_page(
-            html_content=html_content,
-            output_dir=output_dir,
-            filename=filename,
-            original_url=original_url,
-            title=title,
-            **kwargs
-        )
+    # DUPLICATE REMOVED: def save_complete_page(self, html_content=None, output_dir=None, filename=None, original_url=None, title=None, **kwargs):
+    #         """完全なページを保存"""
+    #         return self.page_saver.save_complete_page(
+    #             html_content=html_content,
+    #             output_dir=output_dir,
+    #             filename=filename,
+    #             original_url=original_url,
+    #             title=title,
+    #             **kwargs
+    #         )
     
     def fix_local_navigation_links(self, soup, chapter_mapping):
         """ローカルナビゲーションリンクを修正"""
