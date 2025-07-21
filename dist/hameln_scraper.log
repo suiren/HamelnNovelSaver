@@ -13894,3 +13894,407 @@ b'{console.log("undetected chromedriver 1337!")}                                
 2025-07-15 19:26:37,200 - DEBUG - https://img.syosetu.org:443 "GET /js/ad_dliste.min.js HTTP/1.1" 200 536
 2025-07-15 19:26:37,205 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
 2025-07-15 19:26:37,318 - DEBUG - https://ct.syosetu.org:443 "GET /?n=380313&v=1 HTTP/1.1" 200 None
+2025-07-19 00:09:13,035 - INFO - ハーメルンスクレイパー初期化開始
+2025-07-19 00:09:13,040 - INFO - CloudScraper初期化開始
+2025-07-19 00:09:13,069 - INFO - CloudScraper設定完了
+2025-07-19 00:09:13,072 - INFO - Chrome/Chromiumが見つからないため、CloudScraperのみ使用
+2025-07-19 00:09:15,093 - INFO - ページ取得開始: https://syosetu.org/novel/380014/
+2025-07-19 00:09:17,100 - INFO - CloudScraperで初回試行中...
+2025-07-19 00:09:17,103 - DEBUG - Starting new HTTPS connection (1): syosetu.org:443
+2025-07-19 00:09:17,218 - DEBUG - https://syosetu.org:443 "GET /novel/380014/ HTTP/1.1" 200 None
+2025-07-19 00:09:17,226 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=24464bytes
+2025-07-19 00:09:17,233 - INFO - CloudScraperで取得されたHTMLテキスト長: 20808
+2025-07-19 00:09:17,247 - INFO - CloudScraper取得ページ分析:
+2025-07-19 00:09:17,254 - INFO -   - タイトル: 片田舎の剣聖 錬鉄の英霊 - ハーメルン
+2025-07-19 00:09:17,261 - INFO -   - 本文長: 2142文字
+2025-07-19 00:09:17,274 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380014/" property="og:url"/>
+<meta content="片田舎の剣聖 錬鉄の英霊 - ハーメルン" property="og:title"/>
+<meta content="突如として現れた、ひとりの男―― 彼の名はエミヤ。 かつて“正義の味方”を志し、数えきれぬ修羅を越えてなお、誰か...
+2025-07-19 00:09:17,283 - INFO -   - h1要素数: 1
+2025-07-19 00:09:17,291 - INFO -   - div要素数: 21
+2025-07-19 00:09:17,299 - INFO -   - a要素数: 90
+2025-07-19 00:09:17,307 - INFO -   - novel_body要素数: 0
+2025-07-19 00:09:17,313 - INFO -   - novel_view要素数: 0
+2025-07-19 00:09:17,321 - INFO - ページ検証: 正常なページ
+2025-07-19 00:09:17,330 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380014/
+2025-07-19 00:09:17,339 - INFO - 小説情報抽出開始
+2025-07-19 00:09:17,346 - INFO - タイトル抽出試行中...
+2025-07-19 00:09:17,353 - INFO - タイトルセレクター試行: div {'class': 'section1'}
+2025-07-19 00:09:17,358 - INFO - セレクター div {'class': 'section1'} で要素が見つかりませんでした
+2025-07-19 00:09:17,364 - INFO - タイトルセレクター試行: div {'class': 'section2'}
+2025-07-19 00:09:17,371 - INFO - セレクター div {'class': 'section2'} で要素が見つかりませんでした
+2025-07-19 00:09:17,378 - INFO - タイトルセレクター試行: h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001D17CB8CF40>}
+2025-07-19 00:09:17,389 - INFO - セレクター h1 {'class': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001D17CB8CF40>} で要素が見つかりませんでした
+2025-07-19 00:09:17,399 - INFO - タイトルセレクター試行: h1 {'class': 'p-novel-title'}
+2025-07-19 00:09:17,410 - INFO - セレクター h1 {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-19 00:09:17,417 - INFO - タイトルセレクター試行: h1 {'class': 'novel-title'}
+2025-07-19 00:09:17,426 - INFO - セレクター h1 {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-19 00:09:17,434 - INFO - タイトルセレクター試行: div {'class': 'p-novel-title'}
+2025-07-19 00:09:17,444 - INFO - セレクター div {'class': 'p-novel-title'} で要素が見つかりませんでした
+2025-07-19 00:09:17,451 - INFO - タイトルセレクター試行: span {'class': 'novel-title'}
+2025-07-19 00:09:17,460 - INFO - セレクター span {'class': 'novel-title'} で要素が見つかりませんでした
+2025-07-19 00:09:17,468 - INFO - タイトルセレクター試行: h1 {'class': 'title'}
+2025-07-19 00:09:17,475 - INFO - セレクター h1 {'class': 'title'} で要素が見つかりませんでした
+2025-07-19 00:09:17,482 - INFO - タイトルセレクター試行: h1 {'class': 'novel_title'}
+2025-07-19 00:09:17,489 - INFO - セレクター h1 {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-19 00:09:17,496 - INFO - タイトルセレクター試行: div {'class': 'novel_title'}
+2025-07-19 00:09:17,502 - INFO - セレクター div {'class': 'novel_title'} で要素が見つかりませんでした
+2025-07-19 00:09:17,510 - INFO - タイトルセレクター試行: h1 {}
+2025-07-19 00:09:17,519 - INFO - タイトルセレクター試行: title {}
+2025-07-19 00:09:17,528 - INFO - タイトル取得成功: 片田舎の剣聖 錬鉄の英霊
+2025-07-19 00:09:17,535 - INFO - 作者抽出試行中...
+2025-07-19 00:09:17,544 - INFO - 作者セレクター試行: a {'class': 'p-novel-author'}
+2025-07-19 00:09:17,553 - INFO - セレクター a {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-19 00:09:17,562 - INFO - 作者セレクター試行: span {'class': 'p-novel-author'}
+2025-07-19 00:09:17,571 - INFO - セレクター span {'class': 'p-novel-author'} で要素が見つかりませんでした
+2025-07-19 00:09:17,581 - INFO - 作者セレクター試行: div {'class': 'novel-author'}
+2025-07-19 00:09:17,591 - INFO - セレクター div {'class': 'novel-author'} で要素が見つかりませんでした
+2025-07-19 00:09:17,600 - INFO - 作者セレクター試行: a {'class': 'author-link'}
+2025-07-19 00:09:17,609 - INFO - セレクター a {'class': 'author-link'} で要素が見つかりませんでした
+2025-07-19 00:09:17,620 - INFO - 作者セレクター試行: a {'href': <function HamelnFinalScraper.extract_novel_info.<locals>.<lambda> at 0x000001D17CB8CEA0>}
+2025-07-19 00:09:17,631 - INFO - 作者取得成功: ナチュル志保
+2025-07-19 00:09:17,640 - DEBUG - Starting new HTTPS connection (1): img.syosetu.org:443
+2025-07-19 00:09:17,725 - DEBUG - https://img.syosetu.org:443 "GET /css/style.css?20240131 HTTP/1.1" 200 7847
+2025-07-19 00:09:17,755 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-19 00:09:17,783 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-19 00:09:17,814 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.gif HTTP/1.1" 200 811
+2025-07-19 00:09:17,844 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.gif HTTP/1.1" 200 1297
+2025-07-19 00:09:17,869 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.gif HTTP/1.1" 200 1294
+2025-07-19 00:09:17,896 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.gif HTTP/1.1" 200 833
+2025-07-19 00:09:17,922 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.gif HTTP/1.1" 200 1102
+2025-07-19 00:09:17,948 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.gif HTTP/1.1" 200 1072
+2025-07-19 00:09:17,974 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.gif HTTP/1.1" 200 1866
+2025-07-19 00:09:18,006 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.gif HTTP/1.1" 200 1014
+2025-07-19 00:09:18,037 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.gif HTTP/1.1" 200 927
+2025-07-19 00:09:18,064 - DEBUG - https://img.syosetu.org:443 "GET /image/square.gif HTTP/1.1" 200 816
+2025-07-19 00:09:18,096 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.gif HTTP/1.1" 200 874
+2025-07-19 00:09:18,123 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.gif HTTP/1.1" 200 833
+2025-07-19 00:09:18,153 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.gif HTTP/1.1" 200 834
+2025-07-19 00:09:18,187 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.gif HTTP/1.1" 200 1136
+2025-07-19 00:09:18,218 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.gif HTTP/1.1" 200 1136
+2025-07-19 00:09:18,247 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.gif HTTP/1.1" 200 898
+2025-07-19 00:09:18,274 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-19 00:09:18,302 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-19 00:09:18,328 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-19 00:09:18,355 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-19 00:09:18,387 - DEBUG - https://img.syosetu.org:443 "GET /css/ss_style-.css HTTP/1.1" 200 84
+2025-07-19 00:09:18,413 - DEBUG - https://img.syosetu.org:443 "GET /css/blank.css HTTP/1.1" 200 None
+2025-07-19 00:09:18,437 - DEBUG - https://img.syosetu.org:443 "GET /css/tmp_check3.css?202501083 HTTP/1.1" 200 1047
+2025-07-19 00:09:18,467 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-19 00:09:18,494 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png HTTP/1.1" 200 4864
+2025-07-19 00:09:18,523 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png HTTP/1.1" 200 1566
+2025-07-19 00:09:18,548 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-19 00:09:18,576 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-19 00:09:18,604 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-19 00:09:18,632 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_mokuzi_pc_min.js?202008211 HTTP/1.1" 200 953
+2025-07-19 00:09:18,637 - DEBUG - Starting new HTTPS connection (1): securepubads.g.doubleclick.net:443
+2025-07-19 00:09:18,640 - DEBUG - Starting new HTTPS connection (1): cpt.geniee.jp:443
+2025-07-19 00:09:18,663 - DEBUG - https://img.syosetu.org:443 "GET /js/ad_dliste.min.js?202501083 HTTP/1.1" 200 536
+2025-07-19 00:09:18,689 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a3.gif HTTP/1.1" 200 249
+2025-07-19 00:09:18,716 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a4.gif HTTP/1.1" 200 247
+2025-07-19 00:09:18,744 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_g2.gif HTTP/1.1" 200 244
+2025-07-19 00:09:18,770 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_g5.gif HTTP/1.1" 200 166
+2025-07-19 00:09:18,800 - DEBUG - https://img.syosetu.org:443 "GET /image/grade4/ico_grade3_a5.gif HTTP/1.1" 200 166
+2025-07-19 00:09:18,805 - DEBUG - Starting new HTTPS connection (1): ct.syosetu.org:443
+2025-07-19 00:09:18,929 - DEBUG - https://ct.syosetu.org:443 "GET /?n=380014 HTTP/1.1" 200 None
+2025-07-19 00:09:19,029 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-19 00:09:19,077 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-19 00:09:19,165 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-19 00:09:19,262 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-19 00:09:19,272 - DEBUG - Starting new HTTPS connection (2): securepubads.g.doubleclick.net:443
+2025-07-19 00:09:19,276 - DEBUG - Starting new HTTPS connection (2): cpt.geniee.jp:443
+2025-07-19 00:09:19,302 - INFO - 感想ページを取得中: https://syosetu.org/?mode=review&nid=380014
+2025-07-19 00:09:19,317 - INFO - 感想保存フォルダ作成: saved_novels\片田舎の剣聖 錬鉄の英霊\感想
+2025-07-19 00:09:19,327 - INFO - ページ取得開始: https://syosetu.org/?mode=review&nid=380014
+2025-07-19 00:09:21,335 - INFO - CloudScraperで初回試行中...
+2025-07-19 00:09:21,389 - DEBUG - https://syosetu.org:443 "GET /?mode=review&nid=380014 HTTP/1.1" 200 None
+2025-07-19 00:09:21,396 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=24898bytes
+2025-07-19 00:09:21,405 - INFO - CloudScraperで取得されたHTMLテキスト長: 22600
+2025-07-19 00:09:21,420 - INFO - CloudScraper取得ページ分析:
+2025-07-19 00:09:21,428 - INFO -   - タイトル: 片田舎の剣聖 錬鉄の英霊の感想 - ハーメルン
+2025-07-19 00:09:21,432 - INFO -   - 本文長: 1525文字
+2025-07-19 00:09:21,444 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-19 00:09:21,451 - INFO -   - h1要素数: 1
+2025-07-19 00:09:21,457 - INFO -   - div要素数: 25
+2025-07-19 00:09:21,463 - INFO -   - a要素数: 86
+2025-07-19 00:09:21,472 - INFO -   - novel_body要素数: 0
+2025-07-19 00:09:21,480 - INFO -   - novel_view要素数: 0
+2025-07-19 00:09:21,487 - INFO - ページ検証: 正常なページ
+2025-07-19 00:09:21,494 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=review&nid=380014
+2025-07-19 00:09:21,510 - INFO - 検出されたページ: 1ページ
+2025-07-19 00:09:21,516 - INFO -   ページ1: https://syosetu.org/?mode=review&nid=380014
+2025-07-19 00:09:21,524 - INFO - 感想ページ数: 1ページ
+2025-07-19 00:09:21,531 - INFO - 感想ページ 1/1 を保存中: https://syosetu.org/?mode=review&nid=380014
+2025-07-19 00:09:21,558 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-19 00:09:21,581 - DEBUG - https://img.syosetu.org:443 "GET /image/banner.png HTTP/1.1" 200 1623
+2025-07-19 00:09:21,606 - DEBUG - https://img.syosetu.org:443 "GET /image/banner_inverted.png HTTP/1.1" 200 11905
+2025-07-19 00:09:21,634 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-19 00:09:21,665 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-19 00:09:21,691 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-19 00:09:21,717 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-19 00:09:21,747 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-19 00:09:21,772 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-19 00:09:21,796 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-19 00:09:21,830 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-19 00:09:21,860 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-19 00:09:21,886 - DEBUG - https://img.syosetu.org:443 "GET /image/square.png HTTP/1.1" 200 134
+2025-07-19 00:09:21,915 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-19 00:09:21,942 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6.png HTTP/1.1" 200 108
+2025-07-19 00:09:21,969 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle6_box.png HTTP/1.1" 200 2581
+2025-07-19 00:09:22,068 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-19 00:09:22,100 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-19 00:09:22,130 - DEBUG - https://img.syosetu.org:443 "GET /image/required1.png HTTP/1.1" 200 235
+2025-07-19 00:09:22,162 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-19 00:09:22,193 - DEBUG - https://img.syosetu.org:443 "GET /favicon.ico HTTP/1.1" 200 None
+2025-07-19 00:09:22,220 - DEBUG - https://img.syosetu.org:443 "GET /image/apple-touch-icon-180x180.png?20230812 HTTP/1.1" 200 4864
+2025-07-19 00:09:22,246 - DEBUG - https://img.syosetu.org:443 "GET /image/icon-192x192.png?20230812 HTTP/1.1" 200 1566
+2025-07-19 00:09:22,273 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.min.js HTTP/1.1" 200 32808
+2025-07-19 00:09:22,303 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.cookie.min.js?20220619 HTTP/1.1" 200 663
+2025-07-19 00:09:22,336 - DEBUG - https://img.syosetu.org:443 "GET /js/night_mode.js?201908031 HTTP/1.1" 200 371
+2025-07-19 00:09:22,364 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-19 00:09:22,371 - DEBUG - Starting new HTTPS connection (3): securepubads.g.doubleclick.net:443
+2025-07-19 00:09:22,373 - DEBUG - Starting new HTTPS connection (3): cpt.geniee.jp:443
+2025-07-19 00:09:22,392 - INFO - 感想ページ1保存完了: 感想 - ページ1.html
+2025-07-19 00:09:22,399 - INFO - 感想ページ間のリンクを修正中...
+2025-07-19 00:09:22,417 - INFO - 目次リンク修正: https://syosetu.org/novel/380014/ -> ../目次.html
+2025-07-19 00:09:22,441 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail&nid=380014 -> ../小説情報.html
+2025-07-19 00:09:22,454 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail3&nid=380014 -> ../小説情報.html
+2025-07-19 00:09:22,464 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=380014 -> 感想 - ページ1.html
+2025-07-19 00:09:22,476 - INFO - 小説情報リンク修正: https://syosetu.org/?mode=ss_detail_like&nid=380014 -> ../小説情報.html
+2025-07-19 00:09:22,488 - INFO - 目次リンク修正: https://syosetu.org/novel/380014/ -> ../目次.html
+2025-07-19 00:09:22,500 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=380014&type=1 -> 感想 - ページ1.html
+2025-07-19 00:09:22,513 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=380014 -> 感想 - ページ1.html
+2025-07-19 00:09:22,526 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=380014&volume=1 -> 感想 - ページ1.html
+2025-07-19 00:09:22,540 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=380014&volume=2 -> 感想 - ページ1.html
+2025-07-19 00:09:22,555 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=380014&volume=3 -> 感想 - ページ1.html
+2025-07-19 00:09:22,567 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=380014&volume=4 -> 感想 - ページ1.html
+2025-07-19 00:09:22,579 - INFO - 感想ページリンク修正: https://syosetu.org/?mode=review&nid=380014&volume=5 -> 感想 - ページ1.html
+2025-07-19 00:09:22,595 - INFO - 感想ページ保存完了: 1ページ保存
+2025-07-19 00:09:22,607 - INFO - 小説情報ページを取得中: https://syosetu.org/?mode=ss_detail&nid=380014
+2025-07-19 00:09:22,616 - INFO - ページ取得開始: https://syosetu.org/?mode=ss_detail&nid=380014
+2025-07-19 00:09:24,630 - INFO - CloudScraperで初回試行中...
+2025-07-19 00:09:24,684 - DEBUG - https://syosetu.org:443 "GET /?mode=ss_detail&nid=380014 HTTP/1.1" 200 None
+2025-07-19 00:09:24,694 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=21495bytes
+2025-07-19 00:09:24,704 - INFO - CloudScraperで取得されたHTMLテキスト長: 19619
+2025-07-19 00:09:24,720 - INFO - CloudScraper取得ページ分析:
+2025-07-19 00:09:24,729 - INFO -   - タイトル: 片田舎の剣聖 錬鉄の英霊の小説情報 - ハーメルン
+2025-07-19 00:09:24,736 - INFO -   - 本文長: 1090文字
+2025-07-19 00:09:24,748 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<link href="http://m.syosetu.org/" media="handheld" rel="alternate"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="text/javascript" http-equiv="Content-Script-Type"/>
+<meta content="#b3a98c" name="theme-color"/>
+<link href="https://img.syosetu.org/favicon.ico" rel="shortcut...
+2025-07-19 00:09:24,757 - INFO -   - h1要素数: 1
+2025-07-19 00:09:24,765 - INFO -   - div要素数: 28
+2025-07-19 00:09:24,772 - INFO -   - a要素数: 65
+2025-07-19 00:09:24,778 - INFO -   - novel_body要素数: 0
+2025-07-19 00:09:24,784 - INFO -   - novel_view要素数: 0
+2025-07-19 00:09:24,793 - INFO - ページ検証: 正常なページ
+2025-07-19 00:09:24,800 - INFO - CloudScraperで取得成功: https://syosetu.org/?mode=ss_detail&nid=380014
+2025-07-19 00:09:24,813 - INFO - 小説情報ページ目次リンク修正: https://syosetu.org/novel/380014/ -> 目次.html
+2025-07-19 00:09:24,826 - INFO - 小説情報ページ感想リンク修正: https://syosetu.org/?mode=review&nid=380014 -> 感想/感想 - ページ1.html
+2025-07-19 00:09:24,837 - INFO - 小説情報ページ目次リンク修正: https://syosetu.org/novel/380014/ -> 目次.html
+2025-07-19 00:09:24,849 - INFO - 小説情報ページ感想リンク修正: ./?mode=review&nid=380014 -> 感想/感想 - ページ1.html
+2025-07-19 00:09:24,878 - DEBUG - https://img.syosetu.org:443 "GET /css/style_v2.css?202210101 HTTP/1.1" 200 5834
+2025-07-19 00:09:24,906 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_line_gray.png HTTP/1.1" 200 83
+2025-07-19 00:09:24,938 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_off.png HTTP/1.1" 200 371
+2025-07-19 00:09:24,968 - DEBUG - https://img.syosetu.org:443 "GET /image/hor_menu8_on.png HTTP/1.1" 200 384
+2025-07-19 00:09:24,998 - DEBUG - https://img.syosetu.org:443 "GET /image/menu_triangle2.png HTTP/1.1" 200 108
+2025-07-19 00:09:25,033 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back6.png HTTP/1.1" 200 310
+2025-07-19 00:09:25,062 - DEBUG - https://img.syosetu.org:443 "GET /image/heading_back1.png HTTP/1.1" 200 148
+2025-07-19 00:09:25,091 - DEBUG - https://img.syosetu.org:443 "GET /image/emphasis_back4.png HTTP/1.1" 200 454
+2025-07-19 00:09:25,121 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_gen.png HTTP/1.1" 200 249
+2025-07-19 00:09:25,161 - DEBUG - https://img.syosetu.org:443 "GET /image/tab_act.png HTTP/1.1" 200 204
+2025-07-19 00:09:25,231 - DEBUG - https://img.syosetu.org:443 "GET /image/box_back_gray4.png HTTP/1.1" 200 99
+2025-07-19 00:09:25,264 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_off.png HTTP/1.1" 200 281
+2025-07-19 00:09:25,297 - DEBUG - https://img.syosetu.org:443 "GET /image/form_back3_on.png HTTP/1.1" 200 293
+2025-07-19 00:09:25,334 - DEBUG - https://img.syosetu.org:443 "GET /css/select2.min.css?202212171 HTTP/1.1" 200 2144
+2025-07-19 00:09:25,370 - DEBUG - https://img.syosetu.org:443 "GET /js/select2.min.js?202212171 HTTP/1.1" 200 20017
+2025-07-19 00:09:25,377 - DEBUG - Starting new HTTPS connection (4): securepubads.g.doubleclick.net:443
+2025-07-19 00:09:25,380 - DEBUG - Starting new HTTPS connection (4): cpt.geniee.jp:443
+2025-07-19 00:09:25,399 - INFO - 小説情報ページ保存完了: 片田舎の剣聖 錬鉄の英霊 - 小説情報.html
+2025-07-19 00:09:25,411 - INFO - ページ取得開始: https://syosetu.org/novel/380014/1.html
+2025-07-19 00:09:27,420 - INFO - CloudScraperで初回試行中...
+2025-07-19 00:09:27,470 - DEBUG - https://syosetu.org:443 "GET /novel/380014/1.html HTTP/1.1" 200 None
+2025-07-19 00:09:27,478 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=24657bytes
+2025-07-19 00:09:27,486 - INFO - CloudScraperで取得されたHTMLテキスト長: 19323
+2025-07-19 00:09:27,501 - INFO - CloudScraper取得ページ分析:
+2025-07-19 00:09:27,512 - INFO -   - タイトル: 片田舎の剣聖 錬鉄の英霊 - 【零章・第1話】『剣は、ただ静かに鳴る』 - ハーメルン
+2025-07-19 00:09:27,518 - INFO -   - 本文長: 2774文字
+2025-07-19 00:09:27,531 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380014/1.html" property="og:url"/>
+<meta content="【零章・第1話】『剣は、ただ静かに鳴る』 - 片田舎の剣聖 錬鉄の英霊 - ハーメルン" property="og:title"/>
+<meta content="突如として現れた、ひとりの男―― 彼の名はエミヤ。 か...
+2025-07-19 00:09:27,539 - INFO -   - h1要素数: 1
+2025-07-19 00:09:27,546 - INFO -   - div要素数: 22
+2025-07-19 00:09:27,553 - INFO -   - a要素数: 77
+2025-07-19 00:09:27,560 - INFO -   - novel_body要素数: 0
+2025-07-19 00:09:27,567 - INFO -   - novel_view要素数: 0
+2025-07-19 00:09:27,576 - INFO - ページ検証: 正常なページ
+2025-07-19 00:09:27,583 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380014/1.html
+2025-07-19 00:09:27,636 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-19 00:09:27,686 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-19 00:09:27,738 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-19 00:09:27,788 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-19 00:09:27,820 - DEBUG - https://img.syosetu.org:443 "GET /js/jquery.color.plus-names-2.1.2.min.js HTTP/1.1" 200 3923
+2025-07-19 00:09:27,853 - DEBUG - https://img.syosetu.org:443 "GET /js/novel_pc_min.js HTTP/1.1" 200 10775
+2025-07-19 00:09:27,883 - DEBUG - https://img.syosetu.org:443 "GET /js/reading_record.min.js HTTP/1.1" 200 1116
+2025-07-19 00:09:27,981 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-19 00:09:28,070 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-19 00:09:28,117 - DEBUG - https://ct.syosetu.org:443 "GET /?n=380014&v=1 HTTP/1.1" 200 None
+2025-07-19 00:09:31,149 - INFO - ページ取得開始: https://syosetu.org/novel/380014/2.html
+2025-07-19 00:09:33,157 - INFO - CloudScraperで初回試行中...
+2025-07-19 00:09:33,207 - DEBUG - https://syosetu.org:443 "GET /novel/380014/2.html HTTP/1.1" 200 None
+2025-07-19 00:09:33,213 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=24180bytes
+2025-07-19 00:09:33,219 - INFO - CloudScraperで取得されたHTMLテキスト長: 19258
+2025-07-19 00:09:33,233 - INFO - CloudScraper取得ページ分析:
+2025-07-19 00:09:33,244 - INFO -   - タイトル: 片田舎の剣聖 錬鉄の英霊 - 【零章・第2話】『剣聖との邂逅』 - ハーメルン
+2025-07-19 00:09:33,252 - INFO -   - 本文長: 2575文字
+2025-07-19 00:09:33,267 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380014/2.html" property="og:url"/>
+<meta content="【零章・第2話】『剣聖との邂逅』 - 片田舎の剣聖 錬鉄の英霊 - ハーメルン" property="og:title"/>
+<meta content="突如として現れた、ひとりの男―― 彼の名はエミヤ。 かつて“正...
+2025-07-19 00:09:33,277 - INFO -   - h1要素数: 1
+2025-07-19 00:09:33,286 - INFO -   - div要素数: 22
+2025-07-19 00:09:33,295 - INFO -   - a要素数: 77
+2025-07-19 00:09:33,302 - INFO -   - novel_body要素数: 0
+2025-07-19 00:09:33,311 - INFO -   - novel_view要素数: 0
+2025-07-19 00:09:33,320 - INFO - ページ検証: 正常なページ
+2025-07-19 00:09:33,329 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380014/2.html
+2025-07-19 00:09:33,383 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-19 00:09:33,432 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-19 00:09:33,483 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-19 00:09:33,535 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-19 00:09:33,566 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-19 00:09:33,592 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-19 00:09:33,639 - DEBUG - https://ct.syosetu.org:443 "GET /?n=380014&v=2 HTTP/1.1" 200 None
+2025-07-19 00:09:36,660 - INFO - ページ取得開始: https://syosetu.org/novel/380014/3.html
+2025-07-19 00:09:38,672 - INFO - CloudScraperで初回試行中...
+2025-07-19 00:09:38,727 - DEBUG - https://syosetu.org:443 "GET /novel/380014/3.html HTTP/1.1" 200 None
+2025-07-19 00:09:38,739 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=31173bytes
+2025-07-19 00:09:38,750 - INFO - CloudScraperで取得されたHTMLテキスト長: 22521
+2025-07-19 00:09:38,772 - INFO - CloudScraper取得ページ分析:
+2025-07-19 00:09:38,782 - INFO -   - タイトル: 片田舎の剣聖 錬鉄の英霊 - 【零章・第3話】『かすかに、交わる』 - ハーメルン
+2025-07-19 00:09:38,791 - INFO -   - 本文長: 4443文字
+2025-07-19 00:09:38,812 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380014/3.html" property="og:url"/>
+<meta content="【零章・第3話】『かすかに、交わる』 - 片田舎の剣聖 錬鉄の英霊 - ハーメルン" property="og:title"/>
+<meta content="突如として現れた、ひとりの男―― 彼の名はエミヤ。 かつて...
+2025-07-19 00:09:38,829 - INFO -   - h1要素数: 1
+2025-07-19 00:09:38,842 - INFO -   - div要素数: 20
+2025-07-19 00:09:38,853 - INFO -   - a要素数: 76
+2025-07-19 00:09:38,864 - INFO -   - novel_body要素数: 0
+2025-07-19 00:09:38,875 - INFO -   - novel_view要素数: 0
+2025-07-19 00:09:38,886 - INFO - ページ検証: 正常なページ
+2025-07-19 00:09:38,896 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380014/3.html
+2025-07-19 00:09:38,953 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-19 00:09:39,004 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-19 00:09:39,054 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-19 00:09:39,103 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-19 00:09:39,138 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-19 00:09:39,165 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-19 00:09:39,209 - DEBUG - https://ct.syosetu.org:443 "GET /?n=380014&v=3 HTTP/1.1" 200 None
+2025-07-19 00:09:42,239 - INFO - ページ取得開始: https://syosetu.org/novel/380014/4.html
+2025-07-19 00:09:44,247 - INFO - CloudScraperで初回試行中...
+2025-07-19 00:09:44,306 - DEBUG - https://syosetu.org:443 "GET /novel/380014/4.html HTTP/1.1" 200 None
+2025-07-19 00:09:44,312 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=27459bytes
+2025-07-19 00:09:44,320 - INFO - CloudScraperで取得されたHTMLテキスト長: 20441
+2025-07-19 00:09:44,339 - INFO - CloudScraper取得ページ分析:
+2025-07-19 00:09:44,349 - INFO -   - タイトル: 片田舎の剣聖 錬鉄の英霊 - 【零章・第4話】『剣の在り処』 - ハーメルン
+2025-07-19 00:09:44,358 - INFO -   - 本文長: 3623文字
+2025-07-19 00:09:44,376 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380014/4.html" property="og:url"/>
+<meta content="【零章・第4話】『剣の在り処』 - 片田舎の剣聖 錬鉄の英霊 - ハーメルン" property="og:title"/>
+<meta content="突如として現れた、ひとりの男―― 彼の名はエミヤ。 かつて“正義...
+2025-07-19 00:09:44,385 - INFO -   - h1要素数: 1
+2025-07-19 00:09:44,395 - INFO -   - div要素数: 22
+2025-07-19 00:09:44,404 - INFO -   - a要素数: 77
+2025-07-19 00:09:44,415 - INFO -   - novel_body要素数: 0
+2025-07-19 00:09:44,424 - INFO -   - novel_view要素数: 0
+2025-07-19 00:09:44,434 - INFO - ページ検証: 正常なページ
+2025-07-19 00:09:44,444 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380014/4.html
+2025-07-19 00:09:44,503 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-19 00:09:44,557 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-19 00:09:44,607 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-19 00:09:44,658 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-19 00:09:44,705 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-19 00:09:44,737 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-19 00:09:44,782 - DEBUG - https://ct.syosetu.org:443 "GET /?n=380014&v=4 HTTP/1.1" 200 None
+2025-07-19 00:09:47,810 - INFO - ページ取得開始: https://syosetu.org/novel/380014/5.html
+2025-07-19 00:09:49,818 - INFO - CloudScraperで初回試行中...
+2025-07-19 00:09:49,873 - DEBUG - https://syosetu.org:443 "GET /novel/380014/5.html HTTP/1.1" 200 None
+2025-07-19 00:09:49,899 - INFO - CloudScraperレスポンス: ステータス=200, サイズ=41652bytes
+2025-07-19 00:09:49,907 - INFO - CloudScraperで取得されたHTMLテキスト長: 29876
+2025-07-19 00:09:49,930 - INFO - CloudScraper取得ページ分析:
+2025-07-19 00:09:49,940 - INFO -   - タイトル: 片田舎の剣聖 錬鉄の英霊 - 【壱章・第1話】『都市からの風』 - ハーメルン
+2025-07-19 00:09:49,949 - INFO -   - 本文長: 6276文字
+2025-07-19 00:09:49,968 - INFO -   - HTML先頭部分: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="article" property="og:type"/>
+<meta content="https://syosetu.org/novel/380014/5.html" property="og:url"/>
+<meta content="【壱章・第1話】『都市からの風』 - 片田舎の剣聖 錬鉄の英霊 - ハーメルン" property="og:title"/>
+<meta content="突如として現れた、ひとりの男―― 彼の名はエミヤ。 かつて“正...
+2025-07-19 00:09:49,978 - INFO -   - h1要素数: 1
+2025-07-19 00:09:49,989 - INFO -   - div要素数: 30
+2025-07-19 00:09:49,998 - INFO -   - a要素数: 108
+2025-07-19 00:09:50,009 - INFO -   - novel_body要素数: 0
+2025-07-19 00:09:50,017 - INFO -   - novel_view要素数: 0
+2025-07-19 00:09:50,028 - INFO - ページ検証: 正常なページ
+2025-07-19 00:09:50,035 - INFO - CloudScraperで取得成功: https://syosetu.org/novel/380014/5.html
+2025-07-19 00:09:50,090 - DEBUG - https://syosetu.org:443 "GET /resources/style.css HTTP/1.1" 404 None
+2025-07-19 00:09:50,142 - DEBUG - https://syosetu.org:443 "GET /resources/ss_style-.css HTTP/1.1" 404 None
+2025-07-19 00:09:50,194 - DEBUG - https://syosetu.org:443 "GET /resources/blank.css HTTP/1.1" 404 None
+2025-07-19 00:09:50,246 - DEBUG - https://syosetu.org:443 "GET /resources/tmp_check3.css HTTP/1.1" 404 None
+2025-07-19 00:09:50,283 - DEBUG - https://img.syosetu.org:443 "GET /js/gpt.js HTTP/1.1" 404 None
+2025-07-19 00:09:50,314 - DEBUG - https://img.syosetu.org:443 "GET /js/wrapper.min.js HTTP/1.1" 404 None
+2025-07-19 00:09:50,368 - DEBUG - https://ct.syosetu.org:443 "GET /?n=380014&v=5 HTTP/1.1" 200 None
+2025-07-19 00:09:52,589 - INFO - リソースキャッシュ統計: 74個のリソースをキャッシュしました

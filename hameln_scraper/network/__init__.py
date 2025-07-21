@@ -1,6 +1,9 @@
-"""ネットワーク関連モジュール"""
-from .client import NetworkClient
-from .user_agent import UserAgentRotator
-from .compression import ResponseDecompressor
+"""
+ハーメルンスクレイパー ネットワーク機能
+"""
 
-__all__ = ["NetworkClient", "UserAgentRotator", "ResponseDecompressor"]
+from .client import HamelnNetworkClient
+from .compression import ResponseDecompressor
+from .user_agent import UserAgentRotator
+
+__all__ = ['HamelnNetworkClient', 'ResponseDecompressor', 'UserAgentRotator']
