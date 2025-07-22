@@ -44,7 +44,17 @@
 - **同じミスを二度と繰り返さないための教訓集**
 - AIモックテスト偏重事件とその対策
 - ユーザー提案軽視の防止策
-- 実環境テストの重要性
+- CI/CD・ビルドテスト・横展開ミス記録
+
+### **[docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - 🔧 **技術的トラブルシューティング**
+- 開発プロセス改善のためのガイドライン
+- 具体的な問題と解決方法の記録
+- セレクター・URL処理の技術詳細
+
+### **[docs/NEXT_SESSION_STARTUP_GUIDE.md](docs/NEXT_SESSION_STARTUP_GUIDE.md)** - 🚀 **セッション継続ガイド**
+- 次セッション即座開始のための完全マニュアル
+- ワンライナー復旧コマンド
+- Step-by-Step復旧手順
 
 ---
 
