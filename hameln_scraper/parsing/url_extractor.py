@@ -15,18 +15,21 @@ class UrlExtractor:
     def __init__(self):
         self.logger = logging.getLogger(__name__)
     
-    def get_chapter_links(self, soup: BeautifulSoup, base_novel_url: str) -> List[Dict[str, str]]:
+    def get_chapter_links(self, soup: BeautifulSoup, base_novel_url: str) -> Dict[str, Any]:
         """
-        章のリンクを抽出（ハーメルン特化版）
+        章のリンクを抽出（ハーメルン特化版 - 目次ページ対応）
         
         Args:
             soup: BeautifulSoupオブジェクト
             base_novel_url: 小説のベースURL
             
         Returns:
-            List[Dict[str, str]]: 章リンクのリスト（title, urlを含む）
+            Dict[str, Any]: 章リンクのリストと目次ページ情報を含む
+                - chapter_links: List[Dict[str, str]] 章リンクのリスト
+                - index_page: Dict[str, str] 目次ページ情報（URLとタイトル）
         """
         chapter_links = []
+        index_page = None  # 目次ページ情報を保存
         
         self.logger.debug("章リンクを検索中...")
         
@@ -34,7 +37,11 @@ class UrlExtractor:
         novel_id_match = re.search(r'/novel/(\d+)', base_novel_url)
         if not novel_id_match:
             self.logger.error("作品IDの抽出に失敗しました")
-            return []
+            return {
+                'chapter_links': [],
+                'index_page': None,
+                'error': '作品IDの抽出に失敗しました'
+            }
         
         novel_id = novel_id_match.group(1)
         self.logger.debug(f"対象作品ID: {novel_id}")
@@ -90,7 +97,15 @@ class UrlExtractor:
                                 
                                 # 絶対パス形式の場合は作品ID検証
                                 if f'/novel/{novel_id}/' in full_url:
-                                    if full_url not in processed_urls:
+                                    # 目次ページ（base_novel_urlと同一）を別途記録
+                                    if full_url == base_novel_url:
+                                        if not index_page:  # 最初の目次ページのみ記録
+                                            index_page = {
+                                                'title': title if title else '目次',
+                                                'url': full_url
+                                            }
+                                            self.logger.debug(f"✓ 目次ページを記録: {title[:30] if title else '目次'}... -> {full_url}")
+                                    elif full_url not in processed_urls:
                                         chapter_links.append({
                                             'title': title,
                                             'url': full_url
@@ -108,7 +123,15 @@ class UrlExtractor:
                                 full_url = urljoin(base_novel_url, href)
                                 # 作品ID検証
                                 if f'/novel/{novel_id}/' in full_url:
-                                    if full_url not in processed_urls:
+                                    # 目次ページ（base_novel_urlと同一）を別途記録
+                                    if full_url == base_novel_url:
+                                        if not index_page:  # 最初の目次ページのみ記録
+                                            index_page = {
+                                                'title': title if title else '目次',
+                                                'url': full_url
+                                            }
+                                            self.logger.debug(f"✓ 目次ページを記録: {title[:30] if title else '目次'}... -> {full_url}")
+                                    elif full_url not in processed_urls:
                                         chapter_links.append({
                                             'title': title,
                                             'url': full_url
@@ -129,15 +152,33 @@ class UrlExtractor:
                 if href and f'/novel/{novel_id}/' in href:
                     title = link.get_text(strip=True)
                     full_url = urljoin(base_novel_url, href)
-                    if full_url not in processed_urls:
+                    # フォールバック処理でも目次ページを考慮
+                    if full_url == base_novel_url:
+                        if not index_page:
+                            index_page = {
+                                'title': title if title else '目次',
+                                'url': full_url
+                            }
+                    elif full_url not in processed_urls:
                         chapter_links.append({
                             'title': title,
                             'url': full_url
                         })
                         processed_urls.add(full_url)
         
-        self.logger.debug(f"章リンク抽出完了: {len(chapter_links)}個")
-        return chapter_links
+        # 目次ページが見つからない場合はデフォルト設定
+        if not index_page:
+            index_page = {
+                'title': '目次',
+                'url': base_novel_url
+            }
+            self.logger.debug(f"デフォルト目次ページを設定: {base_novel_url}")
+        
+        self.logger.debug(f"章リンク抽出完了: {len(chapter_links)}個、目次ページ: {index_page['title']}")
+        return {
+            'chapter_links': chapter_links,
+            'index_page': index_page
+        }
     
     def extract_chapter_links(self, soup: BeautifulSoup, base_url: str) -> List[str]:
         """
@@ -150,9 +191,14 @@ class UrlExtractor:
         Returns:
             List[str]: 抽出された章リンクのリスト（URLのみ）
         """
-        # get_chapter_linksを呼び出してURLのみを抽出
-        chapter_data = self.get_chapter_links(soup, base_url)
-        return [item['url'] if isinstance(item, dict) else item for item in chapter_data]
+        # get_chapter_linksを呼び出してURLのみを抽出（新しい辞書形式対応）
+        result = self.get_chapter_links(soup, base_url)
+        if isinstance(result, dict) and 'chapter_links' in result:
+            chapter_data = result['chapter_links']
+            return [item['url'] if isinstance(item, dict) else item for item in chapter_data]
+        else:
+            # 古い形式の場合のフォールバック
+            return [item['url'] if isinstance(item, dict) else item for item in result] if isinstance(result, list) else []
     
     def extract_novel_info_url(self, soup: BeautifulSoup) -> Optional[str]:
         """

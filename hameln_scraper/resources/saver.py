@@ -66,16 +66,16 @@ class PageSaver:
             soup = self._add_meta_information(soup, original_url, datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
             
             # ファイル名安全化と保存（filename引数優先版）
-            # filenameが明示的に指定されている場合は、それを優先
-            if filename and filename != "index.html":  # デフォルト値でない場合
+            # filenameが明示的に指定されている場合は、それを必ず優先
+            if filename:
                 safe_filename = self.file_manager.sanitize_filename(filename)
                 self.logger.debug(f"ファイル名指定優先: {filename}")
             elif title:
                 safe_filename = self.file_manager.sanitize_filename(title + ".html")
                 self.logger.debug(f"タイトルから生成: {title}.html")
             else:
-                safe_filename = self.file_manager.sanitize_filename(filename)
-                self.logger.debug(f"デフォルトファイル名使用: {filename}")
+                safe_filename = "untitled.html"
+                self.logger.debug(f"デフォルトファイル名使用: untitled.html")
             
             output_file = os.path.join(output_dir, safe_filename)
             
@@ -88,7 +88,8 @@ class PageSaver:
             
             return {
                 'success': True,
-                'saved_path': output_file,
+                'file_path': output_file,
+                'saved_path': output_file,  # 後方互換性のため残す
                 'filename': safe_filename,
                 'original_url': original_url,
                 'file_size': len(html_output),
