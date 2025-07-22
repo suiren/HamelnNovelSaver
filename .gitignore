@@ -77,16 +77,44 @@ Thumbs.db
 # Zone.Identifier files (Windows)
 *:Zone.Identifier
 
-# Testing
-test_*.py
+# Testing - テストファイルは保持、結果のみ除外
+test_output/
+test_download*/
+test_fixed/
+test_gif_fix/
+test_gui_fixed/
+test_index_save/
+final_test/
+gif_test/
+
+# Debug files  
 debug_*.py
 analyze_*.py
 
-# Build files
-build.bat
-build.ps1
-build.sh
-# *.spec - コメントアウト：プロジェクトで必要
+# Build files - ビルドファイルは保持
+# build.bat, build.ps1, build.sh は保持
+*.spec.backup
+dist/
+build/
+
+# プロジェクト固有の除外
+# テスト結果JSONファイル
+*_validation_*.json
+execution_environment_test_*.json
+method_conflicts_report_*.json
+release_validation_*.json
+comprehensive_validation_*.json
+
+# 小説データ（サンプル以外）
+novels/
+saved_novels/
+
+# スクリーンショット・例
+*.png
+*.jpg
+*.jpeg
+例/
+スクリーンショット*
 
 # 自動追加: バックアップファイル除外
 backup_original_files/
