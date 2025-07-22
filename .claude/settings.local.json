@@ -11,7 +11,8 @@
       "Bash(pyinstaller:*)",
       "Bash(rm:*)",
       "Bash(mkdir:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": []
   }

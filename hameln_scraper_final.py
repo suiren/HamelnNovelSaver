@@ -7,17 +7,6 @@
 
 import os
 import sys
-from hameln_scraper.core.scraper import HamelnScraper
-from hameln_scraper.core.config import ScraperConfig
-
-class HamelnFinalScraper(HamelnScraper):
-    """後方互換性のためのラッパークラス"""
-    
-    def __init__(self):
-        config = ScraperConfig()
-        config.enable_novel_info_saving = False
-        config.enable_comments_saving = False
-        super().__init__(config)
 
 
 import time
@@ -43,7 +32,7 @@ import zlib
 import brotli
 import copy
 
-class HamelnFinalScraperLegacy:
+class HamelnFinalScraper:
     def __init__(self, base_url="https://syosetu.org"):
         self.base_url = base_url
         self.driver = None

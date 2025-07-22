@@ -272,3 +272,47 @@ class FileManager:
             bool: キャッシュされているかどうか
         """
         return url in self.resource_cache
+    
+    def fix_local_navigation_links(self, soup, chapter_mapping: Dict[str, str], current_url: Optional[str] = None, index_filename: Optional[str] = None):
+        """
+        ローカルナビゲーションリンクを修正
+        
+        章間のリンクを外部URL（https://syosetu.org/novel/...）から
+        ローカルファイル（第001話.html等）に変換する
+        
+        Args:
+            soup: BeautifulSoupオブジェクト
+            chapter_mapping: URLとローカルファイル名のマッピング
+            current_url: 現在のページURL（省略可）
+            index_filename: インデックスファイル名（省略可）
+            
+        Returns:
+            BeautifulSoup: 修正されたBeautifulSoupオブジェクト
+        """
+        self.logger.debug(f"ローカルナビゲーションリンク修正開始")
+        
+        try:
+            # 全てのリンク要素（aタグ）を検索
+            links = soup.find_all('a', href=True)
+            modified_count = 0
+            
+            for link in links:
+                href = link.get('href')
+                
+                # chapter_mappingに含まれるURLの場合、ローカルファイル名に置き換え
+                if href in chapter_mapping:
+                    local_filename = chapter_mapping[href]
+                    
+                    # ファイル名のみを抽出（パス部分を除去）
+                    if isinstance(local_filename, str):
+                        filename_only = os.path.basename(local_filename)
+                        link['href'] = filename_only
+                        modified_count += 1
+                        self.logger.debug(f"リンク修正: {href} → {filename_only}")
+            
+            self.logger.debug(f"ローカルナビゲーションリンク修正完了: {modified_count}個のリンクを修正")
+            return soup
+            
+        except Exception as e:
+            self.logger.error(f"ローカルナビゲーションリンク修正エラー: {e}")
+            return soup

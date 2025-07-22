@@ -9,8 +9,8 @@ from tkinter import ttk, messagebox, filedialog
 import threading
 import os
 import time
-from hameln_scraper.core.scraper import HamelnScraper
-from hameln_scraper.core.config import ScraperConfig
+from hameln_scraper.core.scraper import HamelnModularScraper
+from hameln_scraper.core.config import HamelnConfig
 
 class HamelnGUI:
     def __init__(self, root):
@@ -230,10 +230,11 @@ class HamelnGUI:
             self.log("完全モード（CSS・画像・JavaScript含む完全保存）で実行します")
             
             # スクレイパーを初期化（GUIログ連携）
-            config = ScraperConfig()
-            config.enable_novel_info_saving = False
-            config.enable_comments_saving = True
-            self.scraper = HamelnScraper(config)
+            self.scraper = HamelnModularScraper()
+            
+            # 機能設定
+            self.scraper.config.enable_novel_info_saving = False
+            self.scraper.config.enable_comments_saving = True
             
             # スクレイパーのデバッグログをGUIに転送
             original_debug_log = self.scraper.debug_log
@@ -248,17 +249,33 @@ class HamelnGUI:
             self.log("小説取得を開始します...")
             self.log(f"URL: {url}")
             
-            # scrape_novelメソッドで全話取得を実行
-            result = self.scraper.scrape_novel(url)
+            # 保存先フォルダ設定
+            save_dir = self.save_path_var.get() or "./saved_novels"
+            self.log(f"保存先: {save_dir}")
             
-            if result and self.is_scraping:
+            # 保存先ディレクトリを作成・設定
+            abs_save_dir = os.path.abspath(save_dir)
+            os.makedirs(abs_save_dir, exist_ok=True)
+            
+            original_cwd = os.getcwd()
+            os.chdir(abs_save_dir)
+            
+            try:
+                # scrape_novelメソッドで全話取得を実行
+                result = self.scraper.scrape_novel(url)
+            finally:
+                # 元のディレクトリに戻す
+                os.chdir(original_cwd)
+            
+            if result and result.get('success') and self.is_scraping:
                 self.log(f"✓ 保存完了: {result}")
                 messagebox.showinfo("完了", f"小説の保存が完了しました\n{result}")
             elif not self.is_scraping:
                 self.log("ダウンロードが停止されました")
             else:
-                self.log("✗ 保存に失敗しました")
-                messagebox.showerror("エラー", "小説の保存に失敗しました")
+                error_msg = result.get('error', '不明なエラー') if result else '不明なエラー'
+                self.log(f"✗ 保存に失敗しました: {error_msg}")
+                messagebox.showerror("エラー", f"小説の保存に失敗しました:\n{error_msg}")
                 
         except Exception as e:
             self.log(f"エラーが発生しました: {e}")
